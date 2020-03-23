@@ -1,5 +1,5 @@
 ---
 layout: index
-title: Recipes
+title: Ricette per una vita più semplice
 pagetitle: Page title
 ---

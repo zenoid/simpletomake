@@ -45,18 +45,17 @@ p {
 
 body:not(.touch) {
   p a:hover {
-    color: $color-accent;
   }
 }
 
 ::-moz-selection {
-  background: $color-accent;
+  background: $color-main1;
   text-shadow: none;
   color: $color-white;
 }
 
 ::selection {
-  background: $color-accent;
+  background: $color-main1;
   text-shadow: none;
   color: $color-white;
 }

@@ -1,2 +1,17 @@
 
   <h1>Index</h1>
+
+<%
+
+  var recipes_list = site.pages
+    .filter( p => p.layout === 'recipe' )
+    .sort( 'index' );
+
+  var i;
+
+  recipes_list.forEach( recipe => {
+
+%>
+  <a href="<%- recipe.path %>"><%- recipe.title %></a>
+
+<% }) %>
