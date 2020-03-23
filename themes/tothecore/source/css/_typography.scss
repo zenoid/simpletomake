@@ -1,0 +1,72 @@
+
+
+
+/*                      TEXT
+------------------------------------------------------------------------- */
+
+body {
+  font-family: $font;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+}
+
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+* + p {
+  margin-top: 1.5em;
+}
+
+body:not(.touch) {
+  p a:hover {
+    color: $color-accent;
+  }
+}
+
+::-moz-selection {
+  background: $color-accent;
+  text-shadow: none;
+  color: $color-white;
+}
+
+::selection {
+  background: $color-accent;
+  text-shadow: none;
+  color: $color-white;
+}
+
+
+
+/*                      TITLES
+------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+

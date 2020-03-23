@@ -1,0 +1,4 @@
+---
+layout: recipe
+title: {{ title }}
+---

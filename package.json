@@ -1,0 +1,23 @@
+{
+  "name": "tothecore",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server"
+  },
+  "hexo": {
+    "version": "4.2.0"
+  },
+  "dependencies": {
+    "hexo": "latest",
+    "hexo-browsersync": "latest",
+    "hexo-renderer-ejs": "latest",
+    "hexo-renderer-marked": "latest",
+    "hexo-renderer-scss": "latest",
+    "hexo-server": "latest",
+    "hexo-uglify": "latest"
+  }
+}

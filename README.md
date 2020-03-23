@@ -1,2 +1,2 @@
 # tothecore
-recipes for a simpler life
+Recipes for a simpler life

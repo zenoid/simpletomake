@@ -1,0 +1,19 @@
+
+
+
+/*                      BUTTONS
+------------------------------------------------------------------------- */
+
+.btn {
+  @include resetButton;
+  display: inline-block;
+  cursor: pointer;
+}
+
+body:not(.touch) {
+
+  .btn:hover {
+  }
+}
+
+

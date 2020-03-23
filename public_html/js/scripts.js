@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){"use strict";("ontouchstart"in window||0<navigator.MaxTouchPoints||0<navigator.msMaxTouchPoints)&&document.body.classList.add("touch")});

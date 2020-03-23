@@ -1,0 +1,57 @@
+
+
+
+/*                      COLORS
+------------------------------------------------------------------------- */
+
+$color-white:     #FFFFFF;
+$color-accent:    #5B7F3C;
+
+
+
+/*                      TYPOGRAPHY
+------------------------------------------------------------------------- */
+
+@font-face {
+  // font-family: '';
+  // src: local( '' ), local( '' ),
+  //      url( '../fonts/.woff2' ) format( 'woff2' ),
+  //      url( '../fonts/.woff' ) format( 'woff' );
+  // font-weight: 400;
+  // font-style: normal;
+  // font-display: swap;
+}
+
+@font-face {
+  // font-family: '';
+  // src: url( '../fonts/.woff2' ) format( 'woff2' ),
+  //      url( '../fonts/.woff' ) format( 'woff' );
+  // font-weight: normal;
+  // font-style: normal;
+  // font-display: swap;
+}
+
+$font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-title: serif;
+
+
+
+/*                      SIZES
+------------------------------------------------------------------------- */
+
+$size-M:  55rem; // 880px
+$size-S:  40rem; // 640px
+$size-XS: 30rem; // 480px
+
+$layoutwidth: 75rem;
+
+$border: 2px;
+
+
+
+/*                      TRANSITIONS
+------------------------------------------------------------------------- */
+
+$transition-hover:  0.2s;
+
+
