@@ -1,0 +1,59 @@
+
+
+
+/*                      RECIPE
+------------------------------------------------------------------------- */
+
+article {
+  background-color: $color-main1;
+  color: $color-white;
+}
+
+section {
+  max-width: $layoutwidth;
+  min-height: 100vh;
+  margin: auto;
+  text-align: left;
+  padding: 1rem;
+
+  h2 {
+    margin: 2rem 0 1rem;
+  }
+}
+
+.card-list {
+  @include flex;
+  @include flexWrap;
+  margin: 0 -0.25rem;
+
+  & > div {
+    width: 33.33%;
+  }
+}
+
+.card {
+  background-color: $color-white;
+  border-radius: 4px;
+  color: $color-dark;
+  padding: 2rem 2rem 2.5rem 2rem;
+  height: calc( 100% - 0.5rem );
+  margin: 0 0.25rem;
+  position: relative;
+}
+
+.card-list-ordered {
+  counter-reset: cardnum;
+
+  .card:before {
+    counter-increment: cardnum;
+    content: counter(cardnum);
+    position: absolute;
+    top: 0.25rem;
+    left: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: $fontweight-bold;
+    opacity: 0.2;
+  }
+}
+
+

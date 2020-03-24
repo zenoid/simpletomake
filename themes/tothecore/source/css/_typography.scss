@@ -7,7 +7,7 @@
 body {
   font-family: $font;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: $fontweight-normal;
   text-rendering: optimizeLegibility;
 }
 
@@ -20,7 +20,7 @@ li {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: $fontweight-bold;
 }
 
 ul li {
@@ -35,12 +35,17 @@ a {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.4;
 }
 
 * + p {
-  margin-top: 1.5em;
+  margin-top: 1rem;
+}
+
+.note {
+  font-size: 1rem;
+  color: $color-gray;
 }
 
 body:not(.touch) {
@@ -71,8 +76,36 @@ h3,
 h4 {
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3 {
   font-family: $font-title;
-  font-weight: 700;
+  font-weight: $fontweight-title-bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: $fontweight-bold;
+
+  .quantity {
+    font-weight: $fontweight-normal;
+  }
 }
 
 

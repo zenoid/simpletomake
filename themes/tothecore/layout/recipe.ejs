@@ -1,2 +1,103 @@
+  <article>
 
-  <h1>Recipe</h1>
+  <% var i; %>
+
+    <h1><%- page.title %></h1>
+
+    <section class="section0">
+
+      <h2>Le 3 cose da sapere per fare un <%- page.title %></h2>
+
+      <div class="card-list">
+      <% for ( i = 0; i < page.principles.length; i++ ) { %>
+        <div>
+          <div class="card">
+            <p><%- page.principles[ i ] %></p>
+          </div>
+        </div>
+      <% } %>
+      </div>
+
+    </section>
+
+    <section class="section1">
+
+      <h2>Ingredienti</h2>
+
+      <div class="card-list">
+      <% for ( i = 0; i < page.ingredients.length; i++ ) { %>
+        <div>
+          <div class="card">
+            <h4><%- page.ingredients[ i ][ 0 ] %><br/><span class="quantity"><%- page.ingredients[ i ][ 1 ] %> <%- page.ingredients[ i ][ 2 ] %></span></h4>
+            <% if ( page.ingredients[ i ][ 3 ] ) { %><p class="note"><%- page.ingredients[ i ][ 3 ] %></p><% } %>
+          </div>
+        </div>
+      <% } %>
+      </div>
+
+    </section>
+
+    <section class="section2">
+
+      <h2>Attrezzatura</h2>
+
+      <div class="card-list">
+      <% for ( i = 0; i < page.tools.length; i++ ) { %>
+        <div>
+          <div class="card">
+            <h4><%- page.tools[ i ][ 0 ] %></h4>
+            <% if ( page.tools[ i ][ 1 ] ) { %><p class="note"><%- page.tools[ i ][ 1 ] %></p><% } %>
+          </div>
+        </div>
+      <% } %>
+      </div>
+
+    </section>
+
+    <section class="section3">
+
+      <h2>Procedimento</h2>
+
+      <div class="card-list card-list-ordered">
+      <% for ( i = 0; i < page.directions.length; i++ ) { %>
+        <div>
+          <div class="card">
+            <p><%- page.directions[ i ][ 0 ] %></p>
+            <% if ( page.directions[ i ][ 1 ] ) { %><p class="note"><%- page.directions[ i ][ 1 ] %></p><% } %>
+          </div>
+        </div>
+      <% } %>
+      </div>
+
+    </section>
+
+    <section class="section4">
+
+      <h2>Uso e conservazione</h2>
+
+      <div class="card-list">
+      <% for ( i = 0; i < page.usage.length; i++ ) { %>
+        <div>
+          <div class="card">
+            <p><%- page.usage[ i ][ 0 ] %></p>
+            <% if ( page.usage[ i ][ 1 ] ) { %><p class="note"><%- page.usage[ i ][ 1 ] %></p><% } %>
+          </div>
+        </div>
+      <% } %>
+      </div>
+
+    </section>
+
+  </article>
+
+  <footer>
+
+    <h3>Fonti</h3>
+
+    <ul>
+    <% for ( i = 0; i < page.sources.length; i++ ) { %>
+      <li><a href="<%- page.sources[ i ][ 1 ] %>" target="_blank"><%- page.sources[ i ][ 0 ] %></a></li>
+    <% } %>
+    </ul>
+
+  </footer>

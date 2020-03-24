@@ -6,6 +6,7 @@
 
 $color-white:     #FFFFFF;
 $color-dark:      #000000;
+$color-gray:      #666666;
 $color-main1:     #5B7F3C;
 $color-main2:     #6E5773;
 $color-main3:     #AF5B46;
@@ -17,37 +18,41 @@ $color-main5:     #82755B;
 /*                      TYPOGRAPHY
 ------------------------------------------------------------------------- */
 
+$fontweight-normal:     300;
+$fontweight-bold:       600;
+$fontweight-title-bold: 700;
+
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'Inter';
   font-style: normal;
-  font-weight: 400;
-  src: local( 'Source Sans Pro Regular' ), local('SourceSansPro-Regular' ),
-       url( '../fonts/source-sans-pro-v13-latin-regular.woff2' ) format( 'woff2' ),
-       url( '../fonts/source-sans-pro-v13-latin-regular.woff' ) format( 'woff' );
+  font-weight: $fontweight-normal;
+  src: local( '' ),
+       url( '../fonts/inter-v13-latin-300.woff2' ) format( 'woff2' ),
+       url( '../fonts/inter-v13-latin-300.woff' ) format( 'woff' );
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'Inter';
   font-style: normal;
-  font-weight: 700;
-  src: local( 'Source Sans Pro Bold'), local('SourceSansPro-Bold' ),
-       url( '../fonts/source-sans-pro-v13-latin-700.woff2' ) format( 'woff2' ),
-       url( '../fonts/source-sans-pro-v13-latin-700.woff' ) format( 'woff' );
+  font-weight: $fontweight-bold;
+  src: local( '' ),
+       url( '../fonts/inter-v13-latin-600.woff2' ) format( 'woff2' ),
+       url( '../fonts/inter-v13-latin-600.woff' ) format( 'woff' );
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Source Serif Pro';
   font-style: normal;
-  font-weight: 700;
+  font-weight: $fontweight-title-bold;
   src: local( 'Source Serif Pro Bold' ), local( 'SourceSerifPro-Bold' ),
        url( '../fonts/source-serif-pro-v7-latin-700.woff2' ) format( 'woff2' ),
        url( '../fonts/source-serif-pro-v7-latin-700.woff' ) format( 'woff' );
   font-display: swap;
 }
 
-$font: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+$font: 'Inter', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 $font-title: 'Source Serif Pro', Apple Garamond, Palatino Linotype, Times New Roman, 'Droid Serif', Times, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
 
