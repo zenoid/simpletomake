@@ -83,15 +83,20 @@ h2,
 h3 {
   font-family: $font-title;
   font-weight: $fontweight-title-bold;
+
+  .sub {
+    font-size: 0.6em;
+    opacity: 0.4;
+  }
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 h2 {
   font-size: 3rem;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 h3 {

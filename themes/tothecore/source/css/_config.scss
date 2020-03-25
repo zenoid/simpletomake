@@ -23,22 +23,22 @@ $fontweight-bold:       600;
 $fontweight-title-bold: 700;
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: $fontweight-normal;
-  src: local( '' ),
-       url( '../fonts/inter-v13-latin-300.woff2' ) format( 'woff2' ),
-       url( '../fonts/inter-v13-latin-300.woff' ) format( 'woff' );
+  src: local( 'Source Sans Pro Light' ), local( 'SourceSansPro-Light' ),
+       url( '../fonts/source-sans-pro-v13-latin-ext_latin-300.woff.woff2' ) format( 'woff2' ),
+       url( '../fonts/source-sans-pro-v13-latin-ext_latin-300.woff.woff' ) format( 'woff' );
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: $fontweight-bold;
-  src: local( '' ),
-       url( '../fonts/inter-v13-latin-600.woff2' ) format( 'woff2' ),
-       url( '../fonts/inter-v13-latin-600.woff' ) format( 'woff' );
+  src: local( 'Source Sans Pro SemiBold' ), local( 'SourceSansPro-SemiBold' ),
+       url( '../fonts/source-sans-pro-v13-latin-ext_latin-600.woff.woff2' ) format( 'woff2' ),
+       url( '../fonts/source-sans-pro-v13-latin-ext_latin-600.woff.woff' ) format( 'woff' );
   font-display: swap;
 }
 
@@ -52,7 +52,7 @@ $fontweight-title-bold: 700;
   font-display: swap;
 }
 
-$font: 'Inter', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+$font: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 $font-title: 'Source Serif Pro', Apple Garamond, Palatino Linotype, Times New Roman, 'Droid Serif', Times, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
 
@@ -74,5 +74,6 @@ $border: 2px;
 ------------------------------------------------------------------------- */
 
 $transition-hover:  0.2s;
+$transition-scroll: 0.5s;
 
 

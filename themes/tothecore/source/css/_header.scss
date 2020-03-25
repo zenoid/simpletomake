@@ -5,6 +5,83 @@
 ------------------------------------------------------------------------- */
 
 header {
+  @include flex;
+  @include flexMiddle;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4rem;
+  z-index: 1;
+  @include disableSelect;
+
+  h1 {
+    @include flexGrow( 1 );
+    @include ellipsis;
+    text-align: left;
+    height: 4rem;
+    background-color: $color-white;
+    line-height: 1.5rem;
+    padding: 0.25rem 0 0.25rem 1rem;
+
+    .sub {
+      line-height: 1.25rem;
+    }
+  }
+}
+
+
+
+/*                      MAIN NAV
+------------------------------------------------------------------------- */
+
+nav {
+
+  ul {
+    @include flex;
+    position: relative;
+  }
+
+  .bg {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    background-color: $color-white;
+    @include transition( all, $transition-scroll, ease-in-out );
+  }
+
+  li {
+    @include flexNoShrink;
+    width: 6.5rem;
+
+    &.selected ~ li {
+      a {
+        color: $color-white;
+      }
+    }
+
+    &:nth-child(2).selected ~ .bg { width:  40%; }
+    &:nth-child(3).selected ~ .bg { width:  60%; }
+    &:nth-child(4).selected ~ .bg { width:  80%; }
+    &:nth-child(5).selected ~ .bg { width: 100%; }
+
+    &:nth-child(2) { a { color: $color-main2; } }
+    &:nth-child(3) { a { color: $color-main3; } }
+    &:nth-child(4) { a { color: $color-main4; } }
+    &:nth-child(5) { a { color: $color-main5; } }
+  }
+
+  a {
+    display: block;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: $color-main1;
+    @include transition( color, $transition-hover );
+  }
 }
 
 
