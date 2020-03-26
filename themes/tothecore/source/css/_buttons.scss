@@ -8,6 +8,15 @@
   @include resetButton;
   display: inline-block;
   cursor: pointer;
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 2.5rem;
+  text-align: center;
+  color: var( --color-white );
+  background-color: rgba( 255, 255, 255, 0.1 );
+  @include transition( color, $transition-hover );
 }
 
 body:not(.touch) {

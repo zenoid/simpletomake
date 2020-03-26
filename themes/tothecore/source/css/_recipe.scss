@@ -5,8 +5,12 @@
 ------------------------------------------------------------------------- */
 
 article {
-  background-color: $color-main1;
-  color: $color-white;
+  background: var( --color-main1 );
+  background-image: linear-gradient(
+    var( --color-main1-lt ),
+    var( --color-main1-dk ) );
+  color: var( --color-white );
+  background-attachment: fixed;
 }
 
 section {
@@ -16,6 +20,7 @@ section {
   text-align: left;
   padding: 4rem 1rem 1rem 1rem;
 
+  h1,
   h2 {
     margin: 2rem 0 1.5rem;
   }
@@ -24,7 +29,6 @@ section {
 .card-list {
   @include flex;
   @include flexWrap;
-  margin: 0 -0.25rem;
 
   & > div {
     width: 33.33%;
@@ -32,12 +36,11 @@ section {
 }
 
 .card {
-  background-color: $color-white;
-  border-radius: 4px;
-  color: $color-dark;
-  padding: 2rem 2rem 2.5rem 2rem;
-  height: calc( 100% - 0.5rem );
-  margin: 0 0.25rem;
+  background-color: var( --color-white );
+  color: var( --color-dark );
+  padding: 2rem;
+  height: calc( 100% - 2px );
+  margin: 0 1px;
   position: relative;
 }
 

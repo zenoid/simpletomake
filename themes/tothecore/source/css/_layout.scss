@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  background-color: $color-white;
+  background-color: var( --color-white );
   text-align: center;
 }
 

@@ -40,12 +40,12 @@ p {
 }
 
 * + p {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .note {
   font-size: 1rem;
-  color: $color-gray;
+  color: var( --color-gray );
 }
 
 body:not(.touch) {
@@ -54,15 +54,15 @@ body:not(.touch) {
 }
 
 ::-moz-selection {
-  background: $color-main1;
+  background: var( --color-main1 );
   text-shadow: none;
-  color: $color-white;
+  color: var( --color-white );
 }
 
 ::selection {
-  background: $color-main1;
+  background: var( --color-main1 );
   text-shadow: none;
-  color: $color-white;
+  color: var( --color-white );
 }
 
 
@@ -81,8 +81,7 @@ h4 {
 h1,
 h2,
 h3 {
-  font-family: $font-title;
-  font-weight: $fontweight-title-bold;
+  font-weight: $fontweight-bold;
 
   .sub {
     font-size: 0.6em;
@@ -90,10 +89,7 @@ h3 {
   }
 }
 
-h1 {
-  font-size: 1.4rem;
-}
-
+h1,
 h2 {
   font-size: 3rem;
   line-height: 1;
@@ -105,10 +101,11 @@ h3 {
 
 h4 {
   font-size: 1.5rem;
-  line-height: 1.4;
+  line-height: 1.2;
   font-weight: $fontweight-bold;
 
   .quantity {
+    font-family: $font-mono;
     font-weight: $fontweight-normal;
   }
 }

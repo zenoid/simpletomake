@@ -4,56 +4,80 @@
 /*                      COLORS
 ------------------------------------------------------------------------- */
 
-$color-white:     #FFFFFF;
-$color-dark:      #000000;
-$color-gray:      #666666;
-$color-main1:     #5B7F3C;
-$color-main2:     #6E5773;
-$color-main3:     #AF5B46;
-$color-main4:     #375879;
-$color-main5:     #82755B;
+$color-main1: #5B7F3C;
+$color-main2: #6E5773;
+$color-main3: #AF5B46;
+$color-main4: #375879;
+$color-main5: #9E8928;
+
+:root {
+
+  --color-white:    #FFFFFF;
+  --color-dark:     #000000;
+  --color-gray:     #666666;
+
+  --color-main1:    #{ $color-main1 };
+  --color-main1-lt: #{ lighten( $color-main1,  7% ) };
+  --color-main1-dk: #{  darken( $color-main1, 14% ) };
+
+  --color-main2:    #{ $color-main2 };
+  --color-main2-lt: #{ lighten( $color-main2,  7% ) };
+  --color-main2-dk: #{  darken( $color-main2, 14% ) };
+
+  --color-main3:    #{ $color-main3 };
+  --color-main3-lt: #{ lighten( $color-main3,  7% ) };
+  --color-main3-dk: #{  darken( $color-main3, 14% ) };
+
+  --color-main4:    #{ $color-main4 };
+  --color-main4-lt: #{ lighten( $color-main4,  7%  ) };
+  --color-main4-dk: #{  darken( $color-main4, 14% ) };
+
+  --color-main5:    #{ $color-main5 };
+  --color-main5-lt: #{ lighten( $color-main5,  7% ) };
+  --color-main5-dk: #{  darken( $color-main5, 14% ) };
+
+}
 
 
 
 /*                      TYPOGRAPHY
 ------------------------------------------------------------------------- */
 
-$fontweight-normal:     300;
+$fontweight-normal:     400;
 $fontweight-bold:       600;
-$fontweight-title-bold: 700;
 
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'IBM Plex Sans';
   font-style: normal;
-  font-weight: $fontweight-normal;
-  src: local( 'Source Sans Pro Light' ), local( 'SourceSansPro-Light' ),
-       url( '../fonts/source-sans-pro-v13-latin-ext_latin-300.woff.woff2' ) format( 'woff2' ),
-       url( '../fonts/source-sans-pro-v13-latin-ext_latin-300.woff.woff' ) format( 'woff' );
+  font-weight: 400;
+  src: local('IBM Plex Sans'), local('IBMPlexSans'),
+       url('../fonts/ibm-plex-sans-v7-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/ibm-plex-sans-v7-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'IBM Plex Sans';
   font-style: normal;
-  font-weight: $fontweight-bold;
-  src: local( 'Source Sans Pro SemiBold' ), local( 'SourceSansPro-SemiBold' ),
-       url( '../fonts/source-sans-pro-v13-latin-ext_latin-600.woff.woff2' ) format( 'woff2' ),
-       url( '../fonts/source-sans-pro-v13-latin-ext_latin-600.woff.woff' ) format( 'woff' );
+  font-weight: 600;
+  src: local('IBM Plex Sans SemiBold'), local('IBMPlexSans-SemiBold'),
+       url('../fonts/ibm-plex-sans-v7-latin-ext_latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/ibm-plex-sans-v7-latin-ext_latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Source Serif Pro';
+  font-family: 'IBM Plex Mono';
   font-style: normal;
-  font-weight: $fontweight-title-bold;
-  src: local( 'Source Serif Pro Bold' ), local( 'SourceSerifPro-Bold' ),
-       url( '../fonts/source-serif-pro-v7-latin-700.woff2' ) format( 'woff2' ),
-       url( '../fonts/source-serif-pro-v7-latin-700.woff' ) format( 'woff' );
+  font-weight: 400;
+  src: local('IBM Plex Mono'), local('IBMPlexMono'),
+       url('../fonts/ibm-plex-mono-v5-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/ibm-plex-mono-v5-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   font-display: swap;
 }
 
-$font: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
-$font-title: 'Source Serif Pro', Apple Garamond, Palatino Linotype, Times New Roman, 'Droid Serif', Times, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+$font: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+$font-mono: 'IBM Plex Mono', Consolas, 'Lucida Console', Monaco, monospace;
 
 
 
