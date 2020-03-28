@@ -384,6 +384,13 @@ $default-ease: cubic-bezier(0.5, 0.0, 0.5, 1.0);
           transition: $property1 $duration $ease, $property2 $duration $ease;
 }
 
+@mixin transitionDelay( $delay ) {
+  -webkit-transition-delay: $delay;
+     -moz-transition-delay: $delay;
+       -o-transition-delay: $delay;
+          transition-delay: $delay;
+}
+
 
 
 /*                      ANIMATIONS

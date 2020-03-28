@@ -4,37 +4,17 @@
 /*                      COLORS
 ------------------------------------------------------------------------- */
 
-$color-main1: #5B7F3C;
-$color-main2: #6E5773;
-$color-main3: #AF5B46;
-$color-main4: #375879;
-$color-main5: #9E8928;
-
 :root {
 
   --color-white:    #FFFFFF;
   --color-dark:     #000000;
   --color-gray:     #666666;
 
-  --color-main1:    #{ $color-main1 };
-  --color-main1-lt: #{ lighten( $color-main1,  7% ) };
-  --color-main1-dk: #{  darken( $color-main1, 14% ) };
-
-  --color-main2:    #{ $color-main2 };
-  --color-main2-lt: #{ lighten( $color-main2,  7% ) };
-  --color-main2-dk: #{  darken( $color-main2, 14% ) };
-
-  --color-main3:    #{ $color-main3 };
-  --color-main3-lt: #{ lighten( $color-main3,  7% ) };
-  --color-main3-dk: #{  darken( $color-main3, 14% ) };
-
-  --color-main4:    #{ $color-main4 };
-  --color-main4-lt: #{ lighten( $color-main4,  7%  ) };
-  --color-main4-dk: #{  darken( $color-main4, 14% ) };
-
-  --color-main5:    #{ $color-main5 };
-  --color-main5-lt: #{ lighten( $color-main5,  7% ) };
-  --color-main5-dk: #{  darken( $color-main5, 14% ) };
+  --color-main1:    #5B7F3C;
+  --color-main2:    #6E5773;
+  --color-main3:    #AF5B46;
+  --color-main4:    #375879;
+  --color-main5:    #9E8928;
 
 }
 

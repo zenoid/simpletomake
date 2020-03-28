@@ -15,7 +15,7 @@ principles:
 ingredients:
   - [ "Alcool etilico al 96%", 130, "gr", "Chiamato anche <strong>Etanolo</strong>. Da non confondersi con l'alcool denaturato (quello rosa) che può irritare la pelle." ]
   - [ "Acqua ossigenata al 3%", 12, "gr", "Chiamato anche <strong>Perossido di idrogeno</strong>. La concentrazione può essere a 10 o 20 volumi, ovvero dal 3 al 6%." ]
-  - [ "Glicerolo", 4, "gr", "Chiamato anche <strong>Glicerina</strong>. Si trova in farmacia o erboristeria. Viene usato anche per le sigarette elettroniche." ]
+  - [ "Glicerolo", 4, "gr", "Chiamato anche <strong>Glicerina</strong>.  Si trova in farmacia o erboristeria. Viene usato anche per le sigarette elettroniche." ]
   - [ "Acqua", 22, "gr", "Distillata, oppure bollita e raffreddata." ]
 
 tools:

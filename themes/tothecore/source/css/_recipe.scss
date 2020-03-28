@@ -5,15 +5,24 @@
 ------------------------------------------------------------------------- */
 
 article {
-  background: var( --color-main1 );
-  background-image: linear-gradient(
-    var( --color-main1-lt ),
-    var( --color-main1-dk ) );
   color: var( --color-white );
+  background-color: var( --color-main1 );
+  @include transition( background-color, $transition-scroll );
   background-attachment: fixed;
+  background-image: url( '../images/tothecore-logobg.svg' );
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left 50% top 50%;
+}
+
+@for $i from 1 through 5 {
+  .section#{$i} {
+    background-color: var( --color-main#{$i} );
+  }
 }
 
 section {
+  background: none !important;
   max-width: $layoutwidth;
   min-height: 100vh;
   margin: auto;

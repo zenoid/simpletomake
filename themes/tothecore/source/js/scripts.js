@@ -18,69 +18,70 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   */
 
+  var article = document.querySelector( 'article' ),
+    sections = document.querySelectorAll( 'section' ),
+    aItems = document.querySelectorAll( 'nav a' ),
+    winh = window.innerHeight,
+    scrolling;
+
   function enableRecipeNav()
   {
-    var aItems = document.querySelectorAll( 'nav a' ),
-      liItems = document.querySelectorAll( 'nav li' );
     for ( var i = 0; i < aItems.length; i++ ){
       aItems[ i ].addEventListener( 'click', function( e ){
         e.preventDefault();
-        window.location.replace( '#' + e.target.text );
-        window.history.replaceState( null, null, '' );
-        for ( var j = 0; j < liItems.length; j++ ){
-          liItems[ j ].classList.remove( 'selected' );
-        }
-        this.parentNode.classList.add( 'selected' );
+        setRecipeNav( +this.parentNode.dataset.num );
+        clearInterval( scrolling );
+        scrolling = setTimeout( function(){ clearInterval( scrolling ); scrolling = null; }, 1000 );
+        document.getElementById( this.text ).scrollIntoView({ behavior: 'smooth' });
+        window.history.replaceState( null, null, '#' + this.text );
       });
     }
   }
 
-  if ( document.querySelector( 'nav' ) ) enableRecipeNav();
+  function setRecipeNav( num )
+  {
+    var liItems = document.querySelectorAll( 'nav li' );
+    for ( var i = 0; i < liItems.length; i++ ){
+      liItems[ i ].classList.remove( 'selected' );
+    }
+    liItems[ num-1 ].classList.add( 'selected' );
+  }
 
-  /*
-
-      Recipe sections colors
-
-  */
-
-  var header,
-    footer,
-    screens,
-    scroller,
-    wh,
-    yPos = [];
+  function getSection()
+  {
+    var i = 0;
+    while ( ( i < 5 ) && ( document.documentElement.scrollTop > sections[ i ].offsetTop - winh/2 ) ) {
+      i++;
+    }
+    return i;
+  }
 
   function checkScroll()
   {
-    // var scr = scroller.scrollTop,
-    //   i = 0,
-    //   headerStyle = '';
-    // while ( scr > yPos[ i ]-48 ) {
-    //   i++;
-    // }
-    // if ( screens[ i-1 ].dataset.color ) {
-    //   headerStyle = '--color-nav: #' + screens[ i-1 ].dataset.color + ';';
-    // }
-    // if ( screens[ i-1 ].dataset.lightmenu ) {
-    //   headerStyle += '--color-navlabels: #FFF;';
-    // }
-    // header.style = headerStyle;
+    var s = getSection(),
+      hash = location.hash;
+    article.className = 'section' + s;
+    if ( !scrolling && hash != '#' + aItems[ s-1 ].text ) {
+      window.history.replaceState( null, null, '#' + aItems[ s-1 ].text );
+      setRecipeNav( s );
+    }
   };
 
-  function calcHeights()
+  function calcHeight()
   {
-    // wh = window.innerHeight;
-    // for ( var s = 0; s < screens.length; s++ ) {
-    //   yPos[ s ] = screens[ s ].offsetTop;
-    // }
-    // yPos[ 0 ] = 0;
-    // checkScroll();
+    winh = window.innerHeight;
+    checkScroll();
   }
 
-  if ( document.querySelector( 'section' ) ) {
-    window.onresize = calcHeights;
+  if ( sections ) {
+    window.onresize = calcHeight;
     window.onscroll = checkScroll;
-    calcHeights();
+    enableRecipeNav();
+    if ( location.hash ) {
+      var s = getSection();
+      article.className = 'section' + s;
+      setRecipeNav( s );
+    }
   }
 
 });
