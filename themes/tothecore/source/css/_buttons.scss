@@ -6,22 +6,39 @@
 
 .btn {
   @include resetButton;
+  border: none;
   display: inline-block;
   cursor: pointer;
   font-family: $font-mono;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  line-height: 2.5rem;
+  padding: 0 1rem;
+  line-height: $btn-height;
   text-align: center;
   color: var( --color-white );
-  background-color: rgba( 255, 255, 255, 0.1 );
-  @include transition( color, $transition-hover );
+  background-color: rgba( 0, 0, 0, 0.1 );
+  @include transition( all, $transition-hover );
+
+  &.hidden {
+    opacity: 0;
+    cursor: auto;
+  }
+}
+
+.btn-main {
+  background-color: var( --color-dark );
+  color: var( --color-white );
 }
 
 body:not(.touch) {
 
   .btn:hover {
+    background-color: rgba( 255, 255, 255, 0.1 );
+  }
+
+  .btn-main:hover {
+    color: var( --color-white );
   }
 }
 

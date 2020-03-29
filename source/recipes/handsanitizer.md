@@ -13,8 +13,8 @@ principles:
   - "L'alcool è efficace nell’eliminare virus e batteri, soprattutto se utilizzato con una <strong>concentrazione del 60-80%</strong> in volume anziché puro."
 
 ingredients:
-  - [ "Alcool etilico al 96%", 130, "gr", "Chiamato anche <strong>Etanolo</strong>. Da non confondersi con l'alcool denaturato (quello rosa) che può irritare la pelle." ]
-  - [ "Acqua ossigenata al 3%", 12, "gr", "Chiamato anche <strong>Perossido di idrogeno</strong>. La concentrazione può essere a 10 o 20 volumi, ovvero dal 3 al 6%." ]
+  - [ "Alcool etilico", 130, "gr", "Chiamato anche <strong>Etanolo</strong>. La concentrazione deve essere al 96%. Da non confondersi con l'alcool denaturato (quello rosa) che può irritare la pelle." ]
+  - [ "Acqua ossigenata", 12, "gr", "Chiamato anche <strong>Perossido di idrogeno</strong>. La concentrazione può essere a 10 o 20 volumi, ovvero dal 3 al 6%." ]
   - [ "Glicerolo", 4, "gr", "Chiamato anche <strong>Glicerina</strong>.  Si trova in farmacia o erboristeria. Viene usato anche per le sigarette elettroniche." ]
   - [ "Acqua", 22, "gr", "Distillata, oppure bollita e raffreddata." ]
 
@@ -24,10 +24,10 @@ tools:
   - [ "Una bilancia di precisione" ]
 
 directions:
-  - [ "Versare <strong>130 gr</strong> di alcool etilico in un contenitore pulito" ]
-  - [ "Aggiungere <strong>12 gr</strong> di acqua ossigenata", "Questo permette di eliminare eventuali spore batteriche presenti nel contenitore e di conservare il disinfettante nel tempo." ]
-  - [ "Aggiungere <strong>4 gr</strong> di glicerolo", "Non è un ingrediente essenziale, ma servirà a reidratare la pelle e a rendere più densa la miscela." ]
-  - [ "Aggiungere <strong>22 gr</strong> di acqua distillata (o bollita e portata a temperatura ambiente)", "In questo modo si permette all’alcool di raggiungere la concentrazione ottimale." ]
+  - [ "Versare <strong>130 gr</strong> di <span class='ingredient'>alcool etilico</span> in un contenitore pulito" ]
+  - [ "Aggiungere <strong>12 gr</strong> di <span class='ingredient'>acqua ossigenata</span>", "Questo permette di eliminare eventuali spore batteriche presenti nel contenitore e di conservare il disinfettante nel tempo." ]
+  - [ "Aggiungere <strong>4 gr</strong> di <span class='ingredient'>glicerolo</span>", "Non è un ingrediente essenziale, ma servirà a reidratare la pelle e a rendere più densa la miscela." ]
+  - [ "Aggiungere <strong>22 gr</strong> di <span class='ingredient'>acqua</span> distillata (o bollita e portata a temperatura ambiente)", "In questo modo si permette all’alcool di raggiungere la concentrazione ottimale." ]
   - [ "Lasciar riposare per <strong>72 ore</strong> (3 giorni)", "L'acqua ossigenata avrà il tempo di eliminare eventuali spore presenti nel contenitore." ]
 
 usage:

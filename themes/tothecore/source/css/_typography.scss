@@ -97,17 +97,34 @@ h2 {
 
 h3 {
   font-size: 2rem;
+  color: var( --color-gray );
 }
 
 h4 {
   font-size: 1.5rem;
   line-height: 1.2;
   font-weight: $fontweight-bold;
+}
 
-  .quantity {
-    font-family: $font-mono;
-    font-weight: $fontweight-normal;
-  }
+
+
+/*                      LABELS
+------------------------------------------------------------------------- */
+
+.ingredient,
+.quantity {
+  display: inline-block;
+  padding: 0.3em 0.6em;
+  white-space: nowrap;
+  font-weight: $fontweight-normal;
+}
+
+.ingredient {
+  background-color: var( --color-ingredient );
+}
+
+.quantity {
+  font-family: $font-mono;
 }
 
 

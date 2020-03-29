@@ -28,7 +28,7 @@
       <% for ( i = 0; i < page.ingredients.length; i++ ) { %>
         <div>
           <div class="card">
-            <h4><%- page.ingredients[ i ][ 0 ] %><br/><span class="quantity"><%- page.ingredients[ i ][ 1 ] %> <%- page.ingredients[ i ][ 2 ] %></span></h4>
+            <h4><span class="ingredient"><%- page.ingredients[ i ][ 0 ] %></span><br/><span class="quantity"><%- page.ingredients[ i ][ 1 ] %> <%- page.ingredients[ i ][ 2 ] %></span></h4>
             <% if ( page.ingredients[ i ][ 3 ] ) { %><p class="note"><%- page.ingredients[ i ][ 3 ] %></p><% } %>
           </div>
         </div>
@@ -88,16 +88,26 @@
 
     </section>
 
+    <div class="article-nav">
+      <div class="article-actions">
+      </div>
+      <button class="btn btn-main"><span>Continua</span></button>
+    </div>
+
   </article>
 
   <footer>
 
-    <h3>Fonti</h3>
+    <div class="content">
 
-    <ul>
-    <% for ( i = 0; i < page.sources.length; i++ ) { %>
-      <li><a href="<%- page.sources[ i ][ 1 ] %>" target="_blank"><%- page.sources[ i ][ 0 ] %></a></li>
-    <% } %>
-    </ul>
+      <h3>Fonti</h3>
+
+      <ul>
+      <% for ( i = 0; i < page.sources.length; i++ ) { %>
+        <li><a href="<%- page.sources[ i ][ 1 ] %>" target="_blank"><%- page.sources[ i ][ 0 ] %></a></li>
+      <% } %>
+      </ul>
+
+    </div>
 
   </footer>

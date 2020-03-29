@@ -1,7 +1,7 @@
 
 
 
-/*                      RECIPE
+/*                      RECIPE CONTENT
 ------------------------------------------------------------------------- */
 
 article {
@@ -63,9 +63,28 @@ section {
     top: 0.25rem;
     left: 0.5rem;
     font-size: 1.25rem;
-    font-weight: $fontweight-bold;
-    opacity: 0.2;
+    font-family: $font-mono;
+    opacity: 0.25;
   }
+}
+
+
+
+/*                      RECIPE CONTROLS
+------------------------------------------------------------------------- */
+
+.article-nav {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $btn-height;
+  z-index: 1;
+  @include flex;
+}
+
+.article-actions {
+  @include flexGrow( 1 );
 }
 
 

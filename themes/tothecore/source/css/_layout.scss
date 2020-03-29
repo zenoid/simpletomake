@@ -32,3 +32,15 @@ body {
 }
 
 
+
+/*                      MAIN CONTAINERS
+------------------------------------------------------------------------- */
+
+.content {
+  max-width: $layoutwidth;
+  margin: auto;
+  text-align: left;
+  padding: 4rem 1rem;
+}
+
+

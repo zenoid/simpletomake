@@ -4,17 +4,26 @@
 /*                      COLORS
 ------------------------------------------------------------------------- */
 
+$color-ingredient:    #6E5773;
+$color-ingredient-lt: lighten( $color-ingredient, 20% );
+
 :root {
 
-  --color-white:    #FFFFFF;
-  --color-dark:     #000000;
-  --color-gray:     #666666;
+  --color-white:      #FFFFFF;
+  --color-dark:       #000000;
+  --color-gray:       #666666;
 
-  --color-main1:    #5B7F3C;
-  --color-main2:    #6E5773;
-  --color-main3:    #AF5B46;
-  --color-main4:    #375879;
-  --color-main5:    #9E8928;
+  --color-main1:      #5B7F3C;
+  --color-main2:      #{$color-ingredient};
+  --color-main3:      #AF5B46;
+  --color-main4:      #375879;
+  --color-main5:      #9E8928;
+
+  --color-ingredient: rgba(
+    #{red($color-ingredient-lt)},
+    #{green($color-ingredient-lt)},
+    #{blue($color-ingredient-lt)},
+    0.3 );
 
 }
 
@@ -68,7 +77,9 @@ $size-M:  55rem; // 880px
 $size-S:  40rem; // 640px
 $size-XS: 30rem; // 480px
 
-$layoutwidth: 75rem;
+$layoutwidth: 75rem; // 1200px
+
+$btn-height: 2.5rem; // 40px
 
 $border: 2px;
 
