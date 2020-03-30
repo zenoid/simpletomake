@@ -115,4 +115,88 @@ document.addEventListener( 'DOMContentLoaded', function() {
     }
   }
 
+  /*
+
+      Recipe calculation
+
+  */
+
+  var weightRatio,
+    qtyLabels,
+    qtyValue,
+    qtyRemoveBtn,
+    qtyAddBtn;
+
+  function setupQty()
+  {
+    weightRatio = recipeWeight / recipeVolume;
+    qtyLabels = document.querySelectorAll( '[data-qty]' );
+    qtyValue = document.getElementById( 'qtyValue' );
+    qtyRemoveBtn = document.getElementById( 'qtyRemove' );
+    qtyAddBtn = document.getElementById( 'qtyAdd' );
+    calcQty();
+    qtyRemoveBtn.addEventListener( 'click', function(){
+      recipeVolume = Math.max( 100, recipeVolume-100 );
+      calcQty();
+    });
+    qtyAddBtn.addEventListener( 'click', function(){
+      recipeVolume = Math.min( 10000, recipeVolume+100 );
+      calcQty();
+    });
+  }
+
+  function calcQty()
+  {
+    var i, qty, f;
+    recipeWeight = recipeVolume * weightRatio;
+    qtyValue.textContent = recipeVolume + ' ml';
+    for ( i in ingredients ) {
+      qty = Math.round( recipeWeight * ingredients[ i ].ratio / 100 );
+      if ( String( qty ).length > 2 ) {
+        f = Math.pow( 10, String( qty ).length - 2 );
+        qty = Math.round( qty / f ) * f;
+      }
+      ingredients[ i ].qty = qty;
+    }
+    for ( i = 0; i < qtyLabels.length; i++ ) {
+      if ( ingredients[ qtyLabels[ i ].dataset.qty ] ) {
+        qtyLabels[ i ].textContent = ingredients[ qtyLabels[ i ].dataset.qty ].qty;
+      }
+      if ( qtyLabels[ i ].dataset.qty === 'volume' ) {
+        qtyLabels[ i ].textContent = recipeVolume;
+      }
+    }
+  }
+
+  if ( ingredients ) {
+    setupQty();
+  }
+
+  /*
+
+      Recipe: exclude ingredients
+
+  */
+
+  function enableIngrExclude()
+  {
+    var btns = document.querySelectorAll( '.card-header .btn' );
+    for ( var i = 0; i < btns.length; i++ ) {
+      btns[ i ].addEventListener( 'click', function(){
+        var c = this.parentNode.parentNode;
+        if ( c.classList.contains( 'card-disabled' ) ) {
+          c.classList.remove( 'card-disabled' );
+        } else {
+          c.classList.add( 'card-disabled' );
+          // ingredients.glic.ratio = 0;
+          calcQty();
+        }
+      });
+    }
+  }
+
+  if ( document.querySelectorAll( '.card-header .btn' ).length > 0 ) {
+    enableIngrExclude();
+  }
+
 });

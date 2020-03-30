@@ -6,7 +6,7 @@
 
     <section class="section1" id="principi">
 
-      <h1><span class="sub">Le 3 cose da sapere per fare un</span><br/><%- page.title.toLowerCase() %></h1>
+      <h1><div class="sub"><span>Le 3 cose da sapere per fare un</span></div><%- page.title.toLowerCase() %></h1>
 
       <div class="card-list">
       <% for ( i = 0; i < page.principles.length; i++ ) { %>
@@ -16,23 +16,67 @@
           </div>
         </div>
       <% } %>
+      <% if ( page.timeToMake ) { %>
+        <div>
+          <div class="card-time">
+            <p>Si può fare in<br/><strong><%- page.timeToMake %></strong></p>
+          </div>
+        </div>
+      <% } %>
+      <% if ( page.timeToUse ) { %>
+        <div>
+          <div class="card-time">
+            <p>Si può usare dopo<br/><strong><%- page.timeToUse %></strong></p>
+          </div>
+        </div>
+      <% } %>
       </div>
 
     </section>
 
     <section class="section2" id="ingredienti">
 
-      <h2>Ingredienti</h2>
+      <h2>Ingredienti
+        <div class="sub">
+          <span><%- page.recipeIntro[ 0 ] %></span>
+          <span class="quantity">
+            <button class="btn" id="qtyRemove">-</button><span id="qtyValue"><%- page.recipeIntro[ 1 ] %> <%- page.recipeIntro[ 2 ] %></span><button class="btn" id="qtyAdd">+</button>
+          </span>
+          <span><%- page.recipeIntro[ 3 ] %></span>
+        </div>
+      </h2>
 
       <div class="card-list">
-      <% for ( i = 0; i < page.ingredients.length; i++ ) { %>
+      <%
+
+        var ingr = {};
+
+        for ( i = 0; i < page.ingredients.length; i++ ) {
+
+          ingr[ page.ingredients[ i ][ 0 ] ] = { ratio: +page.ingredients[ i ][ 1 ] };
+
+      %>
         <div>
           <div class="card">
-            <h4><span class="ingredient"><%- page.ingredients[ i ][ 0 ] %></span><br/><span class="quantity"><%- page.ingredients[ i ][ 1 ] %> <%- page.ingredients[ i ][ 2 ] %></span></h4>
-            <% if ( page.ingredients[ i ][ 3 ] ) { %><p class="note"><%- page.ingredients[ i ][ 3 ] %></p><% } %>
+            <% if ( page.ingredients[ i ][ 6 ] === 'optional' ) { %>
+              <div class="card-header">
+                <p>opzionale</p>
+                <button class="btn">Escludi</button>
+              </div>
+            <% } %>
+            <h4><span class="ingredient"><%- page.ingredients[ i ][ 2 ] %></span><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ][ 0 ] %>"><%- page.ingredients[ i ][ 3 ] %></span> <%- page.ingredients[ i ][ 4 ] %></span></h4>
+            <% if ( page.ingredients[ i ][ 5 ] ) { %><p class="note"><%- page.ingredients[ i ][ 5 ] %></p><% } %>
           </div>
         </div>
       <% } %>
+      <% if ( page.recipeDisclaimer ) { %>
+        <div>
+          <div class="card-empty">
+            <p><%- page.recipeDisclaimer %></p>
+          </div>
+        </div>
+      <% } %>
+        <script>var recipeVolume=<%- page.recipeVolume %>;recipeWeight=<%- page.recipeWeight %>;ingredients=<%- JSON.stringify( ingr ) %></script>
       </div>
 
     </section>

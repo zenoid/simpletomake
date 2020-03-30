@@ -60,7 +60,7 @@
 
     <section class="section1" id="principi">
 
-      <h1><span class="sub">Le 3 cose da sapere per fare un</span><br/>disinfettante per mani</h1>
+      <h1><div class="sub"><span>Le 3 cose da sapere per fare un</span></div>disinfettante per mani</h1>
 
       <div class="card-list">
       
@@ -82,44 +82,83 @@
           </div>
         </div>
       
+      
+        <div>
+          <div class="card-time">
+            <p>Si può fare in<br/><strong>5 minuti</strong></p>
+          </div>
+        </div>
+      
+      
+        <div>
+          <div class="card-time">
+            <p>Si può usare dopo<br/><strong>72 ore</strong></p>
+          </div>
+        </div>
+      
       </div>
 
     </section>
 
     <section class="section2" id="ingredienti">
 
-      <h2>Ingredienti</h2>
+      <h2>Ingredienti
+        <div class="sub">
+          <span>Cosa serve per fare circa</span>
+          <span class="quantity">
+            <button class="btn" id="qtyRemove">-</button><span id="qtyValue">200 ml</span><button class="btn" id="qtyAdd">+</button>
+          </span>
+          <span>di disinfettante per mani</span>
+        </div>
+      </h2>
 
       <div class="card-list">
       
         <div>
           <div class="card">
-            <h4>Alcool etilico al 96%<br/><span class="quantity">130 gr</span></h4>
-            <p class="note">Chiamato anche <strong>Etanolo</strong>. Da non confondersi con l'alcool denaturato (quello rosa) che può irritare la pelle.</p>
+            
+            <h4><span class="ingredient">Alcool etilico</span><br/><span class="quantity"><span data-qty="alcol">130</span> gr</span></h4>
+            <p class="note">Chiamato anche <strong>Etanolo</strong>. La concentrazione deve essere al 96%. Da non confondersi con l'alcool denaturato (quello rosa) che può irritare la pelle.</p>
           </div>
         </div>
       
         <div>
           <div class="card">
-            <h4>Acqua ossigenata al 3%<br/><span class="quantity">12 gr</span></h4>
+            
+            <h4><span class="ingredient">Acqua ossigenata</span><br/><span class="quantity"><span data-qty="h2o2">12</span> gr</span></h4>
             <p class="note">Chiamato anche <strong>Perossido di idrogeno</strong>. La concentrazione può essere a 10 o 20 volumi, ovvero dal 3 al 6%.</p>
           </div>
         </div>
       
         <div>
           <div class="card">
-            <h4>Glicerolo<br/><span class="quantity">4 gr</span></h4>
+            
+              <div class="card-header">
+                <p>opzionale</p>
+                <button class="btn">Escludi</button>
+              </div>
+            
+            <h4><span class="ingredient">Glicerolo</span><br/><span class="quantity"><span data-qty="glic">4</span> gr</span></h4>
             <p class="note">Chiamato anche <strong>Glicerina</strong>.  Si trova in farmacia o erboristeria. Viene usato anche per le sigarette elettroniche.</p>
           </div>
         </div>
       
         <div>
           <div class="card">
-            <h4>Acqua<br/><span class="quantity">22 gr</span></h4>
+            
+            <h4><span class="ingredient">Acqua</span><br/><span class="quantity"><span data-qty="aqua">22</span> gr</span></h4>
             <p class="note">Distillata, oppure bollita e raffreddata.</p>
           </div>
         </div>
       
+      
+        <div>
+          <div class="card-empty">
+            <p>Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale</p>
+          </div>
+        </div>
+      
+        <script>var recipeVolume=200;recipeWeight=168.51;ingredients={"alcol":{"ratio":77.54},"h2o2":{"ratio":7.18},"glic":{"ratio":2.17},"aqua":{"ratio":13.11}}</script>
       </div>
 
     </section>
@@ -132,7 +171,7 @@
       
         <div>
           <div class="card">
-            <h4>Un contenitore da almeno 200ml</h4>
+            <h4>Un contenitore da almeno <span data-qty='volume'>200</span> ml</h4>
             <p class="note">Si può riciclare una bottiglietta o un flacone spray, di plastica o di vetro.</p>
           </div>
         </div>
@@ -163,28 +202,28 @@
       
         <div>
           <div class="card">
-            <p>Versare <strong>130 gr</strong> di alcool etilico in un contenitore pulito</p>
+            <p>Versare <strong><span data-qty='alcol'>130</span> gr</strong> di <span class='ingredient'>alcool etilico</span> in un contenitore pulito</p>
             
           </div>
         </div>
       
         <div>
           <div class="card">
-            <p>Aggiungere <strong>12 gr</strong> di acqua ossigenata</p>
+            <p>Aggiungere <strong><span data-qty='h2o2'>12</span> gr</strong> di <span class='ingredient'>acqua ossigenata</span></p>
             <p class="note">Questo permette di eliminare eventuali spore batteriche presenti nel contenitore e di conservare il disinfettante nel tempo.</p>
           </div>
         </div>
       
         <div>
           <div class="card">
-            <p>Aggiungere <strong>4 gr</strong> di glicerolo</p>
+            <p>Aggiungere <strong><span data-qty='glic'>4</span> gr</strong> di <span class='ingredient'>glicerolo</span></p>
             <p class="note">Non è un ingrediente essenziale, ma servirà a reidratare la pelle e a rendere più densa la miscela.</p>
           </div>
         </div>
       
         <div>
           <div class="card">
-            <p>Aggiungere <strong>22 gr</strong> di acqua distillata (o bollita e portata a temperatura ambiente)</p>
+            <p>Aggiungere <strong><span data-qty='aqua'>22</span> gr</strong> di <span class='ingredient'>acqua</span> distillata (o bollita e portata a temperatura ambiente)</p>
             <p class="note">In questo modo si permette all’alcool di raggiungere la concentrazione ottimale.</p>
           </div>
         </div>
@@ -231,19 +270,29 @@
 
     </section>
 
+    <div class="article-nav">
+      <div class="article-actions">
+      </div>
+      <button class="btn btn-main"><span>Continua</span></button>
+    </div>
+
   </article>
 
   <footer>
 
-    <h3>Fonti</h3>
+    <div class="content">
 
-    <ul>
-    
-      <li><a href="https://www.who.int/gpsc/5may/Guide_to_Local_Production.pdf" target="_blank">World Health Organization: guide to local production [ PDF ]</a></li>
-    
-      <li><a href="http://bressanini-lescienze.blogautore.espresso.repubblica.it/2020/02/24/amuchina-fai-da-te-e-isteria-collettiva/" target="_blank">Dario Bressanini: Amuchina fai da te</a></li>
-    
-    </ul>
+      <h3>Fonti</h3>
+
+      <ul>
+      
+        <li><a href="https://www.who.int/gpsc/5may/Guide_to_Local_Production.pdf" target="_blank">World Health Organization: guide to local production [ PDF ]</a></li>
+      
+        <li><a href="http://bressanini-lescienze.blogautore.espresso.repubblica.it/2020/02/24/amuchina-fai-da-te-e-isteria-collettiva/" target="_blank">Dario Bressanini: Amuchina fai da te</a></li>
+      
+      </ul>
+
+    </div>
 
   </footer>
 
