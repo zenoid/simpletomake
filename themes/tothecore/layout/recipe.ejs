@@ -40,7 +40,7 @@
         <div class="sub">
           <span><%- page.recipeIntro[ 0 ] %></span>
           <span class="quantity">
-            <button class="btn" id="qtyRemove">-</button><span id="qtyValue"><%- page.recipeIntro[ 1 ] %> <%- page.recipeIntro[ 2 ] %></span><button class="btn" id="qtyAdd">+</button>
+            <button class="btn" id="qtyRemove"><span>–</span></button><span id="qtyValue"><%- page.recipeIntro[ 1 ] %> <%- page.recipeIntro[ 2 ] %></span><button class="btn" id="qtyAdd"><span>+</span></button>
           </span>
           <span><%- page.recipeIntro[ 3 ] %></span>
         </div>
@@ -58,12 +58,6 @@
       %>
         <div>
           <div class="card">
-            <% if ( page.ingredients[ i ][ 6 ] === 'optional' ) { %>
-              <div class="card-header">
-                <p>opzionale</p>
-                <button class="btn">Escludi</button>
-              </div>
-            <% } %>
             <h4><span class="ingredient"><%- page.ingredients[ i ][ 2 ] %></span><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ][ 0 ] %>"><%- page.ingredients[ i ][ 3 ] %></span> <%- page.ingredients[ i ][ 4 ] %></span></h4>
             <% if ( page.ingredients[ i ][ 5 ] ) { %><p class="note"><%- page.ingredients[ i ][ 5 ] %></p><% } %>
           </div>
@@ -132,10 +126,14 @@
 
     </section>
 
-    <div class="article-nav">
-      <div class="article-actions">
+    <div class="article-actions">
+      <div class="article-actions-main">
+        <a href="/" class="btn iconbg icon-list">Tutte le ricette</a>
       </div>
-      <button class="btn btn-main"><span>Continua</span></button>
+      <div class="article-actions-nav">
+        <button class="btn btn-main hidden" id="btn-prev"><span>&lt;</span></button>
+        <button class="btn btn-main hidden" id="btn-next"><span>Continua &gt;</span></button>
+      </div>
     </div>
 
   </article>
@@ -148,7 +146,7 @@
 
       <ul>
       <% for ( i = 0; i < page.sources.length; i++ ) { %>
-        <li><a href="<%- page.sources[ i ][ 1 ] %>" target="_blank"><%- page.sources[ i ][ 0 ] %></a></li>
+        <li><a href="<%- page.sources[ i ][ 1 ] %>" target="_blank" class="btn-link iconbg icon-link"><%- page.sources[ i ][ 0 ] %></a></li>
       <% } %>
       </ul>
 

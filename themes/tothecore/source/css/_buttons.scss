@@ -16,6 +16,7 @@
   padding: 0 1rem;
   line-height: $btn-height;
   text-align: center;
+  overflow: hidden;
   color: var( --color-white );
   background-color: rgba( 0, 0, 0, 0.1 );
   @include transition( all, $transition-hover );
@@ -31,6 +32,30 @@
   color: var( --color-white );
 }
 
+.quantity {
+  .btn {
+    width: $btn-height;
+    height: $btn-height;
+    position: relative;
+
+    span {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      @include translate( -50%, -50% );
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: $btn-height - 1rem;
+  @include transition( all, $transition-hover );
+}
+
 body:not(.touch) {
 
   .btn:hover {
@@ -40,6 +65,30 @@ body:not(.touch) {
   .btn-main:hover {
     color: var( --color-white );
   }
+
+  .btn-link:hover {
+    background-color: rgba( 0, 0, 0, 0.1 );
+  }
+}
+
+
+
+/*                      ICON BUTTONS
+------------------------------------------------------------------------- */
+
+.iconbg {
+  padding-left: 2.5rem;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: left 0.5rem top 0.5rem;
+}
+
+.icon-list {
+  background-image: url( '../images/icon-list.svg' );
+}
+
+.icon-link {
+  background-image: url( '../images/icon-arrowright.svg' );
 }
 
 

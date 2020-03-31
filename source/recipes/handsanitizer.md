@@ -23,7 +23,7 @@ recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> s
 ingredients:
   - [ alcol, 77.54, "Alcool etilico", 130, "gr", "Chiamato anche <strong>Etanolo</strong>. La concentrazione deve essere al 96%. Da non confondersi con l'alcool denaturato (quello rosa) che può irritare la pelle." ]
   - [ h2o2, 7.18, "Acqua ossigenata", 12, "gr", "Chiamato anche <strong>Perossido di idrogeno</strong>. La concentrazione può essere a 10 o 20 volumi, ovvero dal 3 al 6%." ]
-  - [ glic, 2.17, "Glicerolo", 4, "gr", "Chiamato anche <strong>Glicerina</strong>.  Si trova in farmacia o erboristeria. Viene usato anche per le sigarette elettroniche.", optional ]
+  - [ glic, 2.17, "Glicerolo", 4, "gr", "Chiamato anche <strong>Glicerina</strong>.  Si trova in farmacia o erboristeria. Viene usato anche per le sigarette elettroniche." ]
   - [ aqua, 13.11, "Acqua", 22, "gr", "Distillata, oppure bollita e raffreddata." ]
 
 tools:

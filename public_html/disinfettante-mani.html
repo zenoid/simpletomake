@@ -43,7 +43,7 @@
 
   <nav>
     <ul>
-      <li class="selected" data-num="1"><a href="#principi" class="btn">principi</a></li>
+      <li data-num="1"><a href="#principi" class="btn">principi</a></li>
       <li data-num="2"><a href="#ingredienti" class="btn">ingredienti</a></li>
       <li data-num="3"><a href="#attrezzatura" class="btn">attrezzatura</a></li>
       <li data-num="4"><a href="#procedimento" class="btn">procedimento</a></li>
@@ -106,7 +106,7 @@
         <div class="sub">
           <span>Cosa serve per fare circa</span>
           <span class="quantity">
-            <button class="btn" id="qtyRemove">-</button><span id="qtyValue">200 ml</span><button class="btn" id="qtyAdd">+</button>
+            <button class="btn" id="qtyRemove"><span>–</span></button><span id="qtyValue">200 ml</span><button class="btn" id="qtyAdd"><span>+</span></button>
           </span>
           <span>di disinfettante per mani</span>
         </div>
@@ -116,7 +116,6 @@
       
         <div>
           <div class="card">
-            
             <h4><span class="ingredient">Alcool etilico</span><br/><span class="quantity"><span data-qty="alcol">130</span> gr</span></h4>
             <p class="note">Chiamato anche <strong>Etanolo</strong>. La concentrazione deve essere al 96%. Da non confondersi con l'alcool denaturato (quello rosa) che può irritare la pelle.</p>
           </div>
@@ -124,7 +123,6 @@
       
         <div>
           <div class="card">
-            
             <h4><span class="ingredient">Acqua ossigenata</span><br/><span class="quantity"><span data-qty="h2o2">12</span> gr</span></h4>
             <p class="note">Chiamato anche <strong>Perossido di idrogeno</strong>. La concentrazione può essere a 10 o 20 volumi, ovvero dal 3 al 6%.</p>
           </div>
@@ -132,12 +130,6 @@
       
         <div>
           <div class="card">
-            
-              <div class="card-header">
-                <p>opzionale</p>
-                <button class="btn">Escludi</button>
-              </div>
-            
             <h4><span class="ingredient">Glicerolo</span><br/><span class="quantity"><span data-qty="glic">4</span> gr</span></h4>
             <p class="note">Chiamato anche <strong>Glicerina</strong>.  Si trova in farmacia o erboristeria. Viene usato anche per le sigarette elettroniche.</p>
           </div>
@@ -145,7 +137,6 @@
       
         <div>
           <div class="card">
-            
             <h4><span class="ingredient">Acqua</span><br/><span class="quantity"><span data-qty="aqua">22</span> gr</span></h4>
             <p class="note">Distillata, oppure bollita e raffreddata.</p>
           </div>
@@ -270,10 +261,14 @@
 
     </section>
 
-    <div class="article-nav">
-      <div class="article-actions">
+    <div class="article-actions">
+      <div class="article-actions-main">
+        <a href="/" class="btn iconbg icon-list">Tutte le ricette</a>
       </div>
-      <button class="btn btn-main"><span>Continua</span></button>
+      <div class="article-actions-nav">
+        <button class="btn btn-main hidden" id="btn-prev"><span>&lt;</span></button>
+        <button class="btn btn-main hidden" id="btn-next"><span>Continua &gt;</span></button>
+      </div>
     </div>
 
   </article>
@@ -286,9 +281,9 @@
 
       <ul>
       
-        <li><a href="https://www.who.int/gpsc/5may/Guide_to_Local_Production.pdf" target="_blank">World Health Organization: guide to local production [ PDF ]</a></li>
+        <li><a href="https://www.who.int/gpsc/5may/Guide_to_Local_Production.pdf" target="_blank" class="btn-link iconbg icon-link">World Health Organization: guide to local production [ PDF ]</a></li>
       
-        <li><a href="http://bressanini-lescienze.blogautore.espresso.repubblica.it/2020/02/24/amuchina-fai-da-te-e-isteria-collettiva/" target="_blank">Dario Bressanini: Amuchina fai da te</a></li>
+        <li><a href="http://bressanini-lescienze.blogautore.espresso.repubblica.it/2020/02/24/amuchina-fai-da-te-e-isteria-collettiva/" target="_blank" class="btn-link iconbg icon-link">Dario Bressanini: Amuchina fai da te</a></li>
       
       </ul>
 

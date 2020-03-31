@@ -74,34 +74,6 @@ section {
   }
 }
 
-.card-header {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  @include flex;
-
-  p {
-    @include flexGrow( 1 );
-    font-family: $font-mono;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0 2rem;
-    line-height: 2rem;
-    color: var( --color-gray );
-  }
-
-  .btn {
-    line-height: 2rem;
-    color: var( --color-dark );
-  }
-}
-
-.card-disabled {
-  background-color: rgba( 255, 255, 255, 0.3 );
-}
-
 .card-empty {
   padding: 2rem;
 
@@ -111,8 +83,20 @@ section {
   }
 }
 
-.card-time p {
-  padding: 2rem 2rem 2rem 4rem;
+.card-time {
+  padding: 2rem 2rem 2rem 4.5rem;
+  background-image: url( '../images/icon-clock.svg' );
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  background-position: left 0.5rem top 50%;
+
+  p {
+    line-height: 1.2;
+  }
+
+  strong {
+    font-size: 1.25em;
+  }
 }
 
 
@@ -120,7 +104,7 @@ section {
 /*                      RECIPE CONTROLS
 ------------------------------------------------------------------------- */
 
-.article-nav {
+.article-actions {
   position: sticky;
   bottom: 0;
   left: 0;
@@ -128,9 +112,17 @@ section {
   height: $btn-height;
   z-index: 1;
   @include flex;
+
+  .btn + .btn {
+    margin-left: 2px;
+  }
+
+  & > div {
+    @include flex;
+  }
 }
 
-.article-actions {
+.article-actions-main {
   @include flexGrow( 1 );
 }
 
