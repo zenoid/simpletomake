@@ -16,7 +16,7 @@
   padding: 0 1rem;
   line-height: $btn-height;
   text-align: center;
-  overflow: hidden;
+  @include ellipsis;
   color: var( --color-white );
   background-color: rgba( 0, 0, 0, 0.1 );
   @include transition( all, $transition-hover );

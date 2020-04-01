@@ -13,6 +13,14 @@ article {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left 50% top 50%;
+
+  @media only screen and (max-width: $size-XS) {
+    padding-top: 0rem;
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    background-color: var( --color-main1 ) !important;
+  }
 }
 
 @for $i from 1 through 5 {
@@ -31,7 +39,27 @@ section {
 
   h1,
   h2 {
-    margin: 2rem 0 1.5rem;
+    padding: 2rem 0 1.5rem;
+  }
+
+  @media only screen and (max-width: $size-XS) {
+    padding-top: 0;
+    padding-bottom: 6rem;
+    min-height: 0;
+
+    h1,
+    h2 {
+      padding-top: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    padding: 0 0 4rem 0;
+
+    h1,
+    h2 {
+      padding: 1.5rem;
+    }
   }
 }
 
@@ -46,6 +74,10 @@ section {
 
   & > div {
     width: 33.33%;
+
+    @media only screen and (max-width: $size-S) {
+      width: 100%;
+    }
   }
 }
 
@@ -57,6 +89,28 @@ section {
   margin: 0 1px;
   position: relative;
   @include transition( background-color, $transition-hover );
+
+  @media only screen and (max-width: $size-M) {
+    padding: 1.5rem;
+  }
+
+  @media only screen and (max-width: $size-S) {
+    h4 {
+      position: relative;
+
+      .quantity {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    h4 .quantity {
+      position: static;
+    }
+  }
 }
 
 .card-list-ordered {
@@ -71,6 +125,10 @@ section {
     font-size: 1.25rem;
     font-family: $font-mono;
     opacity: 0.25;
+
+    @media only screen and (max-width: $size-M) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -84,7 +142,7 @@ section {
 }
 
 .card-time {
-  padding: 2rem 2rem 2rem 4.5rem;
+  padding: 2rem 0rem 2rem 4.5rem;
   background-image: url( '../images/icon-clock.svg' );
   background-repeat: no-repeat;
   background-size: 4rem;
@@ -96,6 +154,11 @@ section {
 
   strong {
     font-size: 1.25em;
+  }
+
+  @media only screen and (max-width: $size-S) {
+    padding: 0 0 0 4.5rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -116,14 +179,16 @@ section {
   .btn + .btn {
     margin-left: 2px;
   }
-
-  & > div {
-    @include flex;
-  }
 }
 
 .article-actions-main {
   @include flexGrow( 1 );
+  @include flex;
+  margin-right: 2px;
+}
+
+.article-actions-nav {
+  @include flex;
 }
 
 

@@ -10,6 +10,10 @@ header {
   right: 0;
   top: 0;
   z-index: 2;
+
+  @media only screen and (max-width: $size-XS) {
+    display: none;
+  }
 }
 
 
@@ -60,6 +64,7 @@ nav {
     display: block;
     border-top: 4px solid transparent;
     background-color: rgba( 255, 255, 255, 0.1 );
+    @include ellipsis;
   }
 }
 
