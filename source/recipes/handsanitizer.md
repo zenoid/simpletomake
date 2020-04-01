@@ -32,11 +32,11 @@ tools:
   - [ "Una bilancia di precisione" ]
 
 directions:
-  - [ "Versare <strong><span data-qty='alcol'>130</span> gr</strong> di <span class='ingredient'>alcool etilico</span> in un contenitore pulito" ]
-  - [ "Aggiungere <strong><span data-qty='h2o2'>12</span> gr</strong> di <span class='ingredient'>acqua ossigenata</span>", "Questo permette di eliminare eventuali spore batteriche presenti nel contenitore e di conservare il disinfettante nel tempo." ]
-  - [ "Aggiungere <strong><span data-qty='glic'>4</span> gr</strong> di <span class='ingredient'>glicerolo</span>", "Non è un ingrediente essenziale, ma servirà a reidratare la pelle e a rendere più densa la miscela." ]
-  - [ "Aggiungere <strong><span data-qty='aqua'>22</span> gr</strong> di <span class='ingredient'>acqua</span> distillata (o bollita e portata a temperatura ambiente)", "In questo modo si permette all’alcool di raggiungere la concentrazione ottimale." ]
-  - [ "Lasciar riposare per <strong>72 ore</strong> (3 giorni)", "L'acqua ossigenata avrà il tempo di eliminare eventuali spore presenti nel contenitore." ]
+  - [ "Versa <strong><span data-qty='alcol'>130</span> gr</strong> di <span class='ingredient'>alcool etilico</span> in un contenitore pulito" ]
+  - [ "Aggiungi <strong><span data-qty='h2o2'>12</span> gr</strong> di <span class='ingredient'>acqua ossigenata</span>", "Questo permette di eliminare eventuali spore batteriche presenti nel contenitore e di conservare il disinfettante nel tempo." ]
+  - [ "Aggiungi <strong><span data-qty='glic'>4</span> gr</strong> di <span class='ingredient'>glicerolo</span>", "Non è un ingrediente indispensabile, ma servirà a reidratare la pelle e a rendere più densa la miscela." ]
+  - [ "Aggiungi <strong><span data-qty='aqua'>22</span> gr</strong> di <span class='ingredient'>acqua</span> distillata (o bollita e portata a temperatura ambiente)", "In questo modo si permette all’alcool di raggiungere la concentrazione ottimale." ]
+  - [ "Mescola tutto e lascia riposare per <strong>72 ore</strong> (3 giorni)", "L'acqua ossigenata avrà il tempo di eliminare eventuali spore presenti nel contenitore." ]
 
 usage:
   - [ "Versare il liquido sulle mani, e strofinare finché non si asciuga" ]

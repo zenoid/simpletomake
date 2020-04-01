@@ -27,7 +27,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     winh = window.innerHeight,
     scrolling;
 
-  function navTo( el, hash )
+  function scrollToSection( el, hash )
   {
     clearInterval( scrolling );
     scrolling = setTimeout( function(){ clearInterval( scrolling ); scrolling = null; }, 1000 );
@@ -35,13 +35,18 @@ document.addEventListener( 'DOMContentLoaded', function() {
     window.history.replaceState( null, null, hash );
   }
 
+  function navAction( num )
+  {
+    setRecipeNav( num );
+    scrollToSection( document.getElementById( navItems[ num-1 ].text ), '#' + navItems[ num-1 ].text );
+  }
+
   function enableRecipeNav()
   {
     for ( var i = 0; i < navItems.length; i++ ){
       navItems[ i ].addEventListener( 'click', function( e ){
         e.preventDefault();
-        setRecipeNav( +this.parentNode.dataset.num );
-        navTo( document.getElementById( this.text ), '#' + this.text );
+        navAction( +this.parentNode.dataset.num );
       });
     }
   }
@@ -60,31 +65,37 @@ document.addEventListener( 'DOMContentLoaded', function() {
     }
   }
 
+  function nextBtnAction()
+  {
+    var s = getSection( +1 ),
+      el, hash;
+    if ( s.label ) {
+      setRecipeNav( s.num );
+      el = document.getElementById( s.label );
+      hash = '#' + s.label;
+    } else {
+      el = footer;
+      hash = ' ';
+    }
+    scrollToSection( el, hash );
+  }
+
+  function prevBtnAction()
+  {
+    var s = getSection( -1 ),
+      el, hash;
+    if ( s.label ) {
+      setRecipeNav( s.num );
+      el = document.getElementById( s.label );
+      hash = '#' + s.label;
+      scrollToSection( el, hash );
+    }
+  }
+
   function enableArrowNav()
   {
-    nextBtn.addEventListener( 'click', function(){
-      var s = getSection( +1 ),
-        el, hash;
-      if ( s.label ) {
-        setRecipeNav( s.num );
-        el = document.getElementById( s.label );
-        hash = '#' + s.label;
-      } else {
-        el = footer;
-        hash = ' ';
-      }
-      navTo( el, hash );
-    });
-    prevBtn.addEventListener( 'click', function(){
-      var s = getSection( -1 ),
-        el, hash;
-      if ( s.label ) {
-        setRecipeNav( s.num );
-        el = document.getElementById( s.label );
-        hash = '#' + s.label;
-        navTo( el, hash );
-      }
-    });
+    nextBtn.addEventListener( 'click', nextBtnAction );
+    prevBtn.addEventListener( 'click', prevBtnAction );
   }
 
   function getSection( diff = 0 )
@@ -124,7 +135,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
     checkScroll();
   }
 
-  if ( sections ) {
+  function setupNav()
+  {
     window.onresize = calcHeight;
     window.onscroll = checkScroll;
     enableRecipeNav();
@@ -150,6 +162,18 @@ document.addEventListener( 'DOMContentLoaded', function() {
     qtyRemoveBtn,
     qtyAddBtn;
 
+  function removeQty()
+  {
+    recipeVolume = Math.max( 100, recipeVolume-100 );
+    calcQty();
+  }
+
+  function addQty()
+  {
+    recipeVolume = Math.min( 10000, recipeVolume+100 );
+    calcQty();
+  }
+
   function setupQty()
   {
     weightRatio = recipeWeight / recipeVolume;
@@ -157,15 +181,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
     qtyValue = document.getElementById( 'qtyValue' );
     qtyRemoveBtn = document.getElementById( 'qtyRemove' );
     qtyAddBtn = document.getElementById( 'qtyAdd' );
+    qtyRemoveBtn.addEventListener( 'click', removeQty );
+    qtyAddBtn.addEventListener( 'click', addQty );
     calcQty();
-    qtyRemoveBtn.addEventListener( 'click', function(){
-      recipeVolume = Math.max( 100, recipeVolume-100 );
-      calcQty();
-    });
-    qtyAddBtn.addEventListener( 'click', function(){
-      recipeVolume = Math.min( 10000, recipeVolume+100 );
-      calcQty();
-    });
   }
 
   function calcQty()
@@ -191,8 +209,62 @@ document.addEventListener( 'DOMContentLoaded', function() {
     }
   }
 
-  if ( ingredients ) {
+  /*
+
+      Keyboard actions
+
+  */
+
+  function recipeKeyNav( e )
+  {
+    e = e || window.event;
+    var k = e.keyCode;
+    switch ( k ) {
+      case 37:
+        e.preventDefault();
+        prevBtnAction();
+        break;
+      case 39:
+        e.preventDefault();
+        nextBtnAction();
+        break;
+      case 49:
+        navAction( 1 );
+        break;
+      case 50:
+        navAction( 2 );
+        break;
+      case 51:
+        navAction( 3 );
+        break;
+      case 52:
+        navAction( 4 );
+        break;
+      case 53:
+        navAction( 5 );
+        break;
+      case 189:
+        removeQty();
+        break;
+      case 187:
+        addQty();
+        break;
+      case 220:
+        document.location = '/'
+        break;
+    }
+  }
+
+  /*
+
+      Main setup
+
+  */
+
+  if ( sections.length ) {
+    setupNav();
     setupQty();
+    document.onkeydown = recipeKeyNav;
   }
 
 });
