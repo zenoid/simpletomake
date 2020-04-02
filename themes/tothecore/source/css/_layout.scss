@@ -31,8 +31,19 @@ body {
   text-align: center;
 }
 
+
+
+/*                      HIDE ON MOBILE
+------------------------------------------------------------------------- */
+
 @media only screen and (max-width: $size-S) {
   .mobilehide {
+    display: none;
+  }
+}
+
+body.touch {
+  .touchhide {
     display: none;
   }
 }
@@ -46,7 +57,47 @@ body {
   max-width: $layoutwidth;
   margin: auto;
   text-align: left;
-  padding: 4rem 1rem;
+  padding: 1rem;
+}
+
+.row + .row {
+  margin-top: 2rem;
+}
+
+.row-split {
+  @include flex;
+  @include flexWrap;
+
+  & > div {
+
+    &:first-child {
+      width: 33.33%;
+    }
+
+    &:last-child {
+      width: 66.67%;
+    }
+
+    @media only screen and (max-width: $size-S) {
+      &:first-child,
+      &:last-child {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.card-list {
+  @include flex;
+  @include flexWrap;
+
+  & > div {
+    width: 33.33%;
+
+    @media only screen and (max-width: $size-S) {
+      width: 100%;
+    }
+  }
 }
 
 

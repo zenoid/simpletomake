@@ -43,8 +43,4 @@ usage:
   - [ "Conservare al buio", "La luce rende inattiva nel tempo l'acqua ossigenata." ]
   - [ "Tenere il contenitore chiuso", "Con il contenitore aperto, l'alcool tenderà a evaporare." ]
 
-sources:
-  - [ "World Health Organization: guide to local production [ PDF ]", "https://www.who.int/gpsc/5may/Guide_to_Local_Production.pdf" ]
-  - [ "Dario Bressanini: Amuchina fai da te", "http://bressanini-lescienze.blogautore.espresso.repubblica.it/2020/02/24/amuchina-fai-da-te-e-isteria-collettiva/" ]
-
 ---

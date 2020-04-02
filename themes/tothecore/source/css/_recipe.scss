@@ -5,7 +5,6 @@
 ------------------------------------------------------------------------- */
 
 article {
-  color: var( --color-white );
   background-color: var( --color-main1 );
   @include transition( background-color, $transition-scroll );
   background-attachment: fixed;
@@ -13,24 +12,30 @@ article {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left 50% top 50%;
+  color: var( --color-white );
 
   @media only screen and (max-width: $size-XS) {
     padding-top: 0rem;
   }
 
-  @media only screen and (max-width: $size-XXS) {
-    background-color: var( --color-main1 ) !important;
+  @media only screen and (max-width: $size-XS) {
+    background: none !important;
   }
 }
 
-@for $i from 1 through 5 {
-  .section#{$i} {
+@for $i from 1 through $sectionsNum {
+  article.section#{$i} {
     background-color: var( --color-main#{$i} );
+  }
+
+  @media only screen and (max-width: $size-XS) {
+    section.section#{$i} {
+      background-color: var( --color-main#{$i} );
+    }
   }
 }
 
 section {
-  background: none !important;
   max-width: $layoutwidth;
   min-height: 100vh;
   margin: auto;
@@ -39,12 +44,12 @@ section {
 
   h1,
   h2 {
-    padding: 2rem 0 1.5rem;
+    padding: 1rem 0 1.5rem;
   }
 
   @media only screen and (max-width: $size-XS) {
     padding-top: 0;
-    padding-bottom: 6rem;
+    padding-bottom: 5rem;
     min-height: 0;
 
     h1,
@@ -54,11 +59,11 @@ section {
   }
 
   @media only screen and (max-width: $size-XXS) {
-    padding: 0 0 4rem 0;
+    padding: 0 0 $btn-height 0;
 
     h1,
     h2 {
-      padding: 1.5rem;
+      padding: 2.5rem 1rem;
     }
   }
 }
@@ -67,19 +72,6 @@ section {
 
 /*                      CARDS
 ------------------------------------------------------------------------- */
-
-.card-list {
-  @include flex;
-  @include flexWrap;
-
-  & > div {
-    width: 33.33%;
-
-    @media only screen and (max-width: $size-S) {
-      width: 100%;
-    }
-  }
-}
 
 .card {
   background-color: var( --color-white );

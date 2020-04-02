@@ -1,29 +1,31 @@
 
 
 
+/*                      SECTIONS
+------------------------------------------------------------------------- */
+
+$sectionsNum: 5;
+$colors: #5B7F3C #6E5773 #AF5B46 #375879 #9E8928;
+
+
+
 /*                      COLORS
 ------------------------------------------------------------------------- */
 
-$color-ingredient:    #6E5773;
-$color-ingredient-lt: lighten( $color-ingredient, 20% );
+$color-ingredient: lighten( nth( $colors, 2 ), 20% );
 
 :root {
 
-  --color-white:      #FFFFFF;
-  --color-dark:       #000000;
-  --color-gray:       #666666;
+  --color-white: #FFFFFF;
+  --color-dark:  #000000;
+  --color-gray:  #666666;
+  --color-cta:   #{nth( $colors, 3 )};
 
-  --color-main1:      #5B7F3C;
-  --color-main2:      #{$color-ingredient};
-  --color-main3:      #AF5B46;
-  --color-main4:      #375879;
-  --color-main5:      #9E8928;
+  @for $i from 1 through $sectionsNum {
+    #{ '--color-main' + $i}: nth( $colors, $i );
+  }
 
-  --color-ingredient: rgba(
-    #{red($color-ingredient-lt)},
-    #{green($color-ingredient-lt)},
-    #{blue($color-ingredient-lt)},
-    0.3 );
+  --color-ingredient: rgba( #{red($color-ingredient)}, #{green($color-ingredient)}, #{blue($color-ingredient)}, 0.3 );
 
 }
 
@@ -81,8 +83,6 @@ $size-XXS: 32rem; // 512px
 $layoutwidth: 75rem; // 1200px
 
 $btn-height: 2.5rem; // 40px
-
-$border: 2px;
 
 
 

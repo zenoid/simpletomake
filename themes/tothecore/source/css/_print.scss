@@ -1,0 +1,100 @@
+
+
+
+/*                      PRINT VERSION
+------------------------------------------------------------------------- */
+
+@media print {
+
+  header,
+  footer,
+  .btn,
+  .card-list-ordered .card:before {
+    display: none;
+  }
+
+
+  section {
+    min-height: 0;
+    padding: 0.5rem 0;
+
+    &:not(:first-child) {
+      border-top: 1px solid var( --color-gray );
+    }
+  }
+
+  .card-list {
+    & > div {
+      width: 100%;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var( --color-dark );
+
+    .sub {
+      font-size: 1em;
+      display: inline-block;
+      margin-right: 0.5rem;
+
+      & > span:not(.quantity) {
+        opacity: 1;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+
+    br {
+      display: none;
+    }
+
+    .quantity {
+      margin-left: 1rem;
+    }
+  }
+
+  .ingredient,
+  .quantity {
+    display: inline-block;
+    padding: 0;
+  }
+
+  .card,
+  .card-empty {
+    padding: 0.5rem 0;
+    page-break-inside: avoid;
+
+    p {
+      color: var( --color-dark );
+    }
+  }
+
+  .card-time {
+    padding: 0.5rem 0;
+    color: var( --color-dark );
+
+    br {
+      display: none;
+    }
+
+    strong {
+      margin-left: 0.5rem;
+    }
+  }
+
+}
+
+

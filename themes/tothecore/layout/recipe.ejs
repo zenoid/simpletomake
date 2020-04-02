@@ -94,7 +94,7 @@
 
     <section class="section4" id="procedimento">
 
-      <h2>Procedimento</h2>
+      <h2><div class="sub"><span>Come fare un</span></div><%- page.title.toLowerCase() %></h2>
 
       <div class="card-list card-list-ordered">
       <% for ( i = 0; i < page.directions.length; i++ ) { %>
@@ -137,19 +137,3 @@
     </div>
 
   </article>
-
-  <footer>
-
-    <div class="content">
-
-      <h3>Fonti</h3>
-
-      <ul>
-      <% for ( i = 0; i < page.sources.length; i++ ) { %>
-        <li><a href="<%- page.sources[ i ][ 1 ] %>" target="_blank" class="btn-link iconbg icon-link"><%- page.sources[ i ][ 0 ] %></a></li>
-      <% } %>
-      </ul>
-
-    </div>
-
-  </footer>

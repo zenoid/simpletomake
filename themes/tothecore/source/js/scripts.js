@@ -18,7 +18,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   */
 
-  var article = document.querySelector( 'article' ),
+  var sectionsNum = 5,
+    article = document.querySelector( 'article' ),
     sections = document.querySelectorAll( 'section' ),
     navItems = document.querySelectorAll( 'nav a' ),
     footer = document.querySelector( 'footer' ),
@@ -101,20 +102,20 @@ document.addEventListener( 'DOMContentLoaded', function() {
   function getSection( diff = 0 )
   {
     var i = 0;
-    while ( ( i < 5 ) && ( document.documentElement.scrollTop > sections[ i ].offsetTop - winh/2 ) ) {
+    while ( ( i < sectionsNum ) && ( document.documentElement.scrollTop > sections[ i ].offsetTop - winh/2 ) ) {
       i++;
     }
     if ( document.documentElement.scrollTop + winh - 100 > footer.offsetTop ) {
-      i = 6;
+      i = sectionsNum + 1;
     }
-    return { num: i+diff, label: ( i+diff > 0 && i+diff <= 5 )? navItems[ i-1+diff ].text : '' };
+    return { num: i+diff, label: ( i+diff > 0 && i+diff <= sectionsNum )? navItems[ i-1+diff ].text : '' };
   }
 
   function checkScroll()
   {
     var s = getSection(),
       hash = location.hash;
-    if ( s.num < 6 ) {
+    if ( s.num <= sectionsNum ) {
       article.className = 'section' + s.num;
       if ( !scrolling && hash != '#' + s.label ) {
         window.history.replaceState( null, null, '#' + s.label );
@@ -227,6 +228,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
       case 39:
         e.preventDefault();
         nextBtnAction();
+        break;
+      case 32:
+        e.preventDefault();
+        if ( getSection().num > sectionsNum ) {
+          navAction( 1 );
+        } else {
+          nextBtnAction();
+        }
         break;
       case 49:
         navAction( 1 );

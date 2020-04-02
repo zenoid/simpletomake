@@ -37,6 +37,11 @@ a {
 p {
   font-size: 1.25rem;
   line-height: 1.4;
+
+  a {
+    @include transition( all, $transition-hover );
+    border-bottom: 2px solid var( --color-cta );
+  }
 }
 
 * + p {
@@ -50,7 +55,13 @@ p {
 
 body:not(.touch) {
   p a:hover {
+    color: var( --color-cta );
   }
+}
+
+.copyleft {
+  display: inline-block;
+  @include rotate( 2 );
 }
 
 ::-moz-selection {
@@ -116,8 +127,9 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var( --color-gray );
+
 }
 
 h4 {
@@ -144,6 +156,29 @@ h4 {
 .quantity {
   font-family: $font-mono;
   white-space: nowrap;
+}
+
+
+
+/*                      KEYS
+------------------------------------------------------------------------- */
+
+.key {
+  display: inline-block;
+  padding: 0 0.75em;
+  height: 2em;
+  line-height: 1.8em;
+  font-size: 1rem;
+  color: var( --color-gray );
+  vertical-align: center;
+  font-family: $font-mono;
+  text-align: center;
+  border: 1px solid rgba( 0, 0, 0, 0.2 );
+  border-radius: 3px;
+
+  & + * {
+    margin-left: 0.5rem;
+  }
 }
 
 

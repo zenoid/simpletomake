@@ -51,7 +51,7 @@ nav {
       }
     }
 
-    @for $i from 1 through 5 {
+    @for $i from 1 through $sectionsNum {
       &:nth-child(#{$i}) {
         .btn {  color: var( --color-main#{$i} );
                 border-color: var( --color-main#{$i} ); }
