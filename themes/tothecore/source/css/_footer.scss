@@ -5,10 +5,38 @@
 ------------------------------------------------------------------------- */
 
 footer {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 
   .card {
     background-color: rgba( 0, 0, 0, 0.1 );
+    text-align: center;
+  }
+
+  h3 {
+    padding: 0 1rem 0.25rem 0;
+    text-align: right;
+
+    @media only screen and (max-width: $size-S) {
+      text-align: left;
+    }
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+
+    .btns-list {
+      @include flexColumn;
+
+      .btn + .btn {
+        margin: 2px 0 0 0;
+      }
+    }
+  }
+}
+
+body:not(.touch) {
+  footer .btn:hover {
+    background-color: rgba( 0, 0, 0, 0.1 );
+    color: var( --color-dark );
   }
 }
 

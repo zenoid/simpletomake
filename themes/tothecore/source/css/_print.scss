@@ -13,7 +13,6 @@
     display: none;
   }
 
-
   section {
     min-height: 0;
     padding: 0.5rem 0;
@@ -27,6 +26,10 @@
     & > div {
       width: 100%;
     }
+  }
+
+  p {
+    font-size: 1rem;
   }
 
   h1,
@@ -62,7 +65,7 @@
     }
 
     .quantity {
-      margin-left: 1rem;
+      margin-left: 0.5rem;
     }
   }
 
@@ -76,6 +79,7 @@
   .card-empty {
     padding: 0.5rem 0;
     page-break-inside: avoid;
+    break-inside: avoid;
 
     p {
       color: var( --color-dark );

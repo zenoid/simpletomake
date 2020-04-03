@@ -168,19 +168,10 @@ section {
   z-index: 1;
   @include flex;
 
-  .btn + .btn {
-    margin-left: 2px;
+  & > .btns-list:first-child {
+    @include flexGrow( 1 );
+    margin-right: 2px;
   }
-}
-
-.article-actions-main {
-  @include flexGrow( 1 );
-  @include flex;
-  margin-right: 2px;
-}
-
-.article-actions-nav {
-  @include flex;
 }
 
 

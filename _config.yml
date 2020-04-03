@@ -1,14 +1,15 @@
 # Hexo Configuration
 
 # Site
-title: to the core
-subtitle: ricette per una vita più semplice
-description: Come si fa il sapone? Come si fa il pane? Come fare una bevanda alcolica? Quali sono le ricette più essenziali?
+title: Simple to Make
+subtitle: Ricette per una vita più semplice
+keywords: ricetta, autoproduzione, casalingo, cucina, saponi, detergenti, detersivi, disinfettanti, fermentazioni, fermentati, pane, ingredienti, attrezzature, procedimento, uso, conservazione
+description: Una ricetta semplice per l'autoproduzione, dai principi essenziali alla lista precisa di ingredienti, dal procedimento passo-passo ai suggerimenti per uso e conservazione
 author: Piero Ciarfaglia
 language: it
 
 # URL
-url: https://tothecore.info
+url: https://simpletomake.it
 root: /
 permalink: :title.html
 

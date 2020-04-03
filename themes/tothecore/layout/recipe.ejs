@@ -1,8 +1,6 @@
 <%- partial('_partial/header') %>
-
+<% var i; %>
   <article>
-
-  <% var i; %>
 
     <section class="section1" id="principi">
 
@@ -15,15 +13,15 @@
             <p><%- page.principles[ i ] %></p>
           </div>
         </div>
-      <% } %>
-      <% if ( page.timeToMake ) { %>
+      <% }
+        if ( page.timeToMake ) { %>
         <div>
           <div class="card-time">
             <p>Si può fare in<br/><strong><%- page.timeToMake %></strong></p>
           </div>
         </div>
-      <% } %>
-      <% if ( page.timeToUse ) { %>
+      <% }
+        if ( page.timeToUse ) { %>
         <div>
           <div class="card-time">
             <p>Si può usare dopo<br/><strong><%- page.timeToUse %></strong></p>
@@ -62,8 +60,8 @@
             <% if ( page.ingredients[ i ][ 5 ] ) { %><p class="note"><%- page.ingredients[ i ][ 5 ] %></p><% } %>
           </div>
         </div>
-      <% } %>
-      <% if ( page.recipeDisclaimer ) { %>
+      <% }
+        if ( page.recipeDisclaimer ) { %>
         <div>
           <div class="card-empty">
             <p><%- page.recipeDisclaimer %></p>
@@ -127,13 +125,15 @@
     </section>
 
     <div class="article-actions">
-      <div class="article-actions-main">
+      <div class="btns-list">
         <a href="/" class="btn btn-main iconbg icon-list"><span class="mobilehide">Tutte le </span>ricette</a>
       </div>
-      <div class="article-actions-nav">
+      <div class="btns-list">
         <button class="btn btn-main hidden" id="btn-prev"><span>&lt;</span></button>
         <button class="btn btn-main hidden" id="btn-next"><span>Continua &gt;</span></button>
       </div>
     </div>
 
   </article>
+
+  <%- partial('_partial/footer') %>

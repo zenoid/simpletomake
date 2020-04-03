@@ -56,6 +56,14 @@
   @include transition( all, $transition-hover );
 }
 
+.btns-list {
+  @include flex;
+
+  .btn + .btn {
+    margin-left: 2px;
+  }
+}
+
 body:not(.touch) {
 
   .btn:hover {
