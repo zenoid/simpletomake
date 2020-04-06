@@ -1,17 +1,41 @@
+<div style="background-color: #5B7F3C">
 
-  <h1>Index</h1>
+  <img src="images/simpletomake-logo.svg" alt="Simple to Make">
 
 <%
 
-  var recipes_list = site.pages
-    .filter( p => p.layout === 'recipe' )
-    .sort( 'index' );
-
-  var i;
-
-  recipes_list.forEach( recipe => {
-
+  var i,
+    recipes_list    = site.pages.filter( p => p.layout === 'recipe' ),
+    recipes_hygiene = recipes_list.filter( p => p.category === 'hygiene' )
+      .sort( 'index' ),
+    recipes_food    = recipes_list.filter( p => p.category === 'food' )
+      .sort( 'index' );
 %>
-  <a href="<%- recipe.path %>"><%- recipe.title %></a>
+  <h2>Detergenti e detersivi</h2>
+  <ul><%
 
-<% }) %>
+    recipes_hygiene.forEach( recipe => {
+%>
+    <li><a href="<%- recipe.path %>"><%- recipe.title %></a></li><%
+    }) %>
+  </ul>
+
+  <h2>Cibo e bevande</h2>
+  <ul><%
+
+    recipes_food.forEach( recipe => {
+%>
+    <li><a href="<%- recipe.path %>"><%- recipe.title %></a></li><%
+    }) %>
+  </ul>
+
+  <h3></h3>
+
+</div>
+
+<h1><%- config.subtitle %></h1>
+<p>Torniamo ad essere produttori, non solo consumatori.</p>
+<p>Molti dei cibi e dei prodotti per la pulizia che usiamo più spesso possono essere fatti in casa, in modo più conveniente, ecologico e salutare.</p>
+<p>Esistono migliaia di varianti per ogni ricetta di autoproduzione, ma ognuna può essere ridotta a pochi principi essenziali.</p>
+
+<%- partial('_partial/footer') %>
