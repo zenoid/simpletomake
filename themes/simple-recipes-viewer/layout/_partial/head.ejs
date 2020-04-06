@@ -6,13 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <%
-    var title, htmlTitle;
+    var title, htmlTitle, ogimg;
     if ( page.layout !== 'index' ) {
       title = 'Come fare un '+ page.title.toLowerCase();
       htmlTitle = title + ' | ' + config.title + ': ' + config.subtitle;
+      ogimg = 'recipes/images/' + page.recipeid + '.png';
     } else {
       title = config.title + ': ' + config.subtitle;
       htmlTitle = title;
+      ogimg = 'og-image.png';
     }
   %>
   <title><%- htmlTitle %></title>
@@ -32,7 +34,7 @@
   <meta property="og:title" content="<%- title %>">
   <meta property="og:description" content="<%- config.description %>">
   <meta property="og:url" content="<%- page.permalink %>">
-  <meta property="og:image" content="<%- config.url %>/og-image.png">
+  <meta property="og:image" content="<%- config.url %>/<%- ogimg %>">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/png">
@@ -41,7 +43,7 @@
   <meta name="twitter:title" content="<%- title %>">
   <meta name="twitter:description" content="<%- config.description %>">
   <meta name="twitter:url" content="<%- page.permalink %>">
-  <meta name="twitter:image" content="<%- config.url %>/og-image.png">
+  <meta name="twitter:image" content="<%- config.url %>/<%- ogimg %>">
   <meta name="twitter:image:alt" content="<%- title %>">
 
   <%- css('css/style') %>

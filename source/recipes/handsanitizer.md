@@ -3,6 +3,7 @@
 layout: recipe
 index: 0
 permalink: disinfettante-mani
+recipeid: handsanitizer-it
 category: hygiene
 
 title: Disinfettante per mani
