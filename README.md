@@ -1,2 +1,2 @@
-# Simple to Make it
+# Simple to Make
 Recipes for a simpler life
