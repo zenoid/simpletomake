@@ -9,7 +9,8 @@
   header,
   footer,
   .btn,
-  .card-list-ordered .card:before {
+  .card-list-ordered .card:before,
+  .home-menu {
     display: none;
   }
 
@@ -99,6 +100,10 @@
     }
   }
 
+  .home-about {
+    background: none;
+    color: var( --color-dark );
+  }
 }
 
 

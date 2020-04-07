@@ -65,13 +65,13 @@ body:not(.touch) {
 }
 
 ::-moz-selection {
-  background: var( --color-main1 );
+  background: var( --color-main3 );
   text-shadow: none;
   color: var( --color-white );
 }
 
 ::selection {
-  background: var( --color-main1 );
+  background: var( --color-main3 );
   text-shadow: none;
   color: var( --color-white );
 }

@@ -13,6 +13,7 @@ $colors: #5B7F3C #6E5773 #AF5B46 #375879 #9E8928;
 ------------------------------------------------------------------------- */
 
 $color-ingredient: lighten( nth( $colors, 2 ), 20% );
+$color-darkband:    darken( nth( $colors, 1 ), 10% );
 
 :root {
 
@@ -26,6 +27,7 @@ $color-ingredient: lighten( nth( $colors, 2 ), 20% );
   }
 
   --color-ingredient: rgba( #{red($color-ingredient)}, #{green($color-ingredient)}, #{blue($color-ingredient)}, 0.3 );
+  --color-darkband: #{$color-darkband};
 
 }
 
