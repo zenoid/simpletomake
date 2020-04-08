@@ -76,6 +76,11 @@
     color: var( --color-dark );
     font-size: 1rem;
     text-transform: none;
+
+    &:focus {
+      background-color: var( --color-dark );
+      color: var( --color-white );
+    }
   }
 
   @media only screen and (max-width: $size-M) {

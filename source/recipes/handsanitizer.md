@@ -15,6 +15,9 @@ principles:
 
 timeToMake: 5 minuti
 timeToUse: 72 ore
+sources:
+  - World Health Organization
+  - '"Scienza in Cucina", Dario Bressanini'
 
 recipeVolume: 200
 recipeWeight: 168.51

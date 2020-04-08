@@ -11,6 +11,7 @@ principles: {{ principles }}
 
 timeToMake: {{ timeToMake }}
 timeToUse: {{ timeToUse }}
+sources: {{ sources }}
 
 recipeVolume: {{ recipeVolume }}
 recipeWeight: {{ recipeWeight }}

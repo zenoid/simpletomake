@@ -13,21 +13,36 @@
             <p><%- page.principles[ i ] %></p>
           </div>
         </div>
-      <% }
+      <% } %>
+        <div><%
         if ( page.timeToMake ) { %>
-        <div>
           <div class="card-time">
             <p>Si può fare in<br/><strong><%- page.timeToMake %></strong></p>
-          </div>
+          </div><%
+        } %>
         </div>
-      <% }
+
+        <div><%
         if ( page.timeToUse ) { %>
-        <div>
           <div class="card-time">
             <p>Si può usare dopo<br/><strong><%- page.timeToUse %></strong></p>
-          </div>
+          </div><%
+        } %>
         </div>
-      <% } %>
+
+        <div><%
+        if ( page.sources ) { %>
+          <div class="card-empty">
+            <h5>Fonti</h5>
+            <ul><%
+            for ( i = 0; i < page.sources.length; i++ ) { %>
+              <li><%- page.sources[ i ] %></li><%
+            } %>
+            </ul>
+          </div><%
+        } %>
+        </div>
+
       </div>
 
     </section>

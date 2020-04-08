@@ -84,7 +84,8 @@ body:not(.touch) {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   margin: 0;
   padding: 0;
   font-weight: $fontweight-bold;
@@ -134,6 +135,10 @@ h3 {
 h4 {
   font-size: 1.5rem;
   line-height: 1.2;
+}
+
+h5 {
+  font-size: 1rem;
 }
 
 
