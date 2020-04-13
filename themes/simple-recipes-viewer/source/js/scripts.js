@@ -158,26 +158,40 @@ document.addEventListener( 'DOMContentLoaded', function() {
   */
 
   var weightRatio,
+    unitVolume,
     qtyLabels,
     qtyValue,
     qtyRemoveBtn,
-    qtyAddBtn;
+    qtyAddBtn,
+    hasUnits = false;
 
   function removeQty()
   {
-    recipeVolume = Math.max( 100, recipeVolume-100 );
+    if ( hasUnits ) {
+      recipeUnits = Math.max( 1, recipeUnits-1 );
+    } else {
+      recipeVolume = Math.max( 100, recipeVolume-100 );
+    }
     calcQty();
   }
 
   function addQty()
   {
-    recipeVolume = Math.min( 10000, recipeVolume+100 );
+    if ( hasUnits ) {
+      recipeUnits = Math.min( 100, recipeUnits+1 );
+    } else {
+      recipeVolume = Math.min( 10000, recipeVolume+100 );
+    }
     calcQty();
   }
 
   function setupQty()
   {
+    hasUnits = ( recipeUnits !== undefined );
     weightRatio = recipeWeight / recipeVolume;
+    if ( hasUnits ) {
+      unitVolume = recipeVolume / recipeUnits;
+    }
     qtyLabels = document.querySelectorAll( '[data-qty]' );
     qtyValue = document.getElementById( 'qtyValue' );
     qtyRemoveBtn = document.getElementById( 'qtyRemove' );
@@ -190,8 +204,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
   function calcQty()
   {
     var i, qty, f;
-    recipeWeight = recipeVolume * weightRatio;
-    qtyValue.textContent = recipeVolume + ' ml';
+    if ( hasUnits ) {
+      recipeVolume = unitVolume * recipeUnits;
+      recipeWeight = recipeVolume * weightRatio;
+      qtyValue.textContent = recipeUnits;
+    } else {
+      recipeWeight = recipeVolume * weightRatio;
+      qtyValue.textContent = recipeVolume + ' ml';
+    }
     for ( i in ingredients ) {
       qty = Math.round( recipeWeight * ingredients[ i ].ratio / 100 );
       if ( String( qty ).length > 2 ) {
@@ -206,6 +226,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
       }
       if ( qtyLabels[ i ].dataset.qty === 'volume' ) {
         qtyLabels[ i ].textContent = recipeVolume;
+      }
+      if ( qtyLabels[ i ].dataset.qty === 'units' ) {
+        qtyLabels[ i ].textContent = recipeUnits;
       }
     }
   }

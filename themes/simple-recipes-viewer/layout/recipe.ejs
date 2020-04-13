@@ -25,7 +25,7 @@
         <div><%
         if ( page.timeToUse ) { %>
           <div class="card-time">
-            <p>Si può usare dopo<br/><strong><%- page.timeToUse %></strong></p>
+            <p>Si può <% if ( page.category === 'hygiene' ) { %>usare<% } else { %>consumare<% } %> dopo<br/><strong><%- page.timeToUse %></strong></p>
           </div><%
         } %>
         </div>
@@ -83,7 +83,7 @@
           </div>
         </div>
       <% } %>
-        <script>var recipeVolume=<%- page.recipeVolume %>;recipeWeight=<%- page.recipeWeight %>;ingredients=<%- JSON.stringify( ingr ) %></script>
+        <script>var recipeVolume=<%- page.recipeVolume %>;recipeWeight=<%- page.recipeWeight %>;<% if ( page.recipeUnits ) { %>recipeUnits=<%- page.recipeUnits %>;<% } %>ingredients=<%- JSON.stringify( ingr ) %></script>
       </div>
 
     </section>
