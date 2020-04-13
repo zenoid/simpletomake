@@ -187,7 +187,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   function setupQty()
   {
-    hasUnits = ( recipeUnits !== undefined );
+    hasUnits = ( typeof recipeUnits !== 'undefined' );
     weightRatio = recipeWeight / recipeVolume;
     if ( hasUnits ) {
       unitVolume = recipeVolume / recipeUnits;
