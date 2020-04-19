@@ -149,12 +149,18 @@ h5 {
 .ingredient,
 .quantity {
   display: inline-block;
-  padding: 0.3em 0.6em;
+  padding: 0 0.3em;
   font-weight: $fontweight-normal;
 }
 
 .ingredient {
   background-color: var( --color-ingredient );
+}
+
+h4 {
+  .ingredient {
+    padding: 0.3em 0.6em;
+  }
 }
 
 .quantity {

@@ -71,7 +71,7 @@
       %>
         <div>
           <div class="card">
-            <h4><span class="ingredient"><%- page.ingredients[ i ][ 2 ] %></span><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ][ 0 ] %>"><%- page.ingredients[ i ][ 3 ] %></span> <%- page.ingredients[ i ][ 4 ] %></span></h4>
+            <h4><span class="ingredient"><%- page.ingredients[ i ][ 2 ] %></span><% if ( page.ingredients[ i ][ 3 ] ) { %><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ][ 0 ] %>"><%- page.ingredients[ i ][ 3 ] %></span> <%- page.ingredients[ i ][ 4 ] %></span><% } %></h4>
             <% if ( page.ingredients[ i ][ 5 ] ) { %><p class="note"><%- page.ingredients[ i ][ 5 ] %></p><% } %>
           </div>
         </div>
