@@ -159,6 +159,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   var weightRatio,
     unitVolume,
+    ingrMin = 100,
+    ingrMax = 10000,
+    ingrStep = 100,
     qtyLabels,
     qtyValue,
     qtyRemoveBtn,
@@ -168,9 +171,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
   function removeQty()
   {
     if ( hasUnits ) {
-      recipeUnits = Math.max( 1, recipeUnits-1 );
+      recipeUnits = Math.max( ingrMin, recipeUnits - ingrStep );
     } else {
-      recipeVolume = Math.max( 100, recipeVolume-100 );
+      recipeVolume = Math.max( ingrMin, recipeVolume - ingrStep );
     }
     calcQty();
   }
@@ -178,9 +181,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
   function addQty()
   {
     if ( hasUnits ) {
-      recipeUnits = Math.min( 100, recipeUnits+1 );
+      recipeUnits = Math.min( ingrMax, recipeUnits + ingrStep );
     } else {
-      recipeVolume = Math.min( 10000, recipeVolume+100 );
+      recipeVolume = Math.min( ingrMax, recipeVolume + ingrStep );
     }
     calcQty();
   }
@@ -191,6 +194,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
     weightRatio = recipeWeight / recipeVolume;
     if ( hasUnits ) {
       unitVolume = recipeVolume / recipeUnits;
+      ingrMin  = 1;
+      ingrMax  = 100;
+      ingrStep = 1;
+    }
+    if ( typeof recipeRange !== 'undefined' ) {
+      ingrMin  = recipeRange[ 0 ];
+      ingrMax  = recipeRange[ 1 ];
+      ingrStep = recipeRange[ 2 ];
     }
     qtyLabels = document.querySelectorAll( '[data-qty]' );
     qtyValue = document.getElementById( 'qtyValue' );
@@ -210,7 +221,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
       qtyValue.textContent = recipeUnits;
     } else {
       recipeWeight = recipeVolume * weightRatio;
-      qtyValue.textContent = recipeVolume + ' ml';
+      qtyValue.textContent = recipeVolume;
     }
     for ( i in ingredients ) {
       qty = Math.round( recipeWeight * ingredients[ i ].ratio / 100 );

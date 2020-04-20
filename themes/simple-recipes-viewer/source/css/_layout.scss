@@ -90,6 +90,10 @@ body.touch {
   @include flex;
   @include flexWrap;
 
+  @media only screen and (max-width: $size-S) {
+    @include flexColumn;
+  }
+
   & > div {
     width: 33.33%;
 

@@ -34,9 +34,9 @@ tools:
   - [ "Una bilancia di precisione" ]
 
 directions:
-  - [ "Versa <strong><span data-qty='aqua'>160</span> gr</strong> di <span class='ingredient'>acqua</span> nel flacone", "Se la tua acqua è molto calcarea, aggiungine un po' di meno, o metti un po' di acido citrico in più." ]
-  - [ "Aggiungi <strong><span data-qty='citric'>24</span> gr</strong> di <span class='ingredient'>acido citrico</span>", "È un acido, ma puoi toccarlo tranquillamente con le mani." ]
-  - [ "Mescola tutto finché i granuli di <span class='ingredient'>acido citrico</span> non si sono sciolti completamente" ]
+  - [ "Versa <strong><span data-qty='aqua'>160</span> gr</strong> di acqua nel flacone", "Se la tua acqua è molto calcarea, aggiungine un po' di meno, o metti un po' di acido citrico in più." ]
+  - [ "Aggiungi <strong><span data-qty='citric'>24</span> gr</strong> di acido citrico", "È un acido, ma puoi toccarlo tranquillamente con le mani." ]
+  - [ "Mescola tutto finché i granuli di acido citrico non si sono sciolti completamente" ]
 
 usage:
   - [ "Spruzza il liquido sulle superfici da pulire e lascialo agire per un minuto", "Se la superficie è molto incrostata, lascia agire più a lungo." ]

@@ -53,7 +53,7 @@
         <div class="sub">
           <span><%- page.recipeIntro[ 0 ] %></span>
           <span class="quantity">
-            <button class="btn" id="qtyRemove"><span>–</span></button><span id="qtyValue"><%- page.recipeIntro[ 1 ] %> <%- page.recipeIntro[ 2 ] %></span><button class="btn" id="qtyAdd"><span>+</span></button>
+            <button class="btn" id="qtyRemove"><span>–</span></button><span id="qtyValue"><%- page.recipeIntro[ 1 ] %></span><% if ( page.recipeIntro[ 2 ] ) { %> <%- page.recipeIntro[ 2 ] %><% } %><button class="btn" id="qtyAdd"><span>+</span></button>
           </span>
           <span><%- page.recipeIntro[ 3 ] %></span>
         </div>
@@ -68,14 +68,17 @@
 
           ingr[ page.ingredients[ i ][ 0 ] ] = { ratio: +page.ingredients[ i ][ 1 ] };
 
+          if ( page.ingredients[ i ].length > 2 ) {
+
       %>
         <div>
           <div class="card">
             <h4><span class="ingredient"><%- page.ingredients[ i ][ 2 ] %></span><% if ( page.ingredients[ i ][ 3 ] ) { %><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ][ 0 ] %>"><%- page.ingredients[ i ][ 3 ] %></span> <%- page.ingredients[ i ][ 4 ] %></span><% } %></h4>
             <% if ( page.ingredients[ i ][ 5 ] ) { %><p class="note"><%- page.ingredients[ i ][ 5 ] %></p><% } %>
           </div>
-        </div>
-      <% }
+        </div><%
+          }
+        }
         if ( page.recipeDisclaimer ) { %>
         <div>
           <div class="card-empty">
@@ -83,7 +86,7 @@
           </div>
         </div>
       <% } %>
-        <script>var recipeVolume=<%- page.recipeVolume %>;recipeWeight=<%- page.recipeWeight %>;<% if ( page.recipeUnits ) { %>recipeUnits=<%- page.recipeUnits %>;<% } %>ingredients=<%- JSON.stringify( ingr ) %></script>
+        <script>var recipeVolume=<%- page.recipeVolume %>;recipeWeight=<%- page.recipeWeight %>;<% if ( page.recipeUnits ) { %>recipeUnits=<%- page.recipeUnits %>;<% } %><% if ( page.recipeRange ) { %>recipeRange=[<%- page.recipeRange %>];<% } %>ingredients=<%- JSON.stringify( ingr ) %></script>
       </div>
 
     </section>
@@ -105,14 +108,17 @@
 
     </section>
 
-    <section class="section4" id="procedimento">
+    <section class="section4 section-instructions" id="procedimento">
 
       <h2><div class="sub"><span>Come fare <%- page.titleArticle %></span></div><%- page.title.toLowerCase() %></h2>
 
       <div class="card-list card-list-ordered">
       <% for ( i = 0; i < page.directions.length; i++ ) { %>
         <div>
-          <div class="card">
+          <div class="card<% if ( page.directions[ i ][ 2 ] ) { %> card-title<% } %>"><%
+            if ( page.directions[ i ][ 2 ] ) { %>
+              <h4><%- page.directions[ i ][ 2 ] %></h4><%
+            } %>
             <p><%- page.directions[ i ][ 0 ] %></p>
             <% if ( page.directions[ i ][ 1 ] ) { %><p class="note"><%- page.directions[ i ][ 1 ] %></p><% } %>
           </div>

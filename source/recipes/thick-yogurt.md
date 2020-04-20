@@ -37,12 +37,12 @@ tools:
   - [ "Un termometro per alimenti", "Non è necessario, ma per un risultato migliore è preferibile averlo." ]
 
 directions:
-  - [ "Versa <strong><span data-qty='milk'>160</span> ml</strong> di <span class='ingredient'>latte</span> nella pentola, e inizia a scaldarla a fuoco basso" ]
-  - [ "Usa il termometro per capire quando il <span class='ingredient'>latte</span> ha raggiunto gli <strong>80°C</strong>", "Se non hai il termometro, vedi quando inizia a formare un po' di schiuma, ma senza bollire." ]
-  - [ "Quando il <span class='ingredient'>latte</span> è a temperatura, giralo per un paio di minuti, poi spegni il fuoco e metti il coperchio", "Non scaldare mai il latte oltre i 90°C se non vuoi che prenda odore di zolfo." ]
-  - [ "Aspetta che il <span class='ingredient'>latte</span> raggiunga i <strong>45°C</strong> o temperatura ambiente", "Ci vorranno 2-3 ore. Può anche raffreddarsi completamente: l'importante è che non sia più caldo di 45°C." ]
-  - [ "Distribuisci <strong><span data-qty='yogurt'>200</span> ml</strong> di <span class='ingredient'>yogurt naturale</span> in parti uguali nei <strong><span data-qty='units'>7</span></strong> vasetti", "O versalo tutto nel contenitore scelto." ]
-  - [ "Versa il <span class='ingredient'>latte</span> in parti uguali nei vasetti, e mescola" ]
+  - [ "Versa <strong><span data-qty='milk'>160</span> ml</strong> di latte nella pentola, e inizia a scaldarla a fuoco basso" ]
+  - [ "Usa il termometro per capire quando il latte ha raggiunto gli <strong>80°C</strong>", "Se non hai il termometro, vedi quando inizia a formare un po' di schiuma, ma senza bollire." ]
+  - [ "Quando il latte è a temperatura, giralo per un paio di minuti, poi spegni il fuoco e metti il coperchio", "Non scaldare mai il latte oltre i 90°C se non vuoi che prenda odore di zolfo." ]
+  - [ "Aspetta che il latte raggiunga i <strong>45°C</strong> o temperatura ambiente", "Ci vorranno 2-3 ore. Può anche raffreddarsi completamente: l'importante è che non sia più caldo di 45°C." ]
+  - [ "Distribuisci <strong><span data-qty='yogurt'>200</span> ml</strong> di yogurt naturale in parti uguali nei <strong><span data-qty='units'>7</span></strong> vasetti", "O versalo tutto nel contenitore scelto." ]
+  - [ "Versa il latte in parti uguali nei vasetti, e mescola" ]
   - [ "Chiudi i vasetti e mettili nella yogurtiera", "O nello spazio di incubazione che hai scelto. Se usi il forno, va messa dentro una lampadina accesa da 40W: tenere accesa la luce del forno non basta, e accendere il forno al minimo è eccessivo." ]
   - [ "Avvia la yogurtiera per <strong>9-12 ore</strong>", "O tieni i vasetti nello spazio di incubazione per lo stesso tempo. Usa un tempo più vicino alle 9 ore d'estate o se vuoi uno yogurt meno acidulo." ]
   - [ "Passate le ore previste, estrai i vasetti, aspetta che si raffreddino e mettili in frigo", "Puoi consumare lo yogurt dopo 2-3 ore, quando si saranno rinfrescati." ]

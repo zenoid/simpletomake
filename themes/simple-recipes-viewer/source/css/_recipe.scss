@@ -91,6 +91,8 @@ section {
   }
 
   @media only screen and (max-width: $size-S) {
+    margin: 1px 0;
+
     h4 {
       position: relative;
 
@@ -109,6 +111,27 @@ section {
   }
 }
 
+.card-title {
+  margin-left: 1rem;
+
+  @media only screen and (max-width: $size-S) {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
+
+.section-instructions {
+  .card {
+    padding-bottom: 3rem;
+    height: calc( 100% - 1rem );
+
+    @media only screen and (max-width: $size-S) {
+      padding-bottom: 1.5rem;
+      height: calc( 100% - 2px );
+    }
+  }
+}
+
 .card-list-ordered {
   counter-reset: cardnum;
 
@@ -116,9 +139,9 @@ section {
     counter-increment: cardnum;
     content: counter(cardnum);
     position: absolute;
-    top: 0.25rem;
-    left: 0.5rem;
-    font-size: 1.25rem;
+    top: 0.1rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
     font-family: $font-mono;
     opacity: 0.25;
 
