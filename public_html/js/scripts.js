@@ -254,6 +254,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
   {
     e = e || window.event;
     var k = e.keyCode;
+    console.log( k );
     switch ( k ) {
       case 37:
         e.preventDefault();
@@ -264,6 +265,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
         nextBtnAction();
         break;
       case 32:
+      case  9:
         e.preventDefault();
         if ( getSection().num > sectionsNum ) {
           navAction( 1 );

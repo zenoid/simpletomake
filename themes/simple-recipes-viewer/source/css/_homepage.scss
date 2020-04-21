@@ -6,7 +6,7 @@
 
 .home-menu {
   background-color: var( --color-main1 );
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   color: var( --color-white );
 
   .content {
@@ -85,6 +85,7 @@
 
   @media only screen and (max-width: $size-M) {
     @include flexColumn;
+    padding-left: 1rem;
 
     & > div {
       width: 100%;
@@ -98,6 +99,7 @@
 
   @media only screen and (max-width: $size-S) {
     width: 50%;
+    padding-left: 0;
   }
 
   @media only screen and (max-width: $size-XS) {

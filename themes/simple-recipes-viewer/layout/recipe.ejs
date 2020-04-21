@@ -108,9 +108,9 @@
 
     </section>
 
-    <section class="section4 section-instructions" id="procedimento">
+    <section class="section4 section-instructions" id="ricetta">
 
-      <h2><div class="sub"><span>Come fare <%- page.titleArticle %></span></div><%- page.title.toLowerCase() %></h2>
+      <h2><div class="sub"><span>Ricetta passo passo</span></div>Come fare <%- page.titleArticle %> <%- page.title.toLowerCase() %></h2>
 
       <div class="card-list card-list-ordered">
       <% for ( i = 0; i < page.directions.length; i++ ) { %>
@@ -147,7 +147,7 @@
 
     <div class="article-actions">
       <div class="btns-list">
-        <a href="/" class="btn btn-main iconbg icon-list"><span class="mobilehide">Tutte le </span>ricette</a>
+        <a href="/" class="btn btn-main">\ <span class="mobilehide">Tutte le </span>ricette</a>
       </div>
       <div class="btns-list">
         <button class="btn btn-main hidden" id="btn-prev"><span>&lt;</span></button>

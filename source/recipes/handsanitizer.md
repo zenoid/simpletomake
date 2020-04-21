@@ -15,7 +15,7 @@ principles:
   - "L'alcool è efficace nell’eliminare virus e batteri, soprattutto se utilizzato con una <strong>concentrazione del 60-80%</strong> in volume anziché puro"
 
 timeToMake: 5 minuti
-timeToUse: 72 ore
+timeToUse: 3 giorni
 sources:
   - World Health Organization
   - '"Scienza in Cucina", Dario Bressanini'
