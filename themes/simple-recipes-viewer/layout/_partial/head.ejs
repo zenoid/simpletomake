@@ -8,7 +8,7 @@
   <%
     var title, htmlTitle, ogimg;
     if ( page.layout !== 'index' ) {
-      title = 'Come fare un '+ page.title.toLowerCase();
+      title = 'Come fare ' + page.titleArticle + ' ' + page.title.toLowerCase();
       htmlTitle = title + ' | ' + config.title + ': ' + config.subtitle;
       ogimg = 'recipes/images/' + page.recipeid + '.png';
     } else {
