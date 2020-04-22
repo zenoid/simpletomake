@@ -62,7 +62,7 @@ directions:
 
 usage:
   - [ "Conserva i barattoli in un luogo senza luce solare diretta, a temperatura ambiente", "Non è necessario conservarli al buio. Durante la fermentazione, non vanno messi in frigo o in un luogo troppo fresco, o il processo sarà molto lento. Anche un ambiente troppo caldo può rovinare la fermentazione." ]
-  - [ "Le verdure saranno pronte dopo almeno 1 settimana, e puoi conservare i barattoli anche 1 anno", "Dopo i primi giorni, dovrebbero comparire bolle d'aria dentro il barattolo. Le verdure saranno più gustose dopo 2-3 settimane. Se i barattoli sono stati conservati in un luogo fresco, aspetta un po' di più." ]
+  - [ "Le verdure saranno pronte dopo almeno <strong>1 settimana</strong>, e puoi conservare i barattoli anche <strong>1 anno</strong>", "Dopo i primi giorni, dovrebbero comparire bolle d'aria dentro il barattolo. Le verdure saranno più gustose dopo 2-3 settimane. Se i barattoli sono stati conservati in un luogo fresco, aspetta un po' di più." ]
   - [ "Quando apri la prima volta un barattolo, controlla che non ci siano muffe in superficie, e consumalo entro poche settimane", "Se vuoi consumarlo con più calma, mettilo in frigo dopo l'apertura. Piccole muffe bianche in superficie puoi scartarle, ma se ci sono muffe colorate è sicuramente da buttare. Avrà un odore forte, ma non deve essere troppo acido, e non devono esserci verdure marce." ]
 
 ---

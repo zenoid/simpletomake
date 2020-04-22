@@ -44,8 +44,8 @@ directions:
   - [ "Mescola tutto e lascia riposare per <strong>72 ore</strong> (3 giorni)", "L'acqua ossigenata avrà il tempo di eliminare eventuali spore presenti nel contenitore." ]
 
 usage:
-  - [ "Versare il liquido sulle mani, e strofinare finché non si asciuga" ]
-  - [ "Conservare al buio", "La luce rende inattiva nel tempo l'acqua ossigenata." ]
-  - [ "Tenere il contenitore chiuso", "Con il contenitore aperto, l'alcool tenderà a evaporare." ]
+  - [ "Versa il liquido sulle mani, e strofina finché non si asciuga" ]
+  - [ "Conserva al buio", "La luce rende inattiva nel tempo l'acqua ossigenata." ]
+  - [ "Tieni il contenitore chiuso", "Con il contenitore aperto, l'alcool tenderà a evaporare." ]
 
 ---

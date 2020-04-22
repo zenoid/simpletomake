@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-index: 0
+index: 2
 permalink: spray-anticalcare
 recipeid: descaling-spray-it
 category: hygiene
@@ -41,6 +41,6 @@ directions:
 usage:
   - [ "Spruzza il liquido sulle superfici da pulire e lascialo agire per un minuto", "Se la superficie è molto incrostata, lascia agire più a lungo." ]
   - [ "Strofina con una spugnetta e risciacqua" ]
-  - [ "Dura fino a 3 mesi", "Dopo questo periodo, butta l'eventuale prodotto rimasto" ]
+  - [ "Dura fino a <strong>3 mesi</strong>", "Dopo questo periodo, butta l'eventuale prodotto rimasto" ]
 
 ---
