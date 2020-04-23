@@ -86,7 +86,7 @@
           </div>
         </div>
       <% } %>
-        <script>var recipeVolume=<%- page.recipeVolume %>;recipeWeight=<%- page.recipeWeight %>;<% if ( page.recipeUnits ) { %>recipeUnits=<%- page.recipeUnits %>;<% } %><% if ( page.recipeRange ) { %>recipeRange=[<%- page.recipeRange %>];<% } %>ingredients=<%- JSON.stringify( ingr ) %></script>
+        <script>var recipeVolume=<%- page.recipeVolume %>;recipeWeight=<%- page.recipeWeight %>;<% if ( page.recipeUnits ) { %>recipeUnits=<%- page.recipeUnits %>;<% } %><% if ( page.recipeRange ) { %>recipeRange=[<%- page.recipeRange %>];<% } %><% if ( page.recipePrecision ) { %>recipePrecision=[<%- page.recipePrecision %>];<% } %>ingredients=<%- JSON.stringify( ingr ) %></script>
       </div>
 
     </section>

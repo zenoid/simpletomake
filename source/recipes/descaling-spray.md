@@ -29,13 +29,13 @@ ingredients:
   - [ aqua, 86.96, "Acqua", 160, "gr", "Meglio se distillata. Se contiene calcare, verrà subito consumata una piccola parte dell'acido aggiunto." ]
 
 tools:
-  - [ "Un flacone con spruzzino da almeno <span data-qty='volume'>200</span> ml", "Si può riciclare un flacone usato, di plastica o di vetro." ]
-  - [ "Un mestolo o un cucchiaio", "Il materiale è indifferente." ]
+  - [ "Un flacone con spruzzino da almeno <span class='qtyspan'><span data-qty='volume'>200</span> ml</span>", "Si può riciclare un flacone usato, di plastica o di vetro." ]
   - [ "Una bilancia di precisione" ]
+  - [ "Un mestolo o un cucchiaio", "Il materiale è indifferente." ]
 
 directions:
-  - [ "Versa <strong><span data-qty='aqua'>160</span> gr</strong> di acqua nel flacone", "Se la tua acqua è molto calcarea, aggiungine un po' di meno, o metti un po' di acido citrico in più." ]
-  - [ "Aggiungi <strong><span data-qty='citric'>24</span> gr</strong> di acido citrico", "È un acido, ma puoi toccarlo tranquillamente con le mani." ]
+  - [ "Versa <span class='qtyspan'><span data-qty='aqua'>160</span> gr</span> di acqua nel flacone", "Se la tua acqua è molto calcarea, aggiungine un po' di meno, o metti un po' di acido citrico in più." ]
+  - [ "Aggiungi <span class='qtyspan'><span data-qty='citric'>24</span> gr</span> di acido citrico", "È un acido, ma puoi toccarlo tranquillamente con le mani." ]
   - [ "Mescola tutto finché i granuli di acido citrico non si sono sciolti completamente" ]
 
 usage:

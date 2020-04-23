@@ -32,15 +32,15 @@ ingredients:
   - [ aqua, 13.11, "Acqua", 22, "gr", "Distillata, oppure bollita e raffreddata." ]
 
 tools:
-  - [ "Un contenitore da almeno <span data-qty='volume'>200</span> ml", "Si può riciclare una bottiglietta o un flacone spray, di plastica o di vetro." ]
-  - [ "Un mestolo o un cucchiaio", "Il materiale è indifferente." ]
+  - [ "Un contenitore da almeno <span class='qtyspan'><span data-qty='volume'>200</span> ml</span>", "Si può riciclare una bottiglietta o un flacone spray, di plastica o di vetro." ]
   - [ "Una bilancia di precisione" ]
+  - [ "Un mestolo o un cucchiaio", "Il materiale è indifferente." ]
 
 directions:
-  - [ "Versa <strong><span data-qty='alcol'>130</span> gr</strong> di alcool etilico in un contenitore pulito" ]
-  - [ "Aggiungi <strong><span data-qty='h2o2'>12</span> gr</strong> di acqua ossigenata", "Questo permette di eliminare eventuali spore batteriche presenti nel contenitore e di conservare il disinfettante nel tempo." ]
-  - [ "Aggiungi <strong><span data-qty='glic'>4</span> gr</strong> di glicerolo", "Non è un ingrediente indispensabile, ma servirà a reidratare la pelle e a rendere più densa la miscela." ]
-  - [ "Aggiungi <strong><span data-qty='aqua'>22</span> gr</strong> di acqua distillata (o bollita e portata a temperatura ambiente)", "In questo modo si permette all’alcool di raggiungere la concentrazione ottimale." ]
+  - [ "Versa <span class='qtyspan'><span data-qty='alcol'>130</span> gr</span> di alcool etilico in un contenitore pulito" ]
+  - [ "Aggiungi <span class='qtyspan'><span data-qty='h2o2'>12</span> gr</span> di acqua ossigenata", "Questo permette di eliminare eventuali spore batteriche presenti nel contenitore e di conservare il disinfettante nel tempo." ]
+  - [ "Aggiungi <span class='qtyspan'><span data-qty='glic'>4</span> gr</span> di glicerolo", "Non è un ingrediente indispensabile, ma servirà a reidratare la pelle e a rendere più densa la miscela." ]
+  - [ "Aggiungi <span class='qtyspan'><span data-qty='aqua'>22</span> gr</span> di acqua distillata (o bollita e portata a temperatura ambiente)", "In questo modo si permette all’alcool di raggiungere la concentrazione ottimale." ]
   - [ "Mescola tutto e lascia riposare per <strong>72 ore</strong> (3 giorni)", "L'acqua ossigenata avrà il tempo di eliminare eventuali spore presenti nel contenitore." ]
 
 usage:

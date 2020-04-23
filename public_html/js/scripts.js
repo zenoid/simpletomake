@@ -162,6 +162,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     ingrMin = 100,
     ingrMax = 10000,
     ingrStep = 100,
+    ingrPrec = 2,
     qtyLabels,
     qtyValue,
     qtyRemoveBtn,
@@ -203,6 +204,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
       ingrMax  = recipeRange[ 1 ];
       ingrStep = recipeRange[ 2 ];
     }
+    if ( typeof recipePrecision !== 'undefined' ) {
+      ingrPrec = recipePrecision;
+    }
     qtyLabels = document.querySelectorAll( '[data-qty]' );
     qtyValue = document.getElementById( 'qtyValue' );
     qtyRemoveBtn = document.getElementById( 'qtyRemove' );
@@ -210,6 +214,17 @@ document.addEventListener( 'DOMContentLoaded', function() {
     qtyRemoveBtn.addEventListener( 'click', removeQty );
     qtyAddBtn.addEventListener( 'click', addQty );
     calcQty();
+  }
+
+  function round( qty, prec )
+  {
+    var f,
+      q = Math.round( qty );
+    if ( String( q ).length > prec ) {
+      f = Math.pow( 10, String( q ).length - prec );
+      q = Math.round( q / f ) * f;
+    }
+    return q;
   }
 
   function calcQty()
@@ -224,16 +239,16 @@ document.addEventListener( 'DOMContentLoaded', function() {
       qtyValue.textContent = recipeVolume;
     }
     for ( i in ingredients ) {
-      qty = Math.round( recipeWeight * ingredients[ i ].ratio / 100 );
-      if ( String( qty ).length > 2 ) {
-        f = Math.pow( 10, String( qty ).length - 2 );
-        qty = Math.round( qty / f ) * f;
-      }
+      qty = round( recipeWeight * ingredients[ i ].ratio / 100, ingrPrec );
       ingredients[ i ].qty = qty;
     }
     for ( i = 0; i < qtyLabels.length; i++ ) {
       if ( ingredients[ qtyLabels[ i ].dataset.qty ] ) {
-        qtyLabels[ i ].textContent = ingredients[ qtyLabels[ i ].dataset.qty ].qty;
+        qty = ingredients[ qtyLabels[ i ].dataset.qty ].qty;
+        if ( qtyLabels[ i ].dataset.prec ) {
+          qty = round( qty, qtyLabels[ i ].dataset.prec );
+        }
+        qtyLabels[ i ].textContent = qty;
       }
       if ( qtyLabels[ i ].dataset.qty === 'volume' ) {
         qtyLabels[ i ].textContent = recipeVolume;
@@ -254,7 +269,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
   {
     e = e || window.event;
     var k = e.keyCode;
-    console.log( k );
     switch ( k ) {
       case 37:
         e.preventDefault();
