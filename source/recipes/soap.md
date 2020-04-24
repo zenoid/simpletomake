@@ -56,7 +56,7 @@ directions:
   - [ "Dopo aver sciolto tutta la soda caustica, lascia raffreddare la soluzione per mezz'ora o finché non avrà raggiunto <strong>40-50°C</strong>", "Se vuoi procedere \"a freddo\", non lasciar raffreddare la soluzione." ]
   - [ "Versa nella pentola <span class='qtyspan'><span data-qty='oil'>1000</span> gr</span> di olio d'oliva, scaldalo fino a <strong>40-50°C</strong>, e poi versalo nel contenitore più grande", "Ricorda di pesare l'olio, non basarti sul volume. Se vuoi procedere \"a freddo\", non scaldare l'olio: mettilo direttamente nel contenitore grande." ]
   - [ "Versa la soluzione di acqua e soda caustica nel barattolo con l’olio, girando col mestolo", "L'olio diventerà sempre più opaco." ]
-  - [ "Quando inizi a faticare col mestolo, aggiungi gli oli essenziali, e continua a mescolare con il frullatore a immersione", "" ]
+  - [ "Quando inizi a faticare col mestolo, aggiungi gli oli essenziali, e continua a mescolare con il frullatore ad immersione", "" ]
   - [ "Frulla finché il composto non sarà omogeneo e opaco, come una maionese", "Potrebbe volerci qualche minuto. Accendi e spegni il frullatore per evitare di surriscaldarlo." ]
   - [ "Quando il composto è pronto, versalo subito negli stampi", "Batti leggermente gli stampi sul tavolo per evitare bolle d'aria." ]
   - [ "Tieni gli stampi in un luogo arieggiato per <strong>24-48 ore</strong> e poi estrai i saponi, indossando i guanti", "Il lato esposto all'aria potrebbe essere  più chiaro: non è un problema. Se vuoi tagliarlo in pezzi più piccoli, questo è il momento giusto, perché il sapone sarà solido ma non duro." ]

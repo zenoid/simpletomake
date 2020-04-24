@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-index: 1
+index: 2
 permalink: kimchi
 recipeid: kimchi-it
 category: food
@@ -39,7 +39,7 @@ tools:
   - [ "Una ciotola grande (o più)", "Dovrà contenere tutte le verdure tagliate. Da evitare il metallo: va bene di plastica o vetro." ]
   - [ "Un pentolino", "Meglio se antiaderente." ]
   - [ "Una bilancia di precisione" ]
-  - [ "Un frullatore", "Va bene anche un frullatore a immersione." ]
+  - [ "Un frullatore", "Va bene anche un frullatore ad immersione." ]
   - [ "Un mestolo o un cucchiaio", "Il materiale è indifferente." ]
   - [ "Coltello, mandolina, pelaverdure", "Tutti gli strumenti necessari per tagliare, pelare, sminuzzare le verdure che hai scelto." ]
   - [ "Un tagliere" ]

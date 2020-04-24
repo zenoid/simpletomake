@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-index: 2
+index: 1
 permalink: yogurt-denso
 recipeid: thick-yogurt-it
 category: food

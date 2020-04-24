@@ -22,7 +22,7 @@ sources:
 
 recipeVolume: 200
 recipeWeight: 168.51
-recipeIntro: [ "Cosa serve per fare circa", 200, ml, "di disinfettante per mani" ]
+recipeIntro: [ "Cosa serve per fare circa", 200, "ml", "di disinfettante per mani" ]
 recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale"
 
 ingredients:
