@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://simpletomake.it/index.html</loc>
+    
+    <lastmod>2020-04-30T10:11:41.551Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://simpletomake.it/maionese.html</loc>
     
     <lastmod>2020-04-26T07:49:26.339Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://simpletomake.it/yogurt-denso.html</loc>
     
     <lastmod>2020-04-24T12:32:00.091Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://simpletomake.it/index.html</loc>
-    
-    <lastmod>2020-04-04T07:25:17.978Z</lastmod>
     
   </url>
   

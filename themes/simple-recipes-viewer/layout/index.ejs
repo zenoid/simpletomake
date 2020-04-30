@@ -14,7 +14,7 @@
   %>
       <div class="home-menu-list">
         <div>
-          <h2>Detergenti e detersivi</h2>
+          <h2><%- page.listTitleHygiene %></h2>
           <ul>
             <%
 
@@ -25,7 +25,7 @@
           </ul>
         </div>
         <div>
-          <h2>Cibi e bevande</h2>
+          <h2><%- page.listTitleFood %></h2>
           <ul><%
 
           recipes_food.forEach( recipe => {
@@ -41,10 +41,10 @@
   <div class="home-about">
     <div class="content">
       <h1><%- config.subtitle %></h1>
-      <div class="columns">
-        <p>Ti sei abituato ad essere consumatore: <strong>torna ad essere produttore</strong></p>
-        <p>Molti cibi e prodotti per la pulizia che usi ogni giorno puoi farli in casa, in modo più <strong>conveniente, ecologico e salutare</strong></p>
-        <p>Esistono migliaia di varianti per ogni ricetta di autoproduzione, ma ognuna può essere ridotta a <strong>pochi principi essenziali</strong></p>
+      <div class="columns"><%
+      for ( var i = 0; i < page.introBlocks.length; i++ ) { %>
+        <p><%- page.introBlocks[ i ] %></p><%
+      } %>
       </div>
     </div>
   </div>
