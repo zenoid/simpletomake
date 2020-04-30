@@ -59,16 +59,20 @@ section {
 
     h1,
     h2 {
-      padding-top: 1rem;
+      padding-top: 2rem;
     }
   }
 
   @media only screen and (max-width: $size-XXS) {
-    padding: 0 0 $btn-height 0;
+    padding: 0;
+
+    &:last-of-type {
+      padding-bottom: 5rem;
+    }
 
     h1,
     h2 {
-      padding: 2.5rem 1rem;
+      padding: 2rem 1rem 2rem 1rem;
     }
   }
 }
@@ -199,6 +203,10 @@ section {
   & > .btns-list:first-child {
     @include flexGrow( 1 );
     margin-right: 2px;
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    position: fixed;
   }
 }
 
