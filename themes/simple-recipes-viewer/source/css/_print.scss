@@ -36,12 +36,13 @@
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5 {
     color: var( --color-dark );
 
     .sub {
       font-size: 1em;
-      display: inline-block;
+      display: block;
       margin-right: 0.5rem;
 
       & > span:not(.quantity) {
@@ -58,7 +59,7 @@
     font-size: 1.5rem;
   }
 
-  h4 {
+  h3 {
     font-size: 1rem;
 
     br {
@@ -78,11 +79,13 @@
 
   .card,
   .card-empty {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 !important;
+    height: calc( 100% ) !important;
     page-break-inside: avoid;
     break-inside: avoid;
 
-    p {
+    p,
+    li {
       color: var( --color-dark );
     }
   }

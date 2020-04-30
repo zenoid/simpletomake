@@ -73,7 +73,7 @@
       %>
         <div>
           <div class="card">
-            <h4><span class="ingredient"><%- page.ingredients[ i ][ 2 ] %></span><% if ( page.ingredients[ i ][ 3 ] ) { %><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ][ 0 ] %>"><%- page.ingredients[ i ][ 3 ] %></span> <%- page.ingredients[ i ][ 4 ] %></span><% } %></h4>
+            <h3><span class="ingredient"><%- page.ingredients[ i ][ 2 ] %></span><% if ( page.ingredients[ i ][ 3 ] ) { %><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ][ 0 ] %>"><%- page.ingredients[ i ][ 3 ] %></span> <%- page.ingredients[ i ][ 4 ] %></span><% } %></h3>
             <% if ( page.ingredients[ i ][ 5 ] ) { %><p class="note"><%- page.ingredients[ i ][ 5 ] %></p><% } %>
           </div>
         </div><%
@@ -99,7 +99,7 @@
       <% for ( i = 0; i < page.tools.length; i++ ) { %>
         <div>
           <div class="card">
-            <h4><%- page.tools[ i ][ 0 ] %></h4>
+            <h3><%- page.tools[ i ][ 0 ] %></h3>
             <% if ( page.tools[ i ][ 1 ] ) { %><p class="note"><%- page.tools[ i ][ 1 ] %></p><% } %>
           </div>
         </div>
@@ -117,7 +117,7 @@
         <div>
           <div class="card<% if ( page.directions[ i ][ 2 ] ) { %> card-title<% } %>"><%
             if ( page.directions[ i ][ 2 ] ) { %>
-              <h4><%- page.directions[ i ][ 2 ] %></h4><%
+              <h3><%- page.directions[ i ][ 2 ] %></h3><%
             } %>
             <p><%- page.directions[ i ][ 0 ] %></p>
             <% if ( page.directions[ i ][ 1 ] ) { %><p class="note"><%- page.directions[ i ][ 1 ] %></p><% } %>

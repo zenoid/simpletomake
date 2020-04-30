@@ -93,7 +93,7 @@ h5 {
 
 h1,
 h2,
-h3 {
+h4 {
 
   .sub {
     font-size: 0.6em;
@@ -128,13 +128,13 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
-  line-height: $btn-height;
+  font-size: 1.5rem;
+  line-height: 1.2;
 }
 
 h4 {
-  font-size: 1.5rem;
-  line-height: 1.2;
+  font-size: 1.25rem;
+  line-height: $btn-height;
 }
 
 h5 {
