@@ -10,6 +10,7 @@
   footer,
   .btn,
   .card-list-ordered .card:before,
+  .card-title:after,
   .home-menu {
     display: none;
   }
@@ -38,7 +39,7 @@
   h3,
   h4,
   h5 {
-    color: var( --color-dark );
+    color: var( --color-dark ) !important;
 
     .sub {
       font-size: 1em;
