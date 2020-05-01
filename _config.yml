@@ -75,12 +75,20 @@ node_sass:
   sourceComments: false
   sourceMap: false
 
-# JavaScript
-uglify:
+# Minification
+js_concator:
+  enable: false
+js_minifier:
+  enable: true
   mangle: true
-  output:
-  compress: true
-  es6: false
+  silent: false
+  output: true
+html_minifier:
+  enable: false
+image_minifier:
+  enable: true
+  multipass: false
+  exclude: [ 'svg' ]
 
 # Deployment
 deploy:

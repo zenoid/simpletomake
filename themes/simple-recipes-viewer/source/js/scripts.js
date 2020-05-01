@@ -14,6 +14,114 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   /*
 
+      Recipe calculation
+
+  */
+
+  var weightRatio,
+    unitVolume,
+    ingrMin = 100,
+    ingrMax = 10000,
+    ingrStep = 100,
+    ingrPrec = 2,
+    qtyLabels,
+    qtyValue,
+    qtyRemoveBtn,
+    qtyAddBtn,
+    hasUnits = false;
+
+  function removeQty()
+  {
+    if ( hasUnits ) {
+      recipeUnits = Math.max( ingrMin, recipeUnits - ingrStep );
+    } else {
+      recipeVolume = Math.max( ingrMin, recipeVolume - ingrStep );
+    }
+    calcQty();
+  }
+
+  function addQty()
+  {
+    if ( hasUnits ) {
+      recipeUnits = Math.min( ingrMax, recipeUnits + ingrStep );
+    } else {
+      recipeVolume = Math.min( ingrMax, recipeVolume + ingrStep );
+    }
+    calcQty();
+  }
+
+  function setupQty()
+  {
+    hasUnits = ( typeof recipeUnits !== 'undefined' );
+    weightRatio = recipeWeight / recipeVolume;
+    if ( hasUnits ) {
+      unitVolume = recipeVolume / recipeUnits;
+      ingrMin  = 1;
+      ingrMax  = 100;
+      ingrStep = 1;
+    }
+    if ( typeof recipeRange !== 'undefined' ) {
+      ingrMin  = recipeRange[ 0 ];
+      ingrMax  = recipeRange[ 1 ];
+      ingrStep = recipeRange[ 2 ];
+    }
+    if ( typeof recipePrecision !== 'undefined' ) {
+      ingrPrec = recipePrecision;
+    }
+    qtyLabels = document.querySelectorAll( '[data-qty]' );
+    qtyValue = document.getElementById( 'qtyValue' );
+    qtyRemoveBtn = document.getElementById( 'qtyRemove' );
+    qtyAddBtn = document.getElementById( 'qtyAdd' );
+    qtyRemoveBtn.addEventListener( 'click', removeQty );
+    qtyAddBtn.addEventListener( 'click', addQty );
+    calcQty();
+  }
+
+  function round( qty, prec )
+  {
+    var f,
+      q = Math.round( qty );
+    if ( String( q ).length > prec ) {
+      f = Math.pow( 10, String( q ).length - prec );
+      q = Math.round( q / f ) * f;
+    }
+    return q;
+  }
+
+  function calcQty()
+  {
+    var i, qty, f;
+    if ( hasUnits ) {
+      recipeVolume = unitVolume * recipeUnits;
+      recipeWeight = recipeVolume * weightRatio;
+      qtyValue.textContent = recipeUnits;
+    } else {
+      recipeWeight = recipeVolume * weightRatio;
+      qtyValue.textContent = recipeVolume;
+    }
+    for ( i in ingredients ) {
+      qty = round( recipeWeight * ingredients[ i ].ratio / 100, ingrPrec );
+      ingredients[ i ].qty = qty;
+    }
+    for ( i = 0; i < qtyLabels.length; i++ ) {
+      if ( ingredients[ qtyLabels[ i ].dataset.qty ] ) {
+        qty = ingredients[ qtyLabels[ i ].dataset.qty ].qty;
+        if ( qtyLabels[ i ].dataset.prec ) {
+          qty = round( qty, qtyLabels[ i ].dataset.prec );
+        }
+        qtyLabels[ i ].textContent = qty;
+      }
+      if ( qtyLabels[ i ].dataset.qty === 'volume' ) {
+        qtyLabels[ i ].textContent = recipeVolume;
+      }
+      if ( qtyLabels[ i ].dataset.qty === 'units' ) {
+        qtyLabels[ i ].textContent = recipeUnits;
+      }
+    }
+  }
+
+  /*
+
       Recipe navigation
 
   */
@@ -153,114 +261,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   /*
 
-      Recipe calculation
-
-  */
-
-  var weightRatio,
-    unitVolume,
-    ingrMin = 100,
-    ingrMax = 10000,
-    ingrStep = 100,
-    ingrPrec = 2,
-    qtyLabels,
-    qtyValue,
-    qtyRemoveBtn,
-    qtyAddBtn,
-    hasUnits = false;
-
-  function removeQty()
-  {
-    if ( hasUnits ) {
-      recipeUnits = Math.max( ingrMin, recipeUnits - ingrStep );
-    } else {
-      recipeVolume = Math.max( ingrMin, recipeVolume - ingrStep );
-    }
-    calcQty();
-  }
-
-  function addQty()
-  {
-    if ( hasUnits ) {
-      recipeUnits = Math.min( ingrMax, recipeUnits + ingrStep );
-    } else {
-      recipeVolume = Math.min( ingrMax, recipeVolume + ingrStep );
-    }
-    calcQty();
-  }
-
-  function setupQty()
-  {
-    hasUnits = ( typeof recipeUnits !== 'undefined' );
-    weightRatio = recipeWeight / recipeVolume;
-    if ( hasUnits ) {
-      unitVolume = recipeVolume / recipeUnits;
-      ingrMin  = 1;
-      ingrMax  = 100;
-      ingrStep = 1;
-    }
-    if ( typeof recipeRange !== 'undefined' ) {
-      ingrMin  = recipeRange[ 0 ];
-      ingrMax  = recipeRange[ 1 ];
-      ingrStep = recipeRange[ 2 ];
-    }
-    if ( typeof recipePrecision !== 'undefined' ) {
-      ingrPrec = recipePrecision;
-    }
-    qtyLabels = document.querySelectorAll( '[data-qty]' );
-    qtyValue = document.getElementById( 'qtyValue' );
-    qtyRemoveBtn = document.getElementById( 'qtyRemove' );
-    qtyAddBtn = document.getElementById( 'qtyAdd' );
-    qtyRemoveBtn.addEventListener( 'click', removeQty );
-    qtyAddBtn.addEventListener( 'click', addQty );
-    calcQty();
-  }
-
-  function round( qty, prec )
-  {
-    var f,
-      q = Math.round( qty );
-    if ( String( q ).length > prec ) {
-      f = Math.pow( 10, String( q ).length - prec );
-      q = Math.round( q / f ) * f;
-    }
-    return q;
-  }
-
-  function calcQty()
-  {
-    var i, qty, f;
-    if ( hasUnits ) {
-      recipeVolume = unitVolume * recipeUnits;
-      recipeWeight = recipeVolume * weightRatio;
-      qtyValue.textContent = recipeUnits;
-    } else {
-      recipeWeight = recipeVolume * weightRatio;
-      qtyValue.textContent = recipeVolume;
-    }
-    for ( i in ingredients ) {
-      qty = round( recipeWeight * ingredients[ i ].ratio / 100, ingrPrec );
-      ingredients[ i ].qty = qty;
-    }
-    for ( i = 0; i < qtyLabels.length; i++ ) {
-      if ( ingredients[ qtyLabels[ i ].dataset.qty ] ) {
-        qty = ingredients[ qtyLabels[ i ].dataset.qty ].qty;
-        if ( qtyLabels[ i ].dataset.prec ) {
-          qty = round( qty, qtyLabels[ i ].dataset.prec );
-        }
-        qtyLabels[ i ].textContent = qty;
-      }
-      if ( qtyLabels[ i ].dataset.qty === 'volume' ) {
-        qtyLabels[ i ].textContent = recipeVolume;
-      }
-      if ( qtyLabels[ i ].dataset.qty === 'units' ) {
-        qtyLabels[ i ].textContent = recipeUnits;
-      }
-    }
-  }
-
-  /*
-
       Keyboard actions
 
   */
@@ -321,8 +321,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
   */
 
   if ( sections.length ) {
-    setupNav();
     setupQty();
+    setupNav();
     document.onkeydown = recipeKeyNav;
   }
 

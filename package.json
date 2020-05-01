@@ -13,12 +13,12 @@
   },
   "dependencies": {
     "hexo": "latest",
+    "hexo-all-minifier": "^0.5.3",
     "hexo-browsersync": "latest",
     "hexo-generator-sitemap": "^2.0.0",
     "hexo-renderer-ejs": "latest",
     "hexo-renderer-marked": "latest",
     "hexo-renderer-scss": "latest",
-    "hexo-server": "latest",
-    "hexo-uglify": "latest"
+    "hexo-server": "latest"
   }
 }
