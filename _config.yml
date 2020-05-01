@@ -75,6 +75,13 @@ node_sass:
   sourceComments: false
   sourceMap: false
 
+# JavaScript
+uglify:
+  mangle: true
+  output:
+  compress: true
+  es6: false
+
 # Deployment
 deploy:
   type: ''
