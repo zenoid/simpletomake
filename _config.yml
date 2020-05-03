@@ -22,8 +22,8 @@ new_post_name: :title.md
 default_layout: recipe
 titlecase: false
 external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
+  enable: true
+  field: site
   exclude: ''
 filename_case: 0
 render_drafts: false
@@ -93,3 +93,16 @@ image_minifier:
 # Deployment
 deploy:
   type: ''
+
+# RSS Feed
+feed:
+  type:
+    - atom
+    - rss2
+  limit: false
+  content: false
+  content_limit: 200
+  content_limit_delim: ' '
+  order_by: -date
+  icon: android-chrome-512x512.png
+  autodiscovery: true
