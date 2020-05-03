@@ -1,68 +1,161 @@
 
 
 
-/*                      HOMEPAGE: MENU
+/*                      HOMEPAGE: LAYOUT
 ------------------------------------------------------------------------- */
 
-.home-menu {
+.home-main {
+  @include flex;
+  min-height: 100vh;
   background-color: var( --color-main1 );
-  padding: 2rem 1rem;
   color: var( --color-white );
 
-  .content {
-    @include flex;
-    @include flexMiddle;
-  }
-
-  @media only screen and (max-width: $size-XXS) {
-    padding: 0.5rem;
+  & > div {
+    @include flexNoShrink;
+    width: 50%;
 
     .content {
-      @include flexColumn;
+      max-width: $layoutwidth / 2;
+    }
+
+    &:first-child {
+      .content {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      .content {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $size-XS) {
+    @include flexColumn;
+
+    & > div {
+      width: 100%;
+
+      .content {
+        max-width: $layoutwidth;
+      }
+    }
+  }
+}
+
+
+
+/*                      HOMEPAGE: ABOUT
+------------------------------------------------------------------------- */
+
+.home-about {
+
+  .content {
+    padding: 2rem;
+
+    @media only screen and (max-width: $size-S) {
+      padding: 2rem 1rem;
+    }
+
+    @media only screen and (max-width: $size-XS) {
+      padding: 2rem 1rem;
+      @include flex;
+      @include flexMiddle;
+
+      .logo {
+        width: 50%;
+        @include flexNoShrink;
+      }
+    }
+
+    @media only screen and (max-width: $size-XXS) {
+      display: block;
+
+      .logo {
+        width: 100%;
+      }
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    display: inline;
+
+    strong {
+      font-size: 1.25em;
+    }
+
+    & + p {
+      &:before {
+        content: '\2022';
+        margin: 0 0.5em;
+      }
+    }
+
+    @media only screen and (max-width: $size-M) {
+      font-size: 1.25rem;
+    }
+
+    @media only screen and (max-width: $size-S) {
+      font-size: 1rem;
     }
   }
 }
 
 .logo {
-  @include flexNoShrink;
-  width: 33.33%;
-  height: 60vh;
-  min-height: 20rem;
+  height: 50vh;
+  min-height: 10rem;
+  max-height: 27rem;
   text-align: center;
+  margin-bottom: 2rem;
 
   img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
   }
 
-  @media only screen and (max-width: $size-S) {
-    width: 50%;
-  }
-
   @media only screen and (max-width: $size-XS) {
-    width: 33.33%;
-  }
-
-  @media only screen and (max-width: $size-XXS) {
-    width: 100%;
-    height: 10rem;
-    min-height: 0;
-    margin-bottom: 1.5rem;
+    height: 12rem;
+    margin-bottom: 1rem;
   }
 }
 
-.home-menu-list {
-  @include flexGrow( 1 );
-  @include flex;
 
-  & > div {
-    width: 50%;
-    padding-left: 1rem;
+
+/*                      HOMEPAGE: MENU
+------------------------------------------------------------------------- */
+
+.home-menu {
+  background-color: var( --color-darkband );
+
+  .content {
+    padding: 2rem;
+
+    @media only screen and (max-width: $size-S) {
+      padding: 2rem 1rem;
+    }
+
+    @media only screen and (max-width: $size-XXS) {
+      padding: 1rem;
+    }
+  }
+
+  h1 {
+    opacity: 0.4;
+    margin-bottom: 1em;
+    max-width: $layoutwidth / 3;
   }
 
   h2 {
     font-size: 1.5rem;
+    font-weight: $fontweight-normal;
     margin-bottom: 1rem;
+  }
+
+  ul + h2 {
+    margin-top: 2rem;
   }
 
   li {
@@ -83,105 +176,16 @@
     }
   }
 
-  @media only screen and (max-width: $size-M) {
-    @include flexColumn;
-    padding-left: 1rem;
-
-    & > div {
-      width: 100%;
-      padding-right: 0;
-
-      & + div {
-        margin-top: 2rem;
-      }
-    }
-  }
-
   @media only screen and (max-width: $size-S) {
-    width: 50%;
-    padding-left: 0;
-  }
-
-  @media only screen and (max-width: $size-XS) {
-    width: 66.67%;
-    padding-left: 1rem;
-  }
-
-  @media only screen and (max-width: $size-XXS) {
-    width: 100%;
-
-    & > div {
-      margin: 0;
-      padding: 0;
-
-      & + div {
-        margin-top: 1rem;
-      }
-
-      a {
-        display: block;
-      }
-    }
-  }
-}
-
-
-
-/*                      HOMEPAGE: ABOUT
-------------------------------------------------------------------------- */
-
-.home-about {
-  padding: 4rem 1rem;
-  background-color: var( --color-darkband );
-  color: var( --color-white );
-
-  h1 {
-    margin-bottom: 4rem;
-    opacity: 0.4;
-  }
-
-  @media only screen and (max-width: $size-S) {
-    padding: 2rem 1rem;
-
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      max-width: 100%;
     }
   }
 
   @media only screen and (max-width: $size-XXS) {
-    padding: 1rem 0.5rem;
-  }
-}
-
-.columns {
-  @include flex;
-
-  & > p {
-    width: 33.33%;
-    font-size: 1.1rem;
-    line-height: 1.75rem;
-    margin-top: 0;
-
-    strong {
-      font-size: 1.5em;
-    }
-
-    & + p {
-      margin-left: 2rem;
-    }
-  }
-
-  @media only screen and (max-width: $size-S) {
-    @include flexColumn;
-
-    & > p {
-      width: 100%;
-      margin-top: 2rem;
-
-      & + p {
-        margin-left: 0;
-      }
+    a {
+      display: block;
     }
   }
 }

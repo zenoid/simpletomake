@@ -12,8 +12,8 @@ $colors: #508040 #636399 #994545 #345E73 #548C7E;
 /*                      COLORS
 ------------------------------------------------------------------------- */
 
-$color-ingredient: lighten( nth( $colors, 2 ), 20% );
-$color-darkband:    darken( nth( $colors, 1 ),  7% );
+$color-tag:       lighten( nth( $colors, 2 ), 20% );
+$color-darkband:  darken( nth( $colors, 1 ),  7% );
 
 :root {
 
@@ -26,7 +26,7 @@ $color-darkband:    darken( nth( $colors, 1 ),  7% );
     #{ '--color-main' + $i}: nth( $colors, $i );
   }
 
-  --color-ingredient: rgba( #{red($color-ingredient)}, #{green($color-ingredient)}, #{blue($color-ingredient)}, 0.3 );
+  --color-tag: rgba( #{red($color-tag)}, #{green($color-tag)}, #{blue($color-tag)}, 0.3 );
   --color-darkband: #{$color-darkband};
 
 }

@@ -1,52 +1,49 @@
-  <div class="home-menu">
-    <div class="content">
-      <div class="logo">
-        <img src="images/simpletomake-logo.svg" alt="Simple to Make">
-      </div><%
+  <div class="home-main">
 
-    var i,
-      recipes_list    = site.pages.filter( p => p.layout === 'recipe' ),
-      recipes_hygiene = recipes_list.filter( p => p.category === 'hygiene' )
-        .sort( 'index' ),
-      recipes_food    = recipes_list.filter( p => p.category === 'food' )
-        .sort( 'index' );
-
-  %>
-      <div class="home-menu-list">
-        <div>
-          <h2><%- page.listTitleHygiene %></h2>
-          <ul>
-            <%
-
-          recipes_hygiene.forEach( recipe => {
-  %>
-            <li><a href="<%- recipe.path %>" class="btn btn-main"><%- recipe.title %></a></li><%
-            }) %>
-          </ul>
-        </div>
-        <div>
-          <h2><%- page.listTitleFood %></h2>
-          <ul><%
-
-          recipes_food.forEach( recipe => {
-  %>
-            <li><a href="<%- recipe.path %>" class="btn btn-main"><%- recipe.title %></a></li><%
-            }) %>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="home-about">
-    <div class="content">
-      <h1><%- config.subtitle %></h1>
-      <div class="columns"><%
+    <div class="home-about">
+      <div class="content">
+        <div class="logo">
+          <img src="images/simpletomake-logo.svg" alt="Simple to Make">
+        </div><%
       for ( var i = 0; i < page.introBlocks.length; i++ ) { %>
         <p><%- page.introBlocks[ i ] %></p><%
       } %>
       </div>
     </div>
+
+    <div class="home-menu">
+      <div class="content">
+        <h1><%- config.subtitle %></h1>
+  <%
+
+      var i,
+        recipes_list    = site.pages.filter( p => p.layout === 'recipe' ),
+        recipes_hygiene = recipes_list.filter( p => p.category === 'hygiene' )
+          .sort( 'index' ),
+        recipes_food    = recipes_list.filter( p => p.category === 'food' )
+          .sort( 'index' );
+
+    %>
+        <h2><%- page.listTitleHygiene %></h2>
+        <ul>
+          <%
+
+          recipes_hygiene.forEach( recipe => {
+  %>
+          <li><a href="<%- recipe.path %>" class="btn btn-main"><%- recipe.title %></a></li><%
+          }) %>
+        </ul>
+        <h2><%- page.listTitleFood %></h2>
+        <ul><%
+
+        recipes_food.forEach( recipe => {
+%>
+          <li><a href="<%- recipe.path %>" class="btn btn-main"><%- recipe.title %></a></li><%
+          }) %>
+        </ul>
+      </div>
+    </div>
+
   </div>
 
 <%- partial('_partial/footer') %>
