@@ -4,10 +4,12 @@
       <div class="content">
         <div class="logo">
           <img src="images/simpletomake-logo.svg" alt="Simple to Make">
-        </div><%
-      for ( var i = 0; i < page.introBlocks.length; i++ ) { %>
-        <p><%- page.introBlocks[ i ] %></p><%
-      } %>
+        </div>
+        <div><%
+        for ( var i = 0; i < page.introBlocks.length; i++ ) { %>
+          <p><%- page.introBlocks[ i ] %></p><%
+        } %>
+        </div>
       </div>
     </div>
 

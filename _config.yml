@@ -99,8 +99,10 @@ feed:
   type:
     - atom
     - rss2
+  path:
+    - atom.xml
+    - rss2.xml
   limit: false
-  content: false
   content_limit: 200
   content_limit_delim: ' '
   order_by: -date
