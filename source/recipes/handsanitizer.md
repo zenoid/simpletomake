@@ -20,19 +20,44 @@ sources:
   - World Health Organization
   - '"Scienza in Cucina", Dario Bressanini'
 
-recipeVolume: 200
-recipeWeight: 168.51
-recipeIntro: [ "Cosa serve per fare circa", 200, "ml", "di disinfettante per mani" ]
-recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale"
+recipeIntro: [ "Cosa serve per fare circa", "di disinfettante per mani" ]
+
+recipeBase: { qty: 200, units: "ml" }
 
 ingredients:
-  - [ alcol, 77.54, "Alcool etilico", 130, "gr", "Chiamato anche <strong>Etanolo</strong>. La concentrazione deve essere al 96%. Da non confondersi con l'alcool denaturato (quello rosa) che può irritare la pelle." ]
-  - [ h2o2, 7.18, "Acqua ossigenata", 12, "gr", "Chiamato anche <strong>Perossido di idrogeno</strong>. La concentrazione può essere a 10 o 20 volumi, ovvero dal 3 al 6%." ]
-  - [ glic, 2.17, "Glicerolo", 4, "gr", "Chiamato anche <strong>Glicerina</strong>.  Si trova in farmacia o erboristeria. Viene usato anche per le sigarette elettroniche." ]
-  - [ aqua, 13.11, "Acqua", 22, "gr", "Distillata, oppure bollita e raffreddata." ]
+  - { id: "alcol",
+      ratio: 77.54,
+      spec: 0.789,
+      name: "Alcool etilico",
+      qty: 130,
+      units: "gr",
+      notes: "Chiamato anche <strong>Etanolo</strong>. La concentrazione deve essere al 96%. Da non confondersi con l'alcool denaturato (quello rosa) che può irritare la pelle." }
+  - { id: "h2o2",
+      ratio: 7.18,
+      spec: 1.44,
+      name: "Acqua ossigenata",
+      qty: 12,
+      units: "gr",
+      notes: "Chiamato anche <strong>Perossido di idrogeno</strong>. La concentrazione può essere a 10 o 20 volumi, ovvero dal 3 al 6%." }
+  - { id: "glic",
+      ratio: 2.17,
+      spec: 1.25,
+      name: "Glicerolo",
+      qty: 4,
+      units: "gr",
+      notes: "Chiamato anche <strong>Glicerina</strong>.  Si trova in farmacia o erboristeria. Viene usato anche per le sigarette elettroniche." }
+  - { id: "aqua",
+      ratio: 13.11,
+      spec: 1,
+      name: "Acqua",
+      qty: 22,
+      units: "gr",
+      notes: "Distillata, oppure bollita e raffreddata." }
+
+recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale"
 
 tools:
-  - [ "Un contenitore da almeno <span class='qtyspan'><span data-qty='volume'>200</span> ml</span>", "Si può riciclare una bottiglietta o un flacone spray, di plastica o di vetro." ]
+  - [ "Un contenitore da almeno <span class='qtyspan'><span data-qty='volume.base'>200</span> ml</span>", "Si può riciclare una bottiglietta o un flacone spray, di plastica o di vetro." ]
   - [ "Una bilancia di precisione" ]
   - [ "Un mestolo o un cucchiaio", "Il materiale è indifferente." ]
 

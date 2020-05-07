@@ -19,20 +19,40 @@ timeToUse: 1-2 settimane
 sources:
   - '"The Art of Fermentation", Sandor Katz'
 
-recipeVolume: 1000
-recipeWeight: 1620
+recipeIntro: [ "Cosa serve per fare il kimchi con", "di verdure" ]
+
+recipeBase: { qty: 1000, units: "gr" }
 recipeRange: [ 500, 10000, 500 ]
-recipeIntro: [ "Cosa serve per fare il kimchi con", 1000, "gr", "di verdure" ]
+recipePrecision: 3
 
 ingredients:
-  - [ cabbage, 0, "Cavoli a foglia", , "", "La tradizione prevede <strong>cavolo cinese o cavolo Napa</strong>, ma può essere usato qualunque mix di cavoli a foglia: cappuccio, verza, cavolo rosso, cavolo nero, cavoletti di bruxelles." ]
-  - [ vegetables, 0, "Altre verdure", , "", "Servono verdure che si possano mangiare anche crude: meglio le radici come carote, rape, ravanelli, cipolle. No a pomodori, cetrioli, zucca e altri ortaggi troppo acquosi." ]
-  - [ spices, 0, "Spezie", , "", "Di solito si usano almeno <strong>aglio, zenzero e peperoncino piccante</strong>, ma aggiungi spezie a tuo gusto (paprika, curcuma, cumino, ecc.). La ricetta tradizionale prevede anche salsa di pesce (simile alla colatura di alici)." ]
-  - [ aqua, 92.6, "Acqua", 1500, "gr", "Parte per la salamoia e parte per la salsa. Meglio se senza cloro: se in dubbio, lasciala decantare all'aria alcune ore." ]
-  - [ aquasalt, 61.73 ]
-  - [ aquaflour, 30.86 ]
-  - [ salt, 3.7, "Sale fino", 60, "gr", "Molto meglio se <strong>non iodato</strong>. Il sale integrale è l'ideale." ]
-  - [ flour, 3.7, "Farina", 60, "gr", "Ideale la <strong>farina di riso</strong>, in alternativa metà farina bianca e metà amido (maizena o fecola)." ]
+  - { id: "cabbage",
+      name: "Cavoli a foglia",
+      notes: "La tradizione prevede <strong>cavolo cinese o cavolo Napa</strong>, ma può essere usato qualunque mix di cavoli a foglia: cappuccio, verza, cavolo rosso, cavolo nero, cavoletti di bruxelles." }
+  - { id: "vegetables",
+      name: "Altre verdure",
+      notes: "Servono verdure che si possano mangiare anche crude: meglio le radici come carote, rape, ravanelli, cipolle. No a pomodori, cetrioli, zucca e altri ortaggi troppo acquosi." }
+  - { id: "spices",
+      name: "Spezie",
+      notes: "Di solito si usano almeno <strong>aglio, zenzero e peperoncino piccante</strong>, ma aggiungi spezie a tuo gusto (paprika, curcuma, cumino, ecc.). La ricetta tradizionale prevede anche salsa di pesce (simile alla colatura di alici)." }
+  - { id: "aqua",
+      ratio: 150,
+      name: "Acqua",
+      qty: 1500,
+      units: "gr",
+      notes: "Parte per la salamoia e parte per la salsa. Meglio se senza cloro: se in dubbio, lasciala decantare all'aria alcune ore." }
+  - { id: "salt",
+      ratio: 6,
+      name: "Sale fino",
+      qty: 60,
+      units: "gr",
+      notes: "Molto meglio se <strong>non iodato</strong>. Il sale integrale è l'ideale." }
+  - { id: "flour",
+      ratio: 6,
+      name: "Farina",
+      qty: 60,
+      units: "gr",
+      notes: "Ideale la <strong>farina di riso</strong>, in alternativa metà farina bianca e metà amido (maizena o fecola)." }
 
 tools:
   - [ "Barattoli di vetro, sterilizzati", "Sterilizza i barattoli bollendoli nell'acqua, oppure tenendoli in forno a 110°C per una decina di minuti." ]
@@ -47,11 +67,11 @@ tools:
 directions:
   - [ "Elimina le parti dure dai cavoli a foglia e togli le eventuali bucce dalle altre verdure", "Togli anche ogni eventuale parte marcia: potrebbe rovinare la fermentazione." ]
   - [ "Taglia i cavoli a foglia e tutte le altre verdure a pezzi piccoli o fettine sottili", "Scegli tu come tagliare le verdure: l'importante è che non ci siano pezzi troppo grandi." ]
-  - [ "Prepara una salamoia al <strong>6%</strong>, sciogliendo <span class='qtyspan'><span data-qty='salt'>60</span> gr</span> di sale fino in <span class='qtyspan'><span data-qty='aquasalt'>1000</span> gr</span> di acqua", "" ]
+  - [ "Prepara una salamoia al <strong>6%</strong>, sciogliendo <span class='qtyspan'><span data-qty='salt'>60</span> gr</span> di sale fino in <span class='qtyspan'><span data-qty='aqua' data-mult='0.6666'>1000</span> gr</span> di acqua", "" ]
   - [ "Metti tutte le verdure tagliate nella ciotola, e versa sopra la salamoia" ]
   - [ "Schiaccia le verdure per eliminare ogni bolla d'aria, e metti un piatto e un peso sopra per mantenerle sotto la salamoia", "Come peso, puoi usare un barattolo (pulito) riempito d'acqua." ]
   - [ "Lascia le verdure a bagno per <strong>6 ore</strong>", "Puoi cambiare il tempo cambiando la concentrazione di sale: con una salamoia al 4% tieni a bagno le verdure per 10-12 ore, se all'8% invece 3-4 ore." ]
-  - [ "Intanto prepara il condimento: metti <span class='qtyspan'><span data-qty='aquaflour'>500</span> gr</span> di acqua in un pentolino e accendi il fuoco", "", "Salsa di condimento" ]
+  - [ "Intanto prepara il condimento: metti <span class='qtyspan'><span data-qty='aqua' data-mult='0.3333'>500</span> gr</span> di acqua in un pentolino e accendi il fuoco", "", "Salsa di condimento" ]
   - [ "Quando l'acqua inizia a bollire, versa gradualmente <span class='qtyspan'><span data-qty='flour'>60</span> gr</span> farina di riso e mescola continuamente per non far formare grumi", "" ]
   - [ "Quando avrai una salsa densa, spegni il fuoco e lascia raffreddare fino a temperatura ambiente", "" ]
   - [ "Frulla tutte le spezie che hai scelto, assieme alla salsa bianca", "" ]

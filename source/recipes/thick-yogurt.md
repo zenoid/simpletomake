@@ -20,19 +20,30 @@ sources:
   - '"On Food and Cooking", Harold McGee'
   - '"The Art of Fermentation", Sandor Katz'
 
-recipeVolume: 1050
-recipeWeight: 1100
-recipeUnits: 7
-recipeIntro: [ "Cosa serve per fare", 7, "", "vasetti da 150ml di yogurt denso" ]
+recipeIntro: [ "Cosa serve per fare", "di yogurt denso" ]
+
+recipeBase: { qty: 1000, units: "ml" }
 
 ingredients:
-  - [ milk, 90.91, "Latte", 1000, "ml", "Meglio se <strong>latte vaccino intero</strong>, fresco e non a lunga conservazione. Non si possono utilizzare latti vegetali o delattosati: non contengono il lattosio necessario alla fermentazione." ]
-  - [ yogurt, 9.09, "Yogurt naturale", 100, "ml", "Yogurt prodotto da latte animale, senza aromi o zuccheri aggiunti, e non vicino alla data di scadenza." ]
+  - { id: "milk",
+      ratio: 90.91,
+      spec: 1.04,
+      name: "Latte",
+      qty: 10000,
+      units: "ml",
+      notes: "Meglio se <strong>latte vaccino intero</strong>, fresco e non a lunga conservazione. Non si possono utilizzare latti vegetali o delattosati: non contengono il lattosio necessario alla fermentazione." }
+  - { id: "yogurt",
+      ratio: 9.09,
+      spec: 1.04,
+      name: "Yogurt bianco",
+      qty: 100,
+      units: "ml",
+      notes: "Yogurt prodotto da latte animale, senza aromi o zuccheri aggiunti, e non vicino alla data di scadenza." }
 
 tools:
   - [ "Una yogurtiera", "O uno spazio chiuso che conservi la temperatura e contenga una modesta fonte di calore: ad esempio un forno (spento) con dentro una lampadina accesa da 40W, un essiccatore, una scatola di polistirolo con dentro acqua a 45°C, ecc." ]
-  - [ "<span data-qty='units'>7</span> vasetti da <span class='qtyspan'>150 ml</span>, o un barattolo da almeno <span class='qtyspan'><span data-qty='volume'>1050</span> ml</span>", "Qualunque contenitore scegli, deve essere richiudibile. Va bene il vetro o la plastica, evita il metallo." ]
-  - [ "Una pentola che possa contenere almeno <span class='qtyspan'><span data-qty='milk'>1000</span> ml</span>" ]
+  - [ "<span data-qty='units'>7</span> vasetti da <span class='qtyspan'>150 ml</span>, o un barattolo da almeno <span class='qtyspan'><span data-qty='volume.base' data-prec='1'>1050</span> ml</span>", "Qualunque contenitore scegli, deve essere richiudibile. Va bene il vetro o la plastica, evita il metallo." ]
+  - [ "Una pentola che possa contenere almeno <span class='qtyspan'><span data-qty='volume.milk' data-prec='1'>1000</span> ml</span>" ]
   - [ "Un termometro per alimenti", "Non è necessario, ma per un risultato migliore è preferibile averlo." ]
   - [ "Un mestolo o un cucchiaio", "Il materiale è indifferente." ]
 

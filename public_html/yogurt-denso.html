@@ -117,9 +117,9 @@
         <div class="sub">
           <span>Cosa serve per fare</span>
           <span class="quantity">
-            <button class="btn" id="qtyRemove"><span>–</span></button><span id="qtyValue">7</span><button class="btn" id="qtyAdd"><span>+</span></button>
+            <button class="btn" id="qtyRemove"><span>–</span></button><span id="qtyValue">1000</span> ml<button class="btn" id="qtyAdd"><span>+</span></button>
           </span>
-          <span>vasetti da 150ml di yogurt denso</span>
+          <span>di yogurt denso</span>
         </div>
       </h2>
 
@@ -127,17 +127,17 @@
       
         <div>
           <div class="card">
-            <h3><span class="ingredient">Latte</span><br/><span class="quantity"><span data-qty="milk">1000</span> ml</span></h3>
+            <h3><span class="ingredient">Latte</span><br/><span class="quantity"><span data-qty="milk">10000</span> ml</span></h3>
             <p class="note">Meglio se <strong>latte vaccino intero</strong>, fresco e non a lunga conservazione. Non si possono utilizzare latti vegetali o delattosati: non contengono il lattosio necessario alla fermentazione.</p>
           </div>
         </div>
         <div>
           <div class="card">
-            <h3><span class="ingredient">Yogurt naturale</span><br/><span class="quantity"><span data-qty="yogurt">100</span> ml</span></h3>
+            <h3><span class="ingredient">Yogurt bianco</span><br/><span class="quantity"><span data-qty="yogurt">100</span> ml</span></h3>
             <p class="note">Yogurt prodotto da latte animale, senza aromi o zuccheri aggiunti, e non vicino alla data di scadenza.</p>
           </div>
         </div>
-        <script>var recipeVolume=1050;recipeWeight=1100;recipeUnits=7;ingredients={"milk":{"ratio":90.91},"yogurt":{"ratio":9.09}}</script>
+        <script>var recipeBase={"qty":1000,"units":"ml"},recipeBaseRatio=1.04,ingredients={"milk":{"ratio":90.91,"spec":1.04},"yogurt":{"ratio":9.09,"spec":1.04}}</script>
       </div>
 
     </section>
@@ -157,14 +157,14 @@
       
         <div>
           <div class="card">
-            <h3><span data-qty='units'>7</span> vasetti da <span class='qtyspan'>150 ml</span>, o un barattolo da almeno <span class='qtyspan'><span data-qty='volume'>1050</span> ml</span></h3>
+            <h3><span data-qty='units'>7</span> vasetti da <span class='qtyspan'>150 ml</span>, o un barattolo da almeno <span class='qtyspan'><span data-qty='volume.base' data-prec='1'>1050</span> ml</span></h3>
             <p class="note">Qualunque contenitore scegli, deve essere richiudibile. Va bene il vetro o la plastica, evita il metallo.</p>
           </div>
         </div>
       
         <div>
           <div class="card">
-            <h3>Una pentola che possa contenere almeno <span class='qtyspan'><span data-qty='milk'>1000</span> ml</span></h3>
+            <h3>Una pentola che possa contenere almeno <span class='qtyspan'><span data-qty='volume.milk' data-prec='1'>1000</span> ml</span></h3>
             
           </div>
         </div>

@@ -18,62 +18,25 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   */
 
-  var weightRatio,
-    unitVolume,
-    ingrMin = 100,
-    ingrMax = 10000,
-    ingrStep = 100,
+  var recipeBaseValue,
+    baseMin = 100,
+    baseMax = 5000,
+    baseStep = 50,
     ingrPrec = 2,
     qtyLabels,
     qtyValue,
     qtyRemoveBtn,
-    qtyAddBtn,
-    hasUnits = false;
+    qtyAddBtn;
 
   function removeQty()
   {
-    if ( hasUnits ) {
-      recipeUnits = Math.max( ingrMin, recipeUnits - ingrStep );
-    } else {
-      recipeVolume = Math.max( ingrMin, recipeVolume - ingrStep );
-    }
+    recipeBaseValue = Math.max( baseMin, recipeBaseValue - baseStep );
     calcQty();
   }
 
   function addQty()
   {
-    if ( hasUnits ) {
-      recipeUnits = Math.min( ingrMax, recipeUnits + ingrStep );
-    } else {
-      recipeVolume = Math.min( ingrMax, recipeVolume + ingrStep );
-    }
-    calcQty();
-  }
-
-  function setupQty()
-  {
-    hasUnits = ( typeof recipeUnits !== 'undefined' );
-    weightRatio = recipeWeight / recipeVolume;
-    if ( hasUnits ) {
-      unitVolume = recipeVolume / recipeUnits;
-      ingrMin  = 1;
-      ingrMax  = 100;
-      ingrStep = 1;
-    }
-    if ( typeof recipeRange !== 'undefined' ) {
-      ingrMin  = recipeRange[ 0 ];
-      ingrMax  = recipeRange[ 1 ];
-      ingrStep = recipeRange[ 2 ];
-    }
-    if ( typeof recipePrecision !== 'undefined' ) {
-      ingrPrec = recipePrecision;
-    }
-    qtyLabels = document.querySelectorAll( '[data-qty]' );
-    qtyValue = document.getElementById( 'qtyValue' );
-    qtyRemoveBtn = document.getElementById( 'qtyRemove' );
-    qtyAddBtn = document.getElementById( 'qtyAdd' );
-    qtyRemoveBtn.addEventListener( 'click', removeQty );
-    qtyAddBtn.addEventListener( 'click', addQty );
+    recipeBaseValue = Math.min( baseMax, recipeBaseValue + baseStep );
     calcQty();
   }
 
@@ -90,34 +53,56 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   function calcQty()
   {
-    var i, qty, f;
-    if ( hasUnits ) {
-      recipeVolume = unitVolume * recipeUnits;
-      recipeWeight = recipeVolume * weightRatio;
-      qtyValue.textContent = recipeUnits;
-    } else {
-      recipeWeight = recipeVolume * weightRatio;
-      qtyValue.textContent = recipeVolume;
-    }
+    var i, qty, mult, qtyId, volType,
+      recipeWeight = recipeBaseValue * recipeBaseRatio;
+    qtyValue.textContent = recipeBaseValue;
     for ( i in ingredients ) {
-      qty = round( recipeWeight * ingredients[ i ].ratio / 100, ingrPrec );
-      ingredients[ i ].qty = qty;
+      ingredients[ i ].qty = recipeWeight * ingredients[ i ].ratio / 100;
     }
     for ( i = 0; i < qtyLabels.length; i++ ) {
-      if ( ingredients[ qtyLabels[ i ].dataset.qty ] ) {
-        qty = ingredients[ qtyLabels[ i ].dataset.qty ].qty;
-        if ( qtyLabels[ i ].dataset.prec ) {
-          qty = round( qty, qtyLabels[ i ].dataset.prec );
+      qtyId = qtyLabels[ i ].dataset.qty.split( '.' )[ 0 ];
+      if ( qtyLabels[ i ].dataset.mult ) {
+        mult = +qtyLabels[ i ].dataset.mult;
+      } else {
+        mult = 1;
+      }
+      if ( ingredients[ qtyId ] ) {
+        qty = ingredients[ qtyId ].qty;
+      }
+      if ( qtyId === 'volume' ) {
+        volType = qtyLabels[ i ].dataset.qty.split( '.' )[ 1 ];
+        if ( volType === 'base' ) {
+          qty = recipeBaseValue;
+        } else {
+          qty = ingredients[ volType ].qty / ingredients[ volType ].spec;
         }
-        qtyLabels[ i ].textContent = qty;
       }
-      if ( qtyLabels[ i ].dataset.qty === 'volume' ) {
-        qtyLabels[ i ].textContent = recipeVolume;
-      }
-      if ( qtyLabels[ i ].dataset.qty === 'units' ) {
-        qtyLabels[ i ].textContent = recipeUnits;
-      }
+      qty = round( qty * mult, qtyLabels[ i ].dataset.prec || ingrPrec );
+      qtyLabels[ i ].textContent = qty;
     }
+  }
+
+  function setupQty()
+  {
+    recipeBaseValue = recipeBase.qty;
+
+    if ( typeof recipeRange !== 'undefined' ) {
+      baseMin  = recipeRange[ 0 ];
+      baseMax  = recipeRange[ 1 ];
+      baseStep = recipeRange[ 2 ];
+    }
+    if ( typeof recipePrecision !== 'undefined' ) {
+      ingrPrec = recipePrecision;
+    }
+
+    qtyLabels = document.querySelectorAll( '[data-qty]' );
+    qtyValue = document.getElementById( 'qtyValue' );
+    qtyRemoveBtn = document.getElementById( 'qtyRemove' );
+    qtyAddBtn = document.getElementById( 'qtyAdd' );
+    qtyRemoveBtn.addEventListener( 'click', removeQty );
+    qtyAddBtn.addEventListener( 'click', addQty );
+
+    calcQty();
   }
 
   /*

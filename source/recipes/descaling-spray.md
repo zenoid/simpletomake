@@ -19,23 +19,36 @@ sources:
   - Fabrizio Zago, chimico industriale
   - '"Pulizie creative", Elisa Nicoli'
 
-recipeVolume: 200
-recipeWeight: 184.046
-recipeIntro: [ "Cosa serve per fare circa", 200, "ml", "di spray anticalcare" ]
-recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale"
+recipeIntro: [ "Cosa serve per fare circa", "di spray anticalcare" ]
+
+recipeBase: { qty: 200, units: "ml" }
 
 ingredients:
-  - [ citric, 13.04, "Acido citrico", 24, "gr", "È preferibile usare quello <strong>anidro</strong>, più concentrato, ma anche <strong>monoidrato</strong> va bene per quest'uso. Si presenta in granuli bianchi." ]
-  - [ aqua, 86.96, "Acqua", 160, "gr", "Meglio se distillata. Se contiene calcare, verrà subito consumata una piccola parte dell'acido aggiunto." ]
+  - { id: "citric",
+      ratio: 13.04,
+      spec: 1.665,
+      name: "Acido citrico",
+      qty: 28,
+      units: "gr",
+      notes: "È preferibile usare quello <strong>anidro</strong>, più concentrato, ma anche <strong>monoidrato</strong> va bene per quest'uso. Si presenta in granuli bianchi." }
+  - { id: "aqua",
+      ratio: 86.96,
+      spec: 1,
+      name: "Acqua",
+      qty: 180,
+      units: "gr",
+      notes: "Meglio se distillata. Se contiene calcare, verrà subito consumata una piccola parte dell'acido aggiunto." }
+
+recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale"
 
 tools:
-  - [ "Un flacone con spruzzino da almeno <span class='qtyspan'><span data-qty='volume'>200</span> ml</span>", "Si può riciclare un flacone usato, di plastica o di vetro." ]
+  - [ "Un flacone con spruzzino da almeno <span class='qtyspan'><span data-qty='volume.base'>200</span> ml</span>", "Si può riciclare un flacone usato, di plastica o di vetro." ]
   - [ "Una bilancia di precisione" ]
   - [ "Un mestolo o un cucchiaio", "Il materiale è indifferente." ]
 
 directions:
-  - [ "Versa <span class='qtyspan'><span data-qty='aqua'>160</span> gr</span> di acqua nel flacone", "Se la tua acqua è molto calcarea, aggiungine un po' di meno, o metti un po' di acido citrico in più." ]
-  - [ "Aggiungi <span class='qtyspan'><span data-qty='citric'>24</span> gr</span> di acido citrico", "È un acido, ma puoi toccarlo tranquillamente con le mani." ]
+  - [ "Versa <span class='qtyspan'><span data-qty='aqua'>180</span> gr</span> di acqua nel flacone", "Se la tua acqua è molto calcarea, aggiungine un po' di meno, o metti un po' di acido citrico in più." ]
+  - [ "Aggiungi <span class='qtyspan'><span data-qty='citric'>28</span> gr</span> di acido citrico", "È un acido, ma puoi toccarlo tranquillamente con le mani." ]
   - [ "Mescola tutto finché i granuli di acido citrico non si sono sciolti completamente" ]
 
 usage:

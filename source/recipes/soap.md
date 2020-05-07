@@ -19,24 +19,46 @@ timeToUse: 1 mese e mezzo
 sources:
   - '"Scientific Soapmaking", Kevin M.Dunn'
 
-recipeVolume: 1000
-recipeWeight: 1000
+recipeIntro: [ "Cosa serve per fare sapone con", "di olio d'oliva" ]
+
+recipeBase: { qty: 1000, units: "gr" }
 recipeRange: [ 500, 5000, 250 ]
 recipePrecision: 3
-recipeIntro: [ "Cosa serve per fare sapone con", 1000, "gr", "di olio d'oliva" ]
-recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> dell'olio sono differenti: se hai <strong>1 litro d'olio di oliva</strong> peserà circa <strong>916 grammi</strong>."
 
 ingredients:
-  - [ oil, 100, "Olio di oliva", 1000, "gr", "Non importa che sia di qualità o extravergine, ma <strong>non deve essere rancido o contenere residui o fondo</strong>. Per questa ricetta non usare un altro olio, perché richiede dosi molto differenti di soda caustica." ]
-  - [ soda, 13, "Soda caustica", 130, "gr", "Chiamata anche <strong>Idrossido di Sodio</strong> (NaOH). Si presenta in granuli bianchi e si trova in ferramenta. Non ha nulla a che vedere con il Carbonato di Sodio (Soda Solvay) usato per il bucato. È una sostanza a basso impatto ambientale." ]
-  - [ aqua, 30, "Acqua", 300, "gr", "Meglio se distillata, ma va benissimo quella di rubinetto. In alcune ricette si suggerisce di usare latte, infusi o succhi, ma non hanno effetti molto percepibili sul prodotto finito." ]
-  - [ perfume, 2, "Oli essenziali", 20, "gocce", "Opzionali, per dare profumo o aggiungere proprietà al sapone. Solo gli oli essenziali sono efficaci: si possono aggiungere fiori, spezie o erbe come decorazione, ma aromi e proprietà verranno annullati dalla soda caustica." ]
-  - [ fulljar, 200 ]
-  - [ aquajar, 70 ]
+  - { id: "oil",
+      ratio: 100,
+      spec: 0.916,
+      name: "Olio di oliva",
+      qty: 200,
+      units: "gr",
+      notes: "Non importa che sia di qualità o extravergine, ma <strong>non deve essere rancido o contenere residui o fondo</strong>. Per questa ricetta non usare un altro olio, perché richiede dosi molto differenti di soda caustica." }
+  - { id: "soda",
+      ratio: 13,
+      spec: 1.327,
+      name: "Soda caustica",
+      qty: 130,
+      units: "gr",
+      notes: "Chiamata anche <strong>Idrossido di Sodio</strong> (NaOH). Si presenta in granuli bianchi e si trova in ferramenta. Non ha nulla a che vedere con il Carbonato di Sodio (Soda Solvay) usato per il bucato. È una sostanza a basso impatto ambientale." }
+  - { id: "aqua",
+      ratio: 30,
+      spec: 1,
+      name: "Acqua",
+      qty: 300,
+      units: "gr",
+      notes: "Meglio se distillata, ma va benissimo quella di rubinetto. In alcune ricette si suggerisce di usare latte, infusi o succhi, ma non hanno effetti molto percepibili sul prodotto finito." }
+  - { id: "perfume",
+      ratio: 2,
+      name: "Oli essenziali",
+      qty: 20,
+      units: "gocce",
+      notes: "Opzionali, per dare profumo o aggiungere proprietà al sapone. Solo gli oli essenziali sono efficaci: si possono aggiungere fiori, spezie o erbe come decorazione, ma aromi e proprietà verranno annullati dalla soda caustica." }
+
+recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> dell'olio sono differenti: se hai <strong>1 litro d'olio di oliva</strong> peserà circa <strong>916 grammi</strong>."
 
 tools:
-  - [ "Un barattolo o contenitore alto da almeno <span class='qtyspan'><span data-qty='fulljar' data-prec='1'>2000</span> ml</span>", "Di plastica, vetro o acciaio inox." ]
-  - [ "Un barattolo o contenitore non più piccolo di metà del primo", "Di plastica, vetro o acciaio inox." ]
+  - [ "Un barattolo o contenitore alto da almeno <span class='qtyspan'><span data-qty='volume.oil' data-mult='2' data-prec='1'>2000</span> ml</span>", "Di plastica, vetro o acciaio inox." ]
+  - [ "Un barattolo o contenitore alto da almeno <span class='qtyspan'><span data-qty='volume.aqua' data-mult='2' data-prec='1'>600</span> ml</span>", "Di plastica, vetro o acciaio inox." ]
   - [ "Una ciotola per pesare la soda caustica", "Di plastica, vetro o acciaio inox." ]
   - [ "Una pentola per scaldare l'olio", "Non serve se preferisci lavorare \"a freddo\"." ]
   - [ "Stampi per il sapone", "Puoi riciclare contenitori di plastica (vasetti di yogurt, vaschette non bucate, ecc.), usare gli stampini di silicone che si usano per i dolci, o usare stampi di legno smontabili, fatti proprio per estrarre facilmente i saponi." ]

@@ -126,7 +126,7 @@
       
         <div>
           <div class="card">
-            <h3><span class="ingredient">Olio di oliva</span><br/><span class="quantity"><span data-qty="oil">1000</span> gr</span></h3>
+            <h3><span class="ingredient">Olio di oliva</span><br/><span class="quantity"><span data-qty="oil">200</span> gr</span></h3>
             <p class="note">Non importa che sia di qualità o extravergine, ma <strong>non deve essere rancido o contenere residui o fondo</strong>. Per questa ricetta non usare un altro olio, perché richiede dosi molto differenti di soda caustica.</p>
           </div>
         </div>
@@ -154,7 +154,7 @@
           </div>
         </div>
       
-        <script>var recipeVolume=1000;recipeWeight=1000;recipeRange=[500,5000,250];recipePrecision=[3];ingredients={"oil":{"ratio":100},"soda":{"ratio":13},"aqua":{"ratio":30},"perfume":{"ratio":2},"fulljar":{"ratio":200},"aquajar":{"ratio":70}}</script>
+        <script>var recipeBase={"qty":1000,"units":"gr"},recipeBaseRatio=1,recipeRange=[500,5000,250],recipePrecision=[3],ingredients={"oil":{"ratio":100,"spec":0.916},"soda":{"ratio":13,"spec":1.327},"aqua":{"ratio":30,"spec":1},"perfume":{"ratio":2,"spec":null}}</script>
       </div>
 
     </section>
@@ -167,14 +167,14 @@
       
         <div>
           <div class="card">
-            <h3>Un barattolo o contenitore alto da almeno <span class='qtyspan'><span data-qty='fulljar' data-prec='1'>2000</span> ml</span></h3>
+            <h3>Un barattolo o contenitore alto da almeno <span class='qtyspan'><span data-qty='volume.oil' data-mult='2' data-prec='1'>2000</span> ml</span></h3>
             <p class="note">Di plastica, vetro o acciaio inox.</p>
           </div>
         </div>
       
         <div>
           <div class="card">
-            <h3>Un barattolo o contenitore non più piccolo di metà del primo</h3>
+            <h3>Un barattolo o contenitore alto da almeno <span class='qtyspan'><span data-qty='volume.aqua' data-mult='2' data-prec='1'>600</span> ml</span></h3>
             <p class="note">Di plastica, vetro o acciaio inox.</p>
           </div>
         </div>

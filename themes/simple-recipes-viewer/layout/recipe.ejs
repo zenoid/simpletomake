@@ -53,28 +53,44 @@
         <div class="sub">
           <span><%- page.recipeIntro[ 0 ] %></span>
           <span class="quantity">
-            <button class="btn" id="qtyRemove"><span>–</span></button><span id="qtyValue"><%- page.recipeIntro[ 1 ] %></span><% if ( page.recipeIntro[ 2 ] ) { %> <%- page.recipeIntro[ 2 ] %><% } %><button class="btn" id="qtyAdd"><span>+</span></button>
+            <button class="btn" id="qtyRemove"><span>–</span></button><span id="qtyValue"><%- page.recipeBase.qty %></span><% if ( page.recipeBase.units ) { %> <%- page.recipeBase.units %><% } %><button class="btn" id="qtyAdd"><span>+</span></button>
           </span>
-          <span><%- page.recipeIntro[ 3 ] %></span>
+          <span><%- page.recipeIntro[ 1 ] %></span>
         </div>
       </h2>
 
       <div class="card-list">
       <%
 
-        var ingr = {};
+        var ingr = {},
+          recipeBaseRatio = 1;
+
+        if ( page.recipeBase.units === 'ml' ) {
+          var ingrSpecRatios = 0;
+          for ( i in page.ingredients ) {
+            if ( page.ingredients[ i ].spec ) {
+              ingrSpecRatios += +page.ingredients[ i ].ratio / +page.ingredients[ i ].spec;
+            }
+          }
+          recipeBaseRatio = Math.round( ( 1 / ingrSpecRatios ) * 100000 ) / 1000;
+        }
 
         for ( i = 0; i < page.ingredients.length; i++ ) {
 
-          ingr[ page.ingredients[ i ][ 0 ] ] = { ratio: +page.ingredients[ i ][ 1 ] };
+          if ( page.ingredients[ i ].ratio ) {
+            ingr[ page.ingredients[ i ].id ] = {
+              ratio: +page.ingredients[ i ].ratio,
+              spec: +page.ingredients[ i ].spec
+            };
+          }
 
-          if ( page.ingredients[ i ].length > 2 ) {
+          if ( page.ingredients[ i ].name ) {
 
       %>
         <div>
           <div class="card">
-            <h3><span class="ingredient"><%- page.ingredients[ i ][ 2 ] %></span><% if ( page.ingredients[ i ][ 3 ] ) { %><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ][ 0 ] %>"><%- page.ingredients[ i ][ 3 ] %></span> <%- page.ingredients[ i ][ 4 ] %></span><% } %></h3>
-            <% if ( page.ingredients[ i ][ 5 ] ) { %><p class="note"><%- page.ingredients[ i ][ 5 ] %></p><% } %>
+            <h3><span class="ingredient"><%- page.ingredients[ i ].name %></span><% if ( page.ingredients[ i ].qty ) { %><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ].id %>"><%- page.ingredients[ i ].qty %></span> <%- page.ingredients[ i ].units %></span><% } %></h3>
+            <% if ( page.ingredients[ i ].notes ) { %><p class="note"><%- page.ingredients[ i ].notes %></p><% } %>
           </div>
         </div><%
           }
@@ -86,7 +102,7 @@
           </div>
         </div>
       <% } %>
-        <script>var recipeVolume=<%- page.recipeVolume %>;recipeWeight=<%- page.recipeWeight %>;<% if ( page.recipeUnits ) { %>recipeUnits=<%- page.recipeUnits %>;<% } %><% if ( page.recipeRange ) { %>recipeRange=[<%- page.recipeRange %>];<% } %><% if ( page.recipePrecision ) { %>recipePrecision=[<%- page.recipePrecision %>];<% } %>ingredients=<%- JSON.stringify( ingr ) %></script>
+        <script>var recipeBase=<%- JSON.stringify( page.recipeBase ) %>,recipeBaseRatio=<%- recipeBaseRatio %>,<% if ( page.recipeRange ) { %>recipeRange=[<%- page.recipeRange %>],<% } %><% if ( page.recipePrecision ) { %>recipePrecision=[<%- page.recipePrecision %>],<% } %>ingredients=<%- JSON.stringify( ingr ) %></script>
       </div>
 
     </section>
