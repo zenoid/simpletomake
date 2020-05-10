@@ -1,15 +1,15 @@
 <%- partial('_partial/header') %>
 <% var i; %>
-  <article itemscope itemtype="https://schema.org/Recipe">
+  <article>
 
     <section class="section1" id="principi">
 
-      <h1><div class="sub"><span>Le 3 cose da sapere per fare <%- page.titleArticle %></span></div><span itemprop="name"><%- page.title.toLowerCase() %></span></h1>
+      <h1><div class="sub"><span>Le 3 cose da sapere per fare <%- page.titleArticle %></span></div><span><%- page.title.toLowerCase() %></span></h1>
 
       <div class="card-list">
       <% for ( i = 0; i < page.principles.length; i++ ) { %>
         <div>
-          <div class="card" itemprop="description">
+          <div class="card">
             <p><%- page.principles[ i ] %></p>
           </div>
         </div>
@@ -90,7 +90,7 @@
       %>
         <div>
           <div class="card">
-            <h3 itemprop="recipeIngredient"><span class="ingredient"><%- page.ingredients[ i ].name %></span><% if ( page.ingredients[ i ].qty ) { %><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ].id %>"><%- page.ingredients[ i ].qty %></span> <%- page.ingredients[ i ].units %></span><% } %></h3>
+            <h3><span class="ingredient"><%- page.ingredients[ i ].name %></span><% if ( page.ingredients[ i ].qty ) { %><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ].id %>"><%- page.ingredients[ i ].qty %></span> <%- page.ingredients[ i ].units %></span><% } %></h3>
             <% if ( page.ingredients[ i ].notes ) { %><p class="note"><%- page.ingredients[ i ].notes %></p><% } %>
           </div>
         </div><%
@@ -116,7 +116,7 @@
       <% for ( i = 0; i < page.tools.length; i++ ) { %>
         <div>
           <div class="card">
-            <h3 itemprop="tool"><%- page.tools[ i ][ 0 ] %></h3>
+            <h3><%- page.tools[ i ][ 0 ] %></h3>
             <% if ( page.tools[ i ][ 1 ] ) { %><p class="note"><%- page.tools[ i ][ 1 ] %></p><% } %>
           </div>
         </div>
@@ -132,7 +132,7 @@
       <div class="card-list card-list-ordered">
       <% for ( i = 0; i < page.directions.length; i++ ) { %>
         <div>
-          <div class="card<% if ( page.directions[ i ][ 2 ] ) { %> card-title<% } %>" itemprop="recipeInstructions"><%
+          <div class="card<% if ( page.directions[ i ][ 2 ] ) { %> card-title<% } %>"><%
             if ( page.directions[ i ][ 2 ] ) { %>
               <h3><%- page.directions[ i ][ 2 ] %></h3><%
             } %>
@@ -187,8 +187,15 @@
       "recipeCategory": "<%- page.category %>",
       "keywords": "<%- config.keywords %>",
       "description": "<% for ( i = 0; i < page.principles.length; i++ ) { %><%- page.principles[ i ] %>. <% } %>",
-      "recipeIngredient": [<% for ( i = 0; i < page.ingredients.length; i++ ) { if ( page.ingredients[ i ].name ) {  %>
-        "<% if ( page.ingredients[ i ].qty ) { %><%- page.ingredients[ i ].qty %> <%- page.ingredients[ i ].units %> <% } %><%- page.ingredients[ i ].name %>"<% if ( i < page.ingredients.length - 1 ) { %>, <% } %><% } %><% } %>
+      "recipeIngredient": [<%
+        var ingrSchema = [];
+        for ( i = 0; i < page.ingredients.length; i++ ) {
+          if ( page.ingredients[ i ].name ) {
+            ingrSchema.push( page.ingredients[ i ] );
+          }
+        }
+        for ( i = 0; i < ingrSchema.length; i++ ) { %>
+        "<% if ( ingrSchema[ i ].qty ) { %><%- ingrSchema[ i ].qty %> <%- ingrSchema[ i ].units %> <% } %><%- ingrSchema[ i ].name %>"<% if ( i < ingrSchema.length - 1 ) { %>, <% } %><% } %>
       ],
       "recipeInstructions": [<% for ( i = 0; i < page.directions.length; i++ ) { %>
         {
