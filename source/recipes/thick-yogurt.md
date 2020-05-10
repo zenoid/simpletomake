@@ -12,7 +12,7 @@ titleArticle: uno
 principles:
   - "Fare yogurt è uno dei modi per fermentare il latte: lo rende <strong>più digeribile perché riduce il lattosio e più salutare perché aggiunge fermenti lattici</strong>"
   - "Per fare lo yogurt basta mescolare al latte uno yogurt già fatto, e tenerlo ad una <strong>temperatura costante di 40-45°C per alcune ore</strong>"
-  - "Per ottenere uno yogurt più denso è necessario \"sciogliere\" le proteine del latte prima di aggiungere i fermenti, <strong>scaldandolo lentamente fino a 80°C (ma non oltre 90°C)</strong>"
+  - "Per ottenere uno yogurt più denso è necessario &quot;sciogliere&quot; le proteine del latte prima di aggiungere i fermenti, <strong>scaldandolo lentamente fino a 80°C (ma non oltre 90°C)</strong>"
 
 timeToMake: 12-15 ore
 timeToUse: 2-3 ore

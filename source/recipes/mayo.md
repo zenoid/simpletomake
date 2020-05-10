@@ -11,7 +11,7 @@ titleArticle: la
 
 principles:
 
-  - "La maionese è un'emulsione, e per \"funzionare\" c'è bisogno di un emulsionante, ovvero <strong>la lecitina contenuta nelle uova o nella soia</strong>"
+  - "La maionese è un'emulsione, e per farla funzionare c'è bisogno di un emulsionante, ovvero <strong>la lecitina contenuta nelle uova o nella soia</strong>"
   - "Gli ingredienti liquidi, come aceto e limone, <strong>si possono aggiungere solo dopo aver avviato l'emulsione</strong>, ovvero quando la salsa prende la sua classica consistenza"
   - "Nella preparazione usa ingredienti alla stessa temperatura, mantieni ferma la ciotola nella quale stai frullando, ma soprattutto <strong>aggiungi l'olio in modo molto graduale</strong>"
 
@@ -33,7 +33,7 @@ ingredients:
       name: "Olio di semi",
       qty: 200,
       units: "gr",
-      notes: "Ideale l'<strong>olio di semi di girasole</strong> o l'<strong>olio di arachidi</strong>, non solo per il gusto molto delicato, ma anche per avere una salsa più elastica e regolare. Puoi usare anche olio di oliva, ma avrai una salsa più pesante e più propensa a \"impazzire\"." }
+      notes: "Ideale l'<strong>olio di semi di girasole</strong> o l'<strong>olio di arachidi</strong>, non solo per il gusto molto delicato, ma anche per avere una salsa più elastica e regolare. Puoi usare anche olio di oliva, ma avrai una salsa più pesante e più propensa a &quot;impazzire&quot;." }
   - { id: "egg",
       ratio: 0.7,
       name: "Tuorlo d'uovo",
