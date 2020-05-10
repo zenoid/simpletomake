@@ -184,6 +184,8 @@
         "@type": "Organization",
         "name": "simpletomake.it"
       },
+      "recipeCategory", "<%- page.category %>",
+      "keywords", "<%- config.keywords %>",
       "description": "<% for ( i = 0; i < page.principles.length; i++ ) { %><%- page.principles[ i ] %>. <% } %>",
       "recipeIngredient": [<% for ( i = 0; i < page.ingredients.length; i++ ) { if ( page.ingredients[ i ].name ) {  %>
         "<% if ( page.ingredients[ i ].qty ) { %><%- page.ingredients[ i ].qty %> <%- page.ingredients[ i ].units %> <% } %><%- page.ingredients[ i ].name %>"<% if ( i < page.ingredients.length - 1 ) { %>, <% } %><% } %><% } %>
