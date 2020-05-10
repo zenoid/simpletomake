@@ -179,19 +179,20 @@
       "@context": "https://schema.org/",
       "@type": "Recipe",
       "name": "<%- page.title %>",
+      "image": "<%- config.url %>/recipes/images/<%- page.recipeid %>.png",
       "author": {
         "@type": "Organization",
         "name": "simpletomake.it"
       },
       "description": "<% for ( i = 0; i < page.principles.length; i++ ) { %><%- page.principles[ i ] %>. <% } %>",
       "recipeIngredient": [<% for ( i = 0; i < page.ingredients.length; i++ ) { if ( page.ingredients[ i ].name ) {  %>
-        "<% if ( page.ingredients[ i ].qty ) { %><%- page.ingredients[ i ].qty %> <%- page.ingredients[ i ].units %> <% } %><%- page.ingredients[ i ].name %>",<% } } %>
+        "<% if ( page.ingredients[ i ].qty ) { %><%- page.ingredients[ i ].qty %> <%- page.ingredients[ i ].units %> <% } %><%- page.ingredients[ i ].name %>"<% if ( i < page.ingredients.length - 1 ) { %>, <% } %><% } %><% } %>
       ],
       "recipeInstructions": [<% for ( i = 0; i < page.directions.length; i++ ) { %>
         {
           "@type": "HowToStep",
           "text": "<%- page.directions[ i ] %>"
-        },<% } %>
+        }<% if ( i < page.directions.length - 1 ) { %>, <% } %><% } %>
       ]
     }
     </script>
