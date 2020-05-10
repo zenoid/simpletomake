@@ -65,7 +65,7 @@
         var ingr = {},
           recipeBaseRatio = 1;
 
-        if ( page.recipeBase.units === 'ml' ) {
+        if ( page.recipeBase.units === 'ml' && page.ingredients[ 0 ].units !== 'ml' ) {
           var ingrSpecRatios = 0;
           for ( i in page.ingredients ) {
             if ( page.ingredients[ i ].spec ) {
@@ -80,7 +80,8 @@
           if ( page.ingredients[ i ].ratio ) {
             ingr[ page.ingredients[ i ].id ] = {
               ratio: +page.ingredients[ i ].ratio,
-              spec: +page.ingredients[ i ].spec
+              spec: +page.ingredients[ i ].spec,
+              units: page.ingredients[ i ].units
             };
           }
 

@@ -119,7 +119,7 @@
           <span class="quantity">
             <button class="btn" id="qtyRemove"><span>–</span></button><span id="qtyValue">1000</span> ml<button class="btn" id="qtyAdd"><span>+</span></button>
           </span>
-          <span>di yogurt denso</span>
+          <span>di yogurt denso (<span data-qty='containers.150'>7</span> vasetti da 150ml)</span>
         </div>
       </h2>
 
@@ -127,17 +127,17 @@
       
         <div>
           <div class="card">
-            <h3><span class="ingredient">Latte</span><br/><span class="quantity"><span data-qty="milk">10000</span> ml</span></h3>
+            <h3><span class="ingredient">Latte</span><br/><span class="quantity"><span data-qty="milk">1000</span> ml</span></h3>
             <p class="note">Meglio se <strong>latte vaccino intero</strong>, fresco e non a lunga conservazione. Non si possono utilizzare latti vegetali o delattosati: non contengono il lattosio necessario alla fermentazione.</p>
           </div>
         </div>
         <div>
           <div class="card">
-            <h3><span class="ingredient">Yogurt bianco</span><br/><span class="quantity"><span data-qty="yogurt">100</span> ml</span></h3>
+            <h3><span class="ingredient">Yogurt bianco</span><br/><span class="quantity"><span data-qty="yogurt">120</span> ml</span></h3>
             <p class="note">Yogurt prodotto da latte animale, senza aromi o zuccheri aggiunti, e non vicino alla data di scadenza.</p>
           </div>
         </div>
-        <script>var recipeBase={"qty":1000,"units":"ml"},recipeBaseRatio=1.04,ingredients={"milk":{"ratio":90.91,"spec":1.04},"yogurt":{"ratio":9.09,"spec":1.04}}</script>
+        <script>var recipeBase={"qty":1000,"units":"ml"},recipeBaseRatio=1,recipeRange=[500,5000,100],ingredients={"milk":{"ratio":100,"spec":1.04,"units":"ml"},"yogurt":{"ratio":12,"spec":1.04,"units":"ml"}}</script>
       </div>
 
     </section>
@@ -157,7 +157,7 @@
       
         <div>
           <div class="card">
-            <h3><span data-qty='units'>7</span> vasetti da <span class='qtyspan'>150 ml</span>, o un barattolo da almeno <span class='qtyspan'><span data-qty='volume.base' data-prec='1'>1050</span> ml</span></h3>
+            <h3><span data-qty='containers.150'>7</span> vasetti da <span class='qtyspan'>150 ml</span>, o un barattolo da almeno <span class='qtyspan'><span data-qty='volume.base' data-prec='1'>1000</span> ml</span></h3>
             <p class="note">Qualunque contenitore scegli, deve essere richiudibile. Va bene il vetro o la plastica, evita il metallo.</p>
           </div>
         </div>
@@ -195,7 +195,7 @@
       
         <div>
           <div class="card">
-            <p>Versa <span class='qtyspan'><span data-qty='milk'>160</span> ml</span> di latte nella pentola, e inizia a scaldarla a fuoco basso</p>
+            <p>Versa <span class='qtyspan'><span data-qty='milk'>1000</span> ml</span> di latte nella pentola, e inizia a scaldarla a fuoco basso</p>
             
           </div>
         </div>
@@ -223,7 +223,7 @@
       
         <div>
           <div class="card">
-            <p>Distribuisci <span class='qtyspan'><span data-qty='yogurt'>200</span> ml</span> di yogurt naturale in parti uguali nei <span class='qtyspan'><span data-qty='units'>7</span> vasetti</span></p>
+            <p>Distribuisci <span class='qtyspan'><span data-qty='yogurt'>120</span> ml</span> di yogurt naturale in parti uguali nei <span class='qtyspan'><span data-qty='containers.150'>7</span> vasetti</span></p>
             <p class="note">O versalo tutto nel contenitore scelto.</p>
           </div>
         </div>

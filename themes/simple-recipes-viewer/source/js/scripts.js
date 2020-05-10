@@ -40,20 +40,20 @@ document.addEventListener( 'DOMContentLoaded', function() {
     calcQty();
   }
 
-  function round( qty, prec )
+  function round( qty, prec, ceil = false )
   {
     var f,
-      q = Math.round( qty );
+      q = ceil? Math.ceil( qty ) : Math.round( qty );
     if ( String( q ).length > prec ) {
       f = Math.pow( 10, String( q ).length - prec );
-      q = Math.round( q / f ) * f;
+      q = ceil? Math.ceil( q / f ) * f : Math.round( q / f ) * f;
     }
     return q;
   }
 
   function calcQty()
   {
-    var i, qty, mult, qtyId, volType,
+    var i, qty, mult, qtyId, volType, contSize, ceil,
       recipeWeight = recipeBaseValue * recipeBaseRatio;
     qtyValue.textContent = recipeBaseValue;
     for ( i in ingredients ) {
@@ -61,6 +61,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     }
     for ( i = 0; i < qtyLabels.length; i++ ) {
       qtyId = qtyLabels[ i ].dataset.qty.split( '.' )[ 0 ];
+      ceil = false;
       if ( qtyLabels[ i ].dataset.mult ) {
         mult = +qtyLabels[ i ].dataset.mult;
       } else {
@@ -70,14 +71,24 @@ document.addEventListener( 'DOMContentLoaded', function() {
         qty = ingredients[ qtyId ].qty;
       }
       if ( qtyId === 'volume' ) {
+        ceil = true;
         volType = qtyLabels[ i ].dataset.qty.split( '.' )[ 1 ];
         if ( volType === 'base' ) {
           qty = recipeBaseValue;
         } else {
-          qty = ingredients[ volType ].qty / ingredients[ volType ].spec;
+          if ( ingredients[ volType ].units === 'ml' ) {
+            qty = ingredients[ volType ].qty;
+          } else {
+            qty = ingredients[ volType ].qty / ingredients[ volType ].spec;
+          }
         }
       }
-      qty = round( qty * mult, qtyLabels[ i ].dataset.prec || ingrPrec );
+      if ( qtyId === 'containers' ) {
+        ceil = true;
+        contSize = +qtyLabels[ i ].dataset.qty.split( '.' )[ 1 ];
+        qty = recipeBaseValue / contSize;
+      }
+      qty = round( qty * mult, qtyLabels[ i ].dataset.prec || ingrPrec, ceil );
       qtyLabels[ i ].textContent = qty;
     }
   }
