@@ -36,7 +36,7 @@ ingredients:
       notes: "Ideale l'<strong>olio di semi di girasole</strong> o l'<strong>olio di arachidi</strong>, non solo per il gusto molto delicato, ma anche per avere una salsa più elastica e regolare. Puoi usare anche olio di oliva, ma avrai una salsa più pesante e più propensa a &quot;impazzire&quot;." }
   - { id: "egg",
       ratio: 0.7,
-      name: "Tuorlo d'uovo",
+      name: "Tuorl<span data-plural='egg.o-i'>o</span> d'uovo",
       qty: 1,
       units: "",
       notes: "Per la versione vegan: <span class='qtyspan'><span data-qty='soymilk'>100</span> gr</span> di <strong>latte di soia non zuccherato</strong>. È importante che uova o latte di soia abbiano la stessa temperatura dell'olio." }
@@ -62,7 +62,7 @@ tools:
 
 directions:
   - [ "Versa <span class='qtyspan'><span data-qty='oil'>200</span> gr</span> di olio di semi nel contenitore e tieni a portata di mano gli altri condimenti" ]
-  - [ "Metti nella ciotola i tuorli d'uovo previsti (<span class='qtyspan'><span data-qty='egg'>1</span></span>), o <span class='qtyspan'><span data-qty='soymilk'>100</span> gr</span> di latte di soia", "Assicurati che abbia la stessa temperatura dell'olio: tiralo fuori dal frigo qualche ora prima, oppure fa scorrere acqua calda sotto la ciotola." ]
+  - [ "Metti nella ciotola <span class='qtyspan'><span data-qty='egg'>1</span></span> tuorl<span data-plural='egg.o-i'>o</span> d'uovo, o <span class='qtyspan'><span data-qty='soymilk'>100</span> gr</span> di latte di soia", "Assicurati che abbia la stessa temperatura dell'olio: tiralo fuori dal frigo qualche ora prima, oppure fa scorrere acqua calda sotto la ciotola." ]
   - [ "Inizia a frullare l'uovo (o il latte di soia)", "Cerca di tenere la ciotola ferma: puoi mettergli sotto uno strofinaccio bagnato e arrotolato." ]
   - [ "Versa l'olio molto lentamente, un filo alla volta, mentre continui a frullare", "Se mescoli a mano, non invertire mai la direzione in cui giri." ]
   - [ "Dopo aver versato metà olio, se la salsa è abbastanza densa, aggiungi aceto e/o succo di limone", "Se hai finito l'olio e non ha ancora la giusta consistenza, continua a frullare. Non aggiungere liquidi se la salsa sta perdendo consistenza." ]

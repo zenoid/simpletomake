@@ -24,6 +24,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     baseStep = 50,
     ingrPrec = 2,
     qtyLabels,
+    qtyPlurals,
     qtyValue,
     qtyRemoveBtn,
     qtyAddBtn;
@@ -53,7 +54,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   function calcQty()
   {
-    var i, qty, mult, qtyId, volType, contSize, ceil,
+    var i, qty, mult, qtyId, volType, contSize, plurId, plurOptions, ceil,
       recipeWeight = recipeBaseValue * recipeBaseRatio;
     qtyValue.textContent = recipeBaseValue;
     for ( i in ingredients ) {
@@ -91,6 +92,12 @@ document.addEventListener( 'DOMContentLoaded', function() {
       qty = round( qty * mult, qtyLabels[ i ].dataset.prec || ingrPrec, ceil );
       qtyLabels[ i ].textContent = qty;
     }
+    for ( i = 0; i < qtyPlurals.length; i++ ) {
+      plurId = qtyPlurals[ i ].dataset.plural.split( '.' )[ 0 ],
+      plurOptions = qtyPlurals[ i ].dataset.plural.split( '.' )[ 1 ].split( '-' );
+      qty = round( ingredients[ plurId ].qty );
+      qtyPlurals[ i ].textContent = plurOptions[ qty > 1? 1 : 0 ]
+    }
   }
 
   function setupQty()
@@ -107,6 +114,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     }
 
     qtyLabels = document.querySelectorAll( '[data-qty]' );
+    qtyPlurals = document.querySelectorAll( '[data-plural]' );
     qtyValue = document.getElementById( 'qtyValue' );
     qtyRemoveBtn = document.getElementById( 'qtyRemove' );
     qtyAddBtn = document.getElementById( 'qtyAdd' );

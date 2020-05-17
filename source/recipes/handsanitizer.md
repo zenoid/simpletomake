@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-index: 1
+index: 2
 permalink: disinfettante-mani
 recipeid: handsanitizer-it
 category: hygiene
