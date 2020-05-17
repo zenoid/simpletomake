@@ -36,33 +36,10 @@ highlight:
   auto_detect: false
   tab_replace: ''
 
-# Home page setting
-index_generator:
-  path: ''
-  per_page: 100
-  order_by: date
-
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
-
-# Metadata elements
-meta_generator: true
-
 # Date / Time format
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 use_date_for_updated: false
-
-# Pagination
-per_page: 100
-pagination_dir: page
-
-# Include / Exclude file(s)
-include:
-exclude:
-ignore:
 
 # Theme
 theme: simple-recipes-viewer
@@ -90,9 +67,8 @@ image_minifier:
   multipass: false
   exclude: [ 'svg' ]
 
-# Deployment
-deploy:
-  type: ''
+# Metadata elements
+meta_generator: false
 
 # RSS Feed
 feed:
