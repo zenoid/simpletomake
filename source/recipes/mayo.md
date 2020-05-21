@@ -19,7 +19,7 @@ timeToMake: 10 minuti
 sources:
   - '"Salt, Fat, Acid, Heat", Samin Nosrat'
   - 'Davide Scabin, chef'
-  - '"Food Science and Technology"'
+  - '"LWT – Food Science and Technology journal"'
 
 recipeIntro: [ "Cosa serve per fare maionese usando", "d'olio" ]
 
@@ -67,10 +67,10 @@ directions:
   - [ "Versa l'olio molto lentamente, un filo alla volta, mentre continui a frullare", "Se mescoli a mano, non invertire mai la direzione in cui giri." ]
   - [ "Dopo aver versato metà olio, se la salsa è abbastanza densa, aggiungi aceto e/o succo di limone", "Se hai finito l'olio e non ha ancora la giusta consistenza, continua a frullare. Non aggiungere liquidi se la salsa sta perdendo consistenza." ]
   - [ "Aggiungi alla fine sale e aromi, assaggia, e regola le quantità", "Se aggiungi altri liquidi, riprendi a frullare." ]
-
-usage:
   - [ "Se impazzisce, riparti da un tuorlo d'uovo e usa la maionese impazzita al posto dell'olio", "Ovvero frulla l'uovo e aggiungi la maionese gradualmente." ]
-  - [ "Se non la consumi subito, tienila sempre in frigo", "Non può essere conservata in freezer. Fuori dal frigo, la maionese classica può rimanere solo poche ore." ]
-  - [ "La maionese classica può essere consumata entro <strong>massimo 3 giorni</strong>, quella vegana qualche giorno in più", "" ]
+
+usage: [ "La maionese, specie se fatta con uova, dà il suo meglio se consumata il giorno stesso" ]
+storage: [ "Se non la consumi subito, tienila sempre in frigo", "Non può essere conservata in freezer. Fuori dal frigo, la maionese classica può rimanere solo poche ore." ]
+expiration: [ "La maionese classica va consumata entro <strong>massimo 3 giorni</strong>, quella vegana qualche giorno in più", "" ]
 
 ---

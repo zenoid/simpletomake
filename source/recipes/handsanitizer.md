@@ -68,9 +68,8 @@ directions:
   - [ "Aggiungi <span class='qtyspan'><span data-qty='aqua'>22</span> gr</span> di acqua distillata (o bollita e portata a temperatura ambiente)", "In questo modo si permette all’alcool di raggiungere la concentrazione ottimale." ]
   - [ "Mescola tutto e lascia riposare per <strong>72 ore</strong> (3 giorni)", "L'acqua ossigenata avrà il tempo di eliminare eventuali spore presenti nel contenitore." ]
 
-usage:
-  - [ "Versa il liquido sulle mani, e strofina finché non si asciuga" ]
-  - [ "Conserva al buio", "La luce rende inattiva nel tempo l'acqua ossigenata." ]
-  - [ "Tieni il contenitore chiuso", "Con il contenitore aperto, l'alcool tenderà a evaporare." ]
+usage: [ "Versa il liquido sulle mani, e strofina finché non si asciuga" ]
+storage: [ "Conserva al buio, sempre chiuso e lontano dalle fiamme", "La luce rende inattiva nel tempo l'acqua ossigenata. Con il contenitore aperto, l'alcool tenderà a evaporare. È un liquido facilmente infiammabile." ]
+expiration: [ "Può durare fino a <strong>2-3 anni</strong>, se correttamente conservato", "L'alcool non una ha una scadenza, ma evaporando nel tempo perderà efficacia." ]
 
 ---

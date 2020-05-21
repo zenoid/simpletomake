@@ -145,19 +145,30 @@
 
     </section>
 
-    <section class="section5" id="uso">
-
-      <h2>Uso e conservazione</h2>
+    <section class="section5 section-usage" id="uso">
 
       <div class="card-list">
-      <% for ( i = 0; i < page.usage.length; i++ ) { %>
         <div>
+          <h3>Come si usa</h3>
           <div class="card">
-            <p><%- page.usage[ i ][ 0 ] %></p>
-            <% if ( page.usage[ i ][ 1 ] ) { %><p class="note"><%- page.usage[ i ][ 1 ] %></p><% } %>
+            <p><%- page.usage[ 0 ] %></p>
+            <% if ( page.usage[ 1 ] ) { %><p class="note"><%- page.usage[ 1 ] %></p><% } %>
           </div>
         </div>
-      <% } %>
+        <div>
+          <h3>Come si conserva</h3>
+          <div class="card">
+            <p><%- page.storage[ 0 ] %></p>
+            <% if ( page.storage[ 1 ] ) { %><p class="note"><%- page.storage[ 1 ] %></p><% } %>
+          </div>
+        </div>
+        <div>
+          <h3>Quanto dura</h3>
+          <div class="card">
+            <p><%- page.expiration[ 0 ] %></p>
+            <% if ( page.expiration[ 1 ] ) { %><p class="note"><%- page.expiration[ 1 ] %></p><% } %>
+          </div>
+        </div>
       </div>
 
     </section>

@@ -10,7 +10,7 @@ title: Kimchi (cavolo fermentato)
 titleArticle: il
 
 principles:
-  - "Il Kimchi è la maniera coreana di fermentare le verdure (come i Crauti) e permette di <strong>conservarle a lungo, renderle probiotiche e aggiungere nuovi sapori</strong>"
+  - "Il Kimchi è la maniera coreana di fermentare le verdure (simile ai Crauti) e permette di <strong>conservarle a lungo, renderle probiotiche e aggiungere nuovi sapori</strong>"
   - "La scelta delle verdure da fermentare è abbastanza libera, ma è utile che <strong>i cavoli a foglia siano l'ingrediente principale</strong> perché hanno i batteri più adatti per favorire la fermentazione"
   - "Per far fermentare le verdure ed evitare di farle marcire servono solo due cose: <strong>la giusta quantità di sale e poco contatto con l'aria</strong>"
 
@@ -18,6 +18,7 @@ timeToMake: 7-8 ore
 timeToUse: 1-2 settimane
 sources:
   - '"The Art of Fermentation", Sandor Katz'
+  - Carlo Nesler, fermentatore professionista
 
 recipeIntro: [ "Cosa serve per fare il kimchi con", "di verdure" ]
 
@@ -78,11 +79,10 @@ directions:
   - [ "Dopo <strong>6 ore</strong> da quando hai immerso le verdure, scola tutta la salamoia, tenendone un po' da parte", "", "Imbarattolamento" ]
   - [ "Versa la salsa con le spezie sulle verdure e inizia a mescolare tutto", "Ogni pezzo di verdura deve essere cosparso di salsa. Tradizionalmente, questa operazione si fa massaggiando a mano." ]
   - [ "Metti le verdure nei barattoli, schiacciandole per eliminare bolle d'aria e riempiendo tre quarti di barattolo", "Premi con il pugno o con le dita le verdure verso il fondo del barattolo. Non riempire tutto il barattolo: le verdure si gonfieranno." ]
-  - [ "Se dopo aver schiacciato le verdure non sono del tutto immerse nella salsa, aggiungi salamoia fino a coprirle", "Le verdure devono essere coperte di liquido, ma ricorda di lasciare sempre spazio libero sopra il barattolo." ]
+  - [ "Se dopo aver schiacciato le verdure non sono del tutto immerse nella salsa, aggiungi salamoia fino a coprirle", "Le verdure devono essere coperte di liquido, ma ricorda di lasciare sempre spazio libero nel barattolo." ]
 
-usage:
-  - [ "Conserva i barattoli in un luogo senza luce solare diretta, a temperatura ambiente", "Non è necessario conservarli al buio. Durante la fermentazione, non vanno messi in frigo o in un luogo troppo fresco, o il processo sarà molto lento. Anche un ambiente troppo caldo può rovinare la fermentazione." ]
-  - [ "Le verdure saranno pronte dopo almeno <strong>1 settimana</strong>, e puoi conservare i barattoli anche <strong>1 anno</strong>", "Dopo i primi giorni, dovrebbero comparire bolle d'aria dentro il barattolo. Le verdure saranno più gustose dopo 2-3 settimane. Se i barattoli sono stati conservati in un luogo fresco, aspetta un po' di più." ]
-  - [ "Quando apri la prima volta un barattolo, controlla che non ci siano muffe in superficie, e consumalo entro poche settimane", "Se vuoi consumarlo con più calma, mettilo in frigo dopo l'apertura. Piccole muffe bianche in superficie puoi scartarle, ma se ci sono muffe colorate è sicuramente da buttare. Avrà un odore forte, ma non deve essere troppo acido, e non devono esserci verdure marce." ]
+usage: [ "Le verdure saranno pronte dopo <strong>1-2 settimane</strong>: quando le apri, controlla che non ci siano muffe in superficie", "Dopo i primi giorni di fermentazione, devono comparire bolle d'aria nel barattolo. Piccole muffe bianche in superficie puoi scartarle, ma se ci sono muffe colorate è sicuramente da buttare. Avrà un odore forte, ma non deve essere troppo acido, e non devono esserci verdure marce." ]
+storage: [ "Conserva i barattoli in un luogo senza luce solare diretta, a temperatura ambiente", "Non è necessario conservarli al buio. Durante la fermentazione, non vanno messi in frigo o in un luogo troppo fresco, o il processo sarà molto lento. Anche un ambiente troppo caldo può rovinare la fermentazione." ]
+expiration: [ "Puoi conservare un barattolo chiuso anche <strong>1 anno</strong>, mentre dopo l'apertura va consumato entro poche settimane", "Se vuoi consumarlo con più calma, mettilo in frigo dopo l'apertura." ]
 
 ---

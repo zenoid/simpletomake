@@ -95,9 +95,8 @@ directions:
   - [ "Quando il composto è pronto, versalo subito negli stampi", "Batti leggermente gli stampi sul tavolo per evitare bolle d'aria." ]
   - [ "Tieni gli stampi in un luogo arieggiato per <strong>24-48 ore</strong> e poi estrai i saponi, indossando i guanti", "Il lato esposto all'aria potrebbe essere  più chiaro: non è un problema. Se vuoi tagliarlo in pezzi più piccoli, questo è il momento giusto, perché il sapone sarà solido ma non duro." ]
 
-usage:
-  - [ "Lascia maturare i saponi per almeno <strong>6 settimane</strong>", "Mettili in un luogo arieggiato, asciutto e al riparo dalla polvere. La maturazione serve a far evaporare tutta l'acqua e trasformare tutta la soda caustica." ]
-  - [ "Per lavare i piatti, strofina il sapone sulla spugnetta, o direttamente sulle stoviglie" ]
-  - [ "Può essere conservato per qualche anno", "Il sapone fatto in casa contiene sempre qualche traccia d'olio, dunque quando questo sarà irrancidito, il sapone cambierà odore." ]
+usage: [ "Per lavare i piatti, bagna la saponetta e strofinala sulla spugna, o direttamente sulle stoviglie" ]
+storage: [ "Lascia maturare i saponi per almeno <strong>6 settimane</strong>", "Mettili in un luogo arieggiato, asciutto e al riparo dalla polvere. La maturazione serve a far evaporare tutta l'acqua e trasformare tutta la soda caustica." ]
+expiration: [ "Può essere conservato per <strong>qualche anno</strong>", "Il sapone fatto in casa contiene sempre qualche traccia d'olio, dunque quando questo sarà irrancidito, il sapone cambierà odore." ]
 
 ---

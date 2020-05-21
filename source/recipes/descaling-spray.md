@@ -51,9 +51,8 @@ directions:
   - [ "Aggiungi <span class='qtyspan'><span data-qty='citric'>28</span> gr</span> di acido citrico", "È un acido, ma puoi toccarlo tranquillamente con le mani." ]
   - [ "Mescola tutto finché i granuli di acido citrico non si sono sciolti completamente" ]
 
-usage:
-  - [ "Spruzza il liquido sulle superfici da pulire e lascialo agire per un minuto", "Se la superficie è molto incrostata, lascia agire più a lungo." ]
-  - [ "Strofina con una spugnetta e risciacqua" ]
-  - [ "Dura fino a <strong>3 mesi</strong>", "Dopo questo periodo, butta l'eventuale prodotto rimasto" ]
+usage: [ "Spruzza il liquido sulle superfici da pulire, lascialo agire per un minuto, strofina con una spugnetta e risciacqua", "Se la superficie è molto incrostata, lascia agire più a lungo." ]
+storage: [ "Conservalo al buio e in luogo fresco", "L'esposizione alla luce può cambiare il livello di acidità del prodotto." ]
+expiration: [ "Dura fino a <strong>3 mesi</strong>", "Dopo questo periodo, butta l'eventuale prodotto rimasto" ]
 
 ---

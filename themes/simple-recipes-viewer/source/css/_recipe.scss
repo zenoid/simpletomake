@@ -155,6 +155,30 @@ section {
   }
 }
 
+.section-usage {
+
+  .card-list {
+    padding-top: 2rem;
+  }
+
+  .card {
+    height: calc( 100% - 3.5rem );
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+
+    @media only screen and (max-width: $size-S) {
+      margin-top: 1rem;
+    }
+
+    @media only screen and (max-width: $size-XS) {
+      padding: 0 1rem;
+    }
+  }
+}
+
 .card-list-ordered {
   counter-reset: cardnum;
 

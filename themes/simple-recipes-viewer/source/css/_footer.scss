@@ -22,6 +22,7 @@ footer {
   }
 
   @media only screen and (max-width: $size-XXS) {
+    padding-bottom: 2rem;
 
     .btns-list {
       @include flexColumn;

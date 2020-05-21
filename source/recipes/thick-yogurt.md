@@ -59,9 +59,8 @@ directions:
   - [ "Avvia la yogurtiera per <strong>9-12 ore</strong>", "O tieni i vasetti nello spazio di incubazione per lo stesso tempo. Usa un tempo più vicino alle 9 ore d'estate o se vuoi uno yogurt meno acidulo." ]
   - [ "Passate le ore previste, estrai i vasetti, aspetta che si raffreddino e mettili in frigo", "Puoi consumare lo yogurt dopo 2-3 ore, quando si saranno rinfrescati." ]
 
-usage:
-  - [ "Conserva sempre lo yogurt in frigo, tenendo chiusi i vasetti", "Va messo nei ripiani alti o intermedi, dove la temperatura è più vicina ai 4°C: i ripiani bassi sono più freddi, e i cassetti in fondo sono invece troppo caldi." ]
-  - [ "Se trovi liquido trasparente nel vasetto, puoi scartalo o mescolarlo", "È siero di latte: puoi scartarlo se vuoi mantenere la consistenza, o mescolarlo se non vuoi perdere le sue proteine." ]
-  - [ "Consuma lo yogurt entro <strong>10-15 giorni</strong>", "Lo yogurt fatto in casa è un po' più deperibile perché non chiuso ermeticamente. Buttalo se compaiono puntini di muffa in superficie o se ha un sapore troppo acido." ]
+usage: [ "Se trovi liquido trasparente nel vasetto, puoi scartalo o mescolarlo", "È siero di latte: puoi scartarlo se vuoi mantenere la consistenza, o mescolarlo se non vuoi perdere le sue proteine." ]
+storage: [ "Conserva sempre lo yogurt in frigo, tenendo chiusi i vasetti", "Va messo nei ripiani alti o intermedi, dove la temperatura è più vicina ai 4°C: i ripiani bassi sono più freddi, e i cassetti in fondo sono invece troppo caldi." ]
+expiration: [ "Consuma lo yogurt entro <strong>10-15 giorni</strong>", "Lo yogurt fatto in casa è un po' più deperibile perché non chiuso ermeticamente. Buttalo se compaiono puntini di muffa in superficie o se ha un sapore troppo acido." ]
 
 ---
