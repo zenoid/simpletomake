@@ -16,6 +16,10 @@ principles:
 
 timeToMake: 12-15 ore
 timeToUse: 2-3 ore
+
+comparisonPrices: [ [ 1, 2 ], [ 3, 6 ] ]
+comparisonPricesQty: "al kg"
+
 sources:
   - '"On Food and Cooking", Harold McGee'
   - '"The Art of Fermentation", Sandor Katz'

@@ -1,5 +1,5 @@
 <%- partial('_partial/header') %>
-<% var i; %>
+<% var i, j; %>
   <article>
 
     <section class="section1" id="principi">
@@ -19,10 +19,7 @@
           <div class="card-time">
             <p>Si può fare in<br/><strong><%- page.timeToMake %></strong></p>
           </div><%
-        } %>
-        </div>
-
-        <div><%
+        }
         if ( page.timeToUse ) { %>
           <div class="card-time">
             <p>Si può <% if ( page.category === 'hygiene' ) { %>usare<% } else { %>consumare<% } %> dopo<br/><strong><%- page.timeToUse %></strong></p>
@@ -31,9 +28,59 @@
         </div>
 
         <div><%
+          if ( page.comparisonIngredients || page.comparisonPrices ) { %>
+          <div class="card-empty">
+            <h5>Rispetto ad un prodotto industriale</h5><%
+            if ( page.comparisonIngredients ) { %>
+            <div class="comparison">
+              <table>
+                <tr>
+                  <td colspan="2"><h6>Ingredienti</h6></td>
+                </tr>
+                <tr>
+                  <td><% for ( j = 0; j < page.comparisonIngredients[ 0 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 0 ][ j ]-page.comparisonIngredients[ 0 ][ j-1 ] : page.comparisonIngredients[ 0 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %></td>
+                  <td><strong><%- page.comparisonIngredients[ 0 ].join('-') %></strong></td>
+                </tr>
+                <tr>
+                  <td colspan="2">anziché</td>
+                </tr>
+                <tr>
+                  <td><% for ( j = 0; j < page.comparisonIngredients[ 1 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 1 ][ j ]-page.comparisonIngredients[ 1 ][ j-1 ] : page.comparisonIngredients[ 1 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %></td>
+                  <td><strong><%- page.comparisonIngredients[ 1 ].join('-') %></strong></td>
+                </tr>
+              </table>
+            </div><% }
+            if ( page.comparisonPrices ) {
+              var cPriceMax1 = +page.comparisonPrices[ 1 ][ 1 ],
+                cPriceMin1 = Math.round( page.comparisonPrices[ 1 ][ 0 ] / cPriceMax1 * 100 ),
+                cPriceMin0 = Math.round( page.comparisonPrices[ 0 ][ 0 ] / cPriceMax1 * 100 ),
+                cPriceMax0 = Math.round( page.comparisonPrices[ 0 ][ 1 ] / cPriceMax1 * 100 );
+            %>
+            <div class="comparison">
+              <table>
+                <tr>
+                  <td colspan="2"><h6>Costo (<%- page.comparisonPricesQty %>)</h6></td>
+                </tr>
+                <tr>
+                  <td><div class="bar" style="width:<%- cPriceMax0 %>%"></div><div class="bar" style="width:<%- cPriceMin0 %>%"></div></td>
+                  <td><strong>€ <%- page.comparisonPrices[ 0 ].join('-') %></strong></td>
+                </tr>
+                <tr>
+                  <td colspan="2">anziché</td>
+                </tr>
+                <tr>
+                  <td><div class="bar" style="width:100%"></div><div class="bar" style="width:<%- cPriceMin1 %>%"></div></td>
+                  <td><strong>€ <%- page.comparisonPrices[ 1 ].join('-') %></strong></td>
+                </tr>
+              </table>
+            </div><% } %>
+          </div><% } %>
+        </div>
+
+        <div><%
         if ( page.sources ) { %>
           <div class="card-empty">
-            <h5>Fonti</h5>
+            <h5>Riferimenti</h5>
             <ul><%
             for ( i = 0; i < page.sources.length; i++ ) { %>
               <li><%- page.sources[ i ] %></li><%

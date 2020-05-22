@@ -15,6 +15,11 @@ principles:
   - "La quantità ideale di acido citrico da usare è <strong>il 15% rispetto al peso dell'acqua</strong>"
 
 timeToMake: 5 minuti
+
+comparisonIngredients: [ [ 2 ], [ 6, 8 ] ]
+comparisonPrices: [ [ 1, 1.5 ], [ 5, 10 ] ]
+comparisonPricesQty: "al litro"
+
 sources:
   - Fabrizio Zago, chimico industriale
   - '"Pulizie creative", Elisa Nicoli'

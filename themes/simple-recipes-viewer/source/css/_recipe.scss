@@ -214,6 +214,11 @@ section {
   background-size: 4rem;
   background-position: left 0.5rem top 50%;
 
+  & + .card-time {
+    padding-top: 0.25rem;
+    background-position: left 0.5rem top 0;
+  }
+
   p {
     line-height: 1.2;
   }
@@ -249,6 +254,73 @@ section {
 
   @media only screen and (max-width: $size-XXS) {
     position: fixed;
+  }
+}
+
+
+
+/*                      COMPARISON DATA
+------------------------------------------------------------------------- */
+
+.comparison {
+  font-family: $font-mono;
+  margin-top: 1rem;
+
+  h6 {
+    padding: 0.25rem 0;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  td {
+    font-size: 0.65rem;
+    line-height: 1rem;
+
+    strong {
+      font-size: 1rem;
+      font-weight: $fontweight-normal;
+      padding-left: 0.5rem;
+      text-align: right;
+      white-space: nowrap;
+      display: block;
+    }
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+
+  ul {
+    display: inline;
+
+    & + ul {
+      li {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  li {
+    float: left;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin: 0.15rem;
+    list-style: none;
+    border-radius: 100%;
+    background-color: var( --color-white );
+  }
+
+  .bar {
+    background-color: var( --color-white );
+    opacity: 0.5;
+    height: 0.75rem;
+
+    & + .bar {
+      opacity: 1;
+      margin-top: -0.75rem;
+    }
   }
 }
 

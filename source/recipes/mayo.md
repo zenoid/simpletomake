@@ -16,6 +16,11 @@ principles:
   - "Nella preparazione usa ingredienti alla stessa temperatura, mantieni ferma la ciotola nella quale stai frullando, ma soprattutto <strong>aggiungi l'olio in modo molto graduale</strong>"
 
 timeToMake: 10 minuti
+
+comparisonIngredients: [ [ 4, 5 ], [ 8, 15 ] ]
+comparisonPrices: [ [ 4, 7 ], [ 5, 10 ] ]
+comparisonPricesQty: "al kg"
+
 sources:
   - '"Salt, Fat, Acid, Heat", Samin Nosrat'
   - 'Davide Scabin, chef'

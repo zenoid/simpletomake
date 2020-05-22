@@ -16,6 +16,11 @@ principles:
 
 timeToMake: 1 ora
 timeToUse: 1 mese e mezzo
+
+comparisonIngredients: [ [ 5 ], [ 10, 15 ] ]
+comparisonPrices: [ [ 0.20, 1 ], [ 1.5, 3 ] ]
+comparisonPricesQty: "200gr solido vs 1lt liquido"
+
 sources:
   - Elisa Nicoli, autoproduttrice professonista
   - '"Scientific Soapmaking", Kevin M.Dunn'

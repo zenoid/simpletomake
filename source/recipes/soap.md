@@ -16,6 +16,11 @@ principles:
 
 timeToMake: 1 ora
 timeToUse: 1 mese e mezzo
+
+comparisonIngredients: [ [ 4 ], [ 10, 15 ] ]
+comparisonPrices: [ [ 1, 5 ], [ 10, 30 ] ]
+comparisonPricesQty: "al kg"
+
 sources:
   - '"Scientific Soapmaking", Kevin M.Dunn'
 

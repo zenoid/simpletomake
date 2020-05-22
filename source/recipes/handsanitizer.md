@@ -16,6 +16,11 @@ principles:
 
 timeToMake: 5 minuti
 timeToUse: 3 giorni
+
+comparisonIngredients: [ [ 3, 4 ], [ 13, 16 ] ]
+comparisonPrices: [ [ 15, 20 ], [ 20, 50 ] ]
+comparisonPricesQty: "al litro"
+
 sources:
   - World Health Organization
   - '"Scienza in Cucina", Dario Bressanini'
