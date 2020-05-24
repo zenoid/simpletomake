@@ -48,11 +48,6 @@ section {
     padding: 1rem 0 1.5rem;
   }
 
-  ul li {
-    list-style: disc;
-    margin-left: 1.25rem;
-  }
-
   @media only screen and (max-width: $size-XS) {
     padding-top: 0;
     padding-bottom: 5rem;
@@ -200,7 +195,15 @@ section {
 }
 
 .card-empty {
-  padding: 2rem 1rem;
+  padding: 1rem 0;
+
+  h5 {
+    margin: 1rem;
+  }
+
+  li {
+    margin: 0.5rem 1rem;
+  }
 
   p {
     font-size: 1rem;
@@ -264,8 +267,15 @@ section {
 ------------------------------------------------------------------------- */
 
 .comparison {
-  font-family: $font-mono;
   margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba( 255, 255, 255, 0.4 );
+  font-family: $font-mono;
+
+  @media only screen and (max-width: $size-XXS) {
+    border: none;
+    padding: 0 1rem;
+  }
 
   h6 {
     padding: 0.25rem 0;

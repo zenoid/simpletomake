@@ -17,7 +17,7 @@ principles:
 timeToMake: 5 minuti
 timeToUse: 3 giorni
 
-comparisonIngredients: [ [ 3, 4 ], [ 13, 16 ] ]
+comparisonIngredients: [ [ 4 ], [ 13, 16 ] ]
 comparisonPrices: [ [ 15, 20 ], [ 20, 50 ] ]
 comparisonPricesQty: "al litro"
 
@@ -75,6 +75,6 @@ directions:
 
 usage: [ "Versa il liquido sulle mani, e strofina finché non si asciuga" ]
 storage: [ "Conserva al buio, sempre chiuso e lontano dalle fiamme", "La luce rende inattiva nel tempo l'acqua ossigenata. Con il contenitore aperto, l'alcool tenderà a evaporare. È un liquido facilmente infiammabile." ]
-expiration: [ "Può durare fino a <strong>2-3 anni</strong>, se correttamente conservato", "L'alcool non una ha una scadenza, ma evaporando nel tempo perderà efficacia." ]
+expiration: [ "Può durare fino a <strong>2-3 anni</strong>, se correttamente conservato", "L'alcool non ha una scadenza, ma evaporando nel tempo perderà efficacia." ]
 
 ---
