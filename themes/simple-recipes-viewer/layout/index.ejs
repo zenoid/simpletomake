@@ -42,14 +42,17 @@
 %>
           <li><a href="<%- recipe.path %>" class="btn btn-main"><%- recipe.title %></a></li><%
           }) %>
-        </ul>
+        </ul><%
+          if ( page.notices ) { %>
         <div class="notice">
-          <h5>Maggio 2020</h4>
-          <ul>
-            <li>Nuova ricetta: Detersivo per piatti</li>
-            <li>Aggiunte informazioni di confronto con equivalenti industriali</li>
+          <h5><%- page.noticesTitle %></h5>
+          <ul><%
+            for ( i = 0; i < page.notices.length; i++ ) { %>
+            <li><%- page.notices[ i ] %></li><%
+            } %>
           </ul>
-        </div>
+        </div><%
+          } %>
       </div>
     </div>
 
