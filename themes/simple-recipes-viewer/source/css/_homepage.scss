@@ -149,9 +149,10 @@
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-family: $font-mono;
+    font-size: 1rem;
     font-weight: $fontweight-normal;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   ul + h2 {
@@ -161,6 +162,23 @@
   li {
     height: $btn-height;
     margin-bottom: 2px;
+
+    &.new {
+
+      a {
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: 'NEW';
+          right: 0.25rem;
+          top: 0.2rem;
+          font-size: 0.5rem;
+          line-height: 1;
+          color: var( --color-cta );
+        }
+      }
+    }
   }
 
   a {
@@ -170,9 +188,20 @@
     font-size: 1rem;
     text-transform: none;
 
+    span {
+      font-size: 0.8em;
+      line-height: 1;
+      color: var( --color-gray );
+      @include transition( all, $transition-hover );
+    }
+
     &:focus {
       background-color: var( --color-dark );
       color: var( --color-white );
+
+      span {
+        color: var( --color-white );
+      }
     }
   }
 
@@ -187,34 +216,6 @@
     a {
       display: block;
     }
-  }
-}
-
-
-
-/*                      NOTICE BOX
-------------------------------------------------------------------------- */
-
-.notice {
-  margin-top: 2rem;
-  padding: 1rem;
-  border: 1px solid var( --color-main1 );
-
-  h5,
-  p,
-  li {
-    font-size: 0.9rem;
-  }
-
-  h5 {
-    margin-bottom: 0.5rem;
-  }
-
-  li {
-    list-style: disc;
-    margin: 0 0 0 1rem;
-    padding: 0;
-    height: auto;
   }
 }
 

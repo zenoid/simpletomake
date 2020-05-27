@@ -24,35 +24,27 @@
           .sort( 'index' ),
         recipes_food    = recipes_list.filter( p => p.category === 'food' )
           .sort( 'index' );
+        recipes_new     = page.newRecipes.slice();
 
     %>
         <h2><%- page.listTitleHygiene %></h2>
-        <ul>
-          <%
+        <ul><%
 
-          recipes_hygiene.forEach( recipe => {
+        recipes_hygiene.forEach( recipe => {
+          recipe.title = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' );
   %>
-          <li><a href="<%- recipe.path %>" class="btn btn-main"><%- recipe.title %></a></li><%
+          <li<% if ( recipes_new.indexOf( recipe.recipeid ) > -1 ) { %> class="new"<% } %>><a href="<%- recipe.path %>" class="btn btn-main"><%- recipe.title %></a></li><%
           }) %>
         </ul>
         <h2><%- page.listTitleFood %></h2>
         <ul><%
 
         recipes_food.forEach( recipe => {
+          recipe.title = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' );
 %>
-          <li><a href="<%- recipe.path %>" class="btn btn-main"><%- recipe.title %></a></li><%
+          <li<% if ( recipes_new.indexOf( recipe.recipeid ) > -1 ) { %> class="new"<% } %>><a href="<%- recipe.path %>" class="btn btn-main"><%- recipe.title %></a></li><%
           }) %>
-        </ul><%
-          if ( page.notices ) { %>
-        <div class="notice">
-          <h5><%- page.noticesTitle %></h5>
-          <ul><%
-            for ( i = 0; i < page.notices.length; i++ ) { %>
-            <li><%- page.notices[ i ] %></li><%
-            } %>
-          </ul>
-        </div><%
-          } %>
+        </ul>
       </div>
     </div>
 

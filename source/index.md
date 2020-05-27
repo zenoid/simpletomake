@@ -9,10 +9,6 @@ introBlocks:
   - "Molti cibi e prodotti per la pulizia che usi ogni giorno puoi farli in casa, in modo più <strong>conveniente, ecologico e salutare</strong>"
   - "Esistono migliaia di varianti per ogni ricetta di autoproduzione, ma ognuna può essere ridotta a <strong>pochi principi essenziali</strong>"
 
-noticesTitle: "Maggio 2020"
-notices:
-  - "Nuova ricetta: Liquore"
-  - "Nuova ricetta: Detersivo per piatti"
-  - "Aggiunte informazioni di confronto con equivalenti industriali"
+newRecipes: [ 'liqueur-it', 'dishwashing-soap-it' ]
 
 ---

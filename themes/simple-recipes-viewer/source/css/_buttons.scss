@@ -73,6 +73,10 @@ body:not(.touch) {
 
   .btn-main:hover {
     color: var( --color-white );
+
+    span {
+      color: var( --color-white );
+    }
   }
 
   .btn-link:hover {

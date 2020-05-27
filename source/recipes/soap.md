@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-index: 0
+index: 1
 permalink: sapone
 recipeid: soap-it
 category: hygiene
