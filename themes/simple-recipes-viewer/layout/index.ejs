@@ -18,7 +18,7 @@
         <h1><%- config.subtitle %></h1>
   <%
 
-      var i,
+      var i, recipeLabel,
         recipes_list    = site.pages.filter( p => p.layout === 'recipe' ),
         recipes_hygiene = recipes_list.filter( p => p.category === 'hygiene' )
           .sort( 'index' ),
@@ -31,18 +31,18 @@
         <ul><%
 
         recipes_hygiene.forEach( recipe => {
-          recipe.title = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' );
+          recipeLabel = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' );
   %>
-          <li<% if ( recipes_new.indexOf( recipe.recipeid ) > -1 ) { %> class="new"<% } %>><a href="<%- recipe.path %>" class="btn btn-main"><%- recipe.title %></a></li><%
+          <li<% if ( recipes_new.indexOf( recipe.recipeid ) > -1 ) { %> class="new"<% } %>><a href="<%- recipe.path %>" class="btn btn-main"><%- recipeLabel %></a></li><%
           }) %>
         </ul>
         <h2><%- page.listTitleFood %></h2>
         <ul><%
 
         recipes_food.forEach( recipe => {
-          recipe.title = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' );
+          recipeLabel = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' );
 %>
-          <li<% if ( recipes_new.indexOf( recipe.recipeid ) > -1 ) { %> class="new"<% } %>><a href="<%- recipe.path %>" class="btn btn-main"><%- recipe.title %></a></li><%
+          <li<% if ( recipes_new.indexOf( recipe.recipeid ) > -1 ) { %> class="new"<% } %>><a href="<%- recipe.path %>" class="btn btn-main"><%- recipeLabel %></a></li><%
           }) %>
         </ul>
       </div>
