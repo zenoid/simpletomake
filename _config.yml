@@ -69,18 +69,3 @@ image_minifier:
 
 # Metadata elements
 meta_generator: false
-
-# RSS Feed
-feed:
-  type:
-    - atom
-    - rss2
-  path:
-    - atom.xml
-    - rss2.xml
-  limit: false
-  content_limit: 200
-  content_limit_delim: ' '
-  order_by: -date
-  icon: android-chrome-512x512.png
-  autodiscovery: true

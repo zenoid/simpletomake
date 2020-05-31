@@ -9,13 +9,12 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "4.2.0"
+    "version": "4.2.1"
   },
   "dependencies": {
     "hexo": "latest",
     "hexo-all-minifier": "^0.5.3",
     "hexo-browsersync": "latest",
-    "hexo-generator-feed": "^2.2.0",
     "hexo-generator-sitemap": "^2.0.0",
     "hexo-renderer-ejs": "latest",
     "hexo-renderer-marked": "latest",
