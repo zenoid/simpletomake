@@ -45,7 +45,7 @@ ingredients:
       name: "Zucchero",
       qty: 240,
       units: "gr",
-      notes: "Con queste dosi, otterrai un liquore di media dolcezza. Il peso dello zucchero può variare dal 50% al 100% rispetto a quello dell'alcool." }
+      notes: "Con queste dosi, otterrai un liquore abbastanza dolce. Il peso dello zucchero può variare tra il 15% e il 30% sul totale." }
   - { id: "aqua",
       ratio: 42.4,
       spec: 1,
