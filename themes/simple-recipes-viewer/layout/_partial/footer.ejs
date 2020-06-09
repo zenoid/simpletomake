@@ -18,7 +18,7 @@
           <div>
             <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: <%- title %>" target="_blank" class="btn btn-main btn-icon btn-icon-mail" tabindex="-1">Mandami suggerimenti</a>');</script>
           </div>
-          <div><a href="https://github.com/zenoid/simpletomake/pulls" target="_blank" class="btn btn-main btn-icon btn-icon-pr" tabindex="-1">Proponi modifiche</a></div>
+          <div><a href="<% if ( is_home ) { %>https://github.com/zenoid/simpletomake/pulls<% } else { %>https://github.com/zenoid/simpletomake/blob/master/source/recipes/<%- page.recipeid %>.md<% } %>" target="_blank" class="btn btn-main btn-icon btn-icon-pr" tabindex="-1">Proponi modifiche</a></div>
         </div>
         <div>
           <h4>Vuoi usare la tastiera?</h4>

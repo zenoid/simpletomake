@@ -3,7 +3,7 @@
 layout: recipe
 index: 1
 permalink: yogurt-denso
-recipeid: thick-yogurt-it
+recipeid: thick-yogurt
 category: food
 
 title: Yogurt denso

@@ -3,7 +3,7 @@
 layout: recipe
 index: 2
 permalink: disinfettante-mani
-recipeid: handsanitizer-it
+recipeid: handsanitizer
 category: hygiene
 
 title: Disinfettante mani (amuchina)

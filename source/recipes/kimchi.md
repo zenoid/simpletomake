@@ -3,7 +3,7 @@
 layout: recipe
 index: 2
 permalink: kimchi
-recipeid: kimchi-it
+recipeid: kimchi
 category: food
 
 title: Kimchi (cavolo fermentato)

@@ -10,7 +10,7 @@
     if ( page.layout !== 'index' ) {
       title = 'Come fare ' + page.titleArticle + ' ' + page.title.toLowerCase();
       htmlTitle = title + ' | ' + config.title + ': ' + config.subtitle;
-      ogimg = 'recipes/images/' + page.recipeid + '.png';
+      ogimg = 'recipes/images/' + page.recipeid + '-' + config.language + '.png';
     } else {
       title = config.title + ': ' + config.subtitle;
       htmlTitle = title;

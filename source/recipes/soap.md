@@ -3,7 +3,7 @@
 layout: recipe
 index: 1
 permalink: sapone
-recipeid: soap-it
+recipeid: soap
 category: hygiene
 
 title: Sapone di marsiglia

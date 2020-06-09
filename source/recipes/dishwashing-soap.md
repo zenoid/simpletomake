@@ -3,7 +3,7 @@
 layout: recipe
 index: 4
 permalink: detersivo-piatti
-recipeid: dishwashing-soap-it
+recipeid: dishwashing-soap
 category: hygiene
 
 title: Detersivo per piatti

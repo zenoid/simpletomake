@@ -3,7 +3,7 @@
 layout: recipe
 index: 4
 permalink: liquore
-recipeid: liqueur-it
+recipeid: liqueur
 category: food
 
 title: Liquore (infusione alcolica)

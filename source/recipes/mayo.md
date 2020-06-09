@@ -3,7 +3,7 @@
 layout: recipe
 index: 3
 permalink: maionese
-recipeid: mayo-it
+recipeid: mayo
 category: food
 
 title: Maionese (classica o vegan)
