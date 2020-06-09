@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------- */
 
 footer {
-  padding-top: 1.5rem;
+  padding: 0.5rem 0;
   outline: none;
 
   p {
@@ -13,29 +13,21 @@ footer {
   }
 
   h4 {
-    padding-right: 1rem;
-    text-align: right;
-
-    @media only screen and (max-width: $size-S) {
-      text-align: left;
-    }
+    margin: 0.5rem 0;
   }
 
   @media only screen and (max-width: $size-XXS) {
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
 
-    .btns-list {
-      @include flexColumn;
-
-      .btn + .btn {
-        margin: 2px 0 0 0;
-      }
+    .btn {
+      display: block;
+      margin-bottom: 0.25rem;
     }
   }
 }
 
 .footer-info {
-  margin: 1.5rem auto;
+  margin-top: 1.5rem;
   padding-top: 0;
 
   .card {
