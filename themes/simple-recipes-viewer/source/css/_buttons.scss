@@ -89,11 +89,24 @@ body:not(.touch) {
 /*                      ICON BUTTONS
 ------------------------------------------------------------------------- */
 
-.iconbg {
+.btn-icon {
   padding-left: 2.5rem;
   background-repeat: no-repeat;
   background-size: 1.5rem;
   background-position: left 0.5rem top 0.5rem;
+}
+
+.btn-icon-facebook {
+  background-image: url( '../images/icon-facebook.svg' );
+}
+.btn-icon-twitter {
+  background-image: url( '../images/icon-twitter.svg' );
+}
+.btn-icon-mail {
+  background-image: url( '../images/icon-mail.svg' );
+}
+.btn-icon-pr {
+  background-image: url( '../images/icon-pr.svg' );
 }
 
 

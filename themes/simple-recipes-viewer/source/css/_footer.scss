@@ -58,8 +58,7 @@ footer {
 
 body:not(.touch) {
   footer .btn:hover {
-    background-color: rgba( 0, 0, 0, 0.1 );
-    color: var( --color-dark );
+    background-color: var( --color-main1 );
   }
 }
 
