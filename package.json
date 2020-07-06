@@ -17,8 +17,10 @@
     "hexo-browsersync": "latest",
     "hexo-generator-sitemap": "^2.0.0",
     "hexo-renderer-ejs": "latest",
-    "hexo-renderer-marked": "latest",
+    "hexo-renderer-marked": "^3.0.0",
     "hexo-renderer-scss": "latest",
-    "hexo-server": "latest"
+    "hexo-server": "latest",
+    "http-proxy": "latest",
+    "node-sass": "^4.14.1"
   }
 }

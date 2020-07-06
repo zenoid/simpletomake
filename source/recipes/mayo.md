@@ -66,12 +66,13 @@ tools:
   - [ "Una bilancia", "Per questa ricetta in realtà non servono quantità precise al grammo." ]
 
 directions:
-  - [ "Versa <span class='qtyspan'><span data-qty='oil'>200</span> gr</span> di olio di semi nel contenitore e tieni a portata di mano gli altri condimenti" ]
+  - [ "Versa <span class='qtyspan'><span data-qty='oil'>200</span> gr</span> di olio di semi nel contenitore" ]
+  - [ "Sciogli il sale in un po' del succo di limone che userai", "Se lo aggiungi alla fine, potrebbe non sciogliersi bene" ]
   - [ "Metti nella ciotola <span class='qtyspan'><span data-qty='egg'>1</span></span> tuorl<span data-plural='egg.o-i'>o</span> d'uovo, o <span class='qtyspan'><span data-qty='soymilk'>100</span> gr</span> di latte di soia", "Assicurati che abbia la stessa temperatura dell'olio: tiralo fuori dal frigo qualche ora prima, oppure fa scorrere acqua calda sotto la ciotola." ]
-  - [ "Inizia a frullare l'uovo (o il latte di soia)", "Cerca di tenere la ciotola ferma: puoi mettergli sotto uno strofinaccio bagnato e arrotolato." ]
+  - [ "Inizia a frullare l'uovo (o il latte di soia)", "Cerca di tenere la ciotola ferma: puoi mettergli sotto uno strofinaccio bagnato e arrotolato. Se mescoli a mano, segui sempre uno stesso verso senza mai cambiarlo." ]
   - [ "Versa l'olio molto lentamente, un filo alla volta, mentre continui a frullare", "Se mescoli a mano, non invertire mai la direzione in cui giri." ]
   - [ "Dopo aver versato metà olio, se la salsa è abbastanza densa, aggiungi aceto e/o succo di limone", "Se hai finito l'olio e non ha ancora la giusta consistenza, continua a frullare. Non aggiungere liquidi se la salsa sta perdendo consistenza." ]
-  - [ "Aggiungi alla fine sale e aromi, assaggia, e regola le quantità", "Se aggiungi altri liquidi, riprendi a frullare." ]
+  - [ "Aggiungi alla fine gli eventuali aromi, assaggia, e regola le quantità", "Se aggiungi altri liquidi, riprendi a frullare." ]
   - [ "Se impazzisce, riparti da un tuorlo d'uovo e usa la maionese impazzita al posto dell'olio", "Ovvero frulla l'uovo e aggiungi la maionese gradualmente." ]
 
 usage: [ "La maionese, specie se fatta con uova, dà il suo meglio se consumata il giorno stesso" ]
