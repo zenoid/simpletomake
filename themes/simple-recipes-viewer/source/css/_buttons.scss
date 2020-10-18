@@ -7,7 +7,7 @@
 .btn {
   @include resetButton;
   border: none;
-  border-radius: 0;
+  border-radius: 4px;
   display: inline-block;
   cursor: pointer;
   font-family: $font-mono;

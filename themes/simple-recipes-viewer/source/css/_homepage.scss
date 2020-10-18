@@ -79,8 +79,9 @@
   }
 
   p {
+    font-family: $font;
     font-size: 1.5rem;
-    line-height: 1.5em;
+    line-height: 1.4em;
     display: inline;
 
     strong {
@@ -90,7 +91,7 @@
     & + p {
       &:before {
         content: '\2022';
-        margin: 0 0.5em;
+        margin: 0 0.5em 0 0.25rem;
       }
     }
 

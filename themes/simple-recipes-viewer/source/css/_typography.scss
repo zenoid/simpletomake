@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------- */
 
 body {
-  font-family: $font;
+  font-family: $font-mono;
   font-size: 16px;
   font-weight: $fontweight-normal;
   text-rendering: optimizeLegibility;
@@ -35,7 +35,7 @@ a {
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.4;
 
   a {
@@ -51,7 +51,7 @@ p {
 }
 
 .note {
-  font-size: 1rem;
+  font-size: 0.8em;
   color: var( --color-gray );
 }
 
@@ -92,12 +92,13 @@ h4,
 h5 {
   margin: 0;
   padding: 0;
-  font-weight: $fontweight-bold;
+  font-weight: $fontweight-normal;
 }
 
 h1,
 h2,
 h4 {
+  font-family: $font;
 
   .sub {
     font-size: 0.6em;
@@ -132,7 +133,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.2;
 }
 
@@ -142,11 +143,11 @@ h4 {
 }
 
 h5 {
+  font-weight: $fontweight-bold;
   font-size: 1.25rem;
 }
 
 h6 {
-  font-weight: $fontweight-normal;
   font-size: 0.8rem;
   text-transform: uppercase;
   margin: 0;
