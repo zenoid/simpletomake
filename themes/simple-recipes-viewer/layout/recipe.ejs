@@ -38,15 +38,15 @@
                   <td colspan="2"><h6>Ingredienti</h6></td>
                 </tr>
                 <tr>
-                  <td><% for ( j = 0; j < page.comparisonIngredients[ 0 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 0 ][ j ]-page.comparisonIngredients[ 0 ][ j-1 ] : page.comparisonIngredients[ 0 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %></td>
                   <td><strong><%- page.comparisonIngredients[ 0 ].join('-') %></strong></td>
+                  <td><% for ( j = 0; j < page.comparisonIngredients[ 0 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 0 ][ j ]-page.comparisonIngredients[ 0 ][ j-1 ] : page.comparisonIngredients[ 0 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %></td>
                 </tr>
                 <tr>
                   <td colspan="2">anziché</td>
                 </tr>
                 <tr>
-                  <td><% for ( j = 0; j < page.comparisonIngredients[ 1 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 1 ][ j ]-page.comparisonIngredients[ 1 ][ j-1 ] : page.comparisonIngredients[ 1 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %></td>
                   <td><strong><%- page.comparisonIngredients[ 1 ].join('-') %></strong></td>
+                  <td><% for ( j = 0; j < page.comparisonIngredients[ 1 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 1 ][ j ]-page.comparisonIngredients[ 1 ][ j-1 ] : page.comparisonIngredients[ 1 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %></td>
                 </tr>
               </table>
             </div><% }
@@ -62,15 +62,15 @@
                   <td colspan="2"><h6>Costo (<%- page.comparisonPricesQty %>)</h6></td>
                 </tr>
                 <tr>
-                  <td><div class="bar" style="width:<%- cPriceMax0 %>%"></div><div class="bar" style="width:<%- cPriceMin0 %>%"></div></td>
                   <td><strong>€ <%- page.comparisonPrices[ 0 ].join('-') %></strong></td>
+                  <td><div class="bar" style="width:<%- cPriceMax0 %>%"></div><div class="bar" style="width:<%- cPriceMin0 %>%"></div></td>
                 </tr>
                 <tr>
                   <td colspan="2">anziché</td>
                 </tr>
                 <tr>
-                  <td><div class="bar" style="width:100%"></div><div class="bar" style="width:<%- cPriceMin1 %>%"></div></td>
                   <td><strong>€ <%- page.comparisonPrices[ 1 ].join('-') %></strong></td>
+                  <td><div class="bar" style="width:100%"></div><div class="bar" style="width:<%- cPriceMin1 %>%"></div></td>
                 </tr>
               </table>
             </div><% } %>

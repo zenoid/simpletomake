@@ -155,7 +155,6 @@ section {
   }
 
   h3 {
-    font-family: $font;
     font-size: 1.8rem;
     line-height: 3.5rem;
 
@@ -177,9 +176,8 @@ section {
     content: counter(cardnum);
     position: absolute;
     top: 0.1rem;
-    right: 0.5rem;
-    font-size: 1.5rem;
-    font-family: $font-mono;
+    left: 0.5rem;
+    font-size: 1.25rem;
     opacity: 0.25;
 
     @media only screen and (max-width: $size-M) {
@@ -214,7 +212,7 @@ section {
   background-position: left 0.5rem top 50%;
 
   & + .card-time {
-    padding-top: 0.25rem;
+    padding-top: 0.75rem;
     background-position: left 0.5rem top 0;
   }
 
@@ -263,13 +261,11 @@ section {
 ------------------------------------------------------------------------- */
 
 .comparison {
-  margin-top: 1rem;
-  padding: 1rem;
-  border: 1px solid rgba( 255, 255, 255, 0.4 );
-  font-family: $font-mono;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid rgba( 255, 255, 255, 0.4 );
 
   @media only screen and (max-width: $size-XXS) {
-    border: none;
+    border: none !important;
     padding: 0 1rem;
   }
 
@@ -288,13 +284,13 @@ section {
     strong {
       font-size: 1rem;
       font-weight: $fontweight-normal;
-      padding-left: 0.5rem;
-      text-align: right;
+      width: 5rem;
+      padding-right: 0.5rem;
       white-space: nowrap;
       display: block;
     }
 
-    &:first-child {
+    &:last-child {
       width: 100%;
     }
   }
@@ -329,6 +325,10 @@ section {
       margin-top: -0.75rem;
     }
   }
+}
+
+h5 + .comparison {
+  border-top: 2px solid rgba( 255, 255, 255, 0.4 );
 }
 
 
