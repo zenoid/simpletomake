@@ -133,7 +133,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
   var sectionsNum = 5,
     article = document.querySelector( 'article' ),
     sections = document.querySelectorAll( 'section' ),
-    navItems = document.querySelectorAll( 'nav a' ),
+    navItems = Array.from( sections ).map( s => s.id ),
     footer = document.querySelector( 'footer' ),
     prevBtn = document.getElementById( 'btn-prev' ),
     nextBtn = document.getElementById( 'btn-next' ),
@@ -151,26 +151,11 @@ document.addEventListener( 'DOMContentLoaded', function() {
   function navAction( num )
   {
     setRecipeNav( num );
-    scrollToSection( document.getElementById( navItems[ num-1 ].text ), '#' + navItems[ num-1 ].text );
-  }
-
-  function enableRecipeNav()
-  {
-    for ( var i = 0; i < navItems.length; i++ ){
-      navItems[ i ].addEventListener( 'click', function( e ){
-        e.preventDefault();
-        navAction( +this.parentNode.dataset.num );
-      });
-    }
+    scrollToSection( document.getElementById( navItems[ num-1 ] ), '#' + navItems[ num-1 ] );
   }
 
   function setRecipeNav( num )
   {
-    var liItems = document.querySelectorAll( 'nav li' );
-    for ( var i = 0; i < liItems.length; i++ ){
-      liItems[ i ].classList.remove( 'selected' );
-    }
-    liItems[ num-1 ].classList.add( 'selected' );
     if ( num > 1 ) {
       prevBtn.classList.remove( 'hidden' );
     } else {
@@ -220,7 +205,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     if ( document.documentElement.scrollTop + winh - 100 > footer.offsetTop ) {
       i = sectionsNum + 1;
     }
-    return { num: i+diff, label: ( i+diff > 0 && i+diff <= sectionsNum )? navItems[ i-1+diff ].text : '' };
+    return { num: i+diff, label: ( i+diff > 0 && i+diff <= sectionsNum )? navItems[ i-1+diff ] : '' };
   }
 
   function checkScroll()
@@ -252,7 +237,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
   {
     window.onresize = calcHeight;
     window.onscroll = checkScroll;
-    enableRecipeNav();
     setRecipeNav( 1 );
     enableArrowNav();
     nextBtn.classList.remove( 'hidden' );
@@ -274,6 +258,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
     e = e || window.event;
     var k = e.keyCode;
     switch ( k ) {
+      case 8:
+        document.location = '/'
+        break;
       case 37:
         e.preventDefault();
         prevBtnAction();
@@ -311,9 +298,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
         break;
       case 187:
         addQty();
-        break;
-      case 220:
-        document.location = '/'
         break;
     }
   }

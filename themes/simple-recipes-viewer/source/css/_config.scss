@@ -38,11 +38,11 @@ $color-lightband: lighten( nth( $colors, 2 ), 42% );
 /*                      TYPOGRAPHY
 ------------------------------------------------------------------------- */
 
-$font-title: 'DM Serif Display', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
-$font: 'M PLUS Rounded 1c', 'IBM Plex Mono', Consolas, 'Lucida Console', Monaco, monospace;
+$font-title: Bitter, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+$font: Barlow, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 
-$fontweight-normal:     400;
-$fontweight-bold:       700;
+$fontweight-normal:     300;
+$fontweight-bold:       500;
 
 
 
