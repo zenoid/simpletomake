@@ -1,0 +1,32 @@
+
+
+
+/*                      HEADER
+------------------------------------------------------------------------- */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $btn-height + 0.5rem;
+  z-index: 1;
+  @include flex;
+  padding: 0.25rem;
+
+  & > .btns-list:first-child {
+    @include flexGrow( 1 );
+    margin-right: 2px;
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    padding: 0;
+    height: $btn-height;
+
+    .btn {
+      border-radius: 0;
+    }
+  }
+}
+
+

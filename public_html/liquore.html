@@ -50,6 +50,17 @@
 <body>
 
 
+
+  <header>
+    <div class="btns-list">
+      <a href="/" class="btn btn-main">Home</a>
+    </div>
+    <div class="btns-list">
+      <button class="btn btn-main btn-icon btn-icon-arrow-left hidden" id="btn-prev"></button>
+      <button class="btn btn-main btn-icon btn-icon-arrow-right hidden" id="btn-next"></button>
+    </div>
+  </header>
+
   <article>
 
     <section class="section1" id="principi">
@@ -78,10 +89,10 @@
       
         <div>
           <div class="card-time">
-            <p>Si può fare in<br/><strong>1 o più giorni</strong></p>
-          </div>
-          <div class="card-time">
-            <p>Si può consumare dopo<br/><strong>1 mese</strong></p>
+            <h5>Si può fare in</h5>
+            <span>1 o più giorni</span>
+            <h5>Si può consumare dopo</h5>
+            <span>1 mese</span>
           </div>
         </div>
 
@@ -89,22 +100,16 @@
           <div class="card-empty">
             <h5>Rispetto ad un prodotto industriale</h5>
             <div class="comparison">
-              <table>
-                <tr>
-                  <td colspan="2"><h6>Costo (al litro)</h6></td>
-                </tr>
-                <tr>
-                  <td><strong>€ 8-10</strong></td>
-                  <td><div class="bar" style="width:25%"></div><div class="bar" style="width:20%"></div></td>
-                </tr>
-                <tr>
-                  <td colspan="2">anziché</td>
-                </tr>
-                <tr>
-                  <td><strong>€ 15-40</strong></td>
-                  <td><div class="bar" style="width:100%"></div><div class="bar" style="width:38%"></div></td>
-                </tr>
-              </table>
+              <h6>Costo al litro</h6>
+              <div class="comparison-row">
+                <h6>€ 8-10</strong></h6>
+                <div class="bar" style="width:25%"></div><div class="bar" style="width:20%"></div>
+              </div>
+              <span>anziché</span>
+              <div class="comparison-row">
+                <h6>€ 15-40</h6>
+                <div class="bar" style="width:100%"></div><div class="bar" style="width:38%"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -332,16 +337,6 @@
       </div>
 
     </section>
-
-    <div class="article-actions">
-      <div class="btns-list">
-        <a href="/" class="btn btn-main">Home</a>
-      </div>
-      <div class="btns-list mobilehide">
-        <button class="btn btn-main hidden" id="btn-prev"><span>&lt;</span></button>
-        <button class="btn btn-main hidden" id="btn-next"><span>&gt;</span></button>
-      </div>
-    </div>
 
   </article>
 

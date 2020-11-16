@@ -50,6 +50,17 @@
 <body>
 
 
+
+  <header>
+    <div class="btns-list">
+      <a href="/" class="btn btn-main">Home</a>
+    </div>
+    <div class="btns-list">
+      <button class="btn btn-main btn-icon btn-icon-arrow-left hidden" id="btn-prev"></button>
+      <button class="btn btn-main btn-icon btn-icon-arrow-right hidden" id="btn-next"></button>
+    </div>
+  </header>
+
   <article>
 
     <section class="section1" id="principi">
@@ -78,7 +89,8 @@
       
         <div>
           <div class="card-time">
-            <p>Si può fare in<br/><strong>10 minuti</strong></p>
+            <h5>Si può fare in</h5>
+            <span>10 minuti</span>
           </div>
         </div>
 
@@ -86,40 +98,26 @@
           <div class="card-empty">
             <h5>Rispetto ad un prodotto industriale</h5>
             <div class="comparison">
-              <table>
-                <tr>
-                  <td colspan="2"><h6>Ingredienti</h6></td>
-                </tr>
-                <tr>
-                  <td><strong>4-5</strong></td>
-                  <td><ul><li></li><li></li><li></li><li></li></ul><ul><li></li></ul></td>
-                </tr>
-                <tr>
-                  <td colspan="2">anziché</td>
-                </tr>
-                <tr>
-                  <td><strong>8-15</strong></td>
-                  <td><ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul><ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul></td>
-                </tr>
-              </table>
+              <h6>Ingredienti</h6>
+              <div class="comparison-row">
+                <ul><li></li><li></li><li></li><li></li></ul><ul><li></li></ul>
+              </div>
+              <span>anziché</span>
+              <div class="comparison-row">
+                <ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul><ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+              </div>
             </div>
             <div class="comparison">
-              <table>
-                <tr>
-                  <td colspan="2"><h6>Costo (al kg)</h6></td>
-                </tr>
-                <tr>
-                  <td><strong>€ 4-7</strong></td>
-                  <td><div class="bar" style="width:70%"></div><div class="bar" style="width:40%"></div></td>
-                </tr>
-                <tr>
-                  <td colspan="2">anziché</td>
-                </tr>
-                <tr>
-                  <td><strong>€ 5-10</strong></td>
-                  <td><div class="bar" style="width:100%"></div><div class="bar" style="width:50%"></div></td>
-                </tr>
-              </table>
+              <h6>Costo al kg</h6>
+              <div class="comparison-row">
+                <h6>€ 4-7</strong></h6>
+                <div class="bar" style="width:70%"></div><div class="bar" style="width:40%"></div>
+              </div>
+              <span>anziché</span>
+              <div class="comparison-row">
+                <h6>€ 5-10</h6>
+                <div class="bar" style="width:100%"></div><div class="bar" style="width:50%"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -326,16 +324,6 @@
       </div>
 
     </section>
-
-    <div class="article-actions">
-      <div class="btns-list">
-        <a href="/" class="btn btn-main">Home</a>
-      </div>
-      <div class="btns-list mobilehide">
-        <button class="btn btn-main hidden" id="btn-prev"><span>&lt;</span></button>
-        <button class="btn btn-main hidden" id="btn-next"><span>&gt;</span></button>
-      </div>
-    </div>
 
   </article>
 
