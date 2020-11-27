@@ -211,13 +211,15 @@ document.addEventListener( 'DOMContentLoaded', function() {
   {
     var s = getSection(),
       hash = location.hash;
-    if ( s.num <= sectionsNum-1 ) {
+    if ( s.num <= sectionsNum ) {
       article.className = 'section' + s.num;
       if ( !scrolling && hash != '#' + s.label ) {
         window.history.replaceState( null, null, '#' + s.label );
         setRecipeNav( s.num );
       }
-      nextBtn.classList.remove( 'hidden' );
+      if ( s.num <= sectionsNum-1 ) {
+        nextBtn.classList.remove( 'hidden' );
+      }
     } else {
       if ( !scrolling && hash != '' ) {
         window.history.replaceState( null, null, ' ' );

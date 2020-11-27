@@ -51,17 +51,31 @@
 
   <div class="main">
 
-
-
   <nav>
-    <div class="btns-list">
-      <a href="/" class="btn btn-main">Home</a>
+    <div class="group">
+      <a href="/" class="btn btn-icon btn-icon-home"></a>
     </div>
-    <div class="btns-list mobilehide">
-      <button class="btn btn-main btn-icon btn-icon-arrow-left hidden" id="btn-prev"></button>
-      <button class="btn btn-main btn-icon btn-icon-arrow-right hidden" id="btn-next"></button>
+    <div class="div"></div>
+    
+    <div class="group">
+      <button class="btn btn-icon btn-icon-arrow-up hidden" id="btn-prev"></button>
+      <ul class="navdots">
+        <li class="selected"><a href="#principi"></a></li>
+        <li><a href="#ingredienti"></a></li>
+        <li><a href="#attrezzatura"></a></li>
+        <li><a href="#ricetta"></a></li>
+        <li><a href="#uso"></a></li>
+      </ul>
+      <button class="btn btn-icon btn-icon-arrow-down hidden" id="btn-next"></button>
+    </div>
+    
+    <div class="div"></div>
+    <div class="group">
+      <a href="about.html" class="btn btn-icon btn-icon-about"></a>
     </div>
   </nav>
+
+
 
   <article>
 
@@ -337,63 +351,7 @@
         }
       ]
     }
-    </script>
-
-  <script>String.prototype.encrypt = function(){ return this.replace(/[a-zA-Z]/g, function(c){ return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);});};</script>
-
-  <footer>
-
-    <div class="content">
-
-      <div class="row card-list">
-        <div>
-          <h4>Questa ricetta è utile?</h4>
-          <div><a href="https://www.facebook.com/sharer/sharer.php?u=https://simpletomake.it/disinfettante-mani.html" target="_blank" class="btn btn-main btn-icon btn-icon-facebook" tabindex="-1">Condividi su Facebook</a></div>
-          <div><a href="https://twitter.com/intent/tweet?text=Come fare un disinfettante mani (amuchina)&url=https://simpletomake.it/disinfettante-mani.html" target="_blank" class="btn btn-main btn-icon btn-icon-twitter" tabindex="-1">Condividi su Twitter</a></div>
-        </div>
-        <div>
-          <h4>Puoi migliorarla?</h4>
-          <div>
-            <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: Come fare un disinfettante mani (amuchina)" target="_blank" class="btn btn-main btn-icon btn-icon-mail" tabindex="-1">Mandami suggerimenti</a>');</script>
-          </div>
-          <div><a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/handsanitizer.md" target="_blank" class="btn btn-main btn-icon btn-icon-pr" tabindex="-1">Proponi modifiche</a></div>
-        </div>
-        <div>
-          <h4>Vuoi usare la tastiera?</h4>
-          <p><span class="key">BACKSPACE</span><span class="note">Torna alla homepage</span></p>
-          <p><span class="key">&lsaquo;</span><span class="key">&rsaquo;</span><span class="key">SPAZIO</span><span class="key">TAB</span><span class="note">Scorri le sezioni</span></p>
-          <p><span class="key">1</span><span class="key">2</span><span class="key">3</span><span class="key">4</span><span class="key">5</span><span class="note">Salta tra sezioni</span></p>
-          <p><span class="key">-</span><span class="key">+</span><span class="note">Cambia quantità</span></p>
-          </div>
-      </div>
-
-    </div>
-
-    <div class="content footer-info">
-
-      <div class="row card-list">
-        <div>
-          <div class="card">
-            <p>Sorgenti disponibili su <a href="https://github.com/zenoid/simpletomake" target="_blank" tabindex="-1">Github</a></p>
-            <p class="note">Made in Italy by Piero Ciarfaglia &rarr; <a href="https://zenoid.it" target="_blank" tabindex="-1">zenoid</a></p>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <p><a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank" tabindex="-1"><span class="copyleft">&copy;</span> GNU General Public License</a></p>
-            <p class="note">Sei libero di (ri)utilizzare contenuti e sorgenti di questo sito rispettando questa licenza</p>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <p>Su questo sito non viene utilizzato nessun coookie, e non viene raccolto nessun dato</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </footer>
+  </script>
 
   </div>
 
