@@ -40,7 +40,7 @@ section {
   min-height: 100vh;
   margin: auto;
   text-align: left;
-  padding: 4rem 1rem 1rem 1rem;
+  padding: 2rem 1rem;
   outline: none;
 
   h1,
@@ -228,31 +228,6 @@ section {
   @media only screen and (max-width: $size-S) {
     padding: 0 0 0 4.5rem;
     margin-top: 1.5rem;
-  }
-}
-
-
-
-/*                      RECIPE CONTROLS
-------------------------------------------------------------------------- */
-
-.article-actions {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: $btn-height + 0.5rem;
-  z-index: 1;
-  @include flex;
-  padding: 0.25rem;
-
-  & > .btns-list:first-child {
-    @include flexGrow( 1 );
-    margin-right: 2px;
-  }
-
-  @media only screen and (max-width: $size-XXS) {
-    position: fixed;
   }
 }
 

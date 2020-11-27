@@ -1,0 +1,23 @@
+
+
+
+/*                      NAV
+------------------------------------------------------------------------- */
+
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 3rem;
+  z-index: 1;
+  padding: 0.25rem;
+  background-color: var( --color-dark );
+
+  & > .btns-list:first-child {
+    @include flexGrow( 1 );
+    margin-right: 2px;
+  }
+}
+
+

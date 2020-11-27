@@ -23,11 +23,12 @@ html {
   width: 100%;
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
 }
 
 body {
   text-align: center;
+  overflow: hidden;
+  height: 100%;
 }
 
 
@@ -51,6 +52,13 @@ body.touch {
 
 /*                      MAIN CONTAINERS
 ------------------------------------------------------------------------- */
+
+.main {
+  overflow: auto;
+  height: 100vh;
+  scroll-behavior: smooth;
+  margin-right: 3rem;
+}
 
 .content {
   max-width: $layoutwidth;

@@ -131,13 +131,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
   */
 
   var sectionsNum = 5,
+    main = document.querySelector( '.main' ),
     article = document.querySelector( 'article' ),
     sections = document.querySelectorAll( 'section' ),
     navItems = Array.from( sections ).map( s => s.id ),
     footer = document.querySelector( 'footer' ),
     prevBtn = document.getElementById( 'btn-prev' ),
     nextBtn = document.getElementById( 'btn-next' ),
-    winh = window.innerHeight,
+    winh = main.offsetHeight,
     scrolling;
 
   function scrollToSection( el, hash )
@@ -199,10 +200,10 @@ document.addEventListener( 'DOMContentLoaded', function() {
   function getSection( diff = 0 )
   {
     var i = 0;
-    while ( ( i < sectionsNum ) && ( document.documentElement.scrollTop > sections[ i ].offsetTop - winh/2 ) ) {
+    while ( ( i < sectionsNum ) && ( main.scrollTop > sections[ i ].offsetTop - winh/2 ) ) {
       i++;
     }
-    if ( document.documentElement.scrollTop + winh - 100 > footer.offsetTop ) {
+    if ( main.scrollTop + winh - 100 > footer.offsetTop ) {
       i = sectionsNum + 1;
     }
     return { num: i+diff, label: ( i+diff > 0 && i+diff <= sectionsNum )? navItems[ i-1+diff ] : '' };
@@ -229,14 +230,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   function calcHeight()
   {
-    winh = window.innerHeight;
+    winh = main.offsetHeight;
     checkScroll();
   }
 
   function setupNav()
   {
-    window.onresize = calcHeight;
-    window.onscroll = checkScroll;
+    main.onresize = calcHeight;
+    main.onscroll = checkScroll;
     setRecipeNav( 1 );
     enableArrowNav();
     nextBtn.classList.remove( 'hidden' );
