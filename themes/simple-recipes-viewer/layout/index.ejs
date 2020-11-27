@@ -5,11 +5,6 @@
         <div class="logo">
           <img src="images/simpletomake-logo.svg" alt="Simple to Make">
         </div>
-        <div><%
-        for ( var i = 0; i < page.introBlocks.length; i++ ) { %>
-          <p><%- page.introBlocks[ i ] %></p><%
-        } %>
-        </div>
       </div>
     </div>
 
@@ -24,7 +19,6 @@
           .sort( 'index' ),
         recipes_food    = recipes_list.filter( p => p.category === 'food' )
           .sort( 'index' );
-        recipes_new     = page.newRecipes.slice();
 
     %>
         <h2><%- page.listTitleHygiene %></h2>
@@ -33,16 +27,17 @@
         recipes_hygiene.forEach( recipe => {
           recipeLabel = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' );
   %>
-          <li<% if ( recipes_new.indexOf( recipe.recipeid ) > -1 ) { %> class="new"<% } %>><a href="<%- recipe.path %>" class="btn btn-main"><%- recipeLabel %></a></li><%
+          <li><a href="<%- recipe.path %>" class="btn btn-main"><%- recipeLabel %></a></li><%
           }) %>
         </ul>
+
         <h2><%- page.listTitleFood %></h2>
         <ul><%
 
         recipes_food.forEach( recipe => {
           recipeLabel = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' );
 %>
-          <li<% if ( recipes_new.indexOf( recipe.recipeid ) > -1 ) { %> class="new"<% } %>><a href="<%- recipe.path %>" class="btn btn-main"><%- recipeLabel %></a></li><%
+          <li><a href="<%- recipe.path %>" class="btn btn-main"><%- recipeLabel %></a></li><%
           }) %>
         </ul>
       </div>

@@ -7,15 +7,15 @@
 .home-main {
   @include flex;
   min-height: 100vh;
-  background-color: var( --color-main1 );
   color: var( --color-white );
+  @include gradient( var( --color-main1 ), var( --color-main5 ) );
 
   & > div {
     @include flexNoShrink;
-    width: 50%;
+    width: 33.3%;
 
     .content {
-      max-width: $layoutwidth / 2;
+      max-width: $layoutwidth / 3;
     }
 
     &:first-child {
@@ -129,7 +129,6 @@
 ------------------------------------------------------------------------- */
 
 .home-menu {
-  background-color: var( --color-darkband );
 
   .content {
     padding: 2rem;
@@ -162,23 +161,6 @@
   li {
     height: $btn-height;
     margin-bottom: 2px;
-
-    &.new {
-
-      a {
-        position: relative;
-
-        &:after {
-          position: absolute;
-          content: 'NEW';
-          right: 0.25rem;
-          top: 0.2rem;
-          font-size: 0.5rem;
-          line-height: 1;
-          color: var( --color-cta );
-        }
-      }
-    }
   }
 
   a {

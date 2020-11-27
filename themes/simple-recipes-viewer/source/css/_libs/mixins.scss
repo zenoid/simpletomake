@@ -259,6 +259,11 @@
           box-shadow: inset 0 0 $amount rgba(255, 255, 255, $alpha);
 }
 
+@mixin gradient($start: #FFFFFF, $stop: #000000) {
+  background: $start;
+  background: linear-gradient( 180deg, $start 0%, $stop 100% );
+}
+
 @mixin gradientTint($tint: #F5F5F5, $amount: 10%) {
   background: $tint;
   $start: darken($tint, $amount);
