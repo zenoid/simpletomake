@@ -92,7 +92,6 @@ h4,
 h5 {
   margin: 0;
   padding: 0;
-  font-weight: $fontweight-normal;
 }
 
 h1,
@@ -127,6 +126,7 @@ h1,
 h2 {
   font-size: 3rem;
   line-height: 1;
+  font-weight: $fontweight-normal;
 
   @media only screen and (max-width: $size-XXS) {
     font-size: 2.25rem;
@@ -136,16 +136,19 @@ h2 {
 h3 {
   font-size: 1.25rem;
   line-height: 1.2;
+  font-weight: $fontweight-normal;
 }
 
 h4 {
   font-size: 1.25rem;
   line-height: $btn-height;
+  font-weight: $fontweight-normal;
 }
 
 h5 {
-  font-weight: $fontweight-bold;
   font-size: 1.25rem;
+  color: var( --color-dark );
+  opacity: 0.6;
 }
 
 h6 {

@@ -134,8 +134,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
     main = document.querySelector( '.main' ),
     article = document.querySelector( 'article' ),
     sections = document.querySelectorAll( 'section' ),
+    navLinks = document.querySelectorAll( '.navdots li' ),
     navItems = Array.from( sections ).map( s => s.id ),
-    footer = document.querySelector( 'footer' ),
     prevBtn = document.getElementById( 'btn-prev' ),
     nextBtn = document.getElementById( 'btn-next' ),
     winh = main.offsetHeight,
@@ -162,6 +162,10 @@ document.addEventListener( 'DOMContentLoaded', function() {
     } else {
       prevBtn.classList.add( 'hidden' );
     }
+    Array.from( navLinks ).forEach( li => {
+      li.classList.remove( 'selected' );
+    });
+    navLinks[ num - 1 ].classList.add( 'selected' );
   }
 
   function nextBtnAction()
@@ -172,11 +176,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
       setRecipeNav( s.num );
       el = document.getElementById( s.label );
       hash = '#' + s.label;
-    } else {
-      el = footer;
-      hash = ' ';
+      scrollToSection( el, hash );
     }
-    scrollToSection( el, hash );
   }
 
   function prevBtnAction()
@@ -203,9 +204,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
     while ( ( i < sectionsNum ) && ( main.scrollTop > sections[ i ].offsetTop - winh/2 ) ) {
       i++;
     }
-    if ( main.scrollTop + winh - 100 > footer.offsetTop ) {
-      i = sectionsNum + 1;
-    }
     return { num: i+diff, label: ( i+diff > 0 && i+diff <= sectionsNum )? navItems[ i-1+diff ] : '' };
   }
 
@@ -213,7 +211,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
   {
     var s = getSection(),
       hash = location.hash;
-    if ( s.num <= sectionsNum ) {
+    if ( s.num <= sectionsNum-1 ) {
       article.className = 'section' + s.num;
       if ( !scrolling && hash != '#' + s.label ) {
         window.history.replaceState( null, null, '#' + s.label );
@@ -262,18 +260,18 @@ document.addEventListener( 'DOMContentLoaded', function() {
       case 8:
         document.location = '/'
         break;
-      case 37:
+      case 38:
         e.preventDefault();
         prevBtnAction();
         break;
-      case 39:
+      case 40:
         e.preventDefault();
         nextBtnAction();
         break;
       case 32:
       case  9:
         e.preventDefault();
-        if ( getSection().num > sectionsNum ) {
+        if ( getSection().num > sectionsNum-1 ) {
           navAction( 1 );
         } else {
           nextBtnAction();

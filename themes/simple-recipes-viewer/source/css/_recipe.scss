@@ -15,10 +15,6 @@ article {
   color: var( --color-white );
 
   @media only screen and (max-width: $size-XS) {
-    padding-top: 0rem;
-  }
-
-  @media only screen and (max-width: $size-XS) {
     background: none !important;
   }
 }
@@ -60,7 +56,7 @@ section {
   }
 
   @media only screen and (max-width: $size-XXS) {
-    padding: 0;
+    padding: 1.5rem 0 0 0;
 
     &:last-of-type {
       padding-bottom: 5rem;
@@ -116,7 +112,8 @@ section {
 }
 
 .card-title {
-  border-radius: 32px 4px 4px 32px;
+  border-radius: 16px 4px 4px 16px;
+  margin-left: 0.5rem;
 
   @media only screen and (max-width: $size-S) {
     margin-top: 1rem;
@@ -188,14 +185,10 @@ section {
 }
 
 .card-empty {
-  padding: 1rem 0;
-
-  h5 {
-    margin: 1rem;
-  }
+  padding: 2rem;
 
   li {
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 0;
   }
 
   p {
@@ -206,28 +199,19 @@ section {
 }
 
 .card-time {
-  padding: 2rem 1rem 2rem 4.5rem;
-  background-image: url( '../images/icon-clock.svg' );
-  background-repeat: no-repeat;
-  background-size: 4rem;
-  background-position: left 0.5rem top 50%;
+  padding: 2rem;
 
-  & + .card-time {
-    padding-top: 0.75rem;
-    background-position: left 0.5rem top 0;
+  h5 + span {
+    font-size: 2rem;
+    line-height: 2rem;
   }
 
-  p {
-    line-height: 1.2;
-  }
-
-  strong {
-    font-size: 1.25em;
+  span + h5 {
+    margin-top: 1.5rem;
   }
 
   @media only screen and (max-width: $size-S) {
-    padding: 0 0 0 4.5rem;
-    margin-top: 1.5rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -237,38 +221,32 @@ section {
 ------------------------------------------------------------------------- */
 
 .comparison {
-  padding: 0.5rem 1rem;
-  border-bottom: 2px solid rgba( 255, 255, 255, 0.4 );
-
-  @media only screen and (max-width: $size-XXS) {
-    border: none !important;
-    padding: 0 1rem;
-  }
+  padding: 0.5rem 0;
 
   h6 {
-    padding: 0.25rem 0;
+    margin-bottom: 0.5rem;
   }
 
-  table {
-    width: 100%;
+  span {
+    font-size: 0.75rem;
   }
 
-  td {
-    font-size: 0.65rem;
+}
+
+h5 + .comparison {
+  margin-top: 0.5rem;
+}
+
+.comparison-row {
+  position: relative;
+  @include clearfix;
+
+  h6 {
+    position: absolute;
+    z-index: 1;
     line-height: 1rem;
-
-    strong {
-      font-size: 1rem;
-      font-weight: $fontweight-normal;
-      width: 5rem;
-      padding-right: 0.5rem;
-      white-space: nowrap;
-      display: block;
-    }
-
-    &:last-child {
-      width: 100%;
-    }
+    padding: 0 0.25rem;
+    color: var( --color-gray );
   }
 
   ul {
@@ -294,17 +272,15 @@ section {
   .bar {
     background-color: var( --color-white );
     opacity: 0.5;
-    height: 0.75rem;
+    height: 1rem;
 
     & + .bar {
       opacity: 1;
-      margin-top: -0.75rem;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
-}
-
-h5 + .comparison {
-  border-top: 2px solid rgba( 255, 255, 255, 0.4 );
 }
 
 

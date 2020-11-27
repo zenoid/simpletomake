@@ -1,0 +1,41 @@
+  <div class="home-main">
+
+    <div class="home-about">
+      <div class="content">
+        <div class="logo">
+          <img src="images/simpletomake-logo.svg" alt="Simple to Make">
+        </div>
+        <div><%
+        for ( var i = 0; i < page.introBlocks.length; i++ ) { %>
+          <p><%- page.introBlocks[ i ] %></p><%
+        } %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="home-sources">
+    <div class="content">
+      <h2>Di cosa sono fatte queste ricette?</h2>
+      <div class="row card-list">
+        <div>
+          <span>30%</span>
+          <h4>Manuali tecnici</h4>
+          <p class="note">Il punto di partenza di queste preparazioni sono spesso i manuali più accreditati, che trovi tra i &ldquo;riferimenti&rdquo; di ogni ricetta</p>
+        </div>
+        <div>
+          <span>30%</span>
+          <h4>Articoli e corsi di esperti</h4>
+          <p class="note">Per alcuni dettagli non mi sono fidato della tradizione o dei blogger, ma delle ricette usate da tecnici ed esperti: chimici, chef, autoproduttori professionisti</p>
+        </div>
+        <div>
+          <span>40%</span>
+          <h4>Esperienza personale</h4>
+          <p class="note">Studio e pratico l’autoproduzione dal 2015 con un approccio da &ldquo;nerd&rdquo;: di una ricetta mi chiedo sempre il perché di ogni passaggio</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<%- partial('_partial/footer') %>

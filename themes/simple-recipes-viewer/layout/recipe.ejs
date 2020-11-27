@@ -1,15 +1,5 @@
 <% var i, j; %>
 
-  <nav>
-    <div class="btns-list">
-      <a href="/" class="btn btn-main">Home</a>
-    </div>
-    <div class="btns-list mobilehide">
-      <button class="btn btn-main hidden" id="btn-prev"><span>&lt;</span></button>
-      <button class="btn btn-main hidden" id="btn-next"><span>&gt;</span></button>
-    </div>
-  </nav>
-
   <article>
 
     <section class="section1" id="principi">
@@ -24,17 +14,17 @@
           </div>
         </div>
       <% } %>
-        <div><%
+        <div>
+          <div class="card-time"><%
         if ( page.timeToMake ) { %>
-          <div class="card-time">
-            <p>Si può fare in<br/><strong><%- page.timeToMake %></strong></p>
-          </div><%
+            <h5>Si può fare in</h5>
+            <span><%- page.timeToMake %></span><%
         }
         if ( page.timeToUse ) { %>
-          <div class="card-time">
-            <p>Si può <% if ( page.category === 'hygiene' ) { %>usare<% } else { %>consumare<% } %> dopo<br/><strong><%- page.timeToUse %></strong></p>
-          </div><%
+            <h5>Si può <% if ( page.category === 'hygiene' ) { %>usare<% } else { %>consumare<% } %> dopo</h5>
+            <span><%- page.timeToUse %></span><%
         } %>
+          </div>
         </div>
 
         <div><%
@@ -43,22 +33,14 @@
             <h5>Rispetto ad un prodotto industriale</h5><%
             if ( page.comparisonIngredients ) { %>
             <div class="comparison">
-              <table>
-                <tr>
-                  <td colspan="2"><h6>Ingredienti</h6></td>
-                </tr>
-                <tr>
-                  <td><strong><%- page.comparisonIngredients[ 0 ].join('-') %></strong></td>
-                  <td><% for ( j = 0; j < page.comparisonIngredients[ 0 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 0 ][ j ]-page.comparisonIngredients[ 0 ][ j-1 ] : page.comparisonIngredients[ 0 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %></td>
-                </tr>
-                <tr>
-                  <td colspan="2">anziché</td>
-                </tr>
-                <tr>
-                  <td><strong><%- page.comparisonIngredients[ 1 ].join('-') %></strong></td>
-                  <td><% for ( j = 0; j < page.comparisonIngredients[ 1 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 1 ][ j ]-page.comparisonIngredients[ 1 ][ j-1 ] : page.comparisonIngredients[ 1 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %></td>
-                </tr>
-              </table>
+              <h6>Ingredienti</h6>
+              <div class="comparison-row">
+                <% for ( j = 0; j < page.comparisonIngredients[ 0 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 0 ][ j ]-page.comparisonIngredients[ 0 ][ j-1 ] : page.comparisonIngredients[ 0 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %>
+              </div>
+              <span>anziché</span>
+              <div class="comparison-row">
+                <% for ( j = 0; j < page.comparisonIngredients[ 1 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 1 ][ j ]-page.comparisonIngredients[ 1 ][ j-1 ] : page.comparisonIngredients[ 1 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %>
+              </div>
             </div><% }
             if ( page.comparisonPrices ) {
               var cPriceMax1 = +page.comparisonPrices[ 1 ][ 1 ],
@@ -67,22 +49,16 @@
                 cPriceMax0 = Math.round( page.comparisonPrices[ 0 ][ 1 ] / cPriceMax1 * 100 );
             %>
             <div class="comparison">
-              <table>
-                <tr>
-                  <td colspan="2"><h6>Costo (<%- page.comparisonPricesQty %>)</h6></td>
-                </tr>
-                <tr>
-                  <td><strong>€ <%- page.comparisonPrices[ 0 ].join('-') %></strong></td>
-                  <td><div class="bar" style="width:<%- cPriceMax0 %>%"></div><div class="bar" style="width:<%- cPriceMin0 %>%"></div></td>
-                </tr>
-                <tr>
-                  <td colspan="2">anziché</td>
-                </tr>
-                <tr>
-                  <td><strong>€ <%- page.comparisonPrices[ 1 ].join('-') %></strong></td>
-                  <td><div class="bar" style="width:100%"></div><div class="bar" style="width:<%- cPriceMin1 %>%"></div></td>
-                </tr>
-              </table>
+              <h6>Costo <%- page.comparisonPricesQty %></h6>
+              <div class="comparison-row">
+                <h6>€ <%- page.comparisonPrices[ 0 ].join('-') %></strong></h6>
+                <div class="bar" style="width:<%- cPriceMax0 %>%"></div><div class="bar" style="width:<%- cPriceMin0 %>%"></div>
+              </div>
+              <span>anziché</span>
+              <div class="comparison-row">
+                <h6>€ <%- page.comparisonPrices[ 1 ].join('-') %></h6>
+                <div class="bar" style="width:100%"></div><div class="bar" style="width:<%- cPriceMin1 %>%"></div>
+              </div>
             </div><% } %>
           </div><% } %>
         </div>
@@ -262,6 +238,4 @@
         }<% if ( i < page.directions.length - 1 ) { %>, <% } %><% } %>
       ]
     }
-    </script>
-
-<%- partial('_partial/footer') %>
+  </script>

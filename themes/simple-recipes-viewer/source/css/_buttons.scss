@@ -19,18 +19,13 @@
   text-align: center;
   @include ellipsis;
   color: var( --color-white );
-  background-color: rgba( 0, 0, 0, 0.1 );
+  background: none;
   @include transition( all, $transition-hover );
 
   &.hidden {
     opacity: 0;
     cursor: auto;
   }
-}
-
-.btn-main {
-  background-color: var( --color-dark );
-  color: var( --color-white );
 }
 
 .quantity {
@@ -57,26 +52,10 @@
   @include transition( all, $transition-hover );
 }
 
-.btns-list {
-  @include flex;
-
-  .btn + .btn {
-    margin-left: 2px;
-  }
-}
-
 body:not(.touch) {
 
   .btn:hover {
-    background-color: rgba( 255, 255, 255, 0.1 );
-  }
-
-  .btn-main:hover {
-    color: var( --color-white );
-
-    span {
-      color: var( --color-white );
-    }
+    background-color: rgba( 255, 255, 255, 0.2 );
   }
 
   .btn-link:hover {
@@ -90,17 +69,23 @@ body:not(.touch) {
 ------------------------------------------------------------------------- */
 
 .btn-icon {
-  padding-left: 2.5rem;
   background-repeat: no-repeat;
   background-size: 1.5rem;
-  background-position: left 0.5rem top 0.5rem;
+  background-position: left 50% top 50%;
+  height: 2.5rem;
 }
 
-.btn-icon-facebook {
-  background-image: url( '../images/icon-facebook.svg' );
+.btn-icon-home {
+  background-image: url( '../images/icon-logo.svg' );
 }
-.btn-icon-twitter {
-  background-image: url( '../images/icon-twitter.svg' );
+.btn-icon-about {
+  background-image: url( '../images/icon-about.svg' );
+}
+.btn-icon-arrow-up {
+  background-image: url( '../images/icon-arrow-up.svg' );
+}
+.btn-icon-arrow-down {
+  background-image: url( '../images/icon-arrow-down.svg' );
 }
 .btn-icon-mail {
   background-image: url( '../images/icon-mail.svg' );

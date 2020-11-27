@@ -1,0 +1,23 @@
+  <nav>
+    <div class="group">
+      <a href="/" class="btn btn-icon btn-icon-home"></a>
+    </div>
+    <div class="div"></div>
+    <% if ( page.layout === 'recipe' ) { %>
+    <div class="group">
+      <button class="btn btn-icon btn-icon-arrow-up hidden" id="btn-prev"></button>
+      <ul class="navdots">
+        <li class="selected"><a href="#principi"></a></li>
+        <li><a href="#ingredienti"></a></li>
+        <li><a href="#attrezzatura"></a></li>
+        <li><a href="#ricetta"></a></li>
+        <li><a href="#uso"></a></li>
+      </ul>
+      <button class="btn btn-icon btn-icon-arrow-down hidden" id="btn-next"></button>
+    </div>
+    <% } %>
+    <div class="div"></div>
+    <div class="group">
+      <a href="about.html" class="btn btn-icon btn-icon-about"></a>
+    </div>
+  </nav>

@@ -11,12 +11,61 @@ nav {
   right: 0;
   width: 3rem;
   z-index: 1;
-  padding: 0.25rem;
+  overflow: hidden;
+  @include flex;
+  @include flexColumn;
   background-color: var( --color-dark );
 
-  & > .btns-list:first-child {
+  .btn {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+  }
+
+  .div {
     @include flexGrow( 1 );
-    margin-right: 2px;
+  }
+
+  .group + .group {
+    margin-top: $btn-height;
+  }
+}
+
+.navdots {
+
+  a {
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0.5rem;
+      left: 50%;
+      @include translateX( -50% );
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 100%;
+      border: 1px solid var( --color-white );
+      background-color: var( --color-white );
+      @include transition( all, $transition-hover );
+    }
+  }
+
+  li.selected ~ li {
+    a:after {
+      opacity: 0.5;
+      background-color: transparent;
+    }
+  }
+}
+
+body:not(.touch) {
+  .navdots a:hover:after {
+    opacity: 1;
+    background-color: var( --color-white );
   }
 }
 
