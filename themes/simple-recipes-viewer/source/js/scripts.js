@@ -23,6 +23,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
     baseMax = 5000,
     baseStep = 50,
     ingrPrec = 2,
+    addQtyBtns,
+    removeQtyBtns,
     qtyLabels,
     qtyPlurals,
     qtyValue;
@@ -55,6 +57,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     var i, qty, mult, qtyId, volType, contSize, plurId, plurOptions, ceil,
       recipeWeight = recipeBaseValue * recipeBaseRatio;
     qtyValue.textContent = recipeBaseValue;
+    setQtyButtons();
     for ( i in ingredients ) {
       ingredients[ i ].qty = recipeWeight * ingredients[ i ].ratio / 100;
     }
@@ -98,6 +101,15 @@ document.addEventListener( 'DOMContentLoaded', function() {
     }
   }
 
+  function setQtyButtons() {
+    Array.from( addQtyBtns ).forEach( btn => {
+      btn.disabled = ( recipeBaseValue === baseMax );
+    });
+    Array.from( removeQtyBtns ).forEach( btn => {
+      btn.disabled = ( recipeBaseValue === baseMin );
+    });
+  }
+
   function setupQty()
   {
     recipeBaseValue = recipeBase.qty;
@@ -114,11 +126,13 @@ document.addEventListener( 'DOMContentLoaded', function() {
     qtyLabels = document.querySelectorAll( '[data-qty]' );
     qtyPlurals = document.querySelectorAll( '[data-plural]' );
     qtyValue = document.getElementById( 'qtyValue' );
-    Array.from( document.querySelectorAll( '.btn-icon-minus' ) ).forEach( btn => {
-      btn.addEventListener( 'click', removeQty );
-    });
-    Array.from( document.querySelectorAll( '.btn-icon-plus' ) ).forEach( btn => {
+    addQtyBtns = document.querySelectorAll( '.btn-icon-plus' );
+    removeQtyBtns = document.querySelectorAll( '.btn-icon-minus' );
+    Array.from( addQtyBtns ).forEach( btn => {
       btn.addEventListener( 'click', addQty );
+    });
+    Array.from( removeQtyBtns ).forEach( btn => {
+      btn.addEventListener( 'click', removeQty );
     });
 
     calcQty();
@@ -158,9 +172,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
   function setRecipeNav( num )
   {
     if ( num > 1 ) {
-      prevBtn.classList.remove( 'hidden' );
+      prevBtn.disabled = false;
     } else {
-      prevBtn.classList.add( 'hidden' );
+      prevBtn.disabled = true;
     }
     Array.from( navLinks ).forEach( li => {
       li.classList.remove( 'selected' );
@@ -218,13 +232,13 @@ document.addEventListener( 'DOMContentLoaded', function() {
         setRecipeNav( s.num );
       }
       if ( s.num <= sectionsNum-1 ) {
-        nextBtn.classList.remove( 'hidden' );
+        nextBtn.disabled = false;
       }
     } else {
       if ( !scrolling && hash != '' ) {
         window.history.replaceState( null, null, ' ' );
       }
-      nextBtn.classList.add( 'hidden' );
+      nextBtn.disabled = true;
     }
   }
 
@@ -252,7 +266,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     window.onresize = setupMainEl;
     setRecipeNav( 1 );
     enableArrowNav();
-    nextBtn.classList.remove( 'hidden' );
+    nextBtn.disabled = false;
     if ( location.hash ) {
       var s = getSection();
       article.className = 'section' + s.num;
@@ -317,6 +331,39 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   /*
 
+      Tooltips
+
+  */
+
+  function onTooltipEnter() {
+    let tooltip = document.createElement( 'div' );
+    tooltip.classList.add( 'tooltip' );
+    tooltip.innerHTML = this.dataset.tooltip;
+    document.body.appendChild( tooltip );
+    let elemRect = this.getBoundingClientRect(),
+      tooltipRect = tooltip.getBoundingClientRect(),
+      top = elemRect.top + ( elemRect.height - tooltipRect.height ) / 2,
+      left = elemRect.left - tooltipRect.width - 2;
+    tooltip.style.top = top + 'px';
+    tooltip.style.left = left + 'px';
+  }
+
+  function onTooltipLeave() {
+    Array.from( document.querySelectorAll( '.tooltip' ) ).forEach( t => {
+      document.body.removeChild( t );
+    })
+  }
+
+  function setupTooltips() {
+    Array.from( document.querySelectorAll( '[data-tooltip]' ) ).forEach( t => {
+      t.addEventListener( 'mouseenter', onTooltipEnter );
+      t.addEventListener( 'mouseleave', onTooltipLeave );
+    })
+  }
+
+
+  /*
+
       Main setup
 
   */
@@ -324,6 +371,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
   if ( sections.length ) {
     setupQty();
     setupNav();
+    setupTooltips();
     document.onkeydown = recipeKeyNav;
   }
 

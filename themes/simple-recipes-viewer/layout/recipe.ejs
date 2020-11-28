@@ -127,7 +127,9 @@
         <div class="card-empty">
           <p><%- page.recipeDisclaimer %></p>
         </div>
-      <% } %>
+      <% }
+        page.qtyStep = ( page.recipeRange? page.recipeRange[ 2 ] : '50' ) + page.recipeBase.units;
+      %>
         <script>var recipeBase=<%- JSON.stringify( page.recipeBase ) %>,recipeBaseRatio=<%- recipeBaseRatio %>,<% if ( page.recipeRange ) { %>recipeRange=[<%- page.recipeRange %>],<% } %><% if ( page.recipePrecision ) { %>recipePrecision=[<%- page.recipePrecision %>],<% } %>ingredients=<%- JSON.stringify( ingr ) %></script>
       </div>
 

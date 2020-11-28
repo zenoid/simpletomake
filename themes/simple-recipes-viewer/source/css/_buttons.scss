@@ -12,9 +12,8 @@
   cursor: pointer;
   font-family: $font;
   font-size: 0.75rem;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding: 0 1rem;
+  padding: 0 0.75rem;
   line-height: $btn-height;
   text-align: center;
   @include ellipsis;
@@ -22,9 +21,9 @@
   background: none;
   @include transition( all, $transition-hover );
 
-  &.hidden {
-    opacity: 0;
+  &:disabled {
     cursor: auto;
+    opacity: 0.3;
   }
 }
 
@@ -32,7 +31,6 @@
   .btn {
     width: $btn-height;
     height: $btn-height;
-    position: relative;
   }
 }
 
@@ -46,7 +44,7 @@
 
 body:not(.touch) {
 
-  .btn:hover {
+  .btn:not(:disabled):hover {
     background-color: rgba( 255, 255, 255, 0.2 );
   }
 

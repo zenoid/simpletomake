@@ -140,15 +140,15 @@ h3 {
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: $btn-height;
   font-weight: $fontweight-normal;
 }
 
 h5 {
+  font-family: $font-title;
   font-size: 1.25rem;
   color: var( --color-dark );
-  opacity: 0.6;
 }
 
 h6 {
@@ -193,21 +193,24 @@ h6 {
 .key {
   display: inline-block;
   padding: 0 0.75rem;
-  height: 1.7rem;
-  line-height: 1.8rem;
+  height: 1.7rem !important;
+  line-height: 1.7rem;
   font-size: 0.8rem;
-  color: var( --color-main2 );
-  vertical-align: center;
-  background-color: var( --color-tag );
+  color: var( --color-white );
+  vertical-align: top;
+  background-color: var( --color-main3 );
   font-family: $font;
   text-align: center;
   border-radius: 3px;
+  background-size: 1rem !important;
 
   & + * {
     margin-left: 0.25rem;
   }
 
   & + .note {
+    display: inline-block;
+    line-height: 1.7rem;
     margin-left: 0.5rem;
   }
 }

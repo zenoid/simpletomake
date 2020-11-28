@@ -1,23 +1,19 @@
-  <div class="home-main">
-
-    <div class="home-about">
-      <div class="content">
-        <div class="logo">
-          <img src="images/simpletomake-logo.svg" alt="Simple to Make">
-        </div>
-        <div><%
-        for ( var i = 0; i < page.introBlocks.length; i++ ) { %>
-          <p><%- page.introBlocks[ i ] %></p><%
-        } %>
-        </div>
+  <div class="about-intro cover">
+    <div class="content">
+      <div class="logo">
+        <img src="images/simpletomake-logo.svg" alt="Simple to Make it">
+      </div>
+      <div><%
+      for ( var i = 0; i < page.introBlocks.length; i++ ) { %>
+        <p><%- page.introBlocks[ i ] %></p><%
+      } %>
       </div>
     </div>
-
   </div>
 
-  <div class="home-sources">
+  <div class="about-sources">
     <div class="content">
-      <h2>Di cosa sono fatte queste ricette?</h2>
+      <h2>Di cosa sono fatte queste ricette per l'autoproduzione?</h2>
       <div class="row card-list">
         <div>
           <span>30%</span>
@@ -38,4 +34,41 @@
     </div>
   </div>
 
-<%- partial('_partial/footer') %>
+  <div class="about-footer">
+
+    <div class="content touchhide">
+      <div class="row card-list">
+        <h4>Vuoi navigare da tastiera?</h4>
+        <div>
+          <p><span class="key">BACKSPACE</span><span class="note">Torna alla homepage</span></p>
+          <p><span class="key btn-icon btn-icon-arrow-up"></span><span class="key  btn-icon btn-icon-arrow-down"></span><span class="key">SPAZIO</span><span class="key">TAB</span><span class="note">Scorri le sezioni</span></p>
+          <p><span class="key">1</span><span class="key">2</span><span class="key">3</span><span class="key">4</span><span class="key">5</span><span class="note">Salta tra sezioni</span></p>
+          <p><span class="key btn-icon btn-icon-minus"></span><span class="key btn-icon btn-icon-plus"></span><span class="note">Cambia quantità</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content about-footer-info">
+      <div class="row card-list">
+        <div>
+          <div class="card">
+            <p>Sorgenti disponibili su <a href="https://github.com/zenoid/simpletomake" target="_blank" tabindex="-1">Github</a></p>
+            <p class="note">Made in Italy by Piero Ciarfaglia &rarr; <a href="https://zenoid.it" target="_blank" tabindex="-1">zenoid</a></p>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <p><a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank" tabindex="-1"><span class="copyleft">&copy;</span> GNU General Public License</a></p>
+            <p class="note">Sei libero di (ri)utilizzare contenuti e sorgenti di questo sito rispettando questa licenza</p>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <p>Su questo sito non viene utilizzato nessun coookie, e non viene raccolto nessun dato</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

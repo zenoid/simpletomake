@@ -91,7 +91,7 @@ body.touch {
   grid-template-rows: auto;
 
   @media only screen and (max-width: $size-S) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
 
