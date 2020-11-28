@@ -1,19 +1,8 @@
-  <script>String.prototype.encrypt = function(){ return this.replace(/[a-zA-Z]/g, function(c){ return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);});};</script>
-<%
-    var is_recipe = ( page.layout === 'recipe' ),
-      title = is_recipe? 'Come fare ' + page.titleArticle + ' ' + page.title.toLowerCase() : config.subtitle;
- %>
   <footer>
 
     <div class="content">
 
       <div class="row card-list">
-        <div>
-          <div>
-            <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: <%- title %>" target="_blank" class="btn btn-main btn-icon btn-icon-mail" tabindex="-1">Mandami suggerimenti</a>');</script>
-          </div>
-          <div><a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/<%- page.recipeid %>.md" target="_blank" class="btn btn-main btn-icon btn-icon-pr" tabindex="-1">Proponi modifiche</a></div>
-        </div>
         <div>
           <h4>Vuoi usare la tastiera?</h4>
           <p><span class="key">BACKSPACE</span><span class="note">Torna alla homepage</span></p>

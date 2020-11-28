@@ -51,7 +51,7 @@ p {
 }
 
 .note {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var( --color-gray );
 }
 
@@ -117,7 +117,7 @@ h4 {
 
     .btn {
       vertical-align: top;
-      margin: 0 0.5rem;
+      margin: 0 0.25rem;
     }
   }
 }
@@ -180,6 +180,7 @@ h6 {
 }
 
 .qtyspan {
+  font-family: $font;
   font-weight: $fontweight-bold;
   white-space: nowrap;
 }

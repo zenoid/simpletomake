@@ -25,9 +25,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     ingrPrec = 2,
     qtyLabels,
     qtyPlurals,
-    qtyValue,
-    qtyRemoveBtn,
-    qtyAddBtn;
+    qtyValue;
 
   function removeQty()
   {
@@ -116,10 +114,12 @@ document.addEventListener( 'DOMContentLoaded', function() {
     qtyLabels = document.querySelectorAll( '[data-qty]' );
     qtyPlurals = document.querySelectorAll( '[data-plural]' );
     qtyValue = document.getElementById( 'qtyValue' );
-    qtyRemoveBtn = document.getElementById( 'qtyRemove' );
-    qtyAddBtn = document.getElementById( 'qtyAdd' );
-    qtyRemoveBtn.addEventListener( 'click', removeQty );
-    qtyAddBtn.addEventListener( 'click', addQty );
+    Array.from( document.querySelectorAll( '.btn-icon-minus' ) ).forEach( btn => {
+      btn.addEventListener( 'click', removeQty );
+    });
+    Array.from( document.querySelectorAll( '.btn-icon-plus' ) ).forEach( btn => {
+      btn.addEventListener( 'click', addQty );
+    });
 
     calcQty();
   }
@@ -131,14 +131,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
   */
 
   var sectionsNum = 5,
-    main = document.querySelector( '.main' ),
     article = document.querySelector( 'article' ),
     sections = document.querySelectorAll( 'section' ),
     navLinks = document.querySelectorAll( '.navdots li' ),
     navItems = Array.from( sections ).map( s => s.id ),
     prevBtn = document.getElementById( 'btn-prev' ),
     nextBtn = document.getElementById( 'btn-next' ),
-    winh = main.offsetHeight,
+    scroller,
+    winHeight,
     scrolling;
 
   function scrollToSection( el, hash )
@@ -201,7 +201,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
   function getSection( diff = 0 )
   {
     var i = 0;
-    while ( ( i < sectionsNum ) && ( main.scrollTop > sections[ i ].offsetTop - winh/2 ) ) {
+    while ( ( i < sectionsNum ) && ( scroller.scrollTop > sections[ i ].offsetTop - winHeight/2 ) ) {
       i++;
     }
     return { num: i+diff, label: ( i+diff > 0 && i+diff <= sectionsNum )? navItems[ i-1+diff ] : '' };
@@ -211,7 +211,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
   {
     var s = getSection(),
       hash = location.hash;
-    if ( s.num <= sectionsNum ) {
+    if ( s.num < sectionsNum ) {
       article.className = 'section' + s.num;
       if ( !scrolling && hash != '#' + s.label ) {
         window.history.replaceState( null, null, '#' + s.label );
@@ -226,18 +226,30 @@ document.addEventListener( 'DOMContentLoaded', function() {
       }
       nextBtn.classList.add( 'hidden' );
     }
-  };
+  }
 
-  function calcHeight()
+  function setupMainEl()
   {
-    winh = main.offsetHeight;
+    if ( scroller ) {
+      scroller.onscroll = null;
+    }
+    window.onscroll = null;
+    if ( document.querySelector( 'nav' ).offsetWidth <= 64 ) {
+      scroller = document.querySelector( '.main' );
+      winHeight = scroller.offsetHeight;
+      scroller.onscroll = checkScroll;
+    } else {
+      scroller = document.documentElement;
+      winHeight = window.innerHeight;
+      window.onscroll = checkScroll;
+    }
     checkScroll();
   }
 
   function setupNav()
   {
-    main.onresize = calcHeight;
-    main.onscroll = checkScroll;
+    setupMainEl();
+    window.onresize = setupMainEl;
     setRecipeNav( 1 );
     enableArrowNav();
     nextBtn.classList.remove( 'hidden' );

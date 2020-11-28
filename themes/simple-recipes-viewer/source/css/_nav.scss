@@ -5,13 +5,11 @@
 ------------------------------------------------------------------------- */
 
 nav {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  @include flexNoShrink;
   width: 3rem;
+  height: 100vh;
   z-index: 1;
-  overflow: hidden;
+  overflow: auto;
   @include flex;
   @include flexColumn;
   background-color: var( --color-dark );
@@ -28,6 +26,35 @@ nav {
 
   .group + .group {
     margin-top: $btn-height;
+  }
+
+  @media only screen and (min-width: $size-XL) {
+    width: 4rem;
+  }
+
+  @media only screen and (max-width: $size-XS) {
+    width: $btn-height;
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: $btn-height;
+    overflow: hidden;
+    @include flexRow;
+
+    .btn {
+      width: $btn-height;
+      display: inline-block;
+    }
+
+    .group + .group {
+      margin-top: 0;
+      margin-left: $btn-height;
+    }
   }
 }
 
@@ -59,6 +86,14 @@ nav {
       opacity: 0.5;
       background-color: transparent;
     }
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    display: none;
+  }
+
+  @media only screen and (max-height: 30rem) {
+    display: none;
   }
 }
 

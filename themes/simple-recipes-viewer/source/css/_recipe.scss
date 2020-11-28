@@ -61,11 +61,6 @@ section {
     &:last-of-type {
       padding-bottom: 5rem;
     }
-
-    h1,
-    h2 {
-      padding: 2rem 1rem 2rem 1rem;
-    }
   }
 }
 
@@ -78,36 +73,11 @@ section {
   background-color: var( --color-white );
   border-radius: 4px;
   color: var( --color-dark );
-  padding: 2rem;
-  height: calc( 100% - 2px );
-  margin: 0 1px;
+  padding: 1.5rem;
   position: relative;
-  @include transition( background-color, $transition-hover );
-
-  @media only screen and (max-width: $size-M) {
-    padding: 1.5rem;
-  }
-
-  @media only screen and (max-width: $size-S) {
-    margin: 1px 0;
-
-    h4 {
-      position: relative;
-
-      .quantity {
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-    }
-  }
 
   @media only screen and (max-width: $size-XXS) {
     border-radius: 0;
-
-    h4 .quantity {
-      position: static;
-    }
   }
 }
 
@@ -118,14 +88,48 @@ section {
   @media only screen and (max-width: $size-S) {
     margin-top: 1rem;
     margin-left: 0;
+    border-radius: 4px;
 
     &:after {
       display: none;
     }
   }
+
+  @media only screen and (max-width: $size-XXS) {
+    border-radius: 0;
+  }
+}
+
+.section-ingredients {
+
+  .card {
+
+    h3 {
+      @include flex;
+
+      .quantity {
+        @include flexGrow( 1 );
+        text-align: right;
+        font-weight: $fontweight-bold;
+      }
+    }
+
+    @media only screen and (max-width: $size-XXS) {
+
+      h3 {
+        display: block;
+
+        .quantity {
+          display: block;
+          text-align: left;
+        }
+      }
+    }
+  }
 }
 
 .section-instructions {
+
   .card {
     padding-bottom: 3rem;
     height: calc( 100% - 1rem );
@@ -142,26 +146,21 @@ section {
 }
 
 .section-usage {
-
-  .card-list {
-    padding-top: 2rem;
-  }
-
-  .card {
-    height: calc( 100% - 3.5rem );
-  }
+  @include flex;
+  @include flexVerticalCenter;
 
   h3 {
     font-family: $font-title;
-    font-size: 1.8rem;
-    line-height: 3.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var( --color-main5 );
+  }
 
-    @media only screen and (max-width: $size-S) {
-      margin-top: 1rem;
-    }
+  @media only screen and (max-width: $size-S) {
+    display: block;
 
-    @media only screen and (max-width: $size-XS) {
-      padding: 0 1rem;
+    .card-list {
+      padding-top: 1rem;
     }
   }
 }
@@ -185,7 +184,7 @@ section {
 }
 
 .card-empty {
-  padding: 2rem;
+  padding: 1.5rem;
 
   li {
     margin: 0.5rem 0;
@@ -194,12 +193,11 @@ section {
   p {
     font-size: 1rem;
     opacity: 0.8;
-    margin: 0.5rem 1rem;
   }
 }
 
 .card-time {
-  padding: 2rem;
+  padding: 1.5rem;
 
   h5 + span {
     font-size: 2rem;

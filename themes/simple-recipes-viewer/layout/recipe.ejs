@@ -8,14 +8,11 @@
 
       <div class="card-list">
       <% for ( i = 0; i < page.principles.length; i++ ) { %>
-        <div>
-          <div class="card">
-            <p><%- page.principles[ i ] %></p>
-          </div>
+        <div class="card">
+          <p><%- page.principles[ i ] %></p>
         </div>
       <% } %>
-        <div>
-          <div class="card-time"><%
+        <div class="card-time"><%
         if ( page.timeToMake ) { %>
             <h5>Si può fare in</h5>
             <span><%- page.timeToMake %></span><%
@@ -24,7 +21,6 @@
             <h5>Si può <% if ( page.category === 'hygiene' ) { %>usare<% } else { %>consumare<% } %> dopo</h5>
             <span><%- page.timeToUse %></span><%
         } %>
-          </div>
         </div>
 
         <div><%
@@ -80,13 +76,13 @@
 
     </section>
 
-    <section class="section2" id="ingredienti">
+    <section class="section2 section-ingredients" id="ingredienti">
 
       <h2>Ingredienti
         <div class="sub">
           <span><%- page.recipeIntro[ 0 ] %></span>
           <span class="quantity">
-            <button class="btn" id="qtyRemove"><span>–</span></button><span id="qtyValue"><%- page.recipeBase.qty %></span><% if ( page.recipeBase.units ) { %> <%- page.recipeBase.units %><% } %><button class="btn" id="qtyAdd"><span>+</span></button>
+            <button class="btn btn-icon btn-icon-minus"></button><span id="qtyValue"><%- page.recipeBase.qty %></span><% if ( page.recipeBase.units ) { %> <%- page.recipeBase.units %><% } %><button class="btn btn-icon btn-icon-plus"></button>
           </span>
           <span><%- page.recipeIntro[ 1 ] %></span>
         </div>
@@ -121,19 +117,15 @@
           if ( page.ingredients[ i ].name ) {
 
       %>
-        <div>
-          <div class="card">
-            <h3><span class="ingredient"><%- page.ingredients[ i ].name %></span><% if ( page.ingredients[ i ].qty ) { %><br/><span class="quantity"><span data-qty="<%- page.ingredients[ i ].id %>"><%- page.ingredients[ i ].qty %></span> <%- page.ingredients[ i ].units %></span><% } %></h3>
-            <% if ( page.ingredients[ i ].notes ) { %><p class="note"><%- page.ingredients[ i ].notes %></p><% } %>
-          </div>
+        <div class="card">
+          <h3><span class="ingredient"><%- page.ingredients[ i ].name %></span><% if ( page.ingredients[ i ].qty ) { %><span class="quantity"><span data-qty="<%- page.ingredients[ i ].id %>"><%- page.ingredients[ i ].qty %></span> <%- page.ingredients[ i ].units %></span><% } %></h3>
+          <% if ( page.ingredients[ i ].notes ) { %><p class="note"><%- page.ingredients[ i ].notes %></p><% } %>
         </div><%
           }
         }
         if ( page.recipeDisclaimer ) { %>
-        <div>
-          <div class="card-empty">
-            <p><%- page.recipeDisclaimer %></p>
-          </div>
+        <div class="card-empty">
+          <p><%- page.recipeDisclaimer %></p>
         </div>
       <% } %>
         <script>var recipeBase=<%- JSON.stringify( page.recipeBase ) %>,recipeBaseRatio=<%- recipeBaseRatio %>,<% if ( page.recipeRange ) { %>recipeRange=[<%- page.recipeRange %>],<% } %><% if ( page.recipePrecision ) { %>recipePrecision=[<%- page.recipePrecision %>],<% } %>ingredients=<%- JSON.stringify( ingr ) %></script>
@@ -147,11 +139,9 @@
 
       <div class="card-list">
       <% for ( i = 0; i < page.tools.length; i++ ) { %>
-        <div>
-          <div class="card">
-            <h3><%- page.tools[ i ][ 0 ] %></h3>
-            <% if ( page.tools[ i ][ 1 ] ) { %><p class="note"><%- page.tools[ i ][ 1 ] %></p><% } %>
-          </div>
+        <div class="card">
+          <h3><%- page.tools[ i ][ 0 ] %></h3>
+          <% if ( page.tools[ i ][ 1 ] ) { %><p class="note"><%- page.tools[ i ][ 1 ] %></p><% } %>
         </div>
       <% } %>
       </div>
@@ -164,14 +154,12 @@
 
       <div class="card-list card-list-ordered">
       <% for ( i = 0; i < page.directions.length; i++ ) { %>
-        <div>
-          <div class="card<% if ( page.directions[ i ][ 2 ] ) { %> card-title<% } %>"><%
-            if ( page.directions[ i ][ 2 ] ) { %>
-              <h3><%- page.directions[ i ][ 2 ] %></h3><%
-            } %>
-            <p><%- page.directions[ i ][ 0 ] %></p>
-            <% if ( page.directions[ i ][ 1 ] ) { %><p class="note"><%- page.directions[ i ][ 1 ] %></p><% } %>
-          </div>
+        <div class="card<% if ( page.directions[ i ][ 2 ] ) { %> card-title<% } %>"><%
+          if ( page.directions[ i ][ 2 ] ) { %>
+            <h3><%- page.directions[ i ][ 2 ] %></h3><%
+          } %>
+          <p><%- page.directions[ i ][ 0 ] %></p>
+          <% if ( page.directions[ i ][ 1 ] ) { %><p class="note"><%- page.directions[ i ][ 1 ] %></p><% } %>
         </div>
       <% } %>
       </div>
@@ -181,26 +169,20 @@
     <section class="section5 section-usage" id="uso">
 
       <div class="card-list">
-        <div>
+        <div class="card">
           <h3>Come si usa</h3>
-          <div class="card">
-            <p><%- page.usage[ 0 ] %></p>
-            <% if ( page.usage[ 1 ] ) { %><p class="note"><%- page.usage[ 1 ] %></p><% } %>
-          </div>
+          <p><%- page.usage[ 0 ] %></p>
+          <% if ( page.usage[ 1 ] ) { %><p class="note"><%- page.usage[ 1 ] %></p><% } %>
         </div>
-        <div>
+        <div class="card">
           <h3>Come si conserva</h3>
-          <div class="card">
-            <p><%- page.storage[ 0 ] %></p>
-            <% if ( page.storage[ 1 ] ) { %><p class="note"><%- page.storage[ 1 ] %></p><% } %>
-          </div>
+          <p><%- page.storage[ 0 ] %></p>
+          <% if ( page.storage[ 1 ] ) { %><p class="note"><%- page.storage[ 1 ] %></p><% } %>
         </div>
-        <div>
+        <div class="card">
           <h3>Quanto dura</h3>
-          <div class="card">
-            <p><%- page.expiration[ 0 ] %></p>
-            <% if ( page.expiration[ 1 ] ) { %><p class="note"><%- page.expiration[ 1 ] %></p><% } %>
-          </div>
+          <p><%- page.expiration[ 0 ] %></p>
+          <% if ( page.expiration[ 1 ] ) { %><p class="note"><%- page.expiration[ 1 ] %></p><% } %>
         </div>
       </div>
 

@@ -33,14 +33,6 @@
     width: $btn-height;
     height: $btn-height;
     position: relative;
-
-    span {
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      @include translate( -50%, -50% );
-      font-size: 1.5rem;
-    }
   }
 }
 
@@ -72,7 +64,7 @@ body:not(.touch) {
   background-repeat: no-repeat;
   background-size: 1.5rem;
   background-position: left 50% top 50%;
-  height: 2.5rem;
+  height: $btn-height;
 }
 
 .btn-icon-home {
@@ -86,6 +78,12 @@ body:not(.touch) {
 }
 .btn-icon-arrow-down {
   background-image: url( '../images/icon-arrow-down.svg' );
+}
+.btn-icon-plus {
+  background-image: url( '../images/icon-plus.svg' );
+}
+.btn-icon-minus {
+  background-image: url( '../images/icon-minus.svg' );
 }
 .btn-icon-mail {
   background-image: url( '../images/icon-mail.svg' );

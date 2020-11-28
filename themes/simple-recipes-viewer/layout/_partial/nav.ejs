@@ -5,6 +5,11 @@
     <div class="div"></div>
     <% if ( page.layout === 'recipe' ) { %>
     <div class="group">
+      <button class="btn btn-icon btn-icon-minus"></button>
+      <button class="btn btn-icon btn-icon-plus"></button>
+    </div>
+    <div class="div"></div>
+    <div class="group">
       <button class="btn btn-icon btn-icon-arrow-up hidden" id="btn-prev"></button>
       <ul class="navdots">
         <li class="selected"><a href="#principi"></a></li>
@@ -15,8 +20,13 @@
       </ul>
       <button class="btn btn-icon btn-icon-arrow-down hidden" id="btn-next"></button>
     </div>
-    <% } %>
     <div class="div"></div>
+    <div class="group mobilehide">
+      <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: <%- page.title %>" target="_blank" class="btn btn-icon btn-icon-mail" tabindex="-1"></a>');</script>
+      <a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/<%- page.recipeid %>.md" target="_blank" class="btn btn-icon btn-icon-pr" tabindex="-1"></a>
+    </div>
+    <% } %>
+    <div class="div mobilehide"></div>
     <div class="group">
       <a href="about.html" class="btn btn-icon btn-icon-about"></a>
     </div>
