@@ -127,13 +127,21 @@
 
       <div class="card-list">
       
-        <div class="card">
-          <h3><span class="ingredient">Latte</span><span class="quantity"><span data-qty="milk">1000</span> ml</span></h3>
-          <p class="note">Meglio se <strong>latte vaccino intero</strong>, fresco e non a lunga conservazione. Non si possono utilizzare latti vegetali o delattosati: non contengono il lattosio necessario alla fermentazione.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr0">
+          <label for="ingr0"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Latte</span><span class="quantity"><span data-qty="milk">1000</span> ml</span></h3>
+            <p class="note">Meglio se <strong>latte vaccino intero</strong>, fresco e non a lunga conservazione. Non si possono utilizzare latti vegetali o delattosati: non contengono il lattosio necessario alla fermentazione.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Yogurt bianco</span><span class="quantity"><span data-qty="yogurt">120</span> ml</span></h3>
-          <p class="note">Yogurt prodotto da latte animale, senza aromi o zuccheri aggiunti, e non vicino alla data di scadenza.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr1">
+          <label for="ingr1"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Yogurt bianco</span><span class="quantity"><span data-qty="yogurt">120</span> ml</span></h3>
+            <p class="note">Yogurt prodotto da latte animale, senza aromi o zuccheri aggiunti, e non vicino alla data di scadenza.</p>
+          </div>
         </div>
         <script>var recipeBase={"qty":1000,"units":"ml"},recipeBaseRatio=1,recipeRange=[500,5000,100],ingredients={"milk":{"ratio":100,"spec":1.04,"units":"ml"},"yogurt":{"ratio":12,"spec":1.04,"units":"ml"}}</script>
       </div>
@@ -146,29 +154,49 @@
 
       <div class="card-list">
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool0">
+          <label for="tool0"></label>
+          <div class="card-body">
           <h3>Una yogurtiera</h3>
           <p class="note">O uno spazio chiuso che conservi la temperatura e contenga una modesta fonte di calore: ad esempio un forno (spento) con dentro una lampadina accesa da 40W, un essiccatore, una scatola di polistirolo con dentro acqua a 45°C, ecc.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool1">
+          <label for="tool1"></label>
+          <div class="card-body">
           <h3><span data-qty='containers.150'>7</span> vasetti da <span class='qtyspan'>150 ml</span>, o un barattolo da almeno <span class='qtyspan'><span data-qty='volume.base' data-prec='1'>1000</span> ml</span></h3>
           <p class="note">Qualunque contenitore scegli, deve essere richiudibile. Va bene il vetro o la plastica, evita il metallo.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool2">
+          <label for="tool2"></label>
+          <div class="card-body">
           <h3>Una pentola che possa contenere almeno <span class='qtyspan'><span data-qty='volume.milk' data-prec='1'>1000</span> ml</span></h3>
           
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool3">
+          <label for="tool3"></label>
+          <div class="card-body">
           <h3>Un termometro per alimenti</h3>
           <p class="note">Non è necessario, ma per un risultato migliore è preferibile averlo.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool4">
+          <label for="tool4"></label>
+          <div class="card-body">
           <h3>Un mestolo o un cucchiaio</h3>
           <p class="note">Il materiale è indifferente.</p>
+          </div>
         </div>
       
       </div>

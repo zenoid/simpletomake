@@ -112,29 +112,53 @@
 
       <div class="card-list">
       
-        <div class="card">
-          <h3><span class="ingredient">Cavoli a foglia</span></h3>
-          <p class="note">La tradizione prevede <strong>cavolo cinese o cavolo Napa</strong>, ma può essere usato qualunque mix di cavoli a foglia: cappuccio, verza, cavolo rosso, cavolo nero, cavoletti di bruxelles.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr0">
+          <label for="ingr0"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Cavoli a foglia</span></h3>
+            <p class="note">La tradizione prevede <strong>cavolo cinese o cavolo Napa</strong>, ma può essere usato qualunque mix di cavoli a foglia: cappuccio, verza, cavolo rosso, cavolo nero, cavoletti di bruxelles.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Altre verdure</span></h3>
-          <p class="note">Servono verdure che si possano mangiare anche crude: meglio le radici come carote, rape, ravanelli, cipolle. No a pomodori, cetrioli, zucca e altri ortaggi troppo acquosi.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr1">
+          <label for="ingr1"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Altre verdure</span></h3>
+            <p class="note">Servono verdure che si possano mangiare anche crude: meglio le radici come carote, rape, ravanelli, cipolle. No a pomodori, cetrioli, zucca e altri ortaggi troppo acquosi.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Spezie</span></h3>
-          <p class="note">Di solito si usano almeno <strong>aglio, zenzero e peperoncino piccante</strong>, ma aggiungi spezie a tuo gusto (paprika, curcuma, cumino, ecc.). La ricetta tradizionale prevede anche salsa di pesce (simile alla colatura di alici).</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr2">
+          <label for="ingr2"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Spezie</span></h3>
+            <p class="note">Di solito si usano almeno <strong>aglio, zenzero e peperoncino piccante</strong>, ma aggiungi spezie a tuo gusto (paprika, curcuma, cumino, ecc.). La ricetta tradizionale prevede anche salsa di pesce (simile alla colatura di alici).</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Acqua</span><span class="quantity"><span data-qty="aqua">1500</span> gr</span></h3>
-          <p class="note">Parte per la salamoia e parte per la salsa. Meglio se senza cloro: se in dubbio, lasciala decantare all'aria alcune ore.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr3">
+          <label for="ingr3"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Acqua</span><span class="quantity"><span data-qty="aqua">1500</span> gr</span></h3>
+            <p class="note">Parte per la salamoia e parte per la salsa. Meglio se senza cloro: se in dubbio, lasciala decantare all'aria alcune ore.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Sale fino</span><span class="quantity"><span data-qty="salt">60</span> gr</span></h3>
-          <p class="note">Molto meglio se <strong>non iodato</strong>. Il sale integrale è l'ideale.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr4">
+          <label for="ingr4"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Sale fino</span><span class="quantity"><span data-qty="salt">60</span> gr</span></h3>
+            <p class="note">Molto meglio se <strong>non iodato</strong>. Il sale integrale è l'ideale.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Farina</span><span class="quantity"><span data-qty="flour">60</span> gr</span></h3>
-          <p class="note">Ideale la <strong>farina di riso</strong>, in alternativa metà farina bianca e metà amido (maizena o fecola).</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr5">
+          <label for="ingr5"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Farina</span><span class="quantity"><span data-qty="flour">60</span> gr</span></h3>
+            <p class="note">Ideale la <strong>farina di riso</strong>, in alternativa metà farina bianca e metà amido (maizena o fecola).</p>
+          </div>
         </div>
         <script>var recipeBase={"qty":1000,"units":"gr"},recipeBaseRatio=1,recipeRange=[500,10000,500],recipePrecision=[3],ingredients={"aqua":{"ratio":150,"spec":null,"units":"gr"},"salt":{"ratio":6,"spec":null,"units":"gr"},"flour":{"ratio":6,"spec":null,"units":"gr"}}</script>
       </div>
@@ -147,44 +171,76 @@
 
       <div class="card-list">
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool0">
+          <label for="tool0"></label>
+          <div class="card-body">
           <h3>Barattoli di vetro, sterilizzati</h3>
           <p class="note">Sterilizza i barattoli bollendoli nell'acqua, oppure tenendoli in forno a 110°C per una decina di minuti.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool1">
+          <label for="tool1"></label>
+          <div class="card-body">
           <h3>Una ciotola grande (o più)</h3>
           <p class="note">Dovrà contenere tutte le verdure tagliate. Da evitare il metallo: va bene di plastica o vetro.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool2">
+          <label for="tool2"></label>
+          <div class="card-body">
           <h3>Un pentolino</h3>
           <p class="note">Meglio se antiaderente.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool3">
+          <label for="tool3"></label>
+          <div class="card-body">
           <h3>Una bilancia di precisione</h3>
           
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool4">
+          <label for="tool4"></label>
+          <div class="card-body">
           <h3>Un frullatore</h3>
           <p class="note">Va bene anche un frullatore ad immersione.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool5">
+          <label for="tool5"></label>
+          <div class="card-body">
           <h3>Un mestolo o un cucchiaio</h3>
           <p class="note">Il materiale è indifferente.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool6">
+          <label for="tool6"></label>
+          <div class="card-body">
           <h3>Coltello, mandolina, pelaverdure</h3>
           <p class="note">Tutti gli strumenti necessari per tagliare, pelare, sminuzzare le verdure che hai scelto.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool7">
+          <label for="tool7"></label>
+          <div class="card-body">
           <h3>Un tagliere</h3>
           
+          </div>
         </div>
       
       </div>

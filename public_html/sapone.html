@@ -136,21 +136,37 @@
 
       <div class="card-list">
       
-        <div class="card">
-          <h3><span class="ingredient">Olio di oliva</span><span class="quantity"><span data-qty="oil">200</span> gr</span></h3>
-          <p class="note">Non importa che sia extravergine, può essere anche scaduto o usato per frittura (se filtrato molto bene), ma <strong>non deve essere rancido o contenere residui o fondo</strong>. Per questa ricetta non usare un altro olio, perché richiede dosi molto differenti di soda caustica.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr0">
+          <label for="ingr0"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Olio di oliva</span><span class="quantity"><span data-qty="oil">200</span> gr</span></h3>
+            <p class="note">Non importa che sia extravergine, può essere anche scaduto o usato per frittura (se filtrato molto bene), ma <strong>non deve essere rancido o contenere residui o fondo</strong>. Per questa ricetta non usare un altro olio, perché richiede dosi molto differenti di soda caustica.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Soda caustica</span><span class="quantity"><span data-qty="soda">130</span> gr</span></h3>
-          <p class="note">Chiamata anche <strong>Idrossido di Sodio</strong> (NaOH). Si presenta in granuli bianchi e si trova in ferramenta. Non ha nulla a che vedere con il Carbonato di Sodio (Soda Solvay) usato per il bucato. È una sostanza a basso impatto ambientale.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr1">
+          <label for="ingr1"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Soda caustica</span><span class="quantity"><span data-qty="soda">130</span> gr</span></h3>
+            <p class="note">Chiamata anche <strong>Idrossido di Sodio</strong> (NaOH). Si presenta in granuli bianchi e si trova in ferramenta. Non ha nulla a che vedere con il Carbonato di Sodio (Soda Solvay) usato per il bucato. È una sostanza a basso impatto ambientale.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Acqua</span><span class="quantity"><span data-qty="aqua">300</span> gr</span></h3>
-          <p class="note">Meglio se distillata, ma va benissimo quella di rubinetto. In alcune ricette si suggerisce di usare latte, infusi o succhi, ma non hanno effetti molto percepibili sul prodotto finito.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr2">
+          <label for="ingr2"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Acqua</span><span class="quantity"><span data-qty="aqua">300</span> gr</span></h3>
+            <p class="note">Meglio se distillata, ma va benissimo quella di rubinetto. In alcune ricette si suggerisce di usare latte, infusi o succhi, ma non hanno effetti molto percepibili sul prodotto finito.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Oli essenziali</span><span class="quantity"><span data-qty="perfume">20</span> gocce</span></h3>
-          <p class="note">Opzionali, per dare profumo o aggiungere proprietà al sapone. Solo gli oli essenziali sono efficaci: si possono aggiungere fiori, spezie o erbe come decorazione, ma aromi e proprietà verranno annullati dalla soda caustica.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr3">
+          <label for="ingr3"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Oli essenziali</span><span class="quantity"><span data-qty="perfume">20</span> gocce</span></h3>
+            <p class="note">Opzionali, per dare profumo o aggiungere proprietà al sapone. Solo gli oli essenziali sono efficaci: si possono aggiungere fiori, spezie o erbe come decorazione, ma aromi e proprietà verranno annullati dalla soda caustica.</p>
+          </div>
         </div>
         <div class="card-empty">
           <p>Ricorda che <strong>peso</strong> e <strong>volume</strong> dell'olio sono differenti: se hai <strong>1 litro d'olio di oliva</strong> peserà circa <strong>916 grammi</strong>.</p>
@@ -167,64 +183,112 @@
 
       <div class="card-list">
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool0">
+          <label for="tool0"></label>
+          <div class="card-body">
           <h3>Un barattolo o contenitore alto da almeno <span class='qtyspan'><span data-qty='volume.oil' data-mult='2' data-prec='1'>2000</span> ml</span></h3>
           <p class="note">Di plastica, vetro o acciaio inox.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool1">
+          <label for="tool1"></label>
+          <div class="card-body">
           <h3>Un barattolo o contenitore alto da almeno <span class='qtyspan'><span data-qty='volume.aqua' data-mult='2' data-prec='1'>600</span> ml</span></h3>
           <p class="note">Di plastica, vetro o acciaio inox.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool2">
+          <label for="tool2"></label>
+          <div class="card-body">
           <h3>Una ciotola per pesare la soda caustica</h3>
           <p class="note">Di plastica, vetro o acciaio inox.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool3">
+          <label for="tool3"></label>
+          <div class="card-body">
           <h3>Una pentola per scaldare l'olio</h3>
           <p class="note">Non serve se preferisci lavorare &quot;a freddo&quot;.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool4">
+          <label for="tool4"></label>
+          <div class="card-body">
           <h3>Stampi per il sapone</h3>
           <p class="note">Puoi riciclare contenitori di plastica (vasetti di yogurt, vaschette non bucate, ecc.), usare gli stampini di silicone che si usano per i dolci, o usare stampi di legno smontabili, fatti proprio per estrarre facilmente i saponi.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool5">
+          <label for="tool5"></label>
+          <div class="card-body">
           <h3>Una bilancia di precisione</h3>
           <p class="note">È importante che sia sensibile al grammo.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool6">
+          <label for="tool6"></label>
+          <div class="card-body">
           <h3>Un frullatore ad immersione</h3>
           <p class="note">Meglio se poi non lo usi con alimenti, altrimenti lavalo molto a fondo dopo l'uso.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool7">
+          <label for="tool7"></label>
+          <div class="card-body">
           <h3>Un termometro per alimenti</h3>
           <p class="note">Non serve se preferisci lavorare &quot;a freddo&quot;.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool8">
+          <label for="tool8"></label>
+          <div class="card-body">
           <h3>Guanti di gomma e mascherina</h3>
           <p class="note">O anche protezioni per gli occhi.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool9">
+          <label for="tool9"></label>
+          <div class="card-body">
           <h3>Aceto</h3>
           <p class="note">Da tenere a portata di mano in caso di contatto della soda caustica con la pelle, per neutralizzarne l'effetto.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool10">
+          <label for="tool10"></label>
+          <div class="card-body">
           <h3>Un cucchiaio</h3>
           <p class="note">Meglio se di acciaio inox. Servirà a prendere la soda caustica.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool11">
+          <label for="tool11"></label>
+          <div class="card-body">
           <h3>Un mestolo dal manico lungo</h3>
           <p class="note">Se usi un mestolo di legno, non usarlo poi con alimenti.</p>
+          </div>
         </div>
       
       </div>

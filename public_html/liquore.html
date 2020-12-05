@@ -126,21 +126,37 @@
 
       <div class="card-list">
       
-        <div class="card">
-          <h3><span class="ingredient">Alcool etilico</span><span class="quantity"><span data-qty="alcol">340</span> gr</span></h3>
-          <p class="note">Chiamato anche <strong>Etanolo</strong>. Deve essere per uso alimentare, con concentrazione al 95-96%.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr0">
+          <label for="ingr0"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Alcool etilico</span><span class="quantity"><span data-qty="alcol">340</span> gr</span></h3>
+            <p class="note">Chiamato anche <strong>Etanolo</strong>. Deve essere per uso alimentare, con concentrazione al 95-96%.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Erbe, bacche o agrumi</span></h3>
-          <p class="note">Gli ingredienti più utilizzati sono erbe (<strong>alloro, rosmarino, menta, genziana</strong>), fiori eduli (<strong>rosa, carciofo, sambuco</strong>), bucce di agrumi (<strong>limone, mandarino, arancia</strong>), bacche o noccioli (<strong>malli di noce, ginepro, mirto, armelline, chicchi di caffè</strong>).</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr1">
+          <label for="ingr1"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Erbe, bacche o agrumi</span></h3>
+            <p class="note">Gli ingredienti più utilizzati sono erbe (<strong>alloro, rosmarino, menta, genziana</strong>), fiori eduli (<strong>rosa, carciofo, sambuco</strong>), bucce di agrumi (<strong>limone, mandarino, arancia</strong>), bacche o noccioli (<strong>malli di noce, ginepro, mirto, armelline, chicchi di caffè</strong>).</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Zucchero</span><span class="quantity"><span data-qty="sugar">240</span> gr</span></h3>
-          <p class="note">Con queste dosi, otterrai un liquore abbastanza dolce. Il peso dello zucchero può variare tra il 15% e il 30% sul totale.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr2">
+          <label for="ingr2"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Zucchero</span><span class="quantity"><span data-qty="sugar">240</span> gr</span></h3>
+            <p class="note">Con queste dosi, otterrai un liquore abbastanza dolce. Il peso dello zucchero può variare tra il 15% e il 30% sul totale.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Acqua</span><span class="quantity"><span data-qty="aqua">420</span> gr</span></h3>
-          <p class="note">Se ti è più semplice, puoi anche dosare a volume: usa un volume di acqua pari a quello dell'alcool. Metti più acqua per un liquore meno forte, o viceversa.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr3">
+          <label for="ingr3"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Acqua</span><span class="quantity"><span data-qty="aqua">420</span> gr</span></h3>
+            <p class="note">Se ti è più semplice, puoi anche dosare a volume: usa un volume di acqua pari a quello dell'alcool. Metti più acqua per un liquore meno forte, o viceversa.</p>
+          </div>
         </div>
         <div class="card-empty">
           <p>Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale</p>
@@ -157,39 +173,67 @@
 
       <div class="card-list">
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool0">
+          <label for="tool0"></label>
+          <div class="card-body">
           <h3>Un barattolo di vetro</h3>
           <p class="note">Va messo al buio o ricoperto all'esterno di carta stagnola. Valuta la capienza in base al volume degli aromi da mettere in infusione. Deve potersi chiudere bene. Evita assolutamente la plastica.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool1">
+          <label for="tool1"></label>
+          <div class="card-body">
           <h3>Un contenitore da almeno <span class='qtyspan'><span data-qty='volume.base' data-prec='1'>1000</span> ml</span></h3>
           <p class="note">Qui verrà sciolto lo zucchero in acqua e mescolato tutto. Il materiale è indifferente.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool2">
+          <label for="tool2"></label>
+          <div class="card-body">
           <h3>Una o più bottiglie con capienza totale di <span class='qtyspan'><span data-qty='volume.base'>1000</span> ml</span></h3>
           <p class="note">Meglio se di vetro scuro.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool3">
+          <label for="tool3"></label>
+          <div class="card-body">
           <h3>Un mestolo o un cucchiaio</h3>
           <p class="note">Il materiale è indifferente.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool4">
+          <label for="tool4"></label>
+          <div class="card-body">
           <h3>Una bilancia di precisione</h3>
           
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool5">
+          <label for="tool5"></label>
+          <div class="card-body">
           <h3>Un imbuto</h3>
           
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool6">
+          <label for="tool6"></label>
+          <div class="card-body">
           <h3>Un colino</h3>
           
+          </div>
         </div>
       
       </div>

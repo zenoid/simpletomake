@@ -33,7 +33,7 @@ body {
 
   @media only screen and (max-width: $size-XXS) {
     overflow: auto;
-    padding-top: $btn-height;
+    padding-bottom: $btn-height;
 
     .main {
       overflow: hidden;

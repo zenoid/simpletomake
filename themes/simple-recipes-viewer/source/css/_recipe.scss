@@ -215,6 +215,62 @@ section {
   }
 }
 
+.card-checkbox {
+  background: transparent;
+  padding: 0;
+
+  .card-body {
+    background-color: var( --color-white );
+    border-radius: 4px;
+    padding: 1.5rem;
+    height: 100%;
+    @include transition( opacity, $transition-hover );
+
+    @media only screen and (max-width: $size-XXS) {
+      border-radius: 0;
+    }
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    left: calc( 0.25rem + 1px );
+    top: calc( 0.25rem + 1px );
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var( --color-cta );
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: none;
+    background-color: var( --color-white );
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include transition( all, $transition-hover );
+
+    &:checked {
+      border-color: var( --color-white );
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><polyline fill="none" stroke="%234F8E99" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="21 348 26 353 36 343" transform="translate(-16 -336)"/></svg>');
+
+      & ~ .card-body {
+        opacity: 0.5;
+      }
+    }
+
+  }
+
+  label {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}
+
 
 
 /*                      COMPARISON DATA

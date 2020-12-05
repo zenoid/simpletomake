@@ -135,13 +135,21 @@
 
       <div class="card-list">
       
-        <div class="card">
-          <h3><span class="ingredient">Acido citrico</span><span class="quantity"><span data-qty="citric">28</span> gr</span></h3>
-          <p class="note">È preferibile usare quello <strong>anidro</strong>, più concentrato, ma anche <strong>monoidrato</strong> va bene per quest'uso. Si presenta in granuli bianchi.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr0">
+          <label for="ingr0"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Acido citrico</span><span class="quantity"><span data-qty="citric">28</span> gr</span></h3>
+            <p class="note">È preferibile usare quello <strong>anidro</strong>, più concentrato, ma anche <strong>monoidrato</strong> va bene per quest'uso. Si presenta in granuli bianchi.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3><span class="ingredient">Acqua</span><span class="quantity"><span data-qty="aqua">180</span> gr</span></h3>
-          <p class="note">Meglio se distillata. Se contiene calcare, verrà subito consumata una piccola parte dell'acido aggiunto.</p>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr1">
+          <label for="ingr1"></label>
+          <div class="card-body">
+            <h3><span class="ingredient">Acqua</span><span class="quantity"><span data-qty="aqua">180</span> gr</span></h3>
+            <p class="note">Meglio se distillata. Se contiene calcare, verrà subito consumata una piccola parte dell'acido aggiunto.</p>
+          </div>
         </div>
         <div class="card-empty">
           <p>Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale</p>
@@ -158,19 +166,31 @@
 
       <div class="card-list">
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool0">
+          <label for="tool0"></label>
+          <div class="card-body">
           <h3>Un flacone con spruzzino da almeno <span class='qtyspan'><span data-qty='volume.base'>200</span> ml</span></h3>
           <p class="note">Si può riciclare un flacone usato, di plastica o di vetro.</p>
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool1">
+          <label for="tool1"></label>
+          <div class="card-body">
           <h3>Una bilancia di precisione</h3>
           
+          </div>
         </div>
       
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool2">
+          <label for="tool2"></label>
+          <div class="card-body">
           <h3>Un mestolo o un cucchiaio</h3>
           <p class="note">Il materiale è indifferente.</p>
+          </div>
         </div>
       
       </div>

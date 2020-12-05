@@ -117,9 +117,13 @@
           if ( page.ingredients[ i ].name ) {
 
       %>
-        <div class="card">
-          <h3><span class="ingredient"><%- page.ingredients[ i ].name %></span><% if ( page.ingredients[ i ].qty ) { %><span class="quantity"><span data-qty="<%- page.ingredients[ i ].id %>"><%- page.ingredients[ i ].qty %></span> <%- page.ingredients[ i ].units %></span><% } %></h3>
-          <% if ( page.ingredients[ i ].notes ) { %><p class="note"><%- page.ingredients[ i ].notes %></p><% } %>
+        <div class="card card-checkbox">
+          <input type="checkbox" id="ingr<%= i %>">
+          <label for="ingr<%= i %>"></label>
+          <div class="card-body">
+            <h3><span class="ingredient"><%- page.ingredients[ i ].name %></span><% if ( page.ingredients[ i ].qty ) { %><span class="quantity"><span data-qty="<%- page.ingredients[ i ].id %>"><%- page.ingredients[ i ].qty %></span> <%- page.ingredients[ i ].units %></span><% } %></h3>
+            <% if ( page.ingredients[ i ].notes ) { %><p class="note"><%- page.ingredients[ i ].notes %></p><% } %>
+          </div>
         </div><%
           }
         }
@@ -141,9 +145,13 @@
 
       <div class="card-list">
       <% for ( i = 0; i < page.tools.length; i++ ) { %>
-        <div class="card">
+        <div class="card card-checkbox">
+          <input type="checkbox" id="tool<%= i %>">
+          <label for="tool<%= i %>"></label>
+          <div class="card-body">
           <h3><%- page.tools[ i ][ 0 ] %></h3>
           <% if ( page.tools[ i ][ 1 ] ) { %><p class="note"><%- page.tools[ i ][ 1 ] %></p><% } %>
+          </div>
         </div>
       <% } %>
       </div>
