@@ -47,12 +47,12 @@
             <div class="comparison">
               <h6>Costo <%- page.comparisonPricesQty %></h6>
               <div class="comparison-row">
-                <h6>€ <%- page.comparisonPrices[ 0 ].join('-') %></strong></h6>
+                <h6>€ <%- page.comparisonPrices[ 0 ].join(' - ') %></strong></h6>
                 <div class="bar" style="width:<%- cPriceMax0 %>%"></div><div class="bar" style="width:<%- cPriceMin0 %>%"></div>
               </div>
               <span>anziché</span>
               <div class="comparison-row">
-                <h6>€ <%- page.comparisonPrices[ 1 ].join('-') %></h6>
+                <h6>€ <%- page.comparisonPrices[ 1 ].join(' - ') %></h6>
                 <div class="bar" style="width:100%"></div><div class="bar" style="width:<%- cPriceMin1 %>%"></div>
               </div>
             </div><% } %>

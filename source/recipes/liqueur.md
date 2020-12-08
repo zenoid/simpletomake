@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-index: 4
+index: 1
 permalink: liquore
 recipeid: liqueur
 category: food
@@ -14,7 +14,7 @@ principles:
   - "Le ricette tradizionali parlano spesso di 15-40 giorni di infusione in alcool, ma per gli ingredienti più delicati la maggior parte degli aromi viene estratta nei primissimi giorni: <strong>infusioni più lunghe non sono necessarie, e possono anche essere dannose</strong>"
   - "Lo zucchero aggiunto non si trasformerà in alcool: <strong>il grado alcolico del liquore sarà determinato solamente dalla proporzione di alcool etilico sul volume totale</strong>"
 
-timeToMake: 1 o più giorni
+timeToMake: Pochi giorni
 timeToUse: 1 mese
 
 comparisonPrices: [ [ 8, 10 ], [ 15, 40 ] ]

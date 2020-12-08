@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-index: 2
+index: 3
 permalink: kimchi
 recipeid: kimchi
 category: food
@@ -41,7 +41,7 @@ ingredients:
       name: "Acqua",
       qty: 1500,
       units: "gr",
-      notes: "Parte per la salamoia e parte per la salsa. Meglio se senza cloro: se in dubbio, lasciala decantare all'aria alcune ore." }
+      notes: "Parte per la salamoia e parte per la salsa. Meglio se senza cloro: se sei in dubbio, lasciala decantare all'aria alcune ore." }
   - { id: "salt",
       ratio: 6,
       name: "Sale fino",

@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-index: 3
+index: 2
 permalink: maionese
 recipeid: mayo
 category: food

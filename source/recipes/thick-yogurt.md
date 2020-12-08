@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-index: 1
+index: 5
 permalink: yogurt-denso
 recipeid: thick-yogurt
 category: food
@@ -15,7 +15,6 @@ principles:
   - "Per ottenere uno yogurt più denso è necessario &quot;sciogliere&quot; le proteine del latte prima di aggiungere i fermenti, <strong>scaldandolo lentamente fino a 80°C (ma non oltre 90°C)</strong>"
 
 timeToMake: 12-15 ore
-timeToUse: 2-3 ore
 
 comparisonPrices: [ [ 1, 2 ], [ 3, 6 ] ]
 comparisonPricesQty: "al kg"
