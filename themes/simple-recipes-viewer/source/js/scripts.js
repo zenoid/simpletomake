@@ -225,15 +225,13 @@ document.addEventListener( 'DOMContentLoaded', function() {
   {
     var s = getSection(),
       hash = location.hash;
-    if ( s.num < sectionsNum ) {
+    if ( s.num <= sectionsNum ) {
       article.className = 'section' + s.num;
       if ( !scrolling && hash != '#' + s.label ) {
         window.history.replaceState( null, null, '#' + s.label );
         setRecipeNav( s.num );
       }
-      if ( s.num <= sectionsNum-1 ) {
-        nextBtn.disabled = false;
-      }
+      nextBtn.disabled = ( s.num >= sectionsNum )
     } else {
       if ( !scrolling && hash != '' ) {
         window.history.replaceState( null, null, ' ' );
@@ -288,10 +286,12 @@ document.addEventListener( 'DOMContentLoaded', function() {
       case 8:
         document.location = '/'
         break;
+      case 37:
       case 38:
         e.preventDefault();
         prevBtnAction();
         break;
+      case 39:
       case 40:
         e.preventDefault();
         nextBtnAction();
