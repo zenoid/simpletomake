@@ -1,7 +1,7 @@
 ---
 
 layout: recipe
-index: 3
+index: 5
 permalink: spray-anticalcare
 recipeid: descaling-spray
 category: hygiene
