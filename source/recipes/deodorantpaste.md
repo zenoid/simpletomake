@@ -62,6 +62,8 @@ ingredients:
       qty: 20,
       units: "gocce",
       notes: "Opzionali, per dare profumo al deodorante." }
+  - { id: "jarVolume",
+      ratio: 75 }
 
 recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale"
 
@@ -71,7 +73,7 @@ tools:
   - [ "Una pentola più grande per scaldare a bagnomaria", "Dovrà permettere di sciogliere a bagnomaria il burro di karité." ]
   - [ "Una bilancia di precisione" ]
   - [ "Un cucchiaio", "Il materiale è indifferente." ]
-  - [ "Un barattolo (o più) da almeno <span class='qtyspan'><span data-qty='volume.base'>100</span> ml</span> in totale", "Puoi anche riutilizzare confezioni di deodorante stick. Meglio utilizzare più barattoli piccoli che un solo contenitore grande." ]
+  - [ "Un barattolo (o più) da almeno <span class='qtyspan'><span data-qty='jarVolume'>100</span> ml</span> in totale", "Puoi anche riutilizzare confezioni di deodorante stick. Meglio utilizzare più barattoli piccoli che un solo contenitore grande." ]
 
 directions:
   - [ "Metti <span class='qtyspan'><span data-qty='karite'>40</span> gr</span> di Burro di Karité in un pentolino, e scioglilo a bagnomaria", "Usa il pentolino su una pentola più grande piena d'acqua, scaldata sul fornello ma non in ebolizione." ]
