@@ -262,13 +262,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
   {
     setupMainEl();
     window.onresize = setupMainEl;
-    setRecipeNav( 1 );
     enableArrowNav();
     nextBtn.disabled = false;
     if ( location.hash ) {
       var s = getSection();
       article.className = 'section' + s.num;
       setRecipeNav( s.num );
+    } else {
+      setRecipeNav( 1 );
     }
   }
 
@@ -370,9 +371,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   if ( sections.length ) {
     setupQty();
-    setupNav();
     setupTooltips();
     document.onkeydown = recipeKeyNav;
+    if ( location.hash ) {
+      location = location.hash;
+      setTimeout(function(){
+        setupNav();
+      }, 1000 );
+    } else setupNav();
   }
 
 });

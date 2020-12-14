@@ -180,18 +180,19 @@ body:not(.touch) {
   p {
     font-family: $font;
     font-size: 1.5rem;
-    line-height: 1.4em;
-    display: inline;
-
-    strong {
-      font-size: 1.25em;
-    }
+    line-height: 1.25;
+    padding-left: 2.5rem;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 2rem;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><polyline fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="21 348 26 353 36 343" transform="translate(-16 -336)"/></svg>');
 
     & + p {
-      &:before {
-        content: '\2022';
-        margin: 0 0.5em 0 0.25rem;
-      }
+      margin-top: 1em;
+    }
+
+    strong {
+      font-size: 1.2em;
     }
 
     @media only screen and (max-width: $size-M) {

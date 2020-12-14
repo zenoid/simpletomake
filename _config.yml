@@ -63,7 +63,7 @@ js_minifier:
 html_minifier:
   enable: false
 image_minifier:
-  enable: true
+  enable: false
   multipass: false
   exclude: [ 'svg' ]
 
