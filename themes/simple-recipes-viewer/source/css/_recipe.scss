@@ -36,7 +36,7 @@ section {
   min-height: 100vh;
   margin: auto;
   text-align: left;
-  padding: 2rem 0.5rem;
+  padding: 2rem 3rem 2rem;
   outline: none;
 
   h1,
@@ -237,7 +237,7 @@ section {
     top: calc( 0.25rem + 1px );
     width: 1rem;
     height: 1rem;
-    border: 1px solid var( --color-cta );
+    border: 1px solid var( --color-main3 );
     border-radius: 4px;
     -webkit-appearance: none;
     -moz-appearance: none;

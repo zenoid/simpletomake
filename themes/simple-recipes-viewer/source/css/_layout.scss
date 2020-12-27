@@ -29,11 +29,9 @@ body {
   text-align: center;
   overflow: hidden;
   height: 100%;
-  @include flex;
 
   @media only screen and (max-width: $size-XXS) {
     overflow: auto;
-    padding-bottom: $btn-height;
 
     .main {
       overflow: hidden;

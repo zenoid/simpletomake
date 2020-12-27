@@ -8,8 +8,11 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   */
 
+  var isTouch = false;
+
   if ( ( 'ontouchstart' in window ) || ( navigator.MaxTouchPoints > 0 ) || ( navigator.msMaxTouchPoints > 0 ) ) {
     document.body.classList.add( 'touch' );
+    isTouch = true;
   }
 
   /*
@@ -345,6 +348,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
       tooltipRect = tooltip.getBoundingClientRect(),
       top = elemRect.top + ( elemRect.height - tooltipRect.height ) / 2,
       left = elemRect.left - tooltipRect.width - 2;
+    if ( left < 0 ) {
+      left = elemRect.right + 2;
+    }
     tooltip.style.top = top + 'px';
     tooltip.style.left = left + 'px';
   }
@@ -362,7 +368,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
     })
   }
 
-
   /*
 
       Main setup
@@ -371,8 +376,10 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   if ( sections.length ) {
     setupQty();
-    setupTooltips();
-    document.onkeydown = recipeKeyNav;
+    if ( !isTouch ) {
+      setupTooltips();
+      document.onkeydown = recipeKeyNav;
+    }
     if ( location.hash ) {
       location = location.hash;
       setTimeout(function(){

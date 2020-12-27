@@ -5,14 +5,15 @@
 ------------------------------------------------------------------------- */
 
 nav {
-  @include flexNoShrink;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
   width: 3rem;
-  height: 100vh;
   z-index: 1;
   overflow: auto;
   @include flex;
   @include flexColumn;
-  background-color: var( --color-dark );
 
   .btn {
     width: 100%;
@@ -37,7 +38,7 @@ nav {
   }
 
   @media only screen and (max-width: $size-XXS) {
-    position: fixed;
+    top: auto;
     bottom: 0;
     left: 0;
     right: 0;
@@ -45,6 +46,7 @@ nav {
     height: $btn-height;
     overflow: hidden;
     @include flexRow;
+    background-color: var( --color-cloak );
 
     .btn {
       width: $btn-height;
@@ -69,13 +71,12 @@ nav {
     &:after {
       content: '';
       position: absolute;
-      top: 0.5rem;
+      top: 0.125rem;
       left: 50%;
       @include translateX( -50% );
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: 100%;
-      border: 1px solid var( --color-white );
+      width: 0.25rem;
+      height: 1.25rem;
+      border-radius: 2px;
       background-color: var( --color-white );
       @include transition( all, $transition-hover );
     }
@@ -83,8 +84,7 @@ nav {
 
   li.selected ~ li {
     a:after {
-      opacity: 0.5;
-      background-color: transparent;
+      opacity: 0.2;
     }
   }
 
@@ -100,7 +100,6 @@ nav {
 body:not(.touch) {
   .navdots a:hover:after {
     opacity: 1;
-    background-color: var( --color-white );
   }
 }
 
