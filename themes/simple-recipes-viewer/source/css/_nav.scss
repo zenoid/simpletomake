@@ -8,12 +8,20 @@ nav {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
   width: 3rem;
+  padding: 1rem 0;
   z-index: 1;
   overflow: auto;
   @include flex;
   @include flexColumn;
+
+  &.nav-main {
+    left: 0;
+  }
+
+  &.nav-tools {
+    right: 0;
+  }
 
   .btn {
     width: 100%;
@@ -38,15 +46,24 @@ nav {
   }
 
   @media only screen and (max-width: $size-XXS) {
-    top: auto;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
     height: $btn-height;
+    padding: 0;
     overflow: hidden;
     @include flexRow;
     background-color: var( --color-cloak );
+
+    &.nav-main {
+      position: absolute;
+    }
+
+    &.nav-tools {
+      top: auto;
+      bottom: 0;
+    }
 
     .btn {
       width: $btn-height;
@@ -56,6 +73,16 @@ nav {
     .group + .group {
       margin-top: 0;
       margin-left: $btn-height;
+    }
+  }
+}
+
+.nav-main {
+  .btn {
+    opacity: 0.5;
+
+    &.selected {
+      opacity: 1;
     }
   }
 }

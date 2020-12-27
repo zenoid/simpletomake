@@ -65,6 +65,9 @@ body:not(.touch) {
   height: $btn-height;
 }
 
+.btn-icon-list {
+  background-image: url( '../images/icon-list.svg' );
+}
 .btn-icon-home {
   background-image: url( '../images/icon-logo.svg' );
 }

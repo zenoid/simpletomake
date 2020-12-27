@@ -20,7 +20,7 @@
   @include flexVerticalCenter;
 
   .content {
-    padding: 1rem 3rem;
+    padding-left: 4rem !important;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -31,7 +31,6 @@
     width: 100%;
 
     @media only screen and (max-width: $size-M) {
-      padding: 1rem 1.5rem;
       gap: 1rem 1.5rem;
     }
 
@@ -43,12 +42,17 @@
     }
 
     @media only screen and (max-width: $size-XS) {
+      padding: 1.5rem 3rem !important;
       grid-template-columns: 1fr;
       grid-template-areas:
         "logo"
         "title"
         "menu1"
         "menu2";
+    }
+
+    @media only screen and (max-width: $size-XXS) {
+      padding: 4rem 1.5rem 1.5rem 1.5rem !important;
     }
   }
 
@@ -142,7 +146,7 @@ body:not(.touch) {
   .content {
     @include flex;
     @include flexMiddle;
-    padding: 2rem;
+    // padding: 2rem;
 
     .logo {
       @include flexNoShrink;
@@ -158,6 +162,7 @@ body:not(.touch) {
 
     @media only screen and (max-width: $size-XS) {
       @include flexColumn;
+      padding-top: 4rem !important;
 
       .logo {
         width: 100%;
@@ -315,7 +320,6 @@ body:not(.touch) {
   }
 
   @media only screen and (max-width: $size-S) {
-    margin: 1.5rem 0 0 0;
 
     p {
       & + p {

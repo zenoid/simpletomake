@@ -374,10 +374,13 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   */
 
+  if ( !isTouch ) {
+    setupTooltips();
+  }
+
   if ( sections.length ) {
     setupQty();
     if ( !isTouch ) {
-      setupTooltips();
       document.onkeydown = recipeKeyNav;
     }
     if ( location.hash ) {

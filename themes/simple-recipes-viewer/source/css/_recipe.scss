@@ -32,11 +32,7 @@ article {
 }
 
 section {
-  max-width: $layoutwidth;
   min-height: 100vh;
-  margin: auto;
-  text-align: left;
-  padding: 2rem 3rem 2rem;
   outline: none;
 
   h1,
@@ -49,17 +45,19 @@ section {
     padding-bottom: 5rem;
     min-height: 0;
 
-    h1,
-    h2 {
-      padding-top: 2rem;
+    h1 {
+      padding-top: 3rem;
     }
   }
 
   @media only screen and (max-width: $size-XXS) {
-    padding: 1.5rem 0 0 0;
 
-    &:last-of-type {
-      padding-bottom: 5rem;
+    &.content {
+      padding: 1.5rem 0 0 0;
+
+      &:last-of-type {
+        padding-bottom: 5rem;
+      }
     }
   }
 }

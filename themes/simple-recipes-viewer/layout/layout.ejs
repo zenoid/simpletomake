@@ -1,9 +1,13 @@
 <%- partial('_partial/head') %>
 
+<%- partial('_partial/nav') %>
+
 <div class="main">
 <%- body %>
 </div>
 
-<%- partial('_partial/nav') %>
+<% if ( page.layout === 'recipe' ) { %>
+<%- partial('_partial/recipenav') %>
+<% } %>
 
 <%- partial('_partial/foot') %>

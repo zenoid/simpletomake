@@ -1,33 +1,6 @@
-  <nav>
+  <nav class="nav-main">
     <div class="group">
-      <a href="/" class="btn btn-icon btn-icon-home"></a>
-    </div>
-    <div class="div"></div>
-    <% if ( page.layout === 'recipe' ) { %>
-    <div class="group">
-      <button class="btn btn-icon btn-icon-minus" data-tooltip="Diminuisci la quantità di base di <%= page.qtyStep %>"></button>
-      <button class="btn btn-icon btn-icon-plus" data-tooltip="Aumenta la quantità di base di <%= page.qtyStep %>"></button>
-    </div>
-    <div class="div"></div>
-    <div class="group">
-      <button class="btn btn-icon btn-icon-arrow-up hidden" id="btn-prev"></button>
-      <ul class="navdots">
-        <li class="selected"><a href="#principi" class="btn"></a></li>
-        <li><a href="#ingredienti" class="btn"></a></li>
-        <li><a href="#attrezzatura" class="btn"></a></li>
-        <li><a href="#ricetta" class="btn"></a></li>
-        <li><a href="#uso" class="btn"></a></li>
-      </ul>
-      <button class="btn btn-icon btn-icon-arrow-down hidden" id="btn-next"></button>
-    </div>
-    <div class="div"></div>
-    <div class="group mobilehide">
-      <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: <%- page.title %>" target="_blank" class="btn btn-icon btn-icon-mail" tabindex="-1" data-tooltip="Segnala errori o suggerimenti"></a>');</script>
-      <a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/<%- page.recipeid %>.md" target="_blank" class="btn btn-icon btn-icon-pr" tabindex="-1" data-tooltip="Proponi modifiche a questa ricetta su Github"></a>
-    </div>
-    <% } %>
-    <div class="div mobilehide"></div>
-    <div class="group">
-      <a href="about.html" class="btn btn-icon btn-icon-about"></a>
+      <a href="/" class="btn btn-icon btn-icon-list<% if ( page.layout === 'index' ) { %> selected<% } %>" data-tooltip="Ricette"></a>
+      <a href="about.html" class="btn btn-icon btn-icon-about<% if ( page.layout === 'about' ) { %> selected<% } %>" data-tooltip="Cos'è <strong>Simple To Make It</strong>"></a>
     </div>
   </nav>

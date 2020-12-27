@@ -73,7 +73,11 @@ body.touch {
   max-width: $layoutwidth;
   margin: auto;
   text-align: left;
-  padding: 1rem;
+  padding: 2rem 3rem;
+
+  @media only screen and (max-width: $size-XXS) {
+    padding: 0 1.5rem;
+  }
 }
 
 .row + .row {

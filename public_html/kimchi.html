@@ -51,12 +51,19 @@
 
   <script>String.prototype.encrypt = function(){ return this.replace(/[a-zA-Z]/g, function(c){ return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);});};</script>
 
+  <nav class="nav-main">
+    <div class="group">
+      <a href="/" class="btn btn-icon btn-icon-list" data-tooltip="Ricette"></a>
+      <a href="about.html" class="btn btn-icon btn-icon-about" data-tooltip="Cos'è <strong>Simple To Make It</strong>"></a>
+    </div>
+  </nav>
+
 <div class="main">
 
 
   <article>
 
-    <section class="section1" id="principi">
+    <section class="content section1" id="principi">
 
       <h1><div class="sub"><span>Le 3 cose da sapere per fare il</span></div><span>kimchi (cavolo fermentato)</span></h1>
 
@@ -98,7 +105,7 @@
 
     </section>
 
-    <section class="section2 section-ingredients" id="ingredienti">
+    <section class="content section2 section-ingredients" id="ingredienti">
 
       <h2>Ingredienti
         <div class="sub">
@@ -165,7 +172,7 @@
 
     </section>
 
-    <section class="section3" id="attrezzatura">
+    <section class="content section3" id="attrezzatura">
 
       <h2>Attrezzatura</h2>
 
@@ -247,7 +254,7 @@
 
     </section>
 
-    <section class="section4 section-instructions" id="ricetta">
+    <section class="content section4 section-instructions" id="ricetta">
 
       <h2><div class="sub"><span>Ricetta passo passo</span></div>Come fare il kimchi (cavolo fermentato)</h2>
 
@@ -329,7 +336,7 @@
 
     </section>
 
-    <section class="section5 section-usage" id="uso">
+    <section class="content section5 section-usage" id="uso">
 
       <div class="card-list">
         <div class="card">
@@ -436,15 +443,11 @@
   </script>
 </div>
 
-  <nav>
+
+  <nav class="nav-tools">
     <div class="group">
-      <a href="/" class="btn btn-icon btn-icon-home"></a>
-    </div>
-    <div class="div"></div>
-    
-    <div class="group">
-      <button class="btn btn-icon btn-icon-minus" data-tooltip="Diminuisci la quantità di base di 500gr"></button>
-      <button class="btn btn-icon btn-icon-plus" data-tooltip="Aumenta la quantità di base di 500gr"></button>
+      <button class="btn btn-icon btn-icon-minus" data-tooltip="Diminuisci la quantità base di <strong>500gr</strong>"></button>
+      <button class="btn btn-icon btn-icon-plus" data-tooltip="Aumenta la quantità base di <strong>500gr</strong>"></button>
     </div>
     <div class="div"></div>
     <div class="group">
@@ -458,17 +461,13 @@
       </ul>
       <button class="btn btn-icon btn-icon-arrow-down hidden" id="btn-next"></button>
     </div>
-    <div class="div"></div>
+    <div class="div mobilehide"></div>
     <div class="group mobilehide">
       <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: Kimchi (cavolo fermentato)" target="_blank" class="btn btn-icon btn-icon-mail" tabindex="-1" data-tooltip="Segnala errori o suggerimenti"></a>');</script>
       <a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/kimchi.md" target="_blank" class="btn btn-icon btn-icon-pr" tabindex="-1" data-tooltip="Proponi modifiche a questa ricetta su Github"></a>
     </div>
-    
-    <div class="div mobilehide"></div>
-    <div class="group">
-      <a href="about.html" class="btn btn-icon btn-icon-about"></a>
-    </div>
   </nav>
+
 
   <script type="text/javascript" src="/js/scripts.js"></script>
   <script data-goatcounter="https://zenoid.goatcounter.com/count"
