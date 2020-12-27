@@ -163,7 +163,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     clearInterval( scrolling );
     scrolling = setTimeout( function(){ clearInterval( scrolling ); scrolling = null; }, 1000 );
     el.scrollIntoView({ behavior: 'smooth' });
-    window.history.replaceState( null, null, hash );
+    window.history.replaceState( null, null, hash !== '#principi'? hash : ' ' );
   }
 
   function navAction( num )
@@ -231,7 +231,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
     if ( s.num <= sectionsNum ) {
       article.className = 'section' + s.num;
       if ( !scrolling && hash != '#' + s.label ) {
-        window.history.replaceState( null, null, '#' + s.label );
+        var h = '#' + s.label;
+        window.history.replaceState( null, null, h !== '#principi'? h : ' ' );
         setRecipeNav( s.num );
       }
       nextBtn.disabled = ( s.num >= sectionsNum )
