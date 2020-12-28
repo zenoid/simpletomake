@@ -21,7 +21,6 @@ comparisonPrices: [ [ 1, 1.5 ], [ 5, 10 ] ]
 comparisonPricesQty: "al litro"
 
 sources:
-  - Fabrizio Zago, chimico industriale
   - '"Pulizie creative", Elisa Nicoli'
 
 recipeIntro: [ "Cosa serve per fare circa", "di spray anticalcare" ]
