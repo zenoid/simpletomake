@@ -1,0 +1,28 @@
+<div class="sidebar">
+<%
+  var i, recipeLabel,
+    recipes_list    = site.pages.filter( p => p.layout === 'recipe' ),
+    recipes_hygiene = recipes_list.filter( p => p.category === 'hygiene' )
+      .sort( 'index' ),
+    recipes_food    = recipes_list.filter( p => p.category === 'food' )
+      .sort( 'index' );
+%>
+  <div class="group">
+    <h3><%- __('listTitleHygiene') %></h3>
+    <ul><%
+    recipes_hygiene.forEach( recipe => {
+      recipeLabel = recipe.title.replace( /\([^()]*\)/gi, '' ); %>
+      <li<% if ( page.title === recipe.title ) { %> class="selected"<% } %>><a href="<%- recipe.path %>" class="btn"><%- recipeLabel %></a></li><%
+    }) %>
+    </ul>
+  </div>
+  <div class="group">
+    <h3><%- __('listTitleFood') %></h3>
+    <ul><%
+    recipes_food.forEach( recipe => {
+      recipeLabel = recipe.title.replace( /\([^()]*\)/gi, '' ); %>
+      <li<% if ( page.title === recipe.title ) { %> class="selected"<% } %>><a href="<%- recipe.path %>" class="btn"><%- recipeLabel %></a></li><%
+    }) %>
+    </ul>
+  </div>
+</div>

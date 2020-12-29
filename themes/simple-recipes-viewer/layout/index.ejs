@@ -6,7 +6,7 @@
       </div>
 
       <div class="home-title">
-        <h1><%- config.subtitle %></h1>
+        <h1><%- __('subtitle') %></h1>
       </div>
 <%
       var i, recipeLabel,
@@ -17,7 +17,7 @@
           .sort( 'index' );
 %>
       <div class="home-menu1">
-        <h2><%- page.listTitleHygiene %></h2>
+        <h2><%- __('listTitleHygiene') %></h2>
         <ul class="home-menu"><%
         recipes_hygiene.forEach( recipe => {
           recipeLabel = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' ); %>
@@ -27,7 +27,7 @@
       </div>
 
       <div class="home-menu2">
-        <h2><%- page.listTitleFood %></h2>
+        <h2><%- __('listTitleFood')%></h2>
         <ul class="home-menu"><%
         recipes_food.forEach( recipe => {
           recipeLabel = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' ); %>

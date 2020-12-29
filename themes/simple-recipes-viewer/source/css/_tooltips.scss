@@ -6,7 +6,7 @@
 
 .tooltip {
   position: absolute;
-  z-index: 100;
+  z-index: $zindex-overlay;
   background-color: var( --color-dark );
   color: var( --color-white );
   font-size: 0.9rem;
@@ -14,7 +14,7 @@
   padding: 0 0.75rem;
   text-align: left;
   border-radius: 4px;
-  @include transition( background-color, $transition-scroll );
+  @include transition( background-color, $transition-slide );
   pointer-events: none;
 }
 

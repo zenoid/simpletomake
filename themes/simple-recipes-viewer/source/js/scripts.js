@@ -17,6 +17,39 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   /*
 
+      Sidebar menu
+
+  */
+
+  var sidebar = document.querySelector( '.sidebar' );
+
+  function enableSidebar()
+  {
+    var btnOpen = document.getElementById( 'mainNavOpen' );
+    btnOpen.addEventListener( 'click', function( e ){
+      e.preventDefault();
+      e.stopPropagation();
+      openSidebar();
+    });
+    sidebar.addEventListener( 'click', function( e ){
+      e.stopPropagation();
+    });
+  }
+
+  function openSidebar()
+  {
+    window.addEventListener( 'click', closeSidebar )
+    sidebar.classList.add( 'open' );
+  }
+
+  function closeSidebar()
+  {
+    window.removeEventListener( 'click', closeSidebar )
+    sidebar.classList.remove( 'open' );
+  }
+
+  /*
+
       Recipe calculation
 
   */
@@ -289,7 +322,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     var k = e.keyCode;
     switch ( k ) {
       case 8:
-        document.location = '/'
+        openSidebar();
         break;
       case 37:
       case 38:
@@ -374,6 +407,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
       Main setup
 
   */
+
+  enableSidebar();
 
   if ( !isTouch ) {
     setupTooltips();

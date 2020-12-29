@@ -56,12 +56,17 @@ $layoutwidth: 75em; // 1200px
 
 $btn-height: 2.5rem; // 40px
 
+$zindex-base:       1;
+$zindex-menu:       5;
+$zindex-overlay:   10;
+$zindex-sidebar:  100;
+
 
 
 /*                      TRANSITIONS
 ------------------------------------------------------------------------- */
 
 $transition-hover:  0.2s;
-$transition-scroll: 0.5s;
+$transition-slide: 0.5s;
 
 

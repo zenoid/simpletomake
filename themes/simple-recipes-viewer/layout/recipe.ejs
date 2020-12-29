@@ -211,7 +211,7 @@
         "name": "simpletomake.it"
       },
       "recipeCategory": "<%- page.category %>",
-      "keywords": "<%- config.keywords %>",
+      "keywords": "<%- __('keywords') %>",
       "description": "<% for ( i = 0; i < page.principles.length; i++ ) { %><%- page.principles[ i ] %>. <% } %>",
       "recipeIngredient": [<%
         var ingrSchema = [];

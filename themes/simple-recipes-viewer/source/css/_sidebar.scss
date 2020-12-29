@@ -1,0 +1,59 @@
+
+
+
+/*                      SIDEBAR
+------------------------------------------------------------------------- */
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  min-width: 16rem;
+  max-width: 100%;
+  background-color: var( --color-dark );
+  color: var( --color-white );
+  z-index: $zindex-sidebar;
+  overflow: auto;
+  text-align: left;
+  @include translateX( -100% );
+  @include transition( transform, $transition-slide );
+
+  &.open {
+    @include translateX( 0 );
+  }
+
+  .group {
+    padding: 1rem;
+
+    & + .group {
+      padding-top: 0;
+    }
+  }
+
+  h3 {
+    font-family: $font;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    padding: 0 0.75rem;
+    text-transform: uppercase;
+    color: var( --color-gray );
+  }
+
+  li {
+
+    &.selected {
+      .btn {
+        color: var( --color-main2 );
+      }
+    }
+
+    .btn {
+      display: block;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+
