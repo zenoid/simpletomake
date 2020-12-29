@@ -9,7 +9,6 @@ nav {
   top: 0;
   bottom: 0;
   width: 3rem;
-  padding: 1rem 0;
   z-index: $zindex-menu;
   overflow: auto;
   @include flex;
@@ -73,16 +72,6 @@ nav {
     .group + .group {
       margin-top: 0;
       margin-left: $btn-height;
-    }
-  }
-}
-
-.nav-main {
-  .btn {
-    opacity: 0.5;
-
-    &.selected {
-      opacity: 1;
     }
   }
 }

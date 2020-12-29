@@ -7,12 +7,13 @@
     recipes_food    = recipes_list.filter( p => p.category === 'food' )
       .sort( 'index' );
 %>
+  <button class="btn btn-icon btn-icon-close" id="mainNavClose"></button>
   <div class="group">
     <h3><%- __('listTitleHygiene') %></h3>
     <ul><%
     recipes_hygiene.forEach( recipe => {
       recipeLabel = recipe.title.replace( /\([^()]*\)/gi, '' ); %>
-      <li<% if ( page.title === recipe.title ) { %> class="selected"<% } %>><a href="<%- recipe.path %>" class="btn"><%- recipeLabel %></a></li><%
+      <li<% if ( page.title === recipe.title ) { %> class="selected"<% } %>><a href="<%- recipe.path %>" class="btn" tabindex="-1"><%- recipeLabel %></a></li><%
     }) %>
     </ul>
   </div>
@@ -21,7 +22,7 @@
     <ul><%
     recipes_food.forEach( recipe => {
       recipeLabel = recipe.title.replace( /\([^()]*\)/gi, '' ); %>
-      <li<% if ( page.title === recipe.title ) { %> class="selected"<% } %>><a href="<%- recipe.path %>" class="btn"><%- recipeLabel %></a></li><%
+      <li<% if ( page.title === recipe.title ) { %> class="selected"<% } %>><a href="<%- recipe.path %>" class="btn" tabindex="-1"><%- recipeLabel %></a></li><%
     }) %>
     </ul>
   </div>

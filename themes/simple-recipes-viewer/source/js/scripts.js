@@ -25,11 +25,15 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   function enableSidebar()
   {
-    var btnOpen = document.getElementById( 'mainNavOpen' );
-    btnOpen.addEventListener( 'click', function( e ){
+    document.getElementById( 'mainNavOpen' ).addEventListener( 'click', function( e ){
       e.preventDefault();
       e.stopPropagation();
       openSidebar();
+    });
+    document.getElementById( 'mainNavClose' ).addEventListener( 'click', function( e ){
+      e.preventDefault();
+      e.stopPropagation();
+      closeSidebar();
     });
     sidebar.addEventListener( 'click', function( e ){
       e.stopPropagation();
@@ -322,8 +326,15 @@ document.addEventListener( 'DOMContentLoaded', function() {
     var k = e.keyCode;
     switch ( k ) {
       case 8:
-        openSidebar();
+        if ( sidebar.classList.contains( 'open' ) ) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
         break;
+    }
+    if ( !isRecipe ) return;
+    switch ( k ) {
       case 37:
       case 38:
         e.preventDefault();
@@ -408,23 +419,24 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   */
 
+  var isRecipe = false;
+
   enableSidebar();
 
-  if ( !isTouch ) {
-    setupTooltips();
-  }
-
   if ( sections.length ) {
+    isRecipe = true;
     setupQty();
-    if ( !isTouch ) {
-      document.onkeydown = recipeKeyNav;
-    }
     if ( location.hash ) {
       location = location.hash;
       setTimeout(function(){
         setupNav();
       }, 1000 );
     } else setupNav();
+  }
+
+  if ( !isTouch ) {
+    setupTooltips();
+    document.onkeydown = recipeKeyNav;
   }
 
 });
