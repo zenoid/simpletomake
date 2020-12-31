@@ -223,6 +223,11 @@
         for ( i = 0; i < ingrSchema.length; i++ ) { %>
         "<% if ( ingrSchema[ i ].qty ) { %><%- ingrSchema[ i ].qty %> <%- ingrSchema[ i ].units %> <% } %><%- ingrSchema[ i ].name %>"<% if ( i < ingrSchema.length - 1 ) { %>, <% } %><% } %>
       ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "9"
+      },
       "recipeInstructions": [<% for ( i = 0; i < page.directions.length; i++ ) { %>
         {
           "@type": "HowToStep",
