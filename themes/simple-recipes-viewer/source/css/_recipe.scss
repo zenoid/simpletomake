@@ -248,8 +248,9 @@ section {
     @include transition( all, $transition-hover );
 
     &:checked {
-      border-color: var( --color-white );
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><polyline fill="none" stroke="%234F8E99" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="21 348 26 353 36 343" transform="translate(-16 -336)"/></svg>');
+      border-color: transparent;
+      background-color: transparent;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><polyline fill="none" stroke="%23FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="21 348 26 353 36 343" transform="translate(-16 -336)"/></svg>');
 
       & ~ .card-body {
         opacity: 0.5;

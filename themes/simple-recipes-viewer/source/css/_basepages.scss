@@ -142,44 +142,42 @@ body:not(.touch) {
 ------------------------------------------------------------------------- */
 
 .about-intro {
+  @include flex;
+  @include flexMiddle;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
-  .content {
-    @include flex;
-    @include flexMiddle;
-    // padding: 2rem;
+  .logo {
+    @include flexNoShrink;
+    margin-right: 1.5rem;
+    width: 33%;
+    text-align: center;
+
+    img {
+      max-width: 20rem;
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: $size-XS) {
+    @include flexColumn;
+    padding-top: 4rem !important;
 
     .logo {
-      @include flexNoShrink;
-      margin-right: 1.5rem;
-      width: 33%;
-      text-align: center;
+      width: 100%;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 1.5rem;
 
       img {
-        max-width: 20rem;
-        width: 100%;
+        max-width: 12rem;
       }
     }
+  }
 
-    @media only screen and (max-width: $size-XS) {
-      @include flexColumn;
-      padding-top: 4rem !important;
-
-      .logo {
-        width: 100%;
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 1.5rem;
-
-        img {
-          max-width: 12rem;
-        }
-      }
-    }
-
-    @media only screen and (max-width: $size-XXS) {
-      display: block;
-      padding: 1rem 1rem 2rem 1rem;
-    }
+  @media only screen and (max-width: $size-XXS) {
+    display: block;
+    padding: 1rem 1rem 2rem 1rem;
   }
 
   p {
@@ -212,8 +210,7 @@ body:not(.touch) {
 ------------------------------------------------------------------------- */
 
 .about-sources {
-  padding: 3rem 0;
-  background-color: var( --color-lightband );
+  padding-bottom: 4rem;
 
   .card-list {
     grid-template-columns: 30% 30% 40%;
@@ -229,14 +226,12 @@ body:not(.touch) {
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1em;
-    color: var( --color-main2 );
   }
 
   h4 {
     margin: 1rem 0 0.5rem;
-    line-height: 1.2;
   }
 
   p {
@@ -246,18 +241,19 @@ body:not(.touch) {
   h4,
   p {
     padding: 0 0.5rem;
+    color: var( --color-white );
   }
 
   span {
     display: block;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-    color: var( --color-white );
-    background-color: var( --color-main2 );
+    padding: 0.1rem 0.5rem;
+    font-size: 0.9rem;
+    font-weight: $fontweight-bold;
+    color: var( --color-main5 );
+    background-color: var( --color-white );
   }
 
   @media only screen and (max-width: $size-S) {
-    padding: 1rem 0;
 
     .card-list > div {
       width: 100% !important;
@@ -281,7 +277,7 @@ body:not(.touch) {
       padding: 0;
       line-height: 1.5rem;
       opacity: 1 !important;
-      color: var( --color-main2 );
+      color: var( --color-white );
       background: none;
     }
   }
@@ -306,17 +302,19 @@ body:not(.touch) {
 
   .content:first-child {
     .card-list {
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var( --color-gray );
+      grid-template-columns: 1fr 2fr;
+      column-gap: 1rem;
+      padding-bottom: 2rem;
+      margin-bottom: -2rem;
+      border-bottom: 1px solid var( --color-tag );
     }
   }
 }
 
 .about-footer-info {
-  padding-top: 0;
 
   .card {
-    padding: 1.5rem 1rem 0.5rem 0;
+    padding: 0.5rem 1rem 0.5rem 0;
   }
 
   @media only screen and (max-width: $size-S) {

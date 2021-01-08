@@ -13,7 +13,6 @@ $colors: #4A8040 #4D876D #4F8E99 #5296C5 #559DF2;
 ------------------------------------------------------------------------- */
 
 $color-tag:       lighten( nth( $colors, 2 ), 20% );
-$color-lightband: lighten( nth( $colors, 2 ), 42% );
 
 :root {
 
@@ -22,7 +21,6 @@ $color-lightband: lighten( nth( $colors, 2 ), 42% );
   --color-gray:  #666666;
   --color-cloak: rgba( 0, 0, 0, 0.4 );
   --color-tag: rgba( #{red($color-tag)}, #{green($color-tag)}, #{blue($color-tag)}, 0.3 );
-  --color-lightband: #{$color-lightband};
 
   @for $i from 1 through $sectionsNum {
     #{ '--color-main' + $i}: nth( $colors, $i );
