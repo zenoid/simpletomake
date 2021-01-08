@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------- */
 
 .cover {
-  @include gradient( var( --color-main1 ), var( --color-main5 ) );
+  // @include gradient( var( --color-main1 ), var( --color-main5 ) );
   color: var( --color-white );
 }
 
