@@ -17,14 +17,15 @@ ol,
 li {
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+ol li {
+  margin-left: 1.5rem;
 }
 
 strong {
   font-weight: $fontweight-bold;
-}
-
-ul li {
-  list-style: none;
 }
 
 a {
@@ -37,13 +38,6 @@ a {
 p {
   font-size: 1.25rem;
   line-height: 1.4;
-
-  a {
-    display: inline-block;
-    padding: 0.2em 0.4em;
-    border: 1px solid var( --color-tag );
-    @include transition( all, $transition-hover );
-  }
 }
 
 * + p {
@@ -53,14 +47,6 @@ p {
 .note {
   font-size: 0.9rem;
   color: var( --color-gray );
-}
-
-body:not(.touch) {
-  p a:hover {
-    color: var( --color-white );
-    background-color: var( --color-main1 );
-    border-color: var( --color-main1 )
-  }
 }
 
 .copyleft {
@@ -101,12 +87,12 @@ h4 {
   font-family: $font-title;
 
   .sub {
-    font-size: 0.6em;
+    font-size: 0.55em;
     padding: 0.25rem 0;
     line-height: 1.4;
 
     & > span:not(.quantity) {
-      opacity: 0.4;
+      opacity: 0.5;
     }
 
     .quantity {
@@ -115,7 +101,7 @@ h4 {
       padding: 0;
     }
 
-    .btn {
+    .btn-icon {
       vertical-align: top;
       margin: 0 0.25rem;
     }
@@ -146,14 +132,16 @@ h4 {
 }
 
 h5 {
-  font-family: $font-title;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
   color: var( --color-dark );
 }
 
 h6 {
   font-size: 0.8rem;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
   margin: 0;
   padding: 0;
 }
@@ -212,6 +200,18 @@ h6 {
     display: inline-block;
     line-height: 1.7rem;
     margin-left: 0.5rem;
+  }
+
+  &.key-icon {
+    padding: 0;
+    line-height: 0;
+  }
+
+  .icon {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin: 0.35rem;
   }
 }
 

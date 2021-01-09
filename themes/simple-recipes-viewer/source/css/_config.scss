@@ -16,11 +16,12 @@ $color-tag:       lighten( nth( $colors, 2 ), 20% );
 
 :root {
 
-  --color-white: #FFFFFF;
-  --color-dark:  #000000;
-  --color-gray:  #666666;
-  --color-cloak: rgba( 0, 0, 0, 0.4 );
-  --color-tag: rgba( #{red($color-tag)}, #{green($color-tag)}, #{blue($color-tag)}, 0.3 );
+  --color-white:  #FFFFFF;
+  --color-dark:   #000000;
+  --color-gray:   #666666;
+  --color-hilite: #39E698;
+  --color-tag:    #DEEEE7;
+  --color-cloak:  rgba( 0, 0, 0, 0.4 );
 
   @for $i from 1 through $sectionsNum {
     #{ '--color-main' + $i}: nth( $colors, $i );

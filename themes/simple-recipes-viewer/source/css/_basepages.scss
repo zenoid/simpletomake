@@ -306,7 +306,7 @@ body:not(.touch) {
       column-gap: 1rem;
       padding-bottom: 2rem;
       margin-bottom: -2rem;
-      border-bottom: 1px solid var( --color-tag );
+      border-bottom: 2px solid var( --color-tag );
     }
   }
 }
@@ -334,7 +334,7 @@ body:not(.touch) {
 
 body:not(.touch) {
   .about-footer .btn:hover {
-    background-color: var( --color-main1 );
+    background-color: var( --color-hilite );
   }
 }
 

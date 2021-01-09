@@ -42,7 +42,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Bitter:wght@300;500&display=swap" rel="stylesheet">
   
-<link rel="stylesheet" href="/css/style.css?v=1610102683635.css">
+<link rel="stylesheet" href="/css/style.css?v=1610204858484.css">
 
 
 </head>
@@ -53,13 +53,13 @@
 
   <nav class="nav-main">
     <div class="group">
-      <a href="/" class="btn btn-icon btn-icon-list" data-tooltip="Ricette" id="mainNavOpen"></a>
-      <a href="about.html" class="btn btn-icon btn-icon-about" data-tooltip="Cos'è <strong>Simple To Make It</strong>"></a>
+      <a href="/" class="btn-icon btn-mainnavopen" data-tooltip="Ricette"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-list"/></svg></a>
+      <a href="about.html" class="btn-icon" data-tooltip="Cos'è <strong>Simple To Make It</strong>"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-about"/></svg></a>
     </div>
   </nav>
 <div class="sidebar">
 
-  <button class="btn btn-icon btn-icon-close" id="mainNavClose"></button>
+  <button class="btn-icon btn-mainnavclose"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-close"/></svg></button>
   <div class="group">
     <h3>Detergenti e detersivi</h3>
     <ul>
@@ -85,26 +85,47 @@
 <div class="main">
 
 
+  <div class="recipeheader">
+
+    <div class="nav-main-wrapper">
+      <nav class="nav-main">
+        <div class="group">
+          <a href="/" class="btn-icon btn-mainnavopen" data-tooltip="Ricette"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-list"/></svg></a>
+          <a href="about.html" class="btn-icon" data-tooltip="Cos'è <strong>Simple To Make It</strong>"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-about"/></svg></a>
+        </div>
+      </nav>
+    </div>
+
+    <a href="/" class="breadcrumb"><strong>Simple To Make It</strong></a>
+
+    <div class="content">
+
+      <div class="recipeheader-main">
+        <h1><div class="sub"><span>Le 3 cose da sapere per fare uno</span></div>Yogurt denso</h1>
+        <ol>
+        
+          <li>Fare yogurt è uno dei modi per fermentare il latte: lo rende <strong>più digeribile perché riduce il lattosio e più salutare perché aggiunge fermenti lattici</strong></li>
+        
+          <li>Per fare lo yogurt basta mescolare al latte uno yogurt già fatto, e tenerlo ad una <strong>temperatura costante di 40-45°C per alcune ore</strong></li>
+        
+          <li>Per ottenere uno yogurt più denso è necessario &quot;sciogliere&quot; le proteine del latte prima di aggiungere i fermenti, <strong>scaldandolo lentamente fino a 80°C (ma non oltre 90°C)</strong></li>
+        
+        </ol>
+      </div>
+
+      <div class="recipeheader-image">
+        <img src="recipes/covers/mockup.png" alt="Yogurt denso">
+      </div>
+
+    </div>
+
+  </div>
+
   <article>
 
     <section class="content section1" id="principi">
 
-      <h1><div class="sub"><span>Le 3 cose da sapere per fare uno</span></div><span>yogurt denso</span></h1>
-
       <div class="card-list">
-      
-        <div class="card">
-          <p>Fare yogurt è uno dei modi per fermentare il latte: lo rende <strong>più digeribile perché riduce il lattosio e più salutare perché aggiunge fermenti lattici</strong></p>
-        </div>
-      
-        <div class="card">
-          <p>Per fare lo yogurt basta mescolare al latte uno yogurt già fatto, e tenerlo ad una <strong>temperatura costante di 40-45°C per alcune ore</strong></p>
-        </div>
-      
-        <div class="card">
-          <p>Per ottenere uno yogurt più denso è necessario &quot;sciogliere&quot; le proteine del latte prima di aggiungere i fermenti, <strong>scaldandolo lentamente fino a 80°C (ma non oltre 90°C)</strong></p>
-        </div>
-      
         <div class="card-time">
             <h5>Si può fare in</h5>
             <span>12-15 ore</span>
@@ -148,7 +169,7 @@
         <div class="sub">
           <span>Cosa serve per fare</span>
           <span class="quantity">
-            <button class="btn btn-icon btn-icon-minus"></button><span id="qtyValue">1000</span> ml<button class="btn btn-icon btn-icon-plus"></button>
+            <button class="btn-icon btn-icon-minus"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-minus"/></svg></button><span id="qtyValue">1000</span> ml<button class="btn-icon btn-icon-plus"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-plus"/></svg></button>
           </span>
           <span>di yogurt denso (<span data-qty='containers.150'>7</span> vasetti da 150ml)</span>
         </div>
@@ -378,12 +399,12 @@
 
   <nav class="nav-tools">
     <div class="group">
-      <button class="btn btn-icon btn-icon-minus" data-tooltip="Diminuisci la quantità base di <strong>100ml</strong>"></button>
-      <button class="btn btn-icon btn-icon-plus" data-tooltip="Aumenta la quantità base di <strong>100ml</strong>"></button>
+      <button class="btn-icon btn-icon-minus" data-tooltip="Diminuisci la quantità base di <strong>100ml</strong>"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-minus"/></svg></button>
+      <button class="btn-icon btn-icon-plus" data-tooltip="Aumenta la quantità base di <strong>100ml</strong>"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-plus"/></svg></button>
     </div>
     <div class="div"></div>
     <div class="group">
-      <button class="btn btn-icon btn-icon-arrow-up hidden" id="btn-prev"></button>
+      <button class="btn-icon hidden" id="btn-prev"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-arrow-up"/></svg></button>
       <ul class="navdots">
         <li class="selected"><a href="#" class="btn"></a></li>
         <li><a href="#ingredienti" class="btn"></a></li>
@@ -391,12 +412,12 @@
         <li><a href="#ricetta" class="btn"></a></li>
         <li><a href="#uso" class="btn"></a></li>
       </ul>
-      <button class="btn btn-icon btn-icon-arrow-down hidden" id="btn-next"></button>
+      <button class="btn-icon hidden" id="btn-next"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-arrow-down"/></svg></button>
     </div>
     <div class="div mobilehide"></div>
     <div class="group mobilehide">
-      <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: Yogurt denso" target="_blank" class="btn btn-icon btn-icon-mail" tabindex="-1" data-tooltip="Segnala errori o suggerimenti"></a>');</script>
-      <a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/thick-yogurt.md" target="_blank" class="btn btn-icon btn-icon-pr" tabindex="-1" data-tooltip="Proponi modifiche a questa ricetta su Github"></a>
+      <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: Yogurt denso" target="_blank" class="btn-icon" tabindex="-1" data-tooltip="Segnala errori o suggerimenti"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-mail"/></svg></a>');</script>
+      <a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/thick-yogurt.md" target="_blank" class="btn-icon" tabindex="-1" data-tooltip="Proponi modifiche a questa ricetta su Github"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-pr"/></svg></a>
     </div>
   </nav>
 

@@ -1,6 +1,140 @@
 
 
 
+/*                      RECIPE HEADER
+------------------------------------------------------------------------- */
+
+.recipeheader {
+  background-color: var( --color-white );
+  padding: 3rem 0;
+  position: relative;
+  z-index: $zindex-menu + 1;
+  background-attachment: fixed;
+  background-image: url( '../images/simpletomake-logobg-dark.svg' );
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left 50% top 50%;
+
+  .content {
+    @include flex;
+  }
+
+  @media only screen and (max-width: $size-S) {
+    padding: 1.5rem 0;
+
+    .content {
+      @include flexColumn;
+    }
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    // position: static;
+    padding: ( $btn-height + 1rem ) 0 1.5rem 0;
+  }
+
+  .breadcrumb {
+    position: absolute;
+    top: 0;
+    left: 3rem;
+
+    @media only screen and (min-width: $size-XL) {
+      left: 4rem;
+    }
+
+    @media only screen and (max-width: $size-XS) {
+      left: $btn-height;
+    }
+
+    @media only screen and (max-width: $size-XXS) {
+      left: auto;
+      right: 0;
+      padding: 0 1rem;
+    }
+  }
+
+  h1 {
+    color: var( --color-main2 );
+    padding: 0 1.5rem;
+    font-weight: $fontweight-bold;
+
+    .sub {
+      padding: 0.5rem 0;
+
+      &:last-child {
+        color: var( --color-gray );
+      }
+
+      span {
+        font-weight: $fontweight-normal;
+      }
+    }
+
+    @media only screen and (max-width: $size-XXS) {
+      padding: 0;
+    }
+  }
+
+  ol {
+    counter-reset: things;
+    margin-top: 3rem;
+    padding-right: 3rem;
+
+    li {
+      counter-increment: things;
+      font-size: 1.125rem;
+      position: relative;
+
+      & + li {
+        margin-top: 1em;
+      }
+
+      &:before {
+        content: counter(things);
+        position: absolute;
+        left: -1.5rem;
+        top: 0.25rem;
+        width: 1rem;
+        line-height: 1.125rem;
+        text-align: right;
+        font-weight: $fontweight-bold;
+        color: var( --color-main2 );
+        opacity: 0.6;
+      }
+    }
+
+    @media only screen and (max-width: $size-S) {
+      padding-right: 0;
+    }
+  }
+
+  & + article section:first-child {
+    min-height: auto;
+    padding-top: 0;
+  }
+}
+
+.recipeheader-main {
+  @include flexGrow( 1 );
+}
+
+.recipeheader-image {
+  @include flexNoShrink;
+
+  img {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $size-M) {
+    @include flexShrink( 0.5 );
+  }
+
+  @media only screen and (max-width: $size-S) {
+    margin-top: 1.5rem;
+  }
+}
+
+
+
 /*                      RECIPE LAYOUT
 ------------------------------------------------------------------------- */
 
@@ -35,7 +169,6 @@ section {
   min-height: 100vh;
   outline: none;
 
-  h1,
   h2 {
     padding: 1rem 1.5rem 1.5rem 1.5rem;
   }
@@ -44,10 +177,6 @@ section {
     padding-top: 0;
     padding-bottom: 5rem;
     min-height: 0;
-
-    h1 {
-      padding-top: 3rem;
-    }
   }
 
   @media only screen and (max-width: $size-XXS) {
@@ -174,8 +303,9 @@ section {
     position: absolute;
     top: 0.1rem;
     left: 0.5rem;
-    font-size: 1.25rem;
-    opacity: 0.25;
+    font-weight: $fontweight-bold;
+    color: var( --color-main4 );
+    opacity: 0.6;
 
     @media only screen and (max-width: $size-M) {
       font-size: 1rem;
@@ -267,6 +397,12 @@ section {
     top: 0;
     bottom: 0;
     z-index: $zindex-base;
+  }
+}
+
+body:not(.touch) {
+  input[type="checkbox"]:not(:checked):hover {
+    background-color: var( --color-tag );
   }
 }
 

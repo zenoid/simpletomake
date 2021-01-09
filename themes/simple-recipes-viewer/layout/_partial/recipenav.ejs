@@ -1,11 +1,11 @@
   <nav class="nav-tools">
     <div class="group">
-      <button class="btn btn-icon btn-icon-minus" data-tooltip="Diminuisci la quantità base di <strong><%= page.qtyStep %></strong>"></button>
-      <button class="btn btn-icon btn-icon-plus" data-tooltip="Aumenta la quantità base di <strong><%= page.qtyStep %></strong>"></button>
+      <button class="btn-icon btn-icon-minus" data-tooltip="Diminuisci la quantità base di <strong><%= page.qtyStep %></strong>"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-minus"/></svg></button>
+      <button class="btn-icon btn-icon-plus" data-tooltip="Aumenta la quantità base di <strong><%= page.qtyStep %></strong>"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-plus"/></svg></button>
     </div>
     <div class="div"></div>
     <div class="group">
-      <button class="btn btn-icon btn-icon-arrow-up hidden" id="btn-prev"></button>
+      <button class="btn-icon hidden" id="btn-prev"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-arrow-up"/></svg></button>
       <ul class="navdots">
         <li class="selected"><a href="#" class="btn"></a></li>
         <li><a href="#ingredienti" class="btn"></a></li>
@@ -13,11 +13,11 @@
         <li><a href="#ricetta" class="btn"></a></li>
         <li><a href="#uso" class="btn"></a></li>
       </ul>
-      <button class="btn btn-icon btn-icon-arrow-down hidden" id="btn-next"></button>
+      <button class="btn-icon hidden" id="btn-next"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-arrow-down"/></svg></button>
     </div>
     <div class="div mobilehide"></div>
     <div class="group mobilehide">
-      <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: <%- page.title %>" target="_blank" class="btn btn-icon btn-icon-mail" tabindex="-1" data-tooltip="Segnala errori o suggerimenti"></a>');</script>
-      <a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/<%- page.recipeid %>.md" target="_blank" class="btn btn-icon btn-icon-pr" tabindex="-1" data-tooltip="Proponi modifiche a questa ricetta su Github"></a>
+      <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: <%- page.title %>" target="_blank" class="btn-icon" tabindex="-1" data-tooltip="Segnala errori o suggerimenti"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-mail"/></svg></a>');</script>
+      <a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/<%- page.recipeid %>.md" target="_blank" class="btn-icon" tabindex="-1" data-tooltip="Proponi modifiche a questa ricetta su Github"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-pr"/></svg></a>
     </div>
   </nav>

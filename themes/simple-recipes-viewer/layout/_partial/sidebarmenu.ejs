@@ -7,7 +7,7 @@
     recipes_food    = recipes_list.filter( p => p.category === 'food' )
       .sort( 'index' );
 %>
-  <button class="btn btn-icon btn-icon-close" id="mainNavClose"></button>
+  <button class="btn-icon btn-mainnavclose"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-close"/></svg></button>
   <div class="group">
     <h3><%- __('listTitleHygiene') %></h3>
     <ul><%

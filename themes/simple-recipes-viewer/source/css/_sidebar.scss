@@ -40,7 +40,7 @@
 
     &.selected {
       .btn {
-        color: var( --color-main2 );
+        color: var( --color-hilite );
       }
     }
 
@@ -57,23 +57,17 @@
   }
 }
 
-#mainNavClose {
-  display: block;
+.btn-mainnavclose {
   width: 2rem;
   height: 2rem;
-  margin: 0.5rem;
-  border-radius: 100%;
-  background-color: rgba( 255, 255, 255, 0.2 );
-  @include transition( background-color, $transition-hover );
+  margin: 0.25rem;
+
+  .icon {
+    margin: 0;
+  }
 
   @media only screen and (min-width: $size-XL) {
     margin: 0.5rem 1rem;
-  }
-}
-
-body:not(.touch) {
-  #mainNavClose:hover {
-    background-color: var( --color-main2 );
   }
 }
 

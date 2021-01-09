@@ -1,17 +1,42 @@
 <% var i, j; %>
 
+  <div class="recipeheader">
+
+    <div class="nav-main-wrapper">
+      <nav class="nav-main">
+        <div class="group">
+          <a href="/" class="btn-icon btn-mainnavopen" data-tooltip="Ricette"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-list"/></svg></a>
+          <a href="about.html" class="btn-icon" data-tooltip="Cos'è <strong>Simple To Make It</strong>"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-about"/></svg></a>
+        </div>
+      </nav>
+    </div>
+
+    <a href="/" class="breadcrumb"><strong>Simple To Make It</strong></a>
+
+    <div class="content">
+
+      <div class="recipeheader-main">
+        <h1><div class="sub"><span>Le 3 cose da sapere per fare <%- page.titleArticle %></span></div><%- page.title.replace( '(', '<div class="sub"><span>– ' ).replace( ')', '</span></div>' ) %></h1>
+        <ol>
+        <% for ( i = 0; i < page.principles.length; i++ ) { %>
+          <li><%- page.principles[ i ] %></li>
+        <% } %>
+        </ol>
+      </div>
+
+      <div class="recipeheader-image">
+        <img src="recipes/covers/mockup.png" alt="<%- page.title %>">
+      </div>
+
+    </div>
+
+  </div>
+
   <article>
 
     <section class="content section1" id="principi">
 
-      <h1><div class="sub"><span>Le 3 cose da sapere per fare <%- page.titleArticle %></span></div><span><%- page.title.toLowerCase() %></span></h1>
-
       <div class="card-list">
-      <% for ( i = 0; i < page.principles.length; i++ ) { %>
-        <div class="card">
-          <p><%- page.principles[ i ] %></p>
-        </div>
-      <% } %>
         <div class="card-time"><%
         if ( page.timeToMake ) { %>
             <h5>Si può fare in</h5>
@@ -82,7 +107,7 @@
         <div class="sub">
           <span><%- page.recipeIntro[ 0 ] %></span>
           <span class="quantity">
-            <button class="btn btn-icon btn-icon-minus"></button><span id="qtyValue"><%- page.recipeBase.qty %></span><% if ( page.recipeBase.units ) { %> <%- page.recipeBase.units %><% } %><button class="btn btn-icon btn-icon-plus"></button>
+            <button class="btn-icon btn-icon-minus"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-minus"/></svg></button><span id="qtyValue"><%- page.recipeBase.qty %></span><% if ( page.recipeBase.units ) { %> <%- page.recipeBase.units %><% } %><button class="btn-icon btn-icon-plus"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-plus"/></svg></button>
           </span>
           <span><%- page.recipeIntro[ 1 ] %></span>
         </div>

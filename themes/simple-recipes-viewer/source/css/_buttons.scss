@@ -20,6 +20,17 @@
   color: var( --color-white );
   background: none;
   @include transition( all, $transition-hover );
+}
+
+.btn-icon {
+  @include resetButton;
+  padding: 0;
+  border: none;
+  display: inline-block;
+  height: $btn-height;
+  cursor: pointer;
+  background: none;
+  @include transition( all, $transition-hover );
 
   &:disabled {
     cursor: auto;
@@ -27,73 +38,48 @@
   }
 }
 
-.quantity {
-  .btn {
-    width: $btn-height;
-    height: $btn-height;
-  }
+.icon {
+  stroke: var( --color-white );
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+  @include transition( stroke, $transition-hover );
 }
 
-.btn-link {
+.about-footer-info a {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: $btn-height - 1rem;
+  padding: 0.2em 0.4em;
+  border: 1px solid var( --color-tag );
   @include transition( all, $transition-hover );
+}
+
+.breadcrumb {
+  display: inline-block;
+  line-height: $btn-height;
+  font-size: 0.9rem;
+  opacity: 0.3;
+  @include transition( opacity, $transition-hover );
 }
 
 body:not(.touch) {
 
-  .btn:not(:disabled):hover {
+  .btn:hover {
     background-color: rgba( 255, 255, 255, 0.2 );
   }
 
-  .btn-link:hover {
-    background-color: rgba( 0, 0, 0, 0.1 );
+  .btn-icon:not(:disabled):hover {
+    .icon {
+      stroke: var( --color-hilite );
+    }
   }
-}
 
+  .about-footer-info a:hover {
+    background-color: var( --color-tag );
+  }
 
-
-/*                      ICON BUTTONS
-------------------------------------------------------------------------- */
-
-.btn-icon {
-  background-repeat: no-repeat;
-  background-size: 1.5rem;
-  background-position: left 50% top 50%;
-  height: $btn-height;
-}
-
-.btn-icon-list {
-  background-image: url( '../images/icon-list.svg' );
-}
-.btn-icon-close {
-  background-image: url( '../images/icon-close.svg' );
-}
-.btn-icon-home {
-  background-image: url( '../images/icon-logo.svg' );
-}
-.btn-icon-about {
-  background-image: url( '../images/icon-about.svg' );
-}
-.btn-icon-arrow-up {
-  background-image: url( '../images/icon-arrow-up.svg' );
-}
-.btn-icon-arrow-down {
-  background-image: url( '../images/icon-arrow-down.svg' );
-}
-.btn-icon-plus {
-  background-image: url( '../images/icon-plus.svg' );
-}
-.btn-icon-minus {
-  background-image: url( '../images/icon-minus.svg' );
-}
-.btn-icon-mail {
-  background-image: url( '../images/icon-mail.svg' );
-}
-.btn-icon-pr {
-  background-image: url( '../images/icon-pr.svg' );
+  .breadcrumb:hover {
+    opacity: 1;
+  }
 }
 
 

@@ -25,15 +25,19 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   function enableSidebar()
   {
-    document.getElementById( 'mainNavOpen' ).addEventListener( 'click', function( e ){
-      e.preventDefault();
-      e.stopPropagation();
-      openSidebar();
+    Array.from( document.querySelectorAll( '.btn-mainnavopen' ) ).forEach( btn => {
+      btn.addEventListener( 'click', function( e ){
+        e.preventDefault();
+        e.stopPropagation();
+        openSidebar();
+      });
     });
-    document.getElementById( 'mainNavClose' ).addEventListener( 'click', function( e ){
-      e.preventDefault();
-      e.stopPropagation();
-      closeSidebar();
+    Array.from( document.querySelectorAll( '.btn-mainnavclose' ) ).forEach( btn => {
+      btn.addEventListener( 'click', function( e ){
+        e.preventDefault();
+        e.stopPropagation();
+        closeSidebar();
+      });
     });
     sidebar.addEventListener( 'click', function( e ){
       e.stopPropagation();
@@ -392,9 +396,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
     let elemRect = this.getBoundingClientRect(),
       tooltipRect = tooltip.getBoundingClientRect(),
       top = elemRect.top + ( elemRect.height - tooltipRect.height ) / 2,
-      left = elemRect.left - tooltipRect.width - 2;
+      left = elemRect.left - tooltipRect.width + 4;
     if ( left < 0 ) {
-      left = elemRect.right + 2;
+      left = elemRect.right - 4;
     }
     tooltip.style.top = top + 'px';
     tooltip.style.left = left + 'px';
