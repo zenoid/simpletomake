@@ -223,7 +223,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
     Array.from( navLinks ).forEach( li => {
       li.classList.remove( 'selected' );
     });
-    navLinks[ num - 1 ].classList.add( 'selected' );
+    if ( num > 0 ) {
+      navLinks[ num - 1 ].classList.add( 'selected' );
+    }
   }
 
   function nextBtnAction()

@@ -78,6 +78,7 @@
     counter-reset: things;
     margin-top: 3rem;
     padding-right: 3rem;
+    max-width: 50em;
 
     li {
       counter-increment: things;
