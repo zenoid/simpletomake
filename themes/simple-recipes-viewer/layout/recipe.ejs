@@ -16,7 +16,8 @@
     <div class="content">
 
       <div class="recipeheader-main">
-        <h1><div class="sub"><span>Le 3 cose da sapere per fare <%- page.titleArticle %></span></div><%- page.title.replace( '(', '<span class="sub"><span>– ' ).replace( ')', '</span></span>' ) %></h1>
+        <h1><div class="sub"><span>Ricetta</span></div>Come fare <%- page.titleArticle %> <%- page.title.toLowerCase().replace( '(', '<div class="sub"><span>– ' ).replace( ')', '</span></div>' ) %></h1>
+        <h5>Le 3 cose da sapere</h5>
         <ol>
         <% for ( i = 0; i < page.principles.length; i++ ) { %>
           <li><%- page.principles[ i ] %></li>
