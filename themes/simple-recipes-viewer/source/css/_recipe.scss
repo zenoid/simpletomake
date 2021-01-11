@@ -24,6 +24,10 @@
 
     .content {
       @include flexColumn;
+
+      .recipeheader-image {
+        @include flexOrder( -1 );
+      }
     }
   }
 
@@ -83,7 +87,7 @@
   ol {
     counter-reset: things;
     padding-right: 3rem;
-    max-width: 50em;
+    max-width: 45em;
 
     li {
       counter-increment: things;
@@ -122,9 +126,12 @@
 
 .recipeheader-image {
   @include flexNoShrink;
+  text-align: center;
 
   img {
     width: 100%;
+    max-width: 30em;
+    margin: auto;
   }
 
   @media only screen and (max-width: $size-M) {

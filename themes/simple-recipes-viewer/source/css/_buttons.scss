@@ -63,10 +63,6 @@
 
 body:not(.touch) {
 
-  .btn:hover {
-    background-color: rgba( 255, 255, 255, 0.2 );
-  }
-
   .btn-icon:not(:disabled):hover {
     .icon {
       stroke: var( --color-hilite );

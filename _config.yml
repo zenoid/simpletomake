@@ -51,7 +51,8 @@ node_sass:
 
 # Minification
 js_concator:
-  enable: false
+  enable: true
+  bundle_path: '/js/scripts.js'
 js_minifier:
   enable: true
   mangle: true

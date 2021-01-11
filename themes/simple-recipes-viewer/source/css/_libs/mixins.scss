@@ -5,8 +5,6 @@
 ------------------------------------------------------------------------- */
 
 @mixin flex {
-  display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -326,50 +324,39 @@
 
 @mixin scale( $factor ) {
   -webkit-transform: scale( $factor );
-     -moz-transform: scale( $factor );
       -ms-transform: scale( $factor );
-       -o-transform: scale( $factor );
           transform: scale( $factor );
 }
 
 @mixin translate( $x, $y ) {
   -webkit-transform: translate( $x, $y );
-     -moz-transform: translate( $x, $y );
       -ms-transform: translate( $x, $y );
-       -o-transform: translate( $x, $y );
           transform: translate( $x, $y );
   -webkit-transform-style: preserve-3d;
-     -moz-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
 
 @mixin translateX( $x ) {
   -webkit-transform: translateX( $x );
-     -moz-transform: translateX( $x );
       -ms-transform: translateX( $x );
           transform: translateX( $x );
 }
 
 @mixin translateY( $y ) {
   -webkit-transform: translateY( $y );
-     -moz-transform: translateY( $y );
       -ms-transform: translateY( $y );
           transform: translateY( $y );
 }
 
 @mixin rotate( $squareAngles ) {
   -webkit-transform: rotate( $squareAngles * -90 * 1deg );
-     -moz-transform: rotate( $squareAngles * -90 * 1deg );
       -ms-transform: rotate( $squareAngles * -90 * 1deg );
-       -o-transform: rotate( $squareAngles * -90 * 1deg );
           transform: rotate( $squareAngles * -90 * 1deg );
 }
 
 @mixin transformOrigin( $values ) {
   -webkit-transform-origin: $values;
-     -moz-transform-origin: $values;
       -ms-transform-origin: $values;
-       -o-transform-origin: $values;
           transform-origin: $values;
 }
 
@@ -382,22 +369,16 @@ $default-ease: cubic-bezier(0.5, 0.0, 0.5, 1.0);
 
 @mixin transition( $property, $duration, $ease: $default-ease ) {
   -webkit-transition: $property $duration $ease;
-     -moz-transition: $property $duration $ease;
-       -o-transition: $property $duration $ease;
           transition: $property $duration $ease;
 }
 
 @mixin transitionTwo( $property1, $property2, $duration, $ease: $default-ease ) {
   -webkit-transition: $property1 $duration $ease, $property2 $duration $ease;
-     -moz-transition: $property1 $duration $ease, $property2 $duration $ease;
-       -o-transition: $property1 $duration $ease, $property2 $duration $ease;
           transition: $property1 $duration $ease, $property2 $duration $ease;
 }
 
 @mixin transitionDelay( $delay ) {
   -webkit-transition-delay: $delay;
-     -moz-transition-delay: $delay;
-       -o-transition-delay: $delay;
           transition-delay: $delay;
 }
 

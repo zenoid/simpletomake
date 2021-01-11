@@ -38,16 +38,14 @@
 
   li {
 
-    &.selected {
-      .btn {
-        color: var( --color-hilite );
-      }
-    }
-
     .btn {
       display: block;
       text-align: left;
       font-size: 0.9rem;
+    }
+
+    &.selected .btn {
+      color: var( --color-hilite );
     }
   }
 
@@ -68,6 +66,13 @@
 
   @media only screen and (min-width: $size-XL) {
     margin: 0.5rem 1rem;
+  }
+}
+
+body:not(.touch) {
+  .sidebar .btn:focus,
+  .sidebar .btn:hover {
+    background-color: rgba( 255, 255, 255, 0.2 );
   }
 }
 
