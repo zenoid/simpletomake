@@ -225,13 +225,12 @@ body:not(.touch) {
     }
   }
 
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1em;
-  }
-
   h4 {
     margin: 1rem 0 0.5rem;
+  }
+
+  & > h4 {
+    margin: 0 0 1rem 0;
   }
 
   p {
@@ -258,10 +257,7 @@ body:not(.touch) {
     .card-list > div {
       width: 100% !important;
       position: relative;
-
-      & + div {
-        margin-top: 1.5rem;
-      }
+      margin-top: 1.5rem;
     }
 
     h4,
@@ -281,6 +277,39 @@ body:not(.touch) {
       background: none;
     }
   }
+
+  @media only screen and (max-width: $size-XXS) {
+
+    h4,
+    p {
+      padding: 0 0 0 2rem;
+    }
+
+    & > h4 {
+      padding: 2rem 0 0 0;
+      border-top: 2px solid var( --color-white );
+    }
+
+    span {
+      font-size: 0.75rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+
+
+/*                      ABOUT: DISCLAIMER
+------------------------------------------------------------------------- */
+
+.about-disclaimer {
+  color: var( --color-white );
+  background: var( --color-main1 );
+  padding: 1rem 0;
+
+  @media only screen and (max-width: $size-XS) {
+    padding: 3rem 0;
+  }
 }
 
 
@@ -289,32 +318,31 @@ body:not(.touch) {
 ------------------------------------------------------------------------- */
 
 .about-footer {
-  padding: 0.5rem 0;
-  outline: none;
+  padding-top: 1rem;
 
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
-  h4 {
-    margin: 0.5rem 0;
+  @media only screen and (max-width: $size-XS) {
+    padding-bottom: 1rem;
   }
+}
 
-  .content:first-child {
-    .card-list {
-      grid-template-columns: 1fr 2fr;
-      column-gap: 1rem;
-      padding-bottom: 2rem;
-      margin-bottom: -2rem;
-      border-bottom: 2px solid var( --color-tag );
-    }
+.about-footer-keyboard {
+  padding-bottom: 0;
+
+  @media only screen and (max-width: $size-XXS) {
+    padding: 1.5rem;
   }
 }
 
 .about-footer-info {
 
   .card {
-    padding: 0.5rem 1rem 0.5rem 0;
+    border-top: 1px solid var( --color-gray );
+    padding: 1rem 0 0 0;
+    border-radius: 0;
   }
 
   @media only screen and (max-width: $size-S) {
@@ -328,6 +356,17 @@ body:not(.touch) {
     .card {
       padding-top: 1rem;
       padding-bottom: 0;
+    }
+  }
+}
+
+.touch {
+  @media only screen and (max-width: $size-S) {
+    .about-footer-info .cols > div:first-child {
+      .card {
+        border-top: none;
+        padding-top: 0;
+      }
     }
   }
 }

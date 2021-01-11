@@ -50,6 +50,7 @@
   display: inline-block;
   padding: 0.2em 0.4em;
   border: 1px solid var( --color-tag );
+  border-radius: 4px;
   @include transition( all, $transition-hover );
 }
 

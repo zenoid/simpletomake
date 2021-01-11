@@ -69,6 +69,27 @@
   }
 }
 
+.sidebar-help {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.25rem 0.5rem;
+
+  & > span:first-child {
+    display: inline-block;
+    line-height: 2rem;
+    font-size: 0.7rem;
+    color: var( --color-gray );
+    margin-right: 0.5rem;
+  }
+
+  .icon {
+    margin: 0;
+    vertical-align: middle;
+    stroke: var( --color-gray );
+  }
+}
+
 body:not(.touch) {
   .sidebar .btn:focus,
   .sidebar .btn:hover {

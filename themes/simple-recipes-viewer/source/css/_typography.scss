@@ -133,6 +133,11 @@ h4 {
   font-size: 1.5rem;
   line-height: 1.3;
   font-weight: $fontweight-normal;
+
+  strong {
+    display: block;
+    margin-bottom: 0.25em;
+  }
 }
 
 h5 {
@@ -205,11 +210,11 @@ h6 {
     line-height: 1.7rem;
     margin-left: 0.5rem;
   }
+}
 
-  &.key-icon {
-    padding: 0;
-    line-height: 0;
-  }
+.key-icon {
+  padding: 0;
+  line-height: 0;
 
   .icon {
     width: 1rem;

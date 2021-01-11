@@ -86,15 +86,34 @@ body.touch {
 
 .card-list {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
   column-gap: 2px;
   row-gap: 2px;
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
 
   @media only screen and (max-width: $size-S) {
     grid-template-columns: 1fr !important;
   }
+}
+
+.cols {
+  display: grid;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  width: 100%;
+
+  @media only screen and (max-width: $size-S) {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.cols-1-2 {
+  grid-template-columns: 1fr 2fr;
+}
+
+.cols-1-1-1 {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 
