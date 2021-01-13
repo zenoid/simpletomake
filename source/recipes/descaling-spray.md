@@ -12,7 +12,7 @@ titleArticle: uno
 principles:
   - "Per sciogliere il calcare presente sulle superfici, serve una <strong>sostanza acida mescolata ad acqua</strong>"
   - "Gli acidi più spesso utilizzati per uso domestico sono aceto e acido citrico, ma <strong>l'aceto è meno efficace e più inquinante</strong>"
-  - "La quantità ideale di acido citrico da usare è <strong>il 15% rispetto al peso dell'acqua</strong>"
+  - "La quantità ideale di acido citrico da usare è <strong>il 20% rispetto al peso dell'acqua</strong>"
 
 timeToMake: 5 minuti
 
@@ -21,7 +21,7 @@ comparisonPrices: [ [ 1, 1.5 ], [ 5, 10 ] ]
 comparisonPricesQty: "al litro"
 
 sources:
-  - '"Pulizie creative", Elisa Nicoli'
+  - '"Bolle in libertà", Elisa Nicoli'
 
 recipeIntro: [ "Cosa serve per fare circa", "di spray anticalcare" ]
 
@@ -29,14 +29,14 @@ recipeBase: { qty: 200, units: "ml" }
 
 ingredients:
   - { id: "citric",
-      ratio: 13.04,
+      ratio: 16.66,
       spec: 1.665,
       name: "Acido citrico",
       qty: 28,
       units: "gr",
       notes: "È preferibile usare quello <strong>anidro</strong>, più concentrato, ma anche <strong>monoidrato</strong> va bene per quest'uso. Si presenta in granuli bianchi." }
   - { id: "aqua",
-      ratio: 86.96,
+      ratio: 83.34,
       spec: 1,
       name: "Acqua",
       qty: 180,

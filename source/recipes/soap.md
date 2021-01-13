@@ -53,10 +53,10 @@ ingredients:
       units: "gr",
       notes: "Meglio se distillata, ma va benissimo quella di rubinetto. In alcune ricette si suggerisce di usare latte, infusi o succhi, ma non hanno effetti molto percepibili sul prodotto finito." }
   - { id: "perfume",
-      ratio: 2,
+      ratio: 3,
       name: "Oli essenziali",
-      qty: 20,
-      units: "gocce",
+      qty: 30,
+      units: "ml",
       notes: "Opzionali, per dare profumo o aggiungere proprietà al sapone. Solo gli oli essenziali sono efficaci: si possono aggiungere fiori, spezie o erbe come decorazione, ma aromi e proprietà verranno annullati dalla soda caustica." }
 
 recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> dell'olio sono differenti: se hai <strong>1 litro d'olio di oliva</strong> peserà circa <strong>916 grammi</strong>."
@@ -83,7 +83,7 @@ directions:
   - [ "Dopo aver sciolto tutta la soda caustica, lascia raffreddare la soluzione per mezz'ora o finché non avrà raggiunto <strong>40-50°C</strong>", "Se vuoi procedere &quot;a freddo&quot;, non lasciar raffreddare la soluzione." ]
   - [ "Versa nella pentola <span class='qtyspan'><span data-qty='oil'>1000</span> gr</span> di olio d'oliva, scaldalo fino a <strong>40-50°C</strong>, e poi versalo nel contenitore più grande", "Ricorda di pesare l'olio, non basarti sul volume. Se vuoi procedere &quot;a freddo&quot;, non scaldare l'olio: mettilo direttamente nel contenitore grande." ]
   - [ "Versa la soluzione di acqua e soda caustica nel barattolo con l’olio, girando col mestolo", "L'olio diventerà sempre più opaco." ]
-  - [ "Quando inizi a faticare col mestolo, aggiungi gli oli essenziali, e continua a mescolare con il frullatore ad immersione", "" ]
+  - [ "Quando inizi a faticare col mestolo, aggiungi gli oli essenziali, e continua a mescolare con il frullatore ad immersione", "Per rendere più persistente l'aroma, mescola gli oli in un po' di amido prima di aggiungerli al barattolo." ]
   - [ "Frulla finché il composto non sarà omogeneo e opaco, come una maionese", "Potrebbe volerci qualche minuto. Accendi e spegni il frullatore per evitare di surriscaldarlo." ]
   - [ "Quando il composto è pronto, versalo subito negli stampi", "Batti leggermente gli stampi sul tavolo per evitare bolle d'aria." ]
   - [ "Tieni gli stampi in un luogo arieggiato per <strong>24-48 ore</strong> e poi estrai i saponi, indossando i guanti", "Il lato esposto all'aria potrebbe essere  più chiaro: non è un problema. Se vuoi tagliarlo in pezzi più piccoli, questo è il momento giusto, perché il sapone sarà solido ma non duro." ]
