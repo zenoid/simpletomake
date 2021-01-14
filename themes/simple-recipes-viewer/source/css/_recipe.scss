@@ -6,7 +6,7 @@
 
 .recipeheader {
   background-color: var( --color-white );
-  padding: 3rem 0;
+  padding: 2rem 0 1rem 0;
   position: relative;
   z-index: $zindex-menu + 1;
   background-attachment: fixed;
@@ -32,7 +32,7 @@
   }
 
   @media only screen and (max-width: $size-XXS) {
-    padding: ( $btn-height + 1rem ) 0 1.5rem 0;
+    padding: ( $btn-height + 1rem ) 0 2rem 0;
   }
 
   .breadcrumb {
@@ -87,7 +87,7 @@
   ol {
     counter-reset: things;
     padding-right: 3rem;
-    max-width: 50em;
+    max-width: 45em;
 
     li {
       counter-increment: things;
@@ -116,7 +116,13 @@
 
   & + article section:first-child {
     min-height: auto;
-    padding-top: 0;
+    padding-top: 2rem;
+
+    @media only screen and (max-width: $size-S) {
+      .cols {
+        row-gap: 0;
+      }
+    }
   }
 }
 
@@ -140,6 +146,43 @@
 
   @media only screen and (max-width: $size-S) {
     margin-top: 1.5rem;
+  }
+}
+
+.recipeheader-meta {
+  position: absolute;
+  @include flex;
+  height: 3rem;
+  bottom: -1.5rem;
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  background-color: var( --color-dark );
+  color: var( --color-white );
+  overflow: hidden;
+
+  .icon {
+    stroke: var( --color-gray );
+    margin: 0.25rem;
+  }
+
+  & > div {
+    margin: 0 0.75rem 0 0.25rem;
+  }
+
+  h6 {
+    @include ellipsis;
+    font-size: 0.65rem;
+    color: var( --color-gray );
+    line-height: 1em;
+
+    & + span {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    left: 1rem;
+    right: 1rem;
   }
 }
 
@@ -326,30 +369,9 @@ section {
 .card-empty {
   padding: 1.5rem;
 
-  li {
-    margin: 0.5rem 0;
-  }
-
   p {
     font-size: 1rem;
     opacity: 0.8;
-  }
-}
-
-.card-time {
-  padding: 1.5rem;
-
-  h5 + span {
-    font-size: 2rem;
-    line-height: 2rem;
-  }
-
-  span + h5 {
-    margin-top: 1.5rem;
-  }
-
-  @media only screen and (max-width: $size-S) {
-    padding-bottom: 1rem;
   }
 }
 
@@ -422,7 +444,16 @@ body:not(.touch) {
 ------------------------------------------------------------------------- */
 
 .comparison {
-  padding: 0.5rem 0;
+  @include flex;
+
+  & > div {
+    width: 100%;
+    padding-top: 0.5rem;
+
+    & + div {
+      margin-left: 1rem;
+    }
+  }
 
   h6 {
     margin-bottom: 0.5rem;
@@ -432,10 +463,14 @@ body:not(.touch) {
     font-size: 0.75rem;
   }
 
-}
+  @media only screen and (max-width: $size-XS) {
+    @include flexColumn;
 
-h5 + .comparison {
-  margin-top: 0.5rem;
+    & > div + div {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+  }
 }
 
 .comparison-row {
@@ -480,6 +515,33 @@ h5 + .comparison {
       position: absolute;
       top: 0;
       left: 0;
+    }
+  }
+}
+
+
+
+/*                      SOURCES
+------------------------------------------------------------------------- */
+
+.sources {
+
+  li {
+    @include flex;
+
+    .icon {
+      margin: 0 0.5rem 0 0;
+      opacity: 0.4;
+    }
+
+    span {
+      font-size: 0.85rem;
+      padding: 0.2rem 0;
+      line-height: 1.1rem;
+    }
+
+    & + li {
+      margin-top: 0.5rem;
     }
   }
 }

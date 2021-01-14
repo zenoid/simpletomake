@@ -21,7 +21,7 @@ $color-tag:       lighten( nth( $colors, 2 ), 20% );
   --color-gray:   #666666;
   --color-hilite: #39E698;
   --color-tag:    #DEEEE7;
-  --color-cloak:  rgba( 0, 0, 0, 0.4 );
+  --color-cloak:  rgba( 0, 0, 0, 0.8 );
 
   @for $i from 1 through $sectionsNum {
     #{ '--color-main' + $i}: nth( $colors, $i );

@@ -17,8 +17,8 @@ principles:
 timeToMake: 7-8 ore
 timeToUse: 1-2 settimane
 sources:
-  - '"The Art of Fermentation", Sandor Katz'
-  - Carlo Nesler, fermentatore professionista
+  - [ 'book', '"The Art of Fermentation", Sandor Katz' ]
+  - [ 'star', 'Carlo Nesler, fermentatore professionista' ]
 
 recipeIntro: [ "Cosa serve per fare il kimchi con", "di verdure" ]
 

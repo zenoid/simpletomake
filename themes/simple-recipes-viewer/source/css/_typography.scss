@@ -55,15 +55,15 @@ p {
 }
 
 ::-moz-selection {
-  background: var( --color-main3 );
+  background: var( --color-hilite );
   text-shadow: none;
-  color: var( --color-white );
+  color: var( --color-dark );
 }
 
 ::selection {
-  background: var( --color-main3 );
+  background: var( --color-hilite );
   text-shadow: none;
-  color: var( --color-white );
+  color: var( --color-dark );
 }
 
 
@@ -141,7 +141,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.2;
   margin-bottom: 0.5em;
   color: var( --color-dark );

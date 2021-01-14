@@ -22,8 +22,8 @@ comparisonPrices: [ [ 15, 20 ], [ 20, 50 ] ]
 comparisonPricesQty: "al litro"
 
 sources:
-  - World Health Organization
-  - '"Scienza in Cucina", Dario Bressanini'
+  - [ 'article', 'World Health Organization' ]
+  - [ 'article', '"Scienza in Cucina", Dario Bressanini' ]
 
 recipeIntro: [ "Cosa serve per fare circa", "di disinfettante per mani" ]
 

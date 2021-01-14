@@ -21,7 +21,7 @@ comparisonPrices: [ [ 20, 50 ], [ 50, 200 ] ]
 comparisonPricesQty: "al kg"
 
 sources:
-  - Francesca Piccoletti, autoproduttrice professonista
+  - [ 'star', 'Francesca Piccoletti, autoproduttrice professonista' ]
 
 recipeIntro: [ "Cosa serve per fare circa", "di deodorante in crema" ]
 

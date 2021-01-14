@@ -22,9 +22,9 @@ comparisonPrices: [ [ 4, 7 ], [ 5, 10 ] ]
 comparisonPricesQty: "al kg"
 
 sources:
-  - '"Salt, Fat, Acid, Heat", Samin Nosrat'
-  - 'Davide Scabin, chef'
-  - '"LWT – Food Science and Technology journal"'
+  - [ 'book', '"Salt, Fat, Acid, Heat", Samin Nosrat' ]
+  - [ 'star', 'Davide Scabin, chef' ]
+  - [ 'article', 'LWT – Food Science and Technology journal' ]
 
 recipeIntro: [ "Cosa serve per fare maionese usando", "d'olio" ]
 

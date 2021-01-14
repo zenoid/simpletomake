@@ -21,7 +21,7 @@ comparisonPrices: [ [ 0.2, 0.5 ], [ 5, 20 ] ]
 comparisonPricesQty: "al litro"
 
 sources:
-  - '"The Art of Fermentation", Sandor Katz'
+  - [ 'book', '"The Art of Fermentation", Sandor Katz' ]
 
 recipeIntro: [ "Cosa serve per fare circa", "di ginger beer" ]
 

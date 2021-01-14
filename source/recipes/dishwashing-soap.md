@@ -22,8 +22,8 @@ comparisonPrices: [ [ 0.30, 1 ], [ 1.5, 3 ] ]
 comparisonPricesQty: "200gr solido vs 1lt liquido"
 
 sources:
-  - Elisa Nicoli, autoproduttrice professonista
-  - '"Scientific Soapmaking", Kevin M.Dunn'
+  - [ 'star', 'Elisa Nicoli, autoproduttrice professonista' ]
+  - [ 'book', '"Scientific Soapmaking", Kevin M.Dunn' ]
 
 recipeIntro: [ "Cosa serve per fare sapone con", "di olio" ]
 

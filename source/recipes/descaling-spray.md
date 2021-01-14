@@ -21,7 +21,7 @@ comparisonPrices: [ [ 1, 1.5 ], [ 5, 10 ] ]
 comparisonPricesQty: "al litro"
 
 sources:
-  - '"Bolle in libertà", Elisa Nicoli'
+  - [ 'book', '"Bolle in libertà", Elisa Nicoli' ]
 
 recipeIntro: [ "Cosa serve per fare circa", "di spray anticalcare" ]
 

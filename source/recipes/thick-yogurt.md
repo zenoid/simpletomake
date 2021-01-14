@@ -20,8 +20,8 @@ comparisonPrices: [ [ 1, 2 ], [ 3, 6 ] ]
 comparisonPricesQty: "al kg"
 
 sources:
-  - '"On Food and Cooking", Harold McGee'
-  - '"The Art of Fermentation", Sandor Katz'
+  - [ 'book', '"On Food and Cooking", Harold McGee' ]
+  - [ 'book', '"The Art of Fermentation", Sandor Katz' ]
 
 recipeIntro: [ "Cosa serve per fare", "di yogurt denso (<span data-qty='containers.150'>7</span> vasetti da 150ml)" ]
 

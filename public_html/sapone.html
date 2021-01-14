@@ -40,7 +40,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Bitter:wght@300;500&display=swap" rel="stylesheet">
   
-<link rel="stylesheet" href="/css/style.css?v=1610617945185.css">
+<link rel="stylesheet" href="/css/style.css?v=1610634138612.css">
 
 
 </head>
@@ -117,8 +117,18 @@
         </ol>
       </div>
 
-      <div class="recipeheader-image">
-        <img src="/recipes/covers/soap.jpg" alt="Sapone di marsiglia">
+      
+
+      <div class="recipeheader-meta">
+        <svg class="icon"><use href="images/svgdefs.svg#icon-clock"/></svg>
+        <div>
+          <h6>Si può fare in</h6>
+          <span>1 ora</span>
+        </div>
+        <div>
+          <h6>Si può usare dopo</h6>
+          <span>1 mese e mezzo</span>
+        </div>
       </div>
 
     </div>
@@ -129,48 +139,44 @@
 
     <section class="content section1">
 
-      <div class="card-list">
-        <div class="card-time">
-            <h5>Si può fare in</h5>
-            <span>1 ora</span>
-            <h5>Si può usare dopo</h5>
-            <span>1 mese e mezzo</span>
+      <div class="cols cols-1-2">
+
+        <div class="sources">
+          <div class="card-empty">
+            <h5>Riferimenti</h5>
+            <ul>
+              <li><svg class="icon"><use href="images/svgdefs.svg#icon-book"/></svg><span>"Scientific Soapmaking", Kevin M.Dunn</span></li>
+            </ul>
+          </div>
         </div>
 
         <div>
           <div class="card-empty">
             <h5>Rispetto ad un prodotto industriale</h5>
             <div class="comparison">
-              <h6>Ingredienti</h6>
-              <div class="comparison-row">
-                <ul><li></li><li></li><li></li><li></li></ul>
+              <div>
+                <h6>Ingredienti</h6>
+                <div class="comparison-row">
+                  <ul><li></li><li></li><li></li><li></li></ul>
+                </div>
+                <span>anziché</span>
+                <div class="comparison-row">
+                  <ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul><ul><li></li><li></li><li></li><li></li><li></li></ul>
+                </div>
               </div>
-              <span>anziché</span>
-              <div class="comparison-row">
-                <ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul><ul><li></li><li></li><li></li><li></li><li></li></ul>
+              <div>
+                <h6>Costo al kg</h6>
+                <div class="comparison-row">
+                  <h6>€ 1 - 5</h6>
+                  <div class="bar" style="width:17%"></div><div class="bar" style="width:3%"></div>
+                </div>
+                <span>anziché</span>
+                <div class="comparison-row">
+                  <h6>€ 10 - 30</h6>
+                  <div class="bar" style="width:100%"></div><div class="bar" style="width:33%"></div>
+                </div>
               </div>
             </div>
-            <div class="comparison">
-              <h6>Costo al kg</h6>
-              <div class="comparison-row">
-                <h6>€ 1 - 5</h6>
-                <div class="bar" style="width:17%"></div><div class="bar" style="width:3%"></div>
-              </div>
-              <span>anziché</span>
-              <div class="comparison-row">
-                <h6>€ 10 - 30</h6>
-                <div class="bar" style="width:100%"></div><div class="bar" style="width:33%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="card-empty">
-            <h5>Riferimenti</h5>
-            <ul>
-              <li>"Scientific Soapmaking", Kevin M.Dunn</li>
-            </ul>
           </div>
         </div>
 
@@ -524,7 +530,7 @@
     <div class="group">
       <button class="btn-icon hidden" id="btn-prev"><svg class="icon"><use href="images/svgdefs.svg#icon-arrow-up"/></svg></button>
       <ul class="navdots">
-        <li class="selected"><a href="#top" class="btn" data-tooltip="Principi"></a></li>
+        <li class="selected"><a href="#top" class="btn" data-tooltip="3 cose da sapere"></a></li>
         <li><a href="#ingredienti" class="btn" data-tooltip="Ingredienti"></a></li>
         <li><a href="#attrezzatura" class="btn" data-tooltip="Attrezzatura"></a></li>
         <li><a href="#ricetta" class="btn" data-tooltip="Ricetta"></a></li>

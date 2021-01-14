@@ -21,7 +21,7 @@ comparisonPrices: [ [ 8, 10 ], [ 15, 40 ] ]
 comparisonPricesQty: "al litro"
 
 sources:
-  - '"Scienza in Cucina", Dario Bressanini'
+  - [ 'article', '"Scienza in Cucina", Dario Bressanini' ]
 
 recipeIntro: [ "Cosa serve per fare circa", "di liquore al 40%" ]
 

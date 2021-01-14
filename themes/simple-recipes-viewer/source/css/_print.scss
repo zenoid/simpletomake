@@ -6,8 +6,15 @@
 
 @media print {
 
+  body,
+  .main {
+    overflow: auto;
+    height: 100%;
+  }
+
   .btn,
   .btn-icon,
+  input[type="checkbox"],
   .card-list-ordered .card:before,
   .card-title:after {
     display: none;
@@ -89,17 +96,8 @@
     }
   }
 
-  .card-time {
-    padding: 0.5rem 0;
-    color: var( --color-dark );
-
-    br {
-      display: none;
-    }
-
-    strong {
-      margin-left: 0.5rem;
-    }
+  .recipeheader-image {
+    display: none;
   }
 
   .home-about {

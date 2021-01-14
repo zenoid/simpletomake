@@ -27,8 +27,26 @@
         </ol>
       </div>
 
+      <% if ( page.posterimage ) { %>
       <div class="recipeheader-image">
-        <img src="/recipes/covers/<%= page.recipeid %>.jpg" alt="<%= page.title %>">
+        <img src="/recipes/covers/<%= page.posterimage %>.jpg" alt="<%= page.title %>">
+      </div>
+      <% } %>
+
+      <div class="recipeheader-meta">
+        <svg class="icon"><use xlink:href="images/svgdefs.svg#icon-clock"/></svg><%
+      if ( page.timeToMake ) { %>
+        <div>
+          <h6>Si può fare in</h6>
+          <span><%- page.timeToMake %></span>
+        </div><%
+      }
+      if ( page.timeToUse ) { %>
+        <div>
+          <h6>Si può <% if ( page.category === 'hygiene' ) { %>usare<% } else { %>consumare<% } %> dopo</h6>
+          <span><%- page.timeToUse %></span>
+        </div><%
+      } %>
       </div>
 
     </div>
@@ -39,65 +57,59 @@
 
     <section class="content section1">
 
-      <div class="card-list">
-        <div class="card-time"><%
-        if ( page.timeToMake ) { %>
-            <h5>Si può fare in</h5>
-            <span><%- page.timeToMake %></span><%
-        }
-        if ( page.timeToUse ) { %>
-            <h5>Si può <% if ( page.category === 'hygiene' ) { %>usare<% } else { %>consumare<% } %> dopo</h5>
-            <span><%- page.timeToUse %></span><%
-        } %>
-        </div>
+      <div class="cols cols-1-2">
 
-        <div><%
-          if ( page.comparisonIngredients || page.comparisonPrices ) { %>
-          <div class="card-empty">
-            <h5>Rispetto ad un prodotto industriale</h5><%
-            if ( page.comparisonIngredients ) { %>
-            <div class="comparison">
-              <h6>Ingredienti</h6>
-              <div class="comparison-row">
-                <% for ( j = 0; j < page.comparisonIngredients[ 0 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 0 ][ j ]-page.comparisonIngredients[ 0 ][ j-1 ] : page.comparisonIngredients[ 0 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %>
-              </div>
-              <span>anziché</span>
-              <div class="comparison-row">
-                <% for ( j = 0; j < page.comparisonIngredients[ 1 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 1 ][ j ]-page.comparisonIngredients[ 1 ][ j-1 ] : page.comparisonIngredients[ 1 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %>
-              </div>
-            </div><% }
-            if ( page.comparisonPrices ) {
-              var cPriceMax1 = +page.comparisonPrices[ 1 ][ 1 ],
-                cPriceMin1 = Math.round( page.comparisonPrices[ 1 ][ 0 ] / cPriceMax1 * 100 ),
-                cPriceMin0 = Math.round( page.comparisonPrices[ 0 ][ 0 ] / cPriceMax1 * 100 ),
-                cPriceMax0 = Math.round( page.comparisonPrices[ 0 ][ 1 ] / cPriceMax1 * 100 );
-            %>
-            <div class="comparison">
-              <h6>Costo <%- page.comparisonPricesQty %></h6>
-              <div class="comparison-row">
-                <h6>€ <%- page.comparisonPrices[ 0 ].join(' - ') %></strong></h6>
-                <div class="bar" style="width:<%- cPriceMax0 %>%"></div><div class="bar" style="width:<%- cPriceMin0 %>%"></div>
-              </div>
-              <span>anziché</span>
-              <div class="comparison-row">
-                <h6>€ <%- page.comparisonPrices[ 1 ].join(' - ') %></h6>
-                <div class="bar" style="width:100%"></div><div class="bar" style="width:<%- cPriceMin1 %>%"></div>
-              </div>
-            </div><% } %>
-          </div><% } %>
-        </div>
-
-        <div><%
+        <div class="sources"><%
         if ( page.sources ) { %>
           <div class="card-empty">
             <h5>Riferimenti</h5>
             <ul><%
             for ( i = 0; i < page.sources.length; i++ ) { %>
-              <li><%- page.sources[ i ] %></li><%
+              <li><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-<%= page.sources[ i ][ 0 ] %>"/></svg><span><%- page.sources[ i ][ 1 ] %></span></li><%
             } %>
             </ul>
           </div><%
         } %>
+        </div>
+
+        <div>
+          <div class="card-empty"><%
+          if ( page.comparisonIngredients || page.comparisonPrices ) { %>
+            <h5>Rispetto ad un prodotto industriale</h5><%
+          } %>
+            <div class="comparison"><%
+            if ( page.comparisonIngredients ) { %>
+              <div>
+                <h6>Ingredienti</h6>
+                <div class="comparison-row">
+                  <% for ( j = 0; j < page.comparisonIngredients[ 0 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 0 ][ j ]-page.comparisonIngredients[ 0 ][ j-1 ] : page.comparisonIngredients[ 0 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %>
+                </div>
+                <span>anziché</span>
+                <div class="comparison-row">
+                  <% for ( j = 0; j < page.comparisonIngredients[ 1 ].length; j++ ) { %><ul><% for ( i = 0; i < (j > 0? page.comparisonIngredients[ 1 ][ j ]-page.comparisonIngredients[ 1 ][ j-1 ] : page.comparisonIngredients[ 1 ][ j ]); i++ ) { %><li></li><% } %></ul><% } %>
+                </div>
+              </div><%
+            }
+            if ( page.comparisonPrices ) {
+              var cPriceMax1 = +page.comparisonPrices[ 1 ][ 1 ],
+                cPriceMin1 = Math.round( page.comparisonPrices[ 1 ][ 0 ] / cPriceMax1 * 100 ),
+                cPriceMin0 = Math.round( page.comparisonPrices[ 0 ][ 0 ] / cPriceMax1 * 100 ),
+                cPriceMax0 = Math.round( page.comparisonPrices[ 0 ][ 1 ] / cPriceMax1 * 100 ); %>
+              <div>
+                <h6>Costo <%- page.comparisonPricesQty %></h6>
+                <div class="comparison-row">
+                  <h6>€ <%- page.comparisonPrices[ 0 ].join(' - ') %></strong></h6>
+                  <div class="bar" style="width:<%- cPriceMax0 %>%"></div><div class="bar" style="width:<%- cPriceMin0 %>%"></div>
+                </div>
+                <span>anziché</span>
+                <div class="comparison-row">
+                  <h6>€ <%- page.comparisonPrices[ 1 ].join(' - ') %></h6>
+                  <div class="bar" style="width:100%"></div><div class="bar" style="width:<%- cPriceMin1 %>%"></div>
+                </div>
+              </div><%
+            } %>
+            </div>
+          </div>
         </div>
 
       </div>

@@ -22,7 +22,7 @@ comparisonPrices: [ [ 1, 5 ], [ 10, 30 ] ]
 comparisonPricesQty: "al kg"
 
 sources:
-  - '"Scientific Soapmaking", Kevin M.Dunn'
+  - [ 'book', '"Scientific Soapmaking", Kevin M.Dunn' ]
 
 recipeIntro: [ "Cosa serve per fare sapone con", "di olio d'oliva" ]
 
