@@ -40,7 +40,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Bitter:wght@300;500&display=swap" rel="stylesheet">
   
-<link rel="stylesheet" href="/css/style.css?v=1610634138611.css">
+<link rel="stylesheet" href="/css/style.css?v=1610705559933.css">
 
 
 </head>
@@ -110,7 +110,7 @@
         
           <li>Per disinfettare la nostra pelle da virus e batteri è sufficiente <strong>lavarla a fondo, per almeno 30 secondi, con acqua e sapone</strong></li>
         
-          <li>Un disinfettante per mani è utile solo nelle situazioni in cui non sono accessibili acqua e sapone</li>
+          <li>Un disinfettante per mani è utile <strong>solo nelle situazioni in cui non sono accessibili acqua e sapone</strong></li>
         
           <li>L'alcool è efficace nell’eliminare virus e batteri, soprattutto se utilizzato con una <strong>concentrazione del 60-80%</strong> in volume anziché puro</li>
         
@@ -348,7 +348,7 @@
       },
       "recipeCategory": "hygiene",
       "keywords": "ricetta, autoproduzione, casalingo, cucina, saponi, detergenti, detersivi, disinfettanti, fermentazioni, fermentati, pane, ingredienti, attrezzature, procedimento, uso, conservazione",
-      "description": "Per disinfettare la nostra pelle da virus e batteri è sufficiente <strong>lavarla a fondo, per almeno 30 secondi, con acqua e sapone</strong>. Un disinfettante per mani è utile solo nelle situazioni in cui non sono accessibili acqua e sapone. L'alcool è efficace nell’eliminare virus e batteri, soprattutto se utilizzato con una <strong>concentrazione del 60-80%</strong> in volume anziché puro. ",
+      "description": "Per disinfettare la nostra pelle da virus e batteri è sufficiente <strong>lavarla a fondo, per almeno 30 secondi, con acqua e sapone</strong>. Un disinfettante per mani è utile <strong>solo nelle situazioni in cui non sono accessibili acqua e sapone</strong>. L'alcool è efficace nell’eliminare virus e batteri, soprattutto se utilizzato con una <strong>concentrazione del 60-80%</strong> in volume anziché puro. ",
       "recipeIngredient": [
         "130 gr Alcool etilico", 
         "12 gr Acqua ossigenata", 
@@ -383,6 +383,13 @@
         }
       ]
     }
+  </script>
+
+  <script type="module">
+import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
+var el = document.querySelectorAll('.recipeheader-main li strong'), annotations = [];
+Array.from( el ).forEach( line => { annotations.push( annotate(line, { type: 'highlight', color: 'rgba(255,223,47,0.4)', multiline: true }) ); });
+annotationGroup( annotations ).show();
   </script>
 </div>
 

@@ -40,7 +40,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Bitter:wght@300;500&display=swap" rel="stylesheet">
   
-<link rel="stylesheet" href="/css/style.css?v=1610634138614.css">
+<link rel="stylesheet" href="/css/style.css?v=1610705559931.css">
 
 
 </head>
@@ -342,6 +342,13 @@
         }
       ]
     }
+  </script>
+
+  <script type="module">
+import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
+var el = document.querySelectorAll('.recipeheader-main li strong'), annotations = [];
+Array.from( el ).forEach( line => { annotations.push( annotate(line, { type: 'highlight', color: 'rgba(255,223,47,0.4)', multiline: true }) ); });
+annotationGroup( annotations ).show();
   </script>
 </div>
 

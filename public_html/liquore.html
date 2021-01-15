@@ -40,7 +40,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Bitter:wght@300;500&display=swap" rel="stylesheet">
   
-<link rel="stylesheet" href="/css/style.css?v=1610634138612.css">
+<link rel="stylesheet" href="/css/style.css?v=1610705559934.css">
 
 
 </head>
@@ -110,9 +110,9 @@
         
           <li>L'alcool puro ha il potere di estrarre le sostanze aromatiche contenute in molti ingredienti (vegetali e non), e <strong>basta aggiungere acqua e zucchero ad un infuso alcolico per ottenere un liquore</strong></li>
         
-          <li>Le ricette tradizionali parlano spesso di 15-40 giorni di infusione in alcool, ma per gli ingredienti più delicati la maggior parte degli aromi viene estratta nei primissimi giorni: <strong>infusioni più lunghe non sono necessarie, e possono anche essere dannose</strong></li>
+          <li>Le ricette tradizionali parlano spesso di 15-40 giorni di infusione in alcool, ma per gli ingredienti più delicati gran parte degli aromi viene estratta nelle prime ore: <strong>infusioni più lunghe non sono necessarie, e possono anche essere dannose</strong></li>
         
-          <li>Lo zucchero aggiunto non si trasformerà in alcool: <strong>il grado alcolico del liquore sarà determinato solamente dalla proporzione di alcool etilico sul volume totale</strong></li>
+          <li>Lo zucchero aggiunto non si trasformerà in alcool: il grado alcolico del liquore sarà determinato solamente dalla <strong>proporzione di alcool etilico sul volume totale</strong></li>
         
         </ol>
       </div>
@@ -395,7 +395,7 @@
       },
       "recipeCategory": "food",
       "keywords": "ricetta, autoproduzione, casalingo, cucina, saponi, detergenti, detersivi, disinfettanti, fermentazioni, fermentati, pane, ingredienti, attrezzature, procedimento, uso, conservazione",
-      "description": "L'alcool puro ha il potere di estrarre le sostanze aromatiche contenute in molti ingredienti (vegetali e non), e <strong>basta aggiungere acqua e zucchero ad un infuso alcolico per ottenere un liquore</strong>. Le ricette tradizionali parlano spesso di 15-40 giorni di infusione in alcool, ma per gli ingredienti più delicati la maggior parte degli aromi viene estratta nei primissimi giorni: <strong>infusioni più lunghe non sono necessarie, e possono anche essere dannose</strong>. Lo zucchero aggiunto non si trasformerà in alcool: <strong>il grado alcolico del liquore sarà determinato solamente dalla proporzione di alcool etilico sul volume totale</strong>. ",
+      "description": "L'alcool puro ha il potere di estrarre le sostanze aromatiche contenute in molti ingredienti (vegetali e non), e <strong>basta aggiungere acqua e zucchero ad un infuso alcolico per ottenere un liquore</strong>. Le ricette tradizionali parlano spesso di 15-40 giorni di infusione in alcool, ma per gli ingredienti più delicati gran parte degli aromi viene estratta nelle prime ore: <strong>infusioni più lunghe non sono necessarie, e possono anche essere dannose</strong>. Lo zucchero aggiunto non si trasformerà in alcool: il grado alcolico del liquore sarà determinato solamente dalla <strong>proporzione di alcool etilico sul volume totale</strong>. ",
       "recipeIngredient": [
         "340 gr Alcool etilico", 
         "Erbe, bacche o agrumi", 
@@ -446,6 +446,13 @@
         }
       ]
     }
+  </script>
+
+  <script type="module">
+import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
+var el = document.querySelectorAll('.recipeheader-main li strong'), annotations = [];
+Array.from( el ).forEach( line => { annotations.push( annotate(line, { type: 'highlight', color: 'rgba(255,223,47,0.4)', multiline: true }) ); });
+annotationGroup( annotations ).show();
   </script>
 </div>
 

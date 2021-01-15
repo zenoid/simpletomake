@@ -40,7 +40,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Bitter:wght@300;500&display=swap" rel="stylesheet">
   
-<link rel="stylesheet" href="/css/style.css?v=1610634138611.css">
+<link rel="stylesheet" href="/css/style.css?v=1610705559932.css">
 
 
 </head>
@@ -110,7 +110,7 @@
         
           <li>Si possono produrre semplici detersivi per piatti anche con limone, sale e aceto, ma tendono ad avere cattivo odore, e <strong>hanno un potere sgrassante molto limitato</strong></li>
         
-          <li>Per lavare i piatti, è sufficiente un sapone di marsiglia al quale aggiungere <strong>un sequestrante che cattura il calcare presente nell'acqua ed evita aloni, e un abrasivo come la polvere di caffè</strong></li>
+          <li>Per lavare i piatti, è sufficiente un sapone di marsiglia al quale aggiungere <strong>un sequestrante</strong> che cattura il calcare presente nell'acqua ed evita aloni, e <strong>un abrasivo</strong> come la polvere di caffè</li>
         
           <li>A differenza dei saponi per il corpo, quelli per bucato, superfici o piatti possono essere fatti con <strong>una quantità di soda caustica leggermente superiore a quella che reagisce con l'olio</strong></li>
         
@@ -485,7 +485,7 @@
       },
       "recipeCategory": "hygiene",
       "keywords": "ricetta, autoproduzione, casalingo, cucina, saponi, detergenti, detersivi, disinfettanti, fermentazioni, fermentati, pane, ingredienti, attrezzature, procedimento, uso, conservazione",
-      "description": "Si possono produrre semplici detersivi per piatti anche con limone, sale e aceto, ma tendono ad avere cattivo odore, e <strong>hanno un potere sgrassante molto limitato</strong>. Per lavare i piatti, è sufficiente un sapone di marsiglia al quale aggiungere <strong>un sequestrante che cattura il calcare presente nell'acqua ed evita aloni, e un abrasivo come la polvere di caffè</strong>. A differenza dei saponi per il corpo, quelli per bucato, superfici o piatti possono essere fatti con <strong>una quantità di soda caustica leggermente superiore a quella che reagisce con l'olio</strong>. ",
+      "description": "Si possono produrre semplici detersivi per piatti anche con limone, sale e aceto, ma tendono ad avere cattivo odore, e <strong>hanno un potere sgrassante molto limitato</strong>. Per lavare i piatti, è sufficiente un sapone di marsiglia al quale aggiungere <strong>un sequestrante</strong> che cattura il calcare presente nell'acqua ed evita aloni, e <strong>un abrasivo</strong> come la polvere di caffè. A differenza dei saponi per il corpo, quelli per bucato, superfici o piatti possono essere fatti con <strong>una quantità di soda caustica leggermente superiore a quella che reagisce con l'olio</strong>. ",
       "recipeIngredient": [
         "350 gr Olio di oliva", 
         "150 gr Olio di cocco", 
@@ -554,6 +554,13 @@
         }
       ]
     }
+  </script>
+
+  <script type="module">
+import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
+var el = document.querySelectorAll('.recipeheader-main li strong'), annotations = [];
+Array.from( el ).forEach( line => { annotations.push( annotate(line, { type: 'highlight', color: 'rgba(255,223,47,0.4)', multiline: true }) ); });
+annotationGroup( annotations ).show();
   </script>
 </div>
 

@@ -11,7 +11,7 @@ titleArticle: un
 
 principles:
   - "Per disinfettare la nostra pelle da virus e batteri è sufficiente <strong>lavarla a fondo, per almeno 30 secondi, con acqua e sapone</strong>"
-  - "Un disinfettante per mani è utile solo nelle situazioni in cui non sono accessibili acqua e sapone"
+  - "Un disinfettante per mani è utile <strong>solo nelle situazioni in cui non sono accessibili acqua e sapone</strong>"
   - "L'alcool è efficace nell’eliminare virus e batteri, soprattutto se utilizzato con una <strong>concentrazione del 60-80%</strong> in volume anziché puro"
 
 timeToMake: 5 minuti

@@ -11,7 +11,7 @@ titleArticle: il
 
 principles:
   - "Si possono produrre semplici detersivi per piatti anche con limone, sale e aceto, ma tendono ad avere cattivo odore, e <strong>hanno un potere sgrassante molto limitato</strong>"
-  - "Per lavare i piatti, è sufficiente un sapone di marsiglia al quale aggiungere <strong>un sequestrante che cattura il calcare presente nell'acqua ed evita aloni, e un abrasivo come la polvere di caffè</strong>"
+  - "Per lavare i piatti, è sufficiente un sapone di marsiglia al quale aggiungere <strong>un sequestrante</strong> che cattura il calcare presente nell'acqua ed evita aloni, e <strong>un abrasivo</strong> come la polvere di caffè"
   - "A differenza dei saponi per il corpo, quelli per bucato, superfici o piatti possono essere fatti con <strong>una quantità di soda caustica leggermente superiore a quella che reagisce con l'olio</strong>"
 
 timeToMake: 1 ora
