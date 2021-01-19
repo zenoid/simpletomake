@@ -12,31 +12,50 @@
     height: 100%;
   }
 
+  nav,
+  .logo,
+  .breadcrumb,
+  .sidebar,
   .btn,
   .btn-icon,
   input[type="checkbox"],
   .card-list-ordered .card:before,
-  .card-title:after {
+  .card-title:after,
+  .rough-annotation,
+  .recipeheader-image,
+  .about-footer {
     display: none;
+  }
+
+  .home-main .btn {
+    display: inline-block;
+  }
+
+  * {
+    background: none !important;
+    color: var( --color-dark ) !important;
+  }
+
+  .icon {
+    stroke: var( --color-gray ) !important;
+    opacity: 0.5 !important;
   }
 
   section {
     min-height: 0;
-    padding: 0.5rem 0;
-
-    &:not(:first-child) {
-      border-top: 1px solid var( --color-gray );
-    }
-  }
-
-  .card-list {
-    & > div {
-      width: 100%;
-    }
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 
   p {
     font-size: 1rem;
+  }
+
+  .note {
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    color: var( --color-gray ) !important;
+    border-left: 1px solid rgba( 0, 0, 0, 0.2 );
   }
 
   h1,
@@ -44,30 +63,24 @@
   h3,
   h4,
   h5 {
-    color: var( --color-dark ) !important;
+    padding: 0 !important;
 
     .sub {
-      font-size: 1em;
       display: block;
-      margin-right: 0.5rem;
-
-      & > span:not(.quantity) {
-        opacity: 1;
-      }
     }
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
-  h2 {
-    font-size: 1.5rem;
+  h2,
+  .section-usage h3 {
+    font-size: 2rem;
+    font-weight: $fontweight-bold;
   }
 
   h3 {
-    font-size: 1rem;
-
     br {
       display: none;
     }
@@ -77,32 +90,52 @@
     }
   }
 
+  .recipeheader ol {
+    max-width: 100%;
+  }
+
+  .cols,
+  .card-list {
+    display: block;
+  }
+
+  .card,
+  .card-body,
+  .card-empty {
+    padding: 0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .card,
+  .card-empty,
+  .cols > div {
+    margin-top: 1rem;
+  }
+
   .ingredient,
   .quantity {
     display: inline-block;
     padding: 0;
   }
 
-  .card,
-  .card-empty {
-    padding: 0.5rem 0 !important;
-    height: calc( 100% ) !important;
-    page-break-inside: avoid;
-    break-inside: avoid;
-
-    p,
-    li {
-      color: var( --color-dark );
+  .comparison-row {
+    li,
+    .bar {
+      border: 1px solid var( --color-dark );
     }
   }
 
-  .recipeheader-image {
-    display: none;
+  .about-intro p {
+    padding: 0;
   }
 
-  .home-about {
-    background: none;
-    color: var( --color-dark );
+  .about-sources .card-list > div {
+    margin-top: 1rem;
+
+    span {
+      display: none;
+    }
   }
 }
 
