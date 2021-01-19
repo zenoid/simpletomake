@@ -49,9 +49,8 @@
     }
 
     @media only screen and (max-width: $size-XXS) {
-      left: auto;
-      right: 0;
-      padding: 0 1rem;
+      left: 0;
+      padding: 0 1.5rem;
     }
   }
 
@@ -238,7 +237,40 @@ section {
       padding: 1.5rem 0 0 0;
 
       &:last-of-type {
-        padding-bottom: 5rem;
+        padding-bottom: 2.5rem;
+      }
+    }
+  }
+}
+
+
+
+/*                      RECIPE FOOTER
+------------------------------------------------------------------------- */
+
+.recipefooter {
+  background-color: var( --color-white );
+  color: var( --color-dark );
+
+  .btn-icon {
+    color: var( --color-gray );
+    margin-right: 1rem;
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    padding: 1.5rem 0;
+
+    .btn-icon {
+      @include flex;
+      @include flexMiddle;
+      margin: 0;
+
+      .icon {
+        @include flexNoShrink;
+      }
+
+      span {
+        line-height: 1.1;
       }
     }
   }

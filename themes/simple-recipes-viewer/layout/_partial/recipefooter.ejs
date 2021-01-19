@@ -1,0 +1,43 @@
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Recipe",
+      "name": "<%- page.title %>",
+      "image": "<%- config.url %>/recipes/images/<%- page.recipeid + '-' + config.language %>.png",
+      "author": {
+        "@type": "Organization",
+        "name": "simpletomake.it"
+      },
+      "recipeCategory": "<%- page.category %>",
+      "keywords": "<%- __('keywords') %>",
+      "description": "<% for ( i = 0; i < page.principles.length; i++ ) { %><%- page.principles[ i ] %>. <% } %>",
+      "recipeIngredient": [<%
+        var ingrSchema = [];
+        for ( i = 0; i < page.ingredients.length; i++ ) {
+          if ( page.ingredients[ i ].name ) {
+            ingrSchema.push( page.ingredients[ i ] );
+          }
+        }
+        for ( i = 0; i < ingrSchema.length; i++ ) { %>
+        "<% if ( ingrSchema[ i ].qty ) { %><%- ingrSchema[ i ].qty %> <%- ingrSchema[ i ].units %> <% } %><%- ingrSchema[ i ].name %>"<% if ( i < ingrSchema.length - 1 ) { %>, <% } %><% } %>
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "9"
+      },
+      "recipeInstructions": [<% for ( i = 0; i < page.directions.length; i++ ) { %>
+        {
+          "@type": "HowToStep",
+          "text": "<%- page.directions[ i ] %>"
+        }<% if ( i < page.directions.length - 1 ) { %>, <% } %><% } %>
+      ]
+    }
+  </script>
+
+  <script type="module">
+import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
+var el = document.querySelectorAll('.recipeheader-main li strong'), annotations = [];
+Array.from( el ).forEach( line => { annotations.push( annotate(line, { type: 'highlight', color: 'rgba(255,223,47,0.4)', multiline: true }) ); });
+annotationGroup( annotations ).show();
+  </script>

@@ -36,16 +36,26 @@ body {
     .main {
       overflow: hidden;
       height: 100%;
+      padding-bottom: 2.5rem;
     }
   }
 }
 
 
 
-/*                      HIDE ON MOBILE
+/*                      SHOW/HIDE ON MOBILE
 ------------------------------------------------------------------------- */
 
+.mobileshow {
+  display: none;
+}
+
 @media only screen and (max-width: $size-XXS) {
+
+  .mobileshow {
+    display: block;
+  }
+
   .mobilehide {
     display: none;
   }

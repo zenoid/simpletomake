@@ -40,7 +40,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Bitter:wght@300;500&display=swap" rel="stylesheet">
   
-<link rel="stylesheet" href="/css/style.css?v=1611048619466.css">
+<link rel="stylesheet" href="/css/style.css?v=1611063566588.css">
 
 
 </head>
@@ -54,6 +54,13 @@
       <a href="/" class="btn-icon btn-mainnavopen" data-tooltip="Ricette"><svg class="icon"><use href="images/svgdefs.svg#icon-list"/></svg></a>
       <a href="about.html" class="btn-icon" data-tooltip="Cos'è <strong>Simple To Make It</strong>"><svg class="icon"><use href="images/svgdefs.svg#icon-about"/></svg></a>
     </div>
+
+    <div class="div"></div>
+    <div class="group mobileshow">
+      <button class="btn-icon hidden btn-prev"><svg class="icon"><use href="images/svgdefs.svg#icon-arrow-up"/></svg></button>
+      <button class="btn-icon hidden btn-next"><svg class="icon"><use href="images/svgdefs.svg#icon-arrow-down"/></svg></button>
+    </div>
+
   </nav>
 <div class="sidebar">
 
@@ -368,7 +375,16 @@
 
     </section>
 
+    <div class="recipefooter">
+      <div class="content">
+        <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: Maionese (classica o vegan)" target="_blank" class="btn-icon" tabindex="-1"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-mail"/></svg><span>Segnala errori o suggerimenti</span></a>');</script>
+        <a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/mayo.md" target="_blank" class="btn-icon" tabindex="-1"><svg class="icon"><use href="images/svgdefs.svg#icon-pr"/></svg><span>Proponi modifiche a questa ricetta su Github</span></a>
+      </div>
+    </div>
+
   </article>
+</div>
+
 
   <script type="application/ld+json">
     {
@@ -438,30 +454,23 @@ var el = document.querySelectorAll('.recipeheader-main li strong'), annotations 
 Array.from( el ).forEach( line => { annotations.push( annotate(line, { type: 'highlight', color: 'rgba(255,223,47,0.4)', multiline: true }) ); });
 annotationGroup( annotations ).show();
   </script>
-</div>
-
-
   <nav class="nav-tools">
     <div class="group">
       <button class="btn-icon btn-icon-minus" data-tooltip="Diminuisci la quantità base di <strong>50gr</strong>"><svg class="icon"><use href="images/svgdefs.svg#icon-minus"/></svg></button>
       <button class="btn-icon btn-icon-plus" data-tooltip="Aumenta la quantità base di <strong>50gr</strong>"><svg class="icon"><use href="images/svgdefs.svg#icon-plus"/></svg></button>
     </div>
     <div class="div"></div>
-    <div class="group">
-      <button class="btn-icon hidden" id="btn-prev"><svg class="icon"><use href="images/svgdefs.svg#icon-arrow-up"/></svg></button>
-      <ul class="navdots">
-        <li class="selected"><a href="#top" class="btn" data-tooltip="3 cose da sapere"></a></li>
-        <li><a href="#ingredienti" class="btn" data-tooltip="Ingredienti"></a></li>
-        <li><a href="#attrezzatura" class="btn" data-tooltip="Attrezzatura"></a></li>
-        <li><a href="#ricetta" class="btn" data-tooltip="Ricetta"></a></li>
-        <li><a href="#uso" class="btn" data-tooltip="Uso e conservazione"></a></li>
-      </ul>
-      <button class="btn-icon hidden" id="btn-next"><svg class="icon"><use href="images/svgdefs.svg#icon-arrow-down"/></svg></button>
-    </div>
-    <div class="div mobilehide"></div>
-    <div class="group mobilehide">
-      <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: Maionese (classica o vegan)" target="_blank" class="btn-icon" tabindex="-1" data-tooltip="Segnala errori o suggerimenti"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-mail"/></svg></a>');</script>
-      <a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/mayo.md" target="_blank" class="btn-icon" tabindex="-1" data-tooltip="Proponi modifiche a questa ricetta su Github"><svg class="icon"><use href="images/svgdefs.svg#icon-pr"/></svg></a>
+    <ul class="group navdots">
+      <li class="selected"><a href="#top" class="btn" data-tooltip="3 cose da sapere"></a></li>
+      <li><a href="#ingredienti" class="btn" data-tooltip="Ingredienti"></a></li>
+      <li><a href="#attrezzatura" class="btn" data-tooltip="Attrezzatura"></a></li>
+      <li><a href="#ricetta" class="btn" data-tooltip="Ricetta"></a></li>
+      <li><a href="#uso" class="btn" data-tooltip="Uso e conservazione"></a></li>
+    </ul>
+    <div class="div"></div>
+    <div class="group group-hilite">
+      <button class="btn-icon hidden btn-prev"><svg class="icon"><use href="images/svgdefs.svg#icon-arrow-up"/></svg></button>
+      <button class="btn-icon hidden btn-next"><svg class="icon"><use href="images/svgdefs.svg#icon-arrow-down"/></svg></button>
     </div>
   </nav>
 

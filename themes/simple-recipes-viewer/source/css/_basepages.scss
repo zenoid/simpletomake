@@ -52,7 +52,7 @@
     }
 
     @media only screen and (max-width: $size-XXS) {
-      padding: 4rem 1.5rem 1.5rem 1.5rem !important;
+      padding: 2rem 1.5rem 1.5rem 1.5rem !important;
     }
   }
 
@@ -161,7 +161,7 @@ body:not(.touch) {
 
   @media only screen and (max-width: $size-XS) {
     @include flexColumn;
-    padding-top: 4rem !important;
+    padding-top: 2rem !important;
 
     .logo {
       width: 100%;

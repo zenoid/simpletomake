@@ -30,6 +30,19 @@
   cursor: pointer;
   background: none;
   @include transition( all, $transition-hover );
+  color: var( --color-white );
+
+  .icon {
+    stroke: currentColor;
+  }
+
+  span {
+    display: inline-block;
+    line-height: $btn-height;
+    vertical-align: top;
+    font-size: 0.9rem;
+    color: currentColor;
+  }
 
   &:disabled {
     cursor: auto;
@@ -64,9 +77,7 @@
 body:not(.touch) {
 
   .btn-icon:not(:disabled):hover {
-    .icon {
-      stroke: var( --color-hilite );
-    }
+    color: var( --color-hilite );
   }
 
   .about-footer-info a:hover {

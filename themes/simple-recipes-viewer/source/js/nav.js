@@ -13,8 +13,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
     sections = document.querySelectorAll( 'section' ),
     navLinks = document.querySelectorAll( '.navdots li' ),
     navItems = Array.from( sections ).map( s => s.id ),
-    prevBtn = document.getElementById( 'btn-prev' ),
-    nextBtn = document.getElementById( 'btn-next' ),
+    prevBtn = document.querySelectorAll( '.btn-prev' ),
+    nextBtn = document.querySelectorAll( '.btn-next' ),
     scroller,
     winHeight,
     scrolling;
@@ -38,11 +38,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   function setRecipeNav( num )
   {
-    if ( num > 1 ) {
-      prevBtn.disabled = false;
-    } else {
-      prevBtn.disabled = true;
-    }
+    Array.from( prevBtn ).forEach( btn => {
+      btn.disabled = ( num === 1 );
+    });
     Array.from( navLinks ).forEach( li => {
       li.classList.remove( 'selected' );
     });
@@ -58,6 +56,10 @@ document.addEventListener( 'DOMContentLoaded', function() {
     if ( s.num <= sectionsNum ) {
       setRecipeNav( s.num );
       el = document.getElementById( s.label );
+      hash = '#' + s.label;
+      scrollToSection( el, hash );
+    } else {
+      el = document.querySelector( '.recipefooter' );
       hash = '#' + s.label;
       scrollToSection( el, hash );
     }
@@ -86,8 +88,12 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
   function enableArrowNav()
   {
-    nextBtn.addEventListener( 'click', nextBtnAction );
-    prevBtn.addEventListener( 'click', prevBtnAction );
+    Array.from( nextBtn ).forEach( btn => {
+      btn.addEventListener( 'click', nextBtnAction );
+    });
+    Array.from( prevBtn ).forEach( btn => {
+      btn.addEventListener( 'click', prevBtnAction );
+    });
   }
 
   function getSection( diff = 0 )
@@ -110,12 +116,16 @@ document.addEventListener( 'DOMContentLoaded', function() {
         window.history.replaceState( null, null, h !== '#'? h : ' ' );
         setRecipeNav( s.num );
       }
-      nextBtn.disabled = ( s.num >= sectionsNum )
+      Array.from( nextBtn ).forEach( btn => {
+        btn.disabled = ( s.num >= sectionsNum ) && ( window.innerHeight + scroller.scrollTop >= scroller.scrollHeight - 5 );
+      });
     } else {
       if ( !scrolling && hash != '' ) {
         window.history.replaceState( null, null, ' ' );
       }
-      nextBtn.disabled = true;
+      Array.from( nextBtn ).forEach( btn => {
+        btn.disabled = true;
+      });
     }
   }
 
@@ -125,7 +135,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
       scroller.onscroll = null;
     }
     window.onscroll = null;
-    if ( document.querySelector( 'nav' ).offsetWidth <= 64 ) {
+    if ( document.documentElement.scrollHeight === window.innerHeight ) {
       scroller = document.querySelector( '.main' );
       winHeight = scroller.offsetHeight;
       scroller.onscroll = checkScroll;
@@ -142,7 +152,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
     setupMainEl();
     window.onresize = setupMainEl;
     enableArrowNav();
-    nextBtn.disabled = false;
+    Array.from( nextBtn ).forEach( btn => {
+      btn.disabled = false;
+    });
     if ( location.hash ) {
       var s = getSection();
       article.className = 'section' + s.num;

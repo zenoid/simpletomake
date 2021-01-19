@@ -23,6 +23,12 @@ nav {
     }
   }
 
+  .group-hilite {
+    .btn-icon {
+      background-color: var( --color-cloak );
+    }
+  }
+
   &.nav-main {
     left: 0;
   }
@@ -59,13 +65,14 @@ nav {
     @include flexRow;
 
     &.nav-main {
-      position: absolute;
+      top: auto;
+      bottom: 0;
+      z-index: $zindex-overlay;
+      background-color: var( --color-cloak );
     }
 
     &.nav-tools {
-      top: auto;
-      bottom: 0;
-      background-color: var( --color-cloak );
+      display: none;
     }
 
     .btn-icon {
@@ -109,17 +116,17 @@ nav {
   a {
     display: block;
     width: 100%;
-    height: 2.25rem;
+    height: $btn-height + 0.1rem;
     position: relative;
 
     &:after {
       content: '';
       position: absolute;
-      top: 0.125rem;
+      top: 0.05rem;
       left: 50%;
       @include translateX( -50% );
-      width: 0.25rem;
-      height: 2rem;
+      width: 0.5rem;
+      height: $btn-height;
       border-radius: 2px;
       background-color: var( --color-white );
       @include transition( all, $transition-hover );
@@ -136,7 +143,7 @@ nav {
     display: none;
   }
 
-  @media only screen and (max-height: 30rem) {
+  @media only screen and (max-height: 25em) {
     display: none;
   }
 }
