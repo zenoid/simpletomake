@@ -16,6 +16,10 @@
   border-radius: 4px;
   @include transition( background-color, $transition-slide );
   pointer-events: none;
+
+  @media only screen and (max-width: $size-XXS) {
+    display: none;
+  }
 }
 
 

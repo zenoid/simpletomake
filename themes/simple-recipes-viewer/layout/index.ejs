@@ -2,7 +2,7 @@
     <div class="content">
 
       <div class="home-logo">
-        <img src="images/simpletomake-logo.svg" alt="Simple to Make it">
+        <img src="/images/simpletomake-logo.svg" alt="Simple to Make it">
       </div>
 
       <div class="home-title">
@@ -21,7 +21,7 @@
         <ul class="home-menu"><%
         recipes_hygiene.forEach( recipe => {
           recipeLabel = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' ); %>
-          <li><a href="<%- recipe.path %>" class="btn"><%- recipeLabel %></a></li><%
+          <li><a href="/<%- recipe.path %>" class="btn"><%- recipeLabel %></a></li><%
         }) %>
         </ul>
       </div>
@@ -31,7 +31,7 @@
         <ul class="home-menu"><%
         recipes_food.forEach( recipe => {
           recipeLabel = recipe.title.replace( '(', '<span>' ).replace( ')', '</span>' ); %>
-          <li><a href="<%- recipe.path %>" class="btn"><%- recipeLabel %></a></li><%
+          <li><a href="/<%- recipe.path %>" class="btn"><%- recipeLabel %></a></li><%
         }) %>
         </ul>
       </div>

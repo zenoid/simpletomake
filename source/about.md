@@ -1,5 +1,6 @@
 ---
 layout: about
+title: "Cos'è <strong>Simple to Make it</strong>"
 
 introBlocks:
   - "Ti sei abituato ad essere consumatore: <strong>torna ad essere produttore</strong>"

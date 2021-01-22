@@ -1,0 +1,14 @@
+<h1><%= page.title %></h1>
+
+<%= page.content %>
+
+<%
+  var ingredients = site.pages.filter( p => p.layout === 'ingredient' )
+    .sort( 'name' );
+%>
+
+<ul><%
+ingredients.forEach( ingr => { %>
+  <li><a href="/<%- ingr.path %>"><%- ingr.name %></a></li><%
+}) %>
+</ul>

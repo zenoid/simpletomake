@@ -6,10 +6,7 @@
 
     <div class="nav-main-wrapper">
       <nav class="nav-main">
-        <div class="group">
-          <a href="/" class="btn-icon btn-mainnavopen" data-tooltip="Ricette"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-list"/></svg></a>
-          <a href="about.html" class="btn-icon" data-tooltip="Cos'è <strong>Simple To Make It</strong>"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-about"/></svg></a>
-        </div>
+        <%- partial('_partial/nav-main') %>
       </nav>
     </div>
 
@@ -34,7 +31,7 @@
       <% } %>
 
       <div class="recipeheader-meta">
-        <svg class="icon"><use xlink:href="images/svgdefs.svg#icon-clock"/></svg><%
+        <svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-clock"/></svg><%
       if ( page.timeToMake ) { %>
         <div>
           <h6>Si può fare in</h6>
@@ -65,7 +62,7 @@
             <h5>Riferimenti</h5>
             <ul><%
             for ( i = 0; i < page.sources.length; i++ ) { %>
-              <li><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-<%= page.sources[ i ][ 0 ] %>"/></svg><span><%- page.sources[ i ][ 1 ] %></span></li><%
+              <li><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-<%= page.sources[ i ][ 0 ] %>"/></svg><span><%- page.sources[ i ][ 1 ] %></span></li><%
             } %>
             </ul>
           </div><%
@@ -122,7 +119,7 @@
         <div class="sub">
           <span><%- page.recipeIntro[ 0 ] %></span>
           <span class="quantity">
-            <button class="btn-icon btn-icon-minus"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-minus"/></svg></button><span id="qtyValue"><%- page.recipeBase.qty %></span><% if ( page.recipeBase.units ) { %> <%- page.recipeBase.units %><% } %><button class="btn-icon btn-icon-plus"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-plus"/></svg></button>
+            <button class="btn-icon btn-icon-minus"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-minus"/></svg></button><span id="qtyValue"><%- page.recipeBase.qty %></span><% if ( page.recipeBase.units ) { %> <%- page.recipeBase.units %><% } %><button class="btn-icon btn-icon-plus"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-plus"/></svg></button>
           </span>
           <span><%- page.recipeIntro[ 1 ] %></span>
         </div>
@@ -240,8 +237,8 @@
 
     <div class="recipefooter">
       <div class="content">
-        <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: <%- page.title %>" target="_blank" class="btn-icon" tabindex="-1"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-mail"/></svg><span>Segnala errori o suggerimenti</span></a>');</script>
-        <a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/<%- page.recipeid %>.md" target="_blank" class="btn-icon" tabindex="-1"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-pr"/></svg><span>Proponi modifiche a questa ricetta su Github</span></a>
+        <script>document.write('<a href="'+'znvygb:mra@mrabvq.vg'.encrypt()+'?subject=Ho un suggerimento per: <%- page.title %>" target="_blank" class="btn-icon" tabindex="-1"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-mail"/></svg><span>Segnala errori o suggerimenti</span></a>');</script>
+        <a href="https://github.com/zenoid/simpletomake/blob/master/source/recipes/<%- page.recipeid %>.md" target="_blank" class="btn-icon" tabindex="-1"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-pr"/></svg><span>Proponi modifiche a questa ricetta su Github</span></a>
       </div>
     </div>
 

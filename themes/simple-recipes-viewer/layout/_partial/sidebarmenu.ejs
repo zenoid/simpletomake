@@ -7,16 +7,16 @@
     recipes_food    = recipes_list.filter( p => p.category === 'food' )
       .sort( 'index' );
 %>
-  <button class="btn-icon btn-mainnavclose"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-close"/></svg></button>
+  <button class="btn-icon btn-mainnavclose"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-close"/></svg></button>
   <div class="sidebar-help touchhide">
-    <span>Puoi usare le frecce</span><span class="key-icon"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-arrow-up"/></svg></span><span class="key-icon"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-arrow-down"/></svg>
+    <span>Puoi usare le frecce</span><span class="key-icon"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-arrow-up"/></svg></span><span class="key-icon"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-arrow-down"/></svg>
   </div>
   <div class="group">
     <h3><%- __('listTitleHygiene') %></h3>
     <ul><%
     recipes_hygiene.forEach( recipe => {
       recipeLabel = recipe.title.replace( /\([^()]*\)/gi, '' ); %>
-      <li<% if ( page.title === recipe.title ) { %> class="selected"<% } %>><a href="<%- recipe.path %>" class="btn" tabindex="-1"><%- recipeLabel %></a></li><%
+      <li<% if ( page.title === recipe.title ) { %> class="selected"<% } %>><a href="/<%- recipe.path %>" class="btn" tabindex="-1"><%- recipeLabel %></a></li><%
     }) %>
     </ul>
   </div>
@@ -25,7 +25,7 @@
     <ul><%
     recipes_food.forEach( recipe => {
       recipeLabel = recipe.title.replace( /\([^()]*\)/gi, '' ); %>
-      <li<% if ( page.title === recipe.title ) { %> class="selected"<% } %>><a href="<%- recipe.path %>" class="btn" tabindex="-1"><%- recipeLabel %></a></li><%
+      <li<% if ( page.title === recipe.title ) { %> class="selected"<% } %>><a href="/<%- recipe.path %>" class="btn" tabindex="-1"><%- recipeLabel %></a></li><%
     }) %>
     </ul>
   </div>

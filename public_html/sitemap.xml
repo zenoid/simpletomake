@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://simpletomake.it/about.html</loc>
+    
+    <lastmod>2021-01-22T10:37:40.369Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://simpletomake.it/ingredients/index.html</loc>
+    
+    <lastmod>2021-01-22T10:24:21.642Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://simpletomake.it/ingredients/aqua.html</loc>
+    
+    <lastmod>2021-01-22T09:09:42.907Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://simpletomake.it/yogurt-denso.html</loc>
     
     <lastmod>2021-01-22T08:31:38.935Z</lastmod>
@@ -37,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://simpletomake.it/disinfettante-mani.html</loc>
+    <loc>https://simpletomake.it/gingerbeer.html</loc>
     
     <lastmod>2021-01-22T08:31:38.932Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://simpletomake.it/gingerbeer.html</loc>
+    <loc>https://simpletomake.it/disinfettante-mani.html</loc>
     
     <lastmod>2021-01-22T08:31:38.932Z</lastmod>
     
@@ -68,13 +89,6 @@
     <loc>https://simpletomake.it/deodorante-in-crema.html</loc>
     
     <lastmod>2021-01-22T08:31:38.930Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://simpletomake.it/about.html</loc>
-    
-    <lastmod>2021-01-22T08:31:38.924Z</lastmod>
     
   </url>
   

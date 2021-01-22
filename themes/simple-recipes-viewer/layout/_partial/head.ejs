@@ -6,16 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <%
-    var title, htmlTitle, ogimg;
+
+    var title = '',
+      htmlTitle = '',
+      ogimg = 'og-image.png';
+
     if ( page.layout === 'recipe' ) {
       title = 'Come fare ' + page.titleArticle + ' ' + page.title.toLowerCase();
-      htmlTitle = title + ' | ' + __('title') + ': ' + __('subtitle');
+      htmlTitle = title + ' | ';
       ogimg = 'recipes/images/' + page.recipeid + '-' + config.language + '.png';
+    } else if ( page.layout === 'ingredients' ) {
+      title = page.title;
+      htmlTitle = page.title + ' | ';
+    } else if ( page.layout === 'ingredient' ) {
+      title = 'Ingredienti: ' + page.name;
+      htmlTitle = 'Ingredienti: ' + page.name + ' | ';
     } else {
       title = __('title') + ': ' + __('subtitle');
-      htmlTitle = title;
-      ogimg = 'og-image.png';
     }
+
+    htmlTitle += __('title') + ': ' + __('subtitle');
+
   %>
   <title><%- htmlTitle %></title>
   <meta name="keywords" content="<%- __('keywords') %>">

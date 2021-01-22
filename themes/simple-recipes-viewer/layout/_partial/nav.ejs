@@ -1,13 +1,10 @@
   <nav class="nav-main">
-    <div class="group">
-      <a href="/" class="btn-icon btn-mainnavopen" data-tooltip="Ricette"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-list"/></svg></a>
-      <a href="about.html" class="btn-icon" data-tooltip="Cos'è <strong>Simple To Make It</strong>"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-about"/></svg></a>
-    </div>
+    <%- partial('nav-main') %>
 <% if ( page.layout === 'recipe' ) { %>
     <div class="div"></div>
     <div class="group mobileshow">
-      <button class="btn-icon hidden btn-prev"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-arrow-up"/></svg></button>
-      <button class="btn-icon hidden btn-next"><svg class="icon"><use xlink:href="images/svgdefs.svg#icon-arrow-down"/></svg></button>
+      <button class="btn-icon hidden btn-prev"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-arrow-up"/></svg></button>
+      <button class="btn-icon hidden btn-next"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-arrow-down"/></svg></button>
     </div>
 <% } %>
   </nav>
