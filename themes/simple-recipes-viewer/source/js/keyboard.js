@@ -15,7 +15,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
     // All Pages
     switch ( k ) {
-      case 8:
+      case 9:
         if ( window.sidebar.isOpen() ) {
           window.sidebar.close();
         } else {
@@ -46,7 +46,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
     // Only Recipe Pages
     switch ( k ) {
       case 32:
-      case  9:
         e.preventDefault();
         window.nav.cycle();
         break;
