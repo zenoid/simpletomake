@@ -11,19 +11,19 @@ document.addEventListener( 'DOMContentLoaded', function() {
   function recipeKeyNav( e )
   {
     e = e || window.event;
-    var k = e.keyCode;
+    var k = e.key;
 
     // All Pages
     switch ( k ) {
-      case 9:
+      case 'Tab':
         if ( window.sidebar.isOpen() ) {
           window.sidebar.close();
         } else {
           window.sidebar.open();
         }
         break;
-      case 37:
-      case 38:
+      case 'ArrowUp':
+      case 'ArrowLeft':
         e.preventDefault();
         if ( window.sidebar.isOpen() ) {
           window.sidebar.goUp();
@@ -31,8 +31,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
           window.nav.prev();
         }
         break;
-      case 39:
-      case 40:
+      case 'ArrowDown':
+      case 'ArrowRight':
         e.preventDefault();
         if ( window.sidebar.isOpen() ) {
           window.sidebar.goDown();
@@ -45,29 +45,29 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
     // Only Recipe Pages
     switch ( k ) {
-      case 32:
+      case ' ':
         e.preventDefault();
         window.nav.cycle();
         break;
-      case 49:
+      case '1':
         window.nav.go( 1 );
         break;
-      case 50:
+      case '2':
         window.nav.go( 2 );
         break;
-      case 51:
+      case '3':
         window.nav.go( 3 );
         break;
-      case 52:
+      case '4':
         window.nav.go( 4 );
         break;
-      case 53:
+      case '5':
         window.nav.go( 5 );
         break;
-      case 189:
+      case '-':
         window.quantity.remove();
         break;
-      case 187:
+      case '+':
         window.quantity.add();
         break;
     }
