@@ -31,28 +31,21 @@ recipeRange: [ 500, 5000, 100 ]
 ingredients:
   - { id: "alcol",
       ratio: 33.5,
-      spec: 0.789,
-      name: "Alcool etilico",
       qty: 340,
-      units: "gr",
-      notes: "Chiamato anche <strong>Etanolo</strong>. Deve essere per uso alimentare, con concentrazione al 95-96%." }
-  - { id: "herbs",
-      name: "Erbe, bacche o agrumi",
-      notes: "Gli ingredienti più utilizzati sono erbe (<strong>alloro, rosmarino, menta, genziana</strong>), fiori eduli (<strong>rosa, carciofo, sambuco</strong>), bucce di agrumi (<strong>limone, mandarino, arancia</strong>), bacche o noccioli (<strong>malli di noce, ginepro, mirto, armelline, chicchi di caffè</strong>)." }
+      units: "gr" }
   - { id: "sugar",
       ratio: 24.1,
-      spec: 1.6,
-      name: "Zucchero",
       qty: 240,
       units: "gr",
       notes: "Con queste dosi, otterrai un liquore abbastanza dolce. Il peso dello zucchero può variare tra il 15% e il 30% sul totale." }
   - { id: "aqua",
       ratio: 42.4,
-      spec: 1,
-      name: "Acqua",
       qty: 420,
       units: "gr",
       notes: "Se ti è più semplice, puoi anche dosare a volume: usa un volume di acqua pari a quello dell'alcool. Metti più acqua per un liquore meno forte, o viceversa." }
+  - { id: "herbs",
+      name: "Erbe, bacche o agrumi",
+      notes: "Gli ingredienti più utilizzati sono erbe (<strong>alloro, rosmarino, menta, genziana</strong>), fiori eduli (<strong>rosa, carciofo, sambuco</strong>), bucce di agrumi (<strong>limone, mandarino, arancia</strong>), bacche o noccioli (<strong>malli di noce, ginepro, mirto, armelline, chicchi di caffè</strong>)." }
 
 recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale"
 

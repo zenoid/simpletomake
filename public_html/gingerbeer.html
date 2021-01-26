@@ -40,7 +40,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Bitter:wght@300;500&display=swap" rel="stylesheet">
   
-<link rel="stylesheet" href="/css/style.css?v=1611312227609.css">
+<link rel="stylesheet" href="/css/style.css?v=1611661048096.css">
 
 
 </head>
@@ -206,34 +206,38 @@
       <div class="card-list">
       
         <div class="card card-checkbox">
-          <input type="checkbox" id="ingr0">
-          <label for="ingr0"></label>
+          <input type="checkbox" id="ingrginger">
+          <label for="ingrginger"></label>
           <div class="card-body">
             <h3><span class="ingredient">Zenzero</span><span class="quantity"><span data-qty="ginger">3</span> cm</span></h3>
+            
             <p class="note">Molto meglio se da coltivazione biologica. Questa è la lunghezza indicativa di un pezzo di radice di medio diametro, ma la quantità da usare dipende da quanto forte e piccante vuoi la bevanda. Considera anche un po' di zenzero per la preparazione del Ginger Bug.</p>
           </div>
         </div>
         <div class="card card-checkbox">
-          <input type="checkbox" id="ingr1">
-          <label for="ingr1"></label>
+          <input type="checkbox" id="ingrsugar">
+          <label for="ingrsugar"></label>
           <div class="card-body">
-            <h3><span class="ingredient">Zucchero</span><span class="quantity"><span data-qty="sugar">100</span> gr</span></h3>
-            <p class="note">Considera un po' di zucchero in più per preparare il Ginger Bug. Il più indicato è lo zucchero bianco, ma puoi usare zucchero grezzo se ti piace la sua nota aromatica.</p>
+            <h3><a href="/ingredients/sugar.html" class="ingredient" data-tooltip="Leggi la scheda">Zucchero</a><span class="quantity"><span data-qty="sugar">100</span> gr</span></h3>
+            
+            <p class="note">Il più indicato è lo zucchero bianco perché non contiene impurità, ma puoi usare zucchero grezzo se ti piace la sua nota aromatica.</p><p class="note">Considera un po' di zucchero in più per preparare il Ginger Bug.</p>
           </div>
         </div>
         <div class="card card-checkbox">
-          <input type="checkbox" id="ingr2">
-          <label for="ingr2"></label>
+          <input type="checkbox" id="ingraqua">
+          <label for="ingraqua"></label>
           <div class="card-body">
-            <h3><span class="ingredient">Acqua</span><span class="quantity"><span data-qty="aqua">1000</span> gr</span></h3>
-            <p class="note">Meglio se senza cloro: se sei in dubbio, lasciala decantare all'aria alcune ore.</p>
+            <h3><a href="/ingredients/aqua.html" class="ingredient" data-tooltip="Leggi la scheda">Acqua</a><span class="quantity"><span data-qty="aqua">1000</span> gr</span></h3>
+            
+            <p class="note">Meglio se senza cloro: se sei in dubbio, lasciala decantare all'aria alcune ore.</p><p class="note"></p>
           </div>
         </div>
         <div class="card card-checkbox">
-          <input type="checkbox" id="ingr3">
-          <label for="ingr3"></label>
+          <input type="checkbox" id="ingrlemon">
+          <label for="ingrlemon"></label>
           <div class="card-body">
             <h3><span class="ingredient">Succo di limone</span></h3>
+            
             <p class="note">Quantità a piacere. Serve solo a rendere la bevanda più dissetante, ma puoi anche non aggiungerlo.</p>
           </div>
         </div>
@@ -241,7 +245,7 @@
           <p>Le quantità per questa ricetta sono solo indicative: sperimenta per trovare il giusto mix tra dolcezza, piccantezza e contenuto di gas. Ricorda che un minimo contenuto di zucchero è sempre inspensabile a far funzionare la fermentazione.</p>
         </div>
       
-        <script>var recipeBase={"qty":1000,"units":"ml"},recipeBaseRatio=1,recipeRange=[500,5000,100],ingredients={"ginger":{"ratio":0.3,"spec":0,"units":"cm"},"sugar":{"ratio":10,"spec":null,"units":"gr"},"aqua":{"ratio":100,"spec":1,"units":"gr"}}</script>
+        <script>var recipeBase={"qty":1000,"units":"ml"},recipeBaseRatio=0.999,recipeRange=[500,5000,100],ingredients={"ginger":{"ratio":0.3,"units":"cm"},"sugar":{"ratio":10,"spec":100,"units":"gr"},"aqua":{"ratio":100,"spec":1,"units":"gr"}}</script>
       </div>
 
     </section>
@@ -472,8 +476,6 @@
       "description": "Si chiamano birre, ma non sono birre, quasi tutte le <strong>bevande  prodotte dalla fermentazione degli zuccheri</strong> e con un contenuto di alcool anche minimo. Per produrre ginger beer senza usare lieviti <strong>serve uno starter: il "ginger bug"</strong>, che è come una ginger beer molto concentrata. Lo zenzero produce molta anidride carbonica, e questa bevanda può essere molto gassata: per evitare esplosioni <strong>conserva le bottiglie in frigo o tappale molto bene</strong>. ",
       "recipeIngredient": [
         "3 cm Zenzero", 
-        "100 gr Zucchero", 
-        "1000 gr Acqua", 
         "Succo di limone"
       ],
       "aggregateRating": {

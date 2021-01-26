@@ -31,11 +31,8 @@ recipeRange: [ 500, 5000, 100 ]
 ingredients:
   - { id: "milk",
       ratio: 100,
-      spec: 1.04,
-      name: "Latte",
       qty: 1000,
-      units: "ml",
-      notes: "Meglio se <strong>latte vaccino intero</strong>, fresco e non a lunga conservazione. Non si possono utilizzare latti vegetali o delattosati: non contengono il lattosio necessario alla fermentazione." }
+      units: "ml" }
   - { id: "yogurt",
       ratio: 12,
       spec: 1.04,

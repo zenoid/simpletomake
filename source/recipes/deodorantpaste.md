@@ -30,35 +30,22 @@ recipeBase: { qty: 200, units: "gr" }
 ingredients:
   - { id: "bakingsoda",
       ratio: 40,
-      spec: 2.16,
-      name: "Bicarbonato",
       qty: 80,
-      units: "gr",
-      notes: "Chiamato anche <strong>carbonato acido di sodio</strong> o <strong>carbonato monosodico</strong>: è il comune bicarbonato usato in cucina o per lavare." }
+      units: "gr" }
   - { id: "starch",
       ratio: 20,
-      spec: 1.6,
-      name: "Amido",
       qty: 40,
-      units: "gr",
-      notes: "Va bene qualsiasi amido alimentare: <strong>fecola di patate</strong> o <strong>maizena</strong> sono i più comuni ed economici, ma puoi usare anche <strong>amido di riso</strong> o <strong>frumina</strong> (se non sei celiaco)." }
+      units: "gr" }
   - { id: "almondoil",
       ratio: 20,
-      spec: 0.92,
-      name: "Olio di mandorle",
       qty: 40,
-      units: "gr",
-      notes: "Ha un'azione emolliente e lenitiva per la pelle. Puoi sostituirlo con altri oli vegetali, purché adatti per la pelle." }
+      units: "gr" }
   - { id: "karite",
       ratio: 20,
-      spec: 0.91,
-      name: "Burro di Karité",
       qty: 40,
-      units: "gr",
-      notes: "Meglio se puro (non raffinato). A temperatura ambiente si presenta quasi solido. Utile a proteggere la pelle, proprio come il \"burrocacao\"." }
+      units: "gr" }
   - { id: "perfume",
       ratio: 10,
-      name: "Oli essenziali",
       qty: 20,
       units: "gocce",
       notes: "Opzionali, per dare profumo al deodorante." }

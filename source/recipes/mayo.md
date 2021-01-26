@@ -32,10 +32,8 @@ recipeBase: { qty: 200, units: "gr" }
 recipeRange: [ 150, 500, 50 ]
 
 ingredients:
-  - { id: "oil",
+  - { id: "vegetableoil",
       ratio: 100,
-      spec: 0.947,
-      name: "Olio di semi",
       qty: 200,
       units: "gr",
       notes: "Ideale l'<strong>olio di semi di girasole</strong> o l'<strong>olio di arachidi</strong>, non solo per il gusto molto delicato, ma anche per avere una salsa più elastica e regolare. Puoi usare anche olio di oliva, ma avrai una salsa più pesante e più propensa a &quot;impazzire&quot;." }
@@ -48,8 +46,7 @@ ingredients:
   - { id: "lemon",
       name: "Aceto / Succo di limone",
       notes: "Usa uno o più ingredienti acidi (limone, aceto di vino, aceto di mele, ecc.) per creare contrasto con il grasso. Decidi la quantità assaggiando, e verificando la consistenza della salsa." }
-  - { id: "salt",
-      name: "Sale fino" }
+  - { id: "salt" }
   - { id: "other",
       name: "Aromi",
       notes: "Puoi aromatizzare con erbe o spezie (aglio, prezzemolo, zenzero, curcuma, ecc.)" }
@@ -61,12 +58,12 @@ ingredients:
 tools:
   - [ "Una ciotola", "È utile che rimanga stabile sul tavolo durante la preparazione." ]
   - [ "Un contenitore dal quale versare l'olio", "Un dispenser o una caraffa col beccuccio, come quelle graduate, è l'ideale." ]
-  - [ "Un barattolo da almeno <span class='qtyspan'><span data-qty='volume.oil' data-mult='2' data-prec='1'>400</span> ml</span>", "Per conservare la salsa, se non la consumi subito." ]
+  - [ "Un barattolo da almeno <span class='qtyspan'><span data-qty='volume.vegetableoil' data-mult='2' data-prec='1'>400</span> ml</span>", "Per conservare la salsa, se non la consumi subito." ]
   - [ "Una frusta a mano o elettrica", "Va bene anche un frullatore ad immersione." ]
   - [ "Una bilancia", "Per questa ricetta in realtà non servono quantità precise al grammo." ]
 
 directions:
-  - [ "Versa <span class='qtyspan'><span data-qty='oil'>200</span> gr</span> di olio di semi nel contenitore" ]
+  - [ "Versa <span class='qtyspan'><span data-qty='vegetableoil'>200</span> gr</span> di olio di semi nel contenitore" ]
   - [ "Sciogli il sale in un po' del succo di limone che userai", "Se lo aggiungi alla fine, potrebbe non sciogliersi bene" ]
   - [ "Metti nella ciotola <span class='qtyspan'><span data-qty='egg'>1</span></span> tuorl<span data-plural='egg.o-i'>o</span> d'uovo, o <span class='qtyspan'><span data-qty='soymilk'>100</span> gr</span> di latte di soia", "Assicurati che abbia la stessa temperatura dell'olio: tiralo fuori dal frigo qualche ora prima, oppure fa scorrere acqua calda sotto la ciotola." ]
   - [ "Inizia a frullare l'uovo (o il latte di soia)", "Cerca di tenere la ciotola ferma: puoi mettergli sotto uno strofinaccio bagnato e arrotolato. Se mescoli a mano, segui sempre uno stesso verso senza mai cambiarlo." ]

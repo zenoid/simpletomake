@@ -32,32 +32,21 @@ recipeBase: { qty: 200, units: "ml" }
 ingredients:
   - { id: "alcol",
       ratio: 77.54,
-      spec: 0.789,
-      name: "Alcool etilico",
       qty: 130,
-      units: "gr",
-      notes: "Chiamato anche <strong>Etanolo</strong>. La concentrazione deve essere al 96%. Da non confondersi con l'alcool denaturato (quello rosa) che può irritare la pelle." }
-  - { id: "h2o2",
+      units: "gr" }
+  - { id: "peroxide",
       ratio: 7.18,
-      spec: 1.44,
-      name: "Acqua ossigenata",
       qty: 12,
-      units: "gr",
-      notes: "Chiamato anche <strong>Perossido di idrogeno</strong>. La concentrazione può essere a 10 o 20 volumi, ovvero dal 3 al 6%." }
-  - { id: "glic",
+      units: "gr" }
+  - { id: "glycerol",
       ratio: 2.17,
-      spec: 1.25,
-      name: "Glicerolo",
       qty: 4,
-      units: "gr",
-      notes: "Chiamato anche <strong>Glicerina</strong>.  Si trova in farmacia o erboristeria. Viene usato anche per le sigarette elettroniche." }
+      units: "gr" }
   - { id: "aqua",
       ratio: 13.11,
-      spec: 1,
-      name: "Acqua",
       qty: 22,
       units: "gr",
-      notes: "Distillata, oppure bollita e raffreddata." }
+      notes: "Può essere utile bollirla (e poi farla raffreddare) prima dell'uso per eliminare eventuali batteri presenti." }
 
 recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale"
 
@@ -68,8 +57,8 @@ tools:
 
 directions:
   - [ "Versa <span class='qtyspan'><span data-qty='alcol'>130</span> gr</span> di alcool etilico in un contenitore pulito" ]
-  - [ "Aggiungi <span class='qtyspan'><span data-qty='h2o2'>12</span> gr</span> di acqua ossigenata", "Questo permette di eliminare eventuali spore batteriche presenti nel contenitore e di conservare il disinfettante nel tempo." ]
-  - [ "Aggiungi <span class='qtyspan'><span data-qty='glic'>4</span> gr</span> di glicerolo", "Non è un ingrediente indispensabile, ma servirà a reidratare la pelle e a rendere più densa la miscela." ]
+  - [ "Aggiungi <span class='qtyspan'><span data-qty='peroxide'>12</span> gr</span> di acqua ossigenata", "Questo permette di eliminare eventuali spore batteriche presenti nel contenitore e di conservare il disinfettante nel tempo." ]
+  - [ "Aggiungi <span class='qtyspan'><span data-qty='glycerol'>4</span> gr</span> di glicerolo", "Non è un ingrediente indispensabile, ma servirà a reidratare la pelle e a rendere più densa la miscela." ]
   - [ "Aggiungi <span class='qtyspan'><span data-qty='aqua'>22</span> gr</span> di acqua distillata (o bollita e portata a temperatura ambiente)", "In questo modo si permette all’alcool di raggiungere la concentrazione ottimale." ]
   - [ "Mescola tutto e lascia riposare per <strong>72 ore</strong> (3 giorni)", "L'acqua ossigenata avrà il tempo di eliminare eventuali spore presenti nel contenitore." ]
 

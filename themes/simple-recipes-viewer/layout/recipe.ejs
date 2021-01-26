@@ -128,42 +128,78 @@
       <div class="card-list">
       <%
 
-        var ingr = {},
+        var ingredients = [],
+          ingredientRatios = {},
           recipeBaseRatio = 1;
-
-        if ( page.recipeBase.units === 'ml' && page.ingredients[ 0 ].units !== 'ml' ) {
-          var ingrSpecRatios = 0;
-          for ( i in page.ingredients ) {
-            if ( page.ingredients[ i ].spec ) {
-              ingrSpecRatios += +page.ingredients[ i ].ratio / +page.ingredients[ i ].spec;
-            }
-          }
-          recipeBaseRatio = Math.round( ( 1 / ingrSpecRatios ) * 100000 ) / 1000;
-        }
 
         for ( i = 0; i < page.ingredients.length; i++ ) {
 
-          if ( page.ingredients[ i ].ratio ) {
-            ingr[ page.ingredients[ i ].id ] = {
-              ratio: +page.ingredients[ i ].ratio,
-              spec: +page.ingredients[ i ].spec,
-              units: page.ingredients[ i ].units
+          ingredients.push({
+            id: page.ingredients[ i ].id,
+            name: page.ingredients[ i ].name,
+            qty: +page.ingredients[ i ].qty,
+            ratio: +page.ingredients[ i ].ratio,
+            units: page.ingredients[ i ].units,
+            notes: [ page.ingredients[ i ].notes ]
+          })
+
+          var ingredientDataSource = site.pages.filter( p => {
+            return ( p.layout === 'ingredient' ) && ( p.id === page.ingredients[ i ].id );
+          })
+          if ( ingredientDataSource.length ) {
+            var ds = ingredientDataSource.data[0];
+            ingredients[i].name = ds.name;
+            if ( ds.altNames ) {
+              ingredients[i].altNames = ds.altNames;
+            }
+            ingredients[i].spec = ds.unitWeight;
+            ingredients[i].notes.unshift( ds['features_' + page.category] );
+            if ( ds.path ) {
+              ingredients[i].url = '/' + ds.path;
+            }
+          }
+          if ( page.ingredients[ i ].spec ) {
+            ingredients[ i ].spec = +page.ingredients[ i ].spec;
+          }
+        }
+
+        if ( page.recipeBase.units === 'ml' && page.ingredients[ 0 ].units !== 'ml' ) {
+          var ingrSpecRatios = 0;
+          ingredients.forEach( ing => {
+            if ( ing.spec ) {
+              ingrSpecRatios += ing.ratio / ing.spec;
+            }
+          })
+          recipeBaseRatio = Math.round( ( 1 / ingrSpecRatios ) * 100000 ) / 1000;
+        }
+
+        ingredients.forEach( ing => {
+
+          if ( ing.ratio ) {
+            ingredientRatios[ ing.id ] = {
+              ratio: +ing.ratio,
+              spec: ing.spec,
+              units: ing.units
             };
           }
 
-          if ( page.ingredients[ i ].name ) {
-
+          if ( ing.name ) {
       %>
         <div class="card card-checkbox">
-          <input type="checkbox" id="ingr<%= i %>">
-          <label for="ingr<%= i %>"></label>
+          <input type="checkbox" id="ingr<%= ing.id %>">
+          <label for="ingr<%= ing.id %>"></label>
           <div class="card-body">
-            <h3><span class="ingredient"><%- page.ingredients[ i ].name %></span><% if ( page.ingredients[ i ].qty ) { %><span class="quantity"><span data-qty="<%- page.ingredients[ i ].id %>"><%- page.ingredients[ i ].qty %></span> <%- page.ingredients[ i ].units %></span><% } %></h3>
-            <% if ( page.ingredients[ i ].notes ) { %><p class="note"><%- page.ingredients[ i ].notes %></p><% } %>
+            <h3><% if ( ing.url ) { %><a href="<%= ing.url %>" class="ingredient" data-tooltip="Leggi la scheda"><%- ing.name %></a><% } else { %><span class="ingredient"><%- ing.name %></span><% } %><% if ( ing.qty ) { %><span class="quantity"><span data-qty="<%- ing.id %>"><%- ing.qty %></span> <%- ing.units %></span><% } %></h3>
+            <% if ( ing.altNames ) { %><p class="note">Chiamato anche: <strong><%= ing.altNames %></strong></p><% } %>
+            <% if ( ing.notes.length ) {
+                ing.notes.forEach( note => {
+                   %><p class="note"><%- note %></p><%
+                  })
+                } %>
           </div>
         </div><%
           }
-        }
+        });
         if ( page.recipeDisclaimer ) { %>
         <div class="card-empty">
           <p><%- page.recipeDisclaimer %></p>
@@ -171,7 +207,7 @@
       <% }
         page.qtyStep = ( page.recipeRange? page.recipeRange[ 2 ] : '50' ) + page.recipeBase.units;
       %>
-        <script>var recipeBase=<%- JSON.stringify( page.recipeBase ) %>,recipeBaseRatio=<%- recipeBaseRatio %>,<% if ( page.recipeRange ) { %>recipeRange=[<%- page.recipeRange %>],<% } %><% if ( page.recipePrecision ) { %>recipePrecision=[<%- page.recipePrecision %>],<% } %>ingredients=<%- JSON.stringify( ingr ) %></script>
+        <script>var recipeBase=<%- JSON.stringify( page.recipeBase ) %>,recipeBaseRatio=<%- recipeBaseRatio %>,<% if ( page.recipeRange ) { %>recipeRange=[<%- page.recipeRange %>],<% } %><% if ( page.recipePrecision ) { %>recipePrecision=[<%- page.recipePrecision %>],<% } %>ingredients=<%- JSON.stringify( ingredientRatios ) %></script>
       </div>
 
     </section>

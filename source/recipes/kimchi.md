@@ -38,19 +38,16 @@ ingredients:
       notes: "Di solito si usano almeno <strong>aglio, zenzero e peperoncino piccante</strong>, ma aggiungi spezie a tuo gusto (paprika, curcuma, cumino, ecc.). La ricetta tradizionale prevede anche salsa di pesce (simile alla colatura di alici)." }
   - { id: "aqua",
       ratio: 150,
-      name: "Acqua",
       qty: 1500,
       units: "gr",
-      notes: "Parte per la salamoia e parte per la salsa. Meglio se senza cloro: se sei in dubbio, lasciala decantare all'aria alcune ore." }
+      notes: "Servirà in parte per la salamoia e in parte per la salsa." }
   - { id: "salt",
       ratio: 6,
-      name: "Sale fino",
       qty: 60,
       units: "gr",
       notes: "Molto meglio se <strong>non iodato</strong>. Il sale integrale è l'ideale." }
   - { id: "flour",
       ratio: 6,
-      name: "Farina",
       qty: 60,
       units: "gr",
       notes: "Ideale la <strong>farina di riso</strong>, in alternativa metà farina bianca e metà amido (maizena o fecola)." }

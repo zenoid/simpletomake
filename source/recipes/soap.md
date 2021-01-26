@@ -31,30 +31,21 @@ recipeRange: [ 500, 5000, 250 ]
 recipePrecision: 3
 
 ingredients:
-  - { id: "oil",
+  - { id: "oliveoil",
       ratio: 100,
-      spec: 0.916,
-      name: "Olio di oliva",
       qty: 200,
-      units: "gr",
-      notes: "Non importa che sia extravergine, può essere anche scaduto o usato per frittura (se filtrato molto bene), ma <strong>non deve essere rancido o contenere residui o fondo</strong>. Per questa ricetta non usare un altro olio, perché richiede dosi molto differenti di soda caustica." }
-  - { id: "soda",
+      units: "gr" }
+  - { id: "lye",
       ratio: 13,
-      spec: 1.327,
-      name: "Soda caustica",
       qty: 130,
-      units: "gr",
-      notes: "Chiamata anche <strong>Idrossido di Sodio</strong> (NaOH). Si presenta in granuli bianchi e si trova in ferramenta. Non ha nulla a che vedere con il Carbonato di Sodio (Soda Solvay) usato per il bucato. È una sostanza a basso impatto ambientale." }
+      units: "gr" }
   - { id: "aqua",
       ratio: 30,
-      spec: 1,
-      name: "Acqua",
       qty: 300,
       units: "gr",
-      notes: "Meglio se distillata, ma va benissimo quella di rubinetto. In alcune ricette si suggerisce di usare latte, infusi o succhi, ma non hanno effetti molto percepibili sul prodotto finito." }
+      notes: "In alcune ricette si suggerisce di usare latte, infusi o succhi, ma non hanno effetti percepibili sul prodotto finito." }
   - { id: "perfume",
       ratio: 3,
-      name: "Oli essenziali",
       qty: 30,
       units: "ml",
       notes: "Opzionali, per dare profumo o aggiungere proprietà al sapone. Solo gli oli essenziali sono efficaci: si possono aggiungere fiori, spezie o erbe come decorazione, ma aromi e proprietà verranno annullati dalla soda caustica." }
@@ -62,7 +53,7 @@ ingredients:
 recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> dell'olio sono differenti: se hai <strong>1 litro d'olio di oliva</strong> peserà circa <strong>916 grammi</strong>."
 
 tools:
-  - [ "Un barattolo o contenitore alto da almeno <span class='qtyspan'><span data-qty='volume.oil' data-mult='2' data-prec='1'>2000</span> ml</span>", "Di plastica, vetro o acciaio inox." ]
+  - [ "Un barattolo o contenitore alto da almeno <span class='qtyspan'><span data-qty='volume.oliveoil' data-mult='2' data-prec='1'>2000</span> ml</span>", "Di plastica, vetro o acciaio inox." ]
   - [ "Un barattolo o contenitore alto da almeno <span class='qtyspan'><span data-qty='volume.aqua' data-mult='2' data-prec='1'>600</span> ml</span>", "Di plastica, vetro o acciaio inox." ]
   - [ "Una ciotola per pesare la soda caustica", "Di plastica, vetro o acciaio inox." ]
   - [ "Una pentola per scaldare l'olio", "Non serve se preferisci lavorare &quot;a freddo&quot;." ]
@@ -77,11 +68,11 @@ tools:
 
 directions:
   - [ "Lavora in un ambiente arieggiato e indossa le protezioni", "Indossa sempre i guanti. Tieni una finestra aperta o accendi la cappa della cucina. Tieni l'aceto, aperto, sempre a portata di mano: versalo sulla pelle se entra a contatto con la soda caustica." ]
-  - [ "Pesa nella ciotola <span class='qtyspan'><span data-qty='soda'>130</span> gr</span> di soda caustica", "Se hai dubbi sulla precisione della bilancia, arrotonda sempre per difetto. Qui c'è già uno &quot;sconto&quot; sulla quantità richiesta (ovvero il 13.4% sul peso dell'olio): cerca di non mettere meno del 12.7%." ]
+  - [ "Pesa nella ciotola <span class='qtyspan'><span data-qty='lye'>130</span> gr</span> di soda caustica", "Se hai dubbi sulla precisione della bilancia, arrotonda sempre per difetto. Qui c'è già uno &quot;sconto&quot; sulla quantità richiesta (ovvero il 13.4% sul peso dell'olio): cerca di non mettere meno del 12.7%." ]
   - [ "Versa <span class='qtyspan'><span data-qty='aqua'>300</span> gr</span> di acqua nel contenitore più piccolo dei due", "" ]
   - [ "Versa la soda caustica nell'acqua, girando con il mestolo per farla sciogliere, e tenendo il viso lontano", "La soda caustica produrrà vapori irritanti. Nel frattempo l'acqua si scalderà, fino a 80-90°C. Non aggiungere mai acqua alla soda caustica, ma sempre al contrario." ]
   - [ "Dopo aver sciolto tutta la soda caustica, lascia raffreddare la soluzione per mezz'ora o finché non avrà raggiunto <strong>40-50°C</strong>", "Se vuoi procedere &quot;a freddo&quot;, non lasciar raffreddare la soluzione." ]
-  - [ "Versa nella pentola <span class='qtyspan'><span data-qty='oil'>1000</span> gr</span> di olio d'oliva, scaldalo fino a <strong>40-50°C</strong>, e poi versalo nel contenitore più grande", "Ricorda di pesare l'olio, non basarti sul volume. Se vuoi procedere &quot;a freddo&quot;, non scaldare l'olio: mettilo direttamente nel contenitore grande." ]
+  - [ "Versa nella pentola <span class='qtyspan'><span data-qty='oliveoil'>1000</span> gr</span> di olio d'oliva, scaldalo fino a <strong>40-50°C</strong>, e poi versalo nel contenitore più grande", "Ricorda di pesare l'olio, non basarti sul volume. Se vuoi procedere &quot;a freddo&quot;, non scaldare l'olio: mettilo direttamente nel contenitore grande." ]
   - [ "Versa la soluzione di acqua e soda caustica nel barattolo con l’olio, girando col mestolo", "L'olio diventerà sempre più opaco." ]
   - [ "Quando inizi a faticare col mestolo, aggiungi gli oli essenziali, e continua a mescolare con il frullatore ad immersione", "Per rendere più persistente l'aroma, mescola gli oli in un po' di amido prima di aggiungerli al barattolo." ]
   - [ "Frulla finché il composto non sarà omogeneo e opaco, come una maionese", "Potrebbe volerci qualche minuto. Accendi e spegni il frullatore per evitare di surriscaldarlo." ]

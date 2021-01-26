@@ -416,11 +416,16 @@ section {
     border-radius: 4px;
     padding: 1.5rem;
     height: 100%;
-    @include transition( opacity, $transition-hover );
+    @include transition( background-color, $transition-hover );
 
     @media only screen and (max-width: $size-XXS) {
       border-radius: 0;
     }
+  }
+
+  a {
+    z-index: 1;
+    @include transition( background-color, $transition-hover );
   }
 
   input[type="checkbox"] {
@@ -447,7 +452,7 @@ section {
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><polyline fill="none" stroke="%23FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="21 348 26 353 36 343" transform="translate(-16 -336)"/></svg>');
 
       & ~ .card-body {
-        opacity: 0.5;
+        background-color: rgba( 255, 255, 255, 0.4 );
       }
     }
 
@@ -465,8 +470,13 @@ section {
 }
 
 body:not(.touch) {
+
   input[type="checkbox"]:not(:checked):hover {
     background-color: var( --color-tag );
+  }
+
+  a.ingredient:hover {
+    background: var( --color-hilite );
   }
 }
 

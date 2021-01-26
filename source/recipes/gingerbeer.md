@@ -38,17 +38,14 @@ ingredients:
       notes: "Molto meglio se da coltivazione biologica. Questa è la lunghezza indicativa di un pezzo di radice di medio diametro, ma la quantità da usare dipende da quanto forte e piccante vuoi la bevanda. Considera anche un po' di zenzero per la preparazione del Ginger Bug." }
   - { id: "sugar",
       ratio: 10,
-      name: "Zucchero",
+      spec: 100,
       qty: 100,
       units: "gr",
-      notes: "Considera un po' di zucchero in più per preparare il Ginger Bug. Il più indicato è lo zucchero bianco, ma puoi usare zucchero grezzo se ti piace la sua nota aromatica." }
+      notes: "Considera un po' di zucchero in più per preparare il Ginger Bug." }
   - { id: "aqua",
       ratio: 100,
-      spec: 1,
-      name: "Acqua",
       qty: 1000,
-      units: "gr",
-      notes: "Meglio se senza cloro: se sei in dubbio, lasciala decantare all'aria alcune ore." }
+      units: "gr" }
   - { id: "lemon",
       name: "Succo di limone",
       notes: "Quantità a piacere. Serve solo a rendere la bevanda più dissetante, ma puoi anche non aggiungerlo." }

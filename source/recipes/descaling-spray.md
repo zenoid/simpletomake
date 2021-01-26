@@ -28,20 +28,15 @@ recipeIntro: [ "Cosa serve per fare circa", "di spray anticalcare" ]
 recipeBase: { qty: 200, units: "ml" }
 
 ingredients:
-  - { id: "citric",
+  - { id: "citricacid",
       ratio: 16.66,
-      spec: 1.665,
-      name: "Acido citrico",
       qty: 28,
-      units: "gr",
-      notes: "È preferibile usare quello <strong>anidro</strong>, più concentrato, ma anche <strong>monoidrato</strong> va bene per quest'uso. Si presenta in granuli bianchi." }
+      units: "gr" }
   - { id: "aqua",
       ratio: 83.34,
-      spec: 1,
-      name: "Acqua",
       qty: 180,
       units: "gr",
-      notes: "Meglio se distillata. Se contiene calcare, verrà subito consumata una piccola parte dell'acido aggiunto." }
+      notes: "Se contiene calcare, verrà subito consumata una piccola parte dell'acido aggiunto." }
 
 recipeDisclaimer: "Ricorda che <strong>peso</strong> e <strong>volume</strong> sono differenti: per semplicità, viene indicato il <strong>peso</strong> (arrotondato) di ogni ingrediente necessario per arrivare al <strong>volume</strong> finale"
 
@@ -52,7 +47,7 @@ tools:
 
 directions:
   - [ "Versa <span class='qtyspan'><span data-qty='aqua'>180</span> gr</span> di acqua nel flacone", "Se la tua acqua è molto calcarea, aggiungine un po' di meno, o metti un po' di acido citrico in più." ]
-  - [ "Aggiungi <span class='qtyspan'><span data-qty='citric'>28</span> gr</span> di acido citrico", "È un acido, ma puoi toccarlo tranquillamente con le mani." ]
+  - [ "Aggiungi <span class='qtyspan'><span data-qty='citricacid'>28</span> gr</span> di acido citrico", "È un acido, ma puoi toccarlo tranquillamente con le mani." ]
   - [ "Mescola tutto finché i granuli di acido citrico non si sono sciolti completamente" ]
 
 usage: [ "Spruzza il liquido sulle superfici da pulire, lascialo agire per un minuto, strofina con una spugnetta e risciacqua", "Se la superficie è molto incrostata, lascia agire più a lungo." ]

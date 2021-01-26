@@ -40,7 +40,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=Bitter:wght@300;500&display=swap" rel="stylesheet">
   
-<link rel="stylesheet" href="/css/style.css?v=1611312227611.css">
+<link rel="stylesheet" href="/css/style.css?v=1611661048101.css">
 
 
 </head>
@@ -188,54 +188,60 @@
       <div class="card-list">
       
         <div class="card card-checkbox">
-          <input type="checkbox" id="ingr0">
-          <label for="ingr0"></label>
+          <input type="checkbox" id="ingrcabbage">
+          <label for="ingrcabbage"></label>
           <div class="card-body">
             <h3><span class="ingredient">Cavoli a foglia</span></h3>
+            
             <p class="note">La tradizione prevede <strong>cavolo cinese o cavolo Napa</strong>, ma può essere usato qualunque mix di cavoli a foglia: cappuccio, verza, cavolo rosso, cavolo nero, cavoletti di bruxelles.</p>
           </div>
         </div>
         <div class="card card-checkbox">
-          <input type="checkbox" id="ingr1">
-          <label for="ingr1"></label>
+          <input type="checkbox" id="ingrvegetables">
+          <label for="ingrvegetables"></label>
           <div class="card-body">
             <h3><span class="ingredient">Altre verdure</span></h3>
+            
             <p class="note">Servono verdure che si possano mangiare anche crude: meglio le radici come carote, rape, ravanelli, cipolle. No a pomodori, cetrioli, zucca e altri ortaggi troppo acquosi.</p>
           </div>
         </div>
         <div class="card card-checkbox">
-          <input type="checkbox" id="ingr2">
-          <label for="ingr2"></label>
+          <input type="checkbox" id="ingrspices">
+          <label for="ingrspices"></label>
           <div class="card-body">
             <h3><span class="ingredient">Spezie</span></h3>
+            
             <p class="note">Di solito si usano almeno <strong>aglio, zenzero e peperoncino piccante</strong>, ma aggiungi spezie a tuo gusto (paprika, curcuma, cumino, ecc.). La ricetta tradizionale prevede anche salsa di pesce (simile alla colatura di alici).</p>
           </div>
         </div>
         <div class="card card-checkbox">
-          <input type="checkbox" id="ingr3">
-          <label for="ingr3"></label>
+          <input type="checkbox" id="ingraqua">
+          <label for="ingraqua"></label>
           <div class="card-body">
-            <h3><span class="ingredient">Acqua</span><span class="quantity"><span data-qty="aqua">1500</span> gr</span></h3>
-            <p class="note">Parte per la salamoia e parte per la salsa. Meglio se senza cloro: se sei in dubbio, lasciala decantare all'aria alcune ore.</p>
+            <h3><a href="/ingredients/aqua.html" class="ingredient" data-tooltip="Leggi la scheda">Acqua</a><span class="quantity"><span data-qty="aqua">1500</span> gr</span></h3>
+            
+            <p class="note">Meglio se senza cloro: se sei in dubbio, lasciala decantare all'aria alcune ore.</p><p class="note">Servirà in parte per la salamoia e in parte per la salsa.</p>
           </div>
         </div>
         <div class="card card-checkbox">
-          <input type="checkbox" id="ingr4">
-          <label for="ingr4"></label>
+          <input type="checkbox" id="ingrsalt">
+          <label for="ingrsalt"></label>
           <div class="card-body">
-            <h3><span class="ingredient">Sale fino</span><span class="quantity"><span data-qty="salt">60</span> gr</span></h3>
-            <p class="note">Molto meglio se <strong>non iodato</strong>. Il sale integrale è l'ideale.</p>
+            <h3><a href="/ingredients/salt.html" class="ingredient" data-tooltip="Leggi la scheda">Sale fino</a><span class="quantity"><span data-qty="salt">60</span> gr</span></h3>
+            
+            <p class="note"></p><p class="note">Molto meglio se <strong>non iodato</strong>. Il sale integrale è l'ideale.</p>
           </div>
         </div>
         <div class="card card-checkbox">
-          <input type="checkbox" id="ingr5">
-          <label for="ingr5"></label>
+          <input type="checkbox" id="ingrflour">
+          <label for="ingrflour"></label>
           <div class="card-body">
-            <h3><span class="ingredient">Farina</span><span class="quantity"><span data-qty="flour">60</span> gr</span></h3>
-            <p class="note">Ideale la <strong>farina di riso</strong>, in alternativa metà farina bianca e metà amido (maizena o fecola).</p>
+            <h3><a href="/ingredients/flour.html" class="ingredient" data-tooltip="Leggi la scheda">Farina</a><span class="quantity"><span data-qty="flour">60</span> gr</span></h3>
+            
+            <p class="note"></p><p class="note">Ideale la <strong>farina di riso</strong>, in alternativa metà farina bianca e metà amido (maizena o fecola).</p>
           </div>
         </div>
-        <script>var recipeBase={"qty":1000,"units":"gr"},recipeBaseRatio=1,recipeRange=[500,10000,500],recipePrecision=[3],ingredients={"aqua":{"ratio":150,"spec":null,"units":"gr"},"salt":{"ratio":6,"spec":null,"units":"gr"},"flour":{"ratio":6,"spec":null,"units":"gr"}}</script>
+        <script>var recipeBase={"qty":1000,"units":"gr"},recipeBaseRatio=1,recipeRange=[500,10000,500],recipePrecision=[3],ingredients={"aqua":{"ratio":150,"spec":1,"units":"gr"},"salt":{"ratio":6,"units":"gr"},"flour":{"ratio":6,"units":"gr"}}</script>
       </div>
 
     </section>
@@ -453,10 +459,7 @@
       "recipeIngredient": [
         "Cavoli a foglia", 
         "Altre verdure", 
-        "Spezie", 
-        "1500 gr Acqua", 
-        "60 gr Sale fino", 
-        "60 gr Farina"
+        "Spezie"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
