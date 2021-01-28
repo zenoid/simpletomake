@@ -4,7 +4,31 @@
 
 <%
   var ingredients = site.pages.filter( p => p.layout === 'ingredient' )
-    .sort( 'name' );
+    .sort( 'name' ),
+    recipes = site.pages.filter( p => p.layout === 'recipe' );
+
+  ingredients.forEach( ingr => {
+    var totalRecipes = 0,
+      totalRatio = 0;
+    recipes.forEach( rec => {
+      rec.ingredients.forEach( recIngr => {
+        if ( recIngr.id === ingr.id ) {
+          totalRecipes++;
+          totalRatio += recIngr.ratio || 0;
+        }
+      });
+    });
+    ingr.totalRecipes = totalRecipes;
+    ingr.totalRatio = totalRatio;
+  });
+
+  ingredients.data.sort( ( a, b ) => {
+    if ( a.totalRecipes !== b.totalRecipes ) {
+      return b.totalRecipes - a.totalRecipes;
+    } else {
+      return b.totalRatio - a.totalRatio;
+    }
+  });
 %>
 
 <ul><%
