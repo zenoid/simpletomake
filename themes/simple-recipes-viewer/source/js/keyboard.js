@@ -16,6 +16,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     // All Pages
     switch ( k ) {
       case 'Tab':
+        e.preventDefault();
         if ( window.sidebar.isOpen() ) {
           window.sidebar.close();
         } else {

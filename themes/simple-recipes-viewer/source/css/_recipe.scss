@@ -254,7 +254,25 @@ section {
 
   .btn-icon {
     color: var( --color-gray );
-    margin-right: 1rem;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    @include transition( all, $transition-hover );
+
+    .icon {
+      width: 3rem;
+      height: 3rem;
+      opacity: 0.5;
+      display: block;
+      margin: auto;
+    }
+
+    span {
+      line-height: 1.2;
+      padding: 0.5rem;
+    }
   }
 
   @media only screen and (max-width: $size-XXS) {
@@ -270,9 +288,17 @@ section {
       }
 
       span {
-        line-height: 1.1;
+        @include flexGrow( 1 );
+        text-align: left;
       }
     }
+  }
+}
+
+body:not(.touch) {
+  .recipefooter .btn-icon:hover {
+    color: var( --color-dark );
+    border-color: var( --color-hilite );
   }
 }
 

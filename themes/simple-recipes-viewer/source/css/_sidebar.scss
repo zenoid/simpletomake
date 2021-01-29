@@ -11,6 +11,8 @@
   bottom: 0;
   min-width: 16rem;
   max-width: 100%;
+  @include flex;
+  @include flexColumn;
   background-color: var( --color-dark );
   color: var( --color-white );
   z-index: $zindex-sidebar;
@@ -25,6 +27,18 @@
 
   .group {
     padding: 0 1rem 1rem 1rem;
+  }
+
+  .div {
+    @include flexGrow( 1 );
+  }
+
+  .sidebar-contacts {
+    a {
+      display: block;
+      color: var( --color-gray );
+      border-top: 1px solid rgba( 255, 255, 255, 0.2 );
+    }
   }
 
   h3 {
@@ -58,8 +72,8 @@
 
 .btn-mainnavclose {
   width: 100%;
-  height: 2rem;
-  margin: 0.25rem;
+  height: 2.5rem;
+  padding: 0.5rem;
   text-align: left;
 
   .icon {
@@ -67,7 +81,7 @@
   }
 
   @media only screen and (min-width: $size-XL) {
-    margin: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 
