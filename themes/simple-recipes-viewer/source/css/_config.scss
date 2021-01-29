@@ -41,21 +41,25 @@ $fontweight-bold:       500;
   font-family: Bitter;
   src: url( '../fonts/Bitter-Light.woff2') format('woff2');
   font-weight: $fontweight-normal;
+  font-display: swap;
 }
 @font-face {
   font-family: Bitter;
   src: url( '../fonts/Bitter-Medium.woff2') format('woff2');
   font-weight: $fontweight-bold;
+  font-display: swap;
 }
 @font-face {
   font-family: Barlow;
   src: url( '../fonts/Barlow-Light.woff2') format('woff2');
   font-weight: $fontweight-normal;
+  font-display: swap;
 }
 @font-face {
   font-family: Barlow;
   src: url( '../fonts/Barlow-Medium.woff2') format('woff2');
   font-weight: $fontweight-bold;
+  font-display: swap;
 }
 
 $font-title: Bitter, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
