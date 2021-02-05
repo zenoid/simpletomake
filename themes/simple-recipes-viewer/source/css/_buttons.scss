@@ -15,7 +15,7 @@
   padding: 0 0.75rem;
   line-height: $btn-height;
   text-align: center;
-  @include ellipsis;
+  white-space: nowrap;
   color: var( --color-white );
   background: none;
   @include transition( all, $transition-hover );
@@ -50,6 +50,33 @@
   }
 }
 
+.btn-main {
+  max-width: 100%;
+  line-height: 2.25em;
+  font-size: 1.25rem;
+  color: var( --color-dark );
+  background-color: var( --color-white );
+
+  span {
+    font-size: 0.8em;
+    line-height: 1;
+    color: var( --color-gray );
+    @include transition( all, $transition-hover );
+  }
+
+  &.btn-main-small {
+    font-size: 0.9rem;
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    display: block;
+  }
+}
+
+li .btn-main {
+  margin-bottom: 2px;
+}
+
 .icon {
   stroke: var( --color-white );
   width: 1.5rem;
@@ -70,14 +97,28 @@
   display: inline-block;
   line-height: $btn-height;
   font-size: 0.9rem;
-  opacity: 0.3;
+  opacity: 0.4;
   @include transition( opacity, $transition-hover );
+
+  .icon {
+    width: 0.75rem;
+  }
 }
 
 body:not(.touch) {
 
   .btn-icon:not(:disabled):hover {
     color: var( --color-hilite );
+  }
+
+  .btn-main:focus,
+  .btn-main:hover {
+    background-color: var( --color-dark ) !important;
+    color: var( --color-white );
+
+    span {
+      color: var( --color-white );
+    }
   }
 
   .about-footer-info a:hover {

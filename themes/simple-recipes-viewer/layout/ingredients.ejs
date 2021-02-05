@@ -1,38 +1,43 @@
-<h1><%= page.title %></h1>
+<div class="content">
 
-<%= page.content %>
+  <div class="page-header">
+    <div class="page-header-nav"></div>
+    <h1><%= page.title %></h1>
+    <%= page.content %>
+  </div>
 
-<%
-  var ingredients = site.pages.filter( p => p.layout === 'ingredient' )
-    .sort( 'name' ),
-    recipes = site.pages.filter( p => p.layout === 'recipe' );
+  <div class="page-body"><%
+    var ingredients = site.pages.filter( p => p.layout === 'ingredient' )
+      .sort( 'name' ),
+      recipes = site.pages.filter( p => p.layout === 'recipe' );
 
-  ingredients.forEach( ingr => {
-    var totalRecipes = 0,
-      totalRatio = 0;
-    recipes.forEach( rec => {
-      rec.ingredients.forEach( recIngr => {
-        if ( recIngr.id === ingr.id ) {
-          totalRecipes++;
-          totalRatio += recIngr.ratio || 0;
-        }
+    ingredients.forEach( ingr => {
+      var totalRecipes = 0,
+        totalRatio = 0;
+      recipes.forEach( rec => {
+        rec.ingredients.forEach( recIngr => {
+          if ( recIngr.id === ingr.id ) {
+            totalRecipes++;
+            totalRatio += recIngr.ratio || 0;
+          }
+        });
       });
+      ingr.totalRecipes = totalRecipes;
+      ingr.totalRatio = totalRatio;
     });
-    ingr.totalRecipes = totalRecipes;
-    ingr.totalRatio = totalRatio;
-  });
+    ingredients.data.sort( ( a, b ) => {
+      if ( a.totalRecipes !== b.totalRecipes ) {
+        return b.totalRecipes - a.totalRecipes;
+      } else {
+        return b.totalRatio - a.totalRatio;
+      }
+    });
+  %>
+    <ul class="menu3cols"><%
+    ingredients.forEach( ingr => { %>
+      <li><h3><a href="/<%- ingr.path %>" class="btn btn-main"><%- ingr.name %></a></h3></li><%
+    }) %>
+    </ul>
+  </div>
 
-  ingredients.data.sort( ( a, b ) => {
-    if ( a.totalRecipes !== b.totalRecipes ) {
-      return b.totalRecipes - a.totalRecipes;
-    } else {
-      return b.totalRatio - a.totalRatio;
-    }
-  });
-%>
-
-<ul><%
-ingredients.forEach( ingr => { %>
-  <li><a href="/<%- ingr.path %>"><%- ingr.name %></a></li><%
-}) %>
-</ul>
+</div>

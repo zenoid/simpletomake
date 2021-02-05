@@ -2,8 +2,9 @@
 
 <%- partial('_partial/nav') %>
 <%- partial('_partial/sidebarmenu') %>
+<% if ( page.layout === 'ingredient' ) page.bodyclass = "page page3" %>
 
-<div class="main">
+<div class="main<% if ( page.bodyclass ) { %> <%= page.bodyclass %><% } %>">
 <%- body %>
 </div>
 

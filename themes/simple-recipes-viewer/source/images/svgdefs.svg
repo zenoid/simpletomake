@@ -6,6 +6,7 @@
     <symbol id="icon-plus" viewBox="0 0 24 24"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m-6-6h12"/></symbol>
     <symbol id="icon-ingredients" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="translate(4 4)"><polyline points="5 7 8 10 16 2"/><path d="M16 8v6a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2C0 .9.9 0 2 0h9"/></g></symbol>
     <symbol id="icon-minus" viewBox="0 0 24 24"><line x1="22" x2="34" y1="308" y2="308" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="translate(-16 -296)"/></symbol>
+    <symbol id="icon-back" width="12px" height="24px" viewBox="0 0 12 24"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 6l-6 6m6 6l-6-6"/></symbol>
     <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19V5M8 9l4-4m4 4l-4-4"/></symbol>
     <symbol id="icon-arrow-down" viewBox="0 0 24 24"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 5v14m-4-4l4 4m4-4l-4 4"/></symbol>
     <symbol id="icon-close" viewBox="0 0 24 24"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.2 6.8L6.8 17.2m0-10.4l10.4 10.4"/></symbol>

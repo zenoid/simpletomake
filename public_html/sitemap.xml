@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://simpletomake.it/ingredients/alcol.html</loc>
+    
+    <lastmod>2021-02-05T16:20:09.302Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://simpletomake.it/ingredients/peroxide.html</loc>
+    
+    <lastmod>2021-02-05T16:18:01.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://simpletomake.it/ingredients/index.html</loc>
+    
+    <lastmod>2021-02-05T15:35:36.288Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://simpletomake.it/yogurt-denso.html</loc>
     
     <lastmod>2021-01-29T10:15:58.522Z</lastmod>
@@ -9,14 +30,14 @@
   </url>
   
   <url>
-    <loc>https://simpletomake.it/maionese.html</loc>
+    <loc>https://simpletomake.it/sapone.html</loc>
     
     <lastmod>2021-01-29T10:15:58.521Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://simpletomake.it/sapone.html</loc>
+    <loc>https://simpletomake.it/maionese.html</loc>
     
     <lastmod>2021-01-29T10:15:58.521Z</lastmod>
     
@@ -44,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://simpletomake.it/gingerbeer.html</loc>
-    
-    <lastmod>2021-01-29T10:15:58.517Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://simpletomake.it/detersivo-piatti.html</loc>
     
     <lastmod>2021-01-29T10:15:58.517Z</lastmod>
@@ -58,9 +72,9 @@
   </url>
   
   <url>
-    <loc>https://simpletomake.it/deodorante-in-crema.html</loc>
+    <loc>https://simpletomake.it/gingerbeer.html</loc>
     
-    <lastmod>2021-01-29T10:15:58.516Z</lastmod>
+    <lastmod>2021-01-29T10:15:58.517Z</lastmod>
     
   </url>
   
@@ -72,14 +86,21 @@
   </url>
   
   <url>
-    <loc>https://simpletomake.it/ingredients/sugar.html</loc>
+    <loc>https://simpletomake.it/deodorante-in-crema.html</loc>
+    
+    <lastmod>2021-01-29T10:15:58.516Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://simpletomake.it/ingredients/vegetableoil.html</loc>
     
     <lastmod>2021-01-29T10:15:58.515Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://simpletomake.it/ingredients/vegetableoil.html</loc>
+    <loc>https://simpletomake.it/ingredients/sugar.html</loc>
     
     <lastmod>2021-01-29T10:15:58.515Z</lastmod>
     
@@ -96,13 +117,6 @@
     <loc>https://simpletomake.it/ingredients/starch.html</loc>
     
     <lastmod>2021-01-29T10:15:58.514Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://simpletomake.it/ingredients/peroxide.html</loc>
-    
-    <lastmod>2021-01-29T10:15:58.510Z</lastmod>
     
   </url>
   
@@ -135,13 +149,6 @@
   </url>
   
   <url>
-    <loc>https://simpletomake.it/ingredients/index.html</loc>
-    
-    <lastmod>2021-01-29T10:15:58.498Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://simpletomake.it/ingredients/lye.html</loc>
     
     <lastmod>2021-01-29T10:15:58.498Z</lastmod>
@@ -156,14 +163,14 @@
   </url>
   
   <url>
-    <loc>https://simpletomake.it/ingredients/coconutoil.html</loc>
+    <loc>https://simpletomake.it/ingredients/coffee.html</loc>
     
     <lastmod>2021-01-29T10:15:58.496Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://simpletomake.it/ingredients/coffee.html</loc>
+    <loc>https://simpletomake.it/ingredients/coconutoil.html</loc>
     
     <lastmod>2021-01-29T10:15:58.496Z</lastmod>
     
@@ -191,13 +198,6 @@
   </url>
   
   <url>
-    <loc>https://simpletomake.it/ingredients/aqua.html</loc>
-    
-    <lastmod>2021-01-29T10:15:58.494Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://simpletomake.it/ingredients/almondoil.html</loc>
     
     <lastmod>2021-01-29T10:15:58.494Z</lastmod>
@@ -205,9 +205,9 @@
   </url>
   
   <url>
-    <loc>https://simpletomake.it/ingredients/alcol.html</loc>
+    <loc>https://simpletomake.it/ingredients/aqua.html</loc>
     
-    <lastmod>2021-01-29T10:15:58.493Z</lastmod>
+    <lastmod>2021-01-29T10:15:58.494Z</lastmod>
     
   </url>
   

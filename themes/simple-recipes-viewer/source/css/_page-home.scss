@@ -1,0 +1,85 @@
+
+
+
+/*                      HOMEPAGE
+------------------------------------------------------------------------- */
+
+.home-main {
+  min-height: 100vh;
+  @include flex;
+  @include flexVerticalCenter;
+
+  .content {
+    padding-left: 4rem !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem 3rem;
+    grid-template-areas:
+      "logo title title"
+      "logo menu1 menu2";
+    width: 100%;
+
+    @media only screen and (max-width: $size-M) {
+      gap: 1rem 1.5rem;
+    }
+
+    @media only screen and (max-width: $size-S) {
+      grid-template-areas:
+        "logo title title"
+        "logo menu1 menu1"
+        "logo menu2 menu2";
+    }
+
+    @media only screen and (max-width: $size-XS) {
+      padding: 1.5rem 3rem !important;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "logo"
+        "title"
+        "menu1"
+        "menu2";
+    }
+
+    @media only screen and (max-width: $size-XXS) {
+      padding: 2rem 1.5rem 1.5rem 1.5rem !important;
+    }
+  }
+
+  .home-logo  { grid-area: logo;  }
+  .home-title { grid-area: title; }
+  .home-menu1 { grid-area: menu1; }
+  .home-menu2 { grid-area: menu2; }
+
+  h1 {
+    opacity: 0.6;
+    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+    font-weight: $fontweight-normal;
+
+    @media only screen and (max-width: $size-S) {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: $fontweight-bold;
+    margin-bottom: 0.5em;
+  }
+}
+
+.home-logo {
+  min-width: 10rem;
+  text-align: center;
+
+  img {
+    width: 100%;
+
+    @media only screen and (max-width: $size-S) {
+      max-width: 12rem;
+    }
+  }
+}
+
+

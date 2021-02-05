@@ -108,11 +108,9 @@ h4 {
   }
 }
 
-h1,
-h2 {
+h1 {
   font-size: 3rem;
   line-height: 1;
-  font-weight: $fontweight-normal;
 
   @media only screen and (max-width: $size-XXS) {
     font-size: 2.25rem;
@@ -121,6 +119,12 @@ h2 {
 
 h2 {
   font-size: 2.5rem;
+  line-height: 1;
+  font-weight: $fontweight-normal;
+
+  @media only screen and (max-width: $size-XXS) {
+    font-size: 2.25rem;
+  }
 }
 
 h3 {

@@ -1,21 +1,57 @@
-<h1><%= page.name %></h1>
-
-<%= page.content %>
-
 <%
-  var recipes = site.pages.filter( p => p.layout === 'recipe' ).filter( rec => {
-    let isInRecipe = false;
-    rec.ingredients.forEach( recIngr => {
-      if ( recIngr.id === page.id ) {
-        isInRecipe = true;
-      }
-    });
-    return isInRecipe;
-  });
-%>
 
-<ul><%
-recipes.forEach( rec => { %>
-  <li><a href="/<%- rec.path %>"><%- rec.title %></a></li><%
-}) %>
-</ul>
+let page_ingredients = site.pages.filter( p => p.layout === 'ingredients' ).data[0];
+
+%>
+<div class="content">
+
+  <div class="page-header">
+    <div class="page-header-nav">
+      <a href="/<%= page_ingredients.path %>" class="breadcrumb"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-back"/></svg><strong><%= page_ingredients.title %></strong></a>
+    </div>
+    <h1><%= page.name %></h1>
+    <% if ( page.altNames ) { %>
+    <h2>Chiamato anche: <strong><%= page.altNames %></strong></h2>
+    <% } %>
+  </div>
+
+  <div class="page-body cols cols-2-1">
+    <div>
+      <%= page.content %>
+      <% if ( page.features_hygiene ) { %>
+      <h2>Che <%= page.name %> usare per autoprodurre detergenti o detersivi</h2>
+      <p><%= page.features_hygiene %></p>
+      <% } %>
+      <% if ( page.features_food ) { %>
+      <h2>Che <%= page.name %> usare per autoprodurre cibo o bevande</h2>
+      <p><%= page.features_food %></p>
+      <% } %>
+      <% if ( page.unitWeight ) { %>
+      <h2>Quanto pesano 100 ml di <%= page.name %></h2>
+      <p><strong><%= Math.round( page.unitWeight * 1000 ) / 10 %> gr</strong></p>
+      <h2>Che volume occupano 100 gr di <%= page.name %></h2>
+      <p><strong><%= Math.round( ( 1 / page.unitWeight ) * 1000 ) / 10 %> ml</strong></p>
+      <% } %>
+    </div>
+    <%
+    var recipes = site.pages.filter( p => p.layout === 'recipe' ).filter( rec => {
+      let isInRecipe = false;
+      rec.ingredients.forEach( recIngr => {
+        if ( recIngr.id === page.id ) {
+          isInRecipe = true;
+        }
+      });
+      return isInRecipe;
+    });
+    %>
+    <div>
+      <h2>Cosa puoi farci</h2>
+      <ul><%
+      recipes.forEach( rec => { %>
+        <li><a href="/<%- rec.path %>" class="btn btn-main btn-main-small"><%- rec.title.replace( / *\([^)]*\) */g, '' ) %></a></li><%
+      }) %>
+      </ul>
+    </div>
+  </div>
+
+</div>
