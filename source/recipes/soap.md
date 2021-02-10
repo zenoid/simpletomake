@@ -5,6 +5,7 @@ index: 1
 permalink: sapone
 recipeid: soap
 category: hygiene
+posterimage: soap
 
 title: Sapone di marsiglia
 titleArticle: il

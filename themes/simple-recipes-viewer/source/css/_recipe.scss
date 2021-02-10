@@ -31,6 +31,10 @@
     }
   }
 
+  @media only screen and (max-width: $size-XS) {
+    background: none !important;
+  }
+
   @media only screen and (max-width: $size-XXS) {
     padding: ( $btn-height + 1rem ) 0 2rem 0;
   }
@@ -131,10 +135,11 @@
 .recipeheader-image {
   @include flexNoShrink;
   text-align: center;
+  width: 50%;
 
   img {
     width: 100%;
-    max-width: 30em;
+    max-width: 35rem;
     margin: auto;
   }
 
@@ -144,6 +149,7 @@
 
   @media only screen and (max-width: $size-S) {
     margin-top: 1.5rem;
+    width: 100%;
   }
 }
 
