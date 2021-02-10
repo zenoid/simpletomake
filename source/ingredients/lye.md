@@ -5,6 +5,7 @@ layout: ingredient
 id: lye
 name: "Soda caustica"
 altNames: "Idrossido di Sodio (NaOH)"
+inci: Sodium Hydroxide
 unitWeight: 1.327
 
 features_hygiene:

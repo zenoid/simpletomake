@@ -5,6 +5,7 @@ layout: ingredient
 id: coconutoil
 name: "Olio di cocco"
 altNames: "Burro di cocco"
+inci: "Cocos Nucifera Oil"
 unitWeight: 0.915
 
 features_hygiene:

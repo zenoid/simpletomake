@@ -1,0 +1,121 @@
+
+
+
+/*                      INGREDIENT PAGES
+------------------------------------------------------------------------- */
+
+.page {
+  padding: 0 1.5rem;
+  min-height: 100%;
+  color: var( --color-white );
+  background-attachment: fixed;
+  background-image: url( '../images/simpletomake-logobg.svg' );
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left 50% top 50%;
+
+  &.page2 { background-color: var( --color-main2 ); }
+  &.page3 { background-color: var( --color-main3 ); }
+
+
+  h2 {
+    font-family: $font;
+    font-size: 1rem;
+    font-weight: $fontweight-bold;
+    text-transform: uppercase;
+    color: var( --color-dark );
+
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+
+    strong {
+      display: block;
+      margin: 0.25em 0 1em 0;
+      color: var( --color-white );
+      font-size: 1.25rem;
+      text-transform: none;
+    }
+
+    & + ul {
+      margin-top: 0.5rem;
+    }
+  }
+
+  @media only screen and (max-width: $size-XS) {
+    padding: 0;
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    min-height: 100vh;
+  }
+}
+
+.page-header {
+  margin-bottom: 3rem;
+
+  h3 {
+    margin-top: 1em;
+  }
+}
+
+.page-header-nav {
+  height: 2.5rem;
+  margin-bottom: 1rem;
+
+  @media only screen and (max-width: $size-XXS) {
+    margin-top: 1.5rem;
+  }
+}
+
+.page-body {
+
+  p + p {
+    margin-top: 1em;
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.databoxes {
+  margin-top: 2.5rem;
+  @include flex;
+
+  & > div {
+    width: 50%;
+    padding: 1rem;
+    background-color: rgba( 255, 255, 255, 0.25 );
+    border-radius: 4px;
+    text-align: center;
+
+    & + div {
+      margin-left: 2px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 2rem;
+      margin-top: 0;
+    }
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    @include flexColumn;
+
+    & > div {
+      width: 100%;
+
+      & + div {
+        margin-left: 0;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+

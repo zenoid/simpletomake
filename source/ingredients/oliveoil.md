@@ -4,6 +4,7 @@ layout: ingredient
 
 id: oliveoil
 name: "Olio d'oliva"
+inci: "Olea Europaea Fruit Oil"
 unitWeight: 0.916
 
 features_hygiene:

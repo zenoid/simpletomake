@@ -4,6 +4,7 @@ layout: ingredient
 
 id: aqua
 name: "Acqua"
+inci: "aqua"
 unitWeight: 1
 
 features_hygiene:
@@ -13,4 +14,8 @@ features_food:
 - "Meglio se senza cloro: se sei in dubbio, lasciala decantare all'aria alcune ore."
 
 ---
-È l'ingrediente più basilare di ogni ricetta, ed è quello che non manca mai in nessuna casa. Per la maggior parte delle ricette, l'acqua del rubinetto andrà benissimo, ma in alcuni casi è bene ricordare che l'acqua contiene anche molte altre sostanze, alcune delle quali possono anche influenzare il risultato.
+Per la maggior parte delle ricette, l'acqua del rubinetto va benissimo, ma bisogna fare attenzione alle altre sostanze che potrebbe contenere.
+
+Se usata per produrre detergenti, l'ideale è l'acqua distillata, perché il contenuto di calcare può interferire con l'azione del prodotto.
+
+Per le fermentazioni, invece, è meglio che non contenga cloro, sostanza aggiunta appunto per eliminare i batteri (inclusi quelli utili alla fermentazione). Per eliminare il cloro è sufficiente lasciar decantare l'acqua per alcune ore in un recipiente aperto.
