@@ -5,6 +5,7 @@ index: 4
 permalink: gingerbeer
 recipeid: gingerbeer
 category: food
+posterimage: gingerbeer
 
 title: Ginger beer
 titleArticle: la

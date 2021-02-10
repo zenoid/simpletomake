@@ -5,6 +5,7 @@ index: 3
 permalink: kimchi
 recipeid: kimchi
 category: food
+posterimage: kimchi
 
 title: Kimchi (cavolo fermentato)
 titleArticle: il

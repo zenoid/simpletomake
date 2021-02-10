@@ -49,11 +49,6 @@ p {
   color: var( --color-gray );
 }
 
-.copyleft {
-  display: inline-block;
-  @include rotate( 2 );
-}
-
 ::-moz-selection {
   background: var( --color-hilite );
   text-shadow: none;

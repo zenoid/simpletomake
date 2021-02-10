@@ -5,6 +5,7 @@ index: 5
 permalink: yogurt-denso
 recipeid: thick-yogurt
 category: food
+posterimage: yogurt
 
 title: Yogurt denso
 titleArticle: uno
