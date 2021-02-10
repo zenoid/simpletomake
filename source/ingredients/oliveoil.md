@@ -11,3 +11,6 @@ features_hygiene:
 - "Non importa che sia extravergine, può essere anche scaduto o usato per frittura (se filtrato molto bene), ma <strong>non deve essere rancido o contenere residui o fondo</strong>. Per questa ricetta non usare un altro olio, perché richiede dosi molto differenti di soda caustica."
 
 ---
+Non importa che sia extravergine, può essere anche scaduto o usato per frittura (se filtrato molto bene), ma <strong>non deve essere rancido o contenere residui o fondo</strong>.
+
+In una ricetta che prevede Soda Caustica, va ricordato che ogni olio ha un differente "coefficiente di saponificazione" (per l'Olio di Oliva: <strong>0.134</strong>), da usare per calcolare la quantità corretta di Soda. Non sostituire l'Olio di Oliva con altri grassi o oli senza considerare i loro coefficienti.
