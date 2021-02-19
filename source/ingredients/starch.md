@@ -13,3 +13,5 @@ features_hygiene:
 
 ---
 Va bene qualsiasi amido alimentare: la fecola di patate e la maizena sono i più comuni ed economici, ma puoi usare anche amido di riso o frumina (se non sei celiaco).
+
+È consigliabile l'uso di amido di mais non-OGM, acquistabile anche sfuso nei negozi di prodotti bio.

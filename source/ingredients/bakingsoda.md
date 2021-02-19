@@ -9,9 +9,13 @@ inci: "Sodium Bicarbonate"
 unitWeight: 2.16
 
 features_hygiene:
-- "È il comune bicarbonato usato in cucina o per lavare"
+- "È il comune bicarbonato usato in cucina, ed è utile per il suo potere assorbente."
 
 ---
 È un prodotto per uso alimentare che si trova facilmente nei supermercati. Si presenta come polvere bianca.
 
-È la sostanza "alcalina" di uso più comune (ha un pH di circa 9), ed i suoi usi dipendono principalmente da questa caratteristica: nei prodotti per la pulizia, viene usato per creare chimicamente un ambiente ostile a batteri e virus, e se bevuto disciolto in acqua permette invece di contrastare l'acido presente nel nostro stomaco.
+Viene spesso citato come "rimedio casalingo" per tutti gli usi, ma attenzione: il bicarbonato <strong>non disinfetta, non è un anticalcare e non è un ammorbidente</strong>.
+
+È la sostanza "alcalina" di uso più comune (ha un pH di circa 9). Si può aggiungere ai legumi in ammollo per rendere più delicata la loro buccia, o bere disciolto in acqua in caso di acidità di stomaco.
+
+Nei prodotti per la pulizia è prezioso per il suo potere assorbente (di residui untuosi) e abrasivo, ma solo se usato puro o in crema.

@@ -15,3 +15,5 @@ features_hygiene:
 L'acqua ossigenata in commercio può avere differenti "volumi", ovvero una diversa concentrazione di perossido di idrogeno rispetto all'acqua in cui è disciolto.
 
 Per gli usi più comuni (e per i dosaggi indicati in queste ricette) va usata acqua ossigenata a <strong>10 volumi</strong>, ovvero con una concentrazione al <strong>3%</strong>. Può andare bene anche acqua ossigenata a 20 volumi (6%), ma vanno assolutamente evitate concentrazioni maggiori.
+
+L'acqua ossigenata a 130 volumi, utilizzabile per l'autoproduzione della candeggina delicata, si può acquistare ora solo per scopi professionali.
