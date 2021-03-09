@@ -5,6 +5,7 @@ index: 5
 permalink: spray-anticalcare
 recipeid: descaling-spray
 category: hygiene
+posterimage: descaling-spray
 
 title: Spray anticalcare
 titleArticle: uno

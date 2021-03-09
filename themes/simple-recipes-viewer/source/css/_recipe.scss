@@ -9,11 +9,6 @@
   padding: 2rem 0 1rem 0;
   position: relative;
   z-index: $zindex-menu + 1;
-  background-attachment: fixed;
-  background-image: url( '../images/simpletomake-logobg-dark.svg' );
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left 50% top 50%;
 
   .content {
     @include flex;

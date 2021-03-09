@@ -5,6 +5,7 @@ index: 2
 permalink: maionese
 recipeid: mayo
 category: food
+posterimage: mayo
 
 title: Maionese (classica o vegan)
 titleArticle: la

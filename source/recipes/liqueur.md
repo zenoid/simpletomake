@@ -5,6 +5,7 @@ index: 1
 permalink: liquore
 recipeid: liqueur
 category: food
+posterimage: liqueur
 
 title: Liquore (infusione alcolica)
 titleArticle: un

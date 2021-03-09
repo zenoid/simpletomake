@@ -12,7 +12,7 @@ titleArticle: la
 
 principles:
   - "Si chiamano birre, ma non sono birre, quasi tutte le <strong>bevande  prodotte dalla fermentazione degli zuccheri</strong> e con un contenuto di alcool anche minimo"
-  - "Per produrre ginger beer senza usare lieviti <strong>serve uno starter: il \"ginger bug\"</strong>, che è come una ginger beer molto concentrata"
+  - "Per produrre ginger beer senza usare lieviti <strong>serve uno starter: il ginger bug</strong>, che è come una ginger beer molto concentrata"
   - "Lo zenzero produce molta anidride carbonica, e questa bevanda può essere molto gassata: per evitare esplosioni <strong>conserva le bottiglie in frigo o tappale molto bene</strong>"
 
 timeToMake: 1-2 settimane

@@ -5,6 +5,7 @@ index: 3
 permalink: deodorante-in-crema
 recipeid: deodorantpaste
 category: hygiene
+posterimage: deodorantpaste
 
 title: Deodorante in crema
 titleArticle: un
