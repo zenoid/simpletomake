@@ -73,7 +73,8 @@ body.touch {
 ------------------------------------------------------------------------- */
 
 .cover {
-  @include gradient( var( --color-main1 ), var( --color-main5 ) );
+  background: var( --color-main1 );
+  background: linear-gradient( 165deg, var( --color-main1 ), var( --color-main2 ), var( --color-main3 ), var( --color-main4 ), var( --color-main5 ) );
   color: var( --color-white );
 }
 
