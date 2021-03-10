@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------- */
 
 $sectionsNum: 5;
-$colors: #4A8040 #1e8a5d #009aa8 #00a0e5 #559DF2;
+$colors: #4A8040 #2D8C61 #259381 #339AB9 #559DF2;
 
 
 
@@ -19,7 +19,7 @@ $color-tag:       lighten( nth( $colors, 2 ), 20% );
   --color-white:  #FFFFFF;
   --color-dark:   #000000;
   --color-gray:   #666666;
-  --color-hilite: #39E698;
+  --color-hilite: #33CCB3;
   --color-tag:    #DEEEE7;
   --color-cloak:  rgba( 0, 0, 0, 0.8 );
 
