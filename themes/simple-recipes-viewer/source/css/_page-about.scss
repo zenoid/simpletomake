@@ -7,7 +7,7 @@
 .about-intro {
   @include flex;
   @include flexMiddle;
-  padding-top: 4rem;
+  padding-top: 6rem;
   padding-bottom: 4rem;
 
   .logo {
@@ -24,7 +24,7 @@
 
   @media only screen and (max-width: $size-XS) {
     @include flexColumn;
-    padding-top: 2rem !important;
+    padding-top: 4rem !important;
 
     .logo {
       width: 100%;
@@ -40,7 +40,7 @@
 
   @media only screen and (max-width: $size-XXS) {
     display: block;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 1rem 2rem 1rem !important;
   }
 
   p {

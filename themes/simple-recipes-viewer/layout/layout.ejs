@@ -5,6 +5,9 @@
 <% if ( page.layout === 'ingredient' ) page.bodyclass = "page page3" %>
 
 <div class="main<% if ( page.bodyclass ) { %> <%= page.bodyclass %><% } %>">
+  <div class="nav-main<% if ( page.layout === 'recipe' ) { %> nav-main-recipe<% } %>">
+    <%- partial('_partial/nav-main') %>
+  </div>
 <%- body %>
 </div>
 

@@ -29,7 +29,7 @@ nav {
     }
   }
 
-  &.nav-main {
+  &.nav-switch {
     left: 0;
   }
 
@@ -64,7 +64,7 @@ nav {
     overflow: hidden;
     @include flexRow;
 
-    &.nav-main {
+    &.nav-switch {
       top: auto;
       bottom: 0;
       z-index: $zindex-overlay;
@@ -86,7 +86,7 @@ nav {
   }
 }
 
-.nav-main-wrapper {
+.nav-switch-wrapper {
   position: absolute;
   left: 0;
   top: 0;
@@ -108,6 +108,50 @@ nav {
     right: 0;
     width: 100%;
     height: $btn-height;
+  }
+}
+
+.nav-main {
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  z-index: $zindex-overlay;
+
+  ul {
+    @include flex;
+  }
+
+  li {
+    .btn {
+      opacity: 0.4;
+    }
+
+    &.selected {
+      .btn {
+        opacity: 1;
+      }
+    }
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+    border-radius: 0;
+  }
+
+  @media only screen and (min-width: $size-XL) {
+    left: 4rem;
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    display: none;
+  }
+}
+
+.nav-main-recipe {
+  li .btn {
+    opacity: 1;
+    color: var( --color-gray );
   }
 }
 
@@ -149,6 +193,12 @@ nav {
 }
 
 body:not(.touch) {
+
+  .nav-main .btn:hover {
+    color: var( --color-hilite );
+    opacity: 1;
+  }
+
   .navdots .btn:hover {
     background-color: transparent;
 
