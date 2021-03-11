@@ -5,11 +5,20 @@
     recipes_hygiene = recipes_list.filter( p => p.category === 'hygiene' )
       .sort( 'index' ),
     recipes_food    = recipes_list.filter( p => p.category === 'food' )
-      .sort( 'index' );
+      .sort( 'index' ),
+    page_about = site.pages.filter( p => p.layout === 'about' ).data[0],
+    page_ingredients = site.pages.filter( p => p.layout === 'ingredients' ).data[0];
 %>
   <button class="btn-icon btn-mainnavclose"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-close"/></svg></button>
   <div class="sidebar-help touchhide">
     <span>Puoi usare le frecce</span><span class="key-icon"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-arrow-up"/></svg></span><span class="key-icon"><svg class="icon"><use xlink:href="/images/svgdefs.svg#icon-arrow-down"/></svg>
+  </div>
+  <div class="group">
+    <ul>
+      <li<% if ( page.layout === 'index' ) { %> class="selected"<% } %>><a href="/" class="btn" tabindex="-1">Homepage</a></li>
+      <li<% if ( page.layout === 'about' ) { %> class="selected"<% } %>><a href="/<%= page_about.path %>" class="btn" tabindex="-1">About</a></li>
+      <li<% if ( page.layout === 'ingredients' || page.layout === 'ingredient' ) { %> class="selected"<% } %>><a href="/<%= page_ingredients.path %>" class="btn" tabindex="-1">Guida agli ingredienti</a></li>
+    </ul>
   </div>
   <div class="group">
     <h3><%- __('listTitleHygiene') %></h3>
