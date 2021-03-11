@@ -61,10 +61,11 @@
 
 .page-header-nav {
   height: 2.5rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 
   @media only screen and (max-width: $size-XXS) {
-    margin-top: 1.5rem;
+    margin-top: 3rem;
   }
 }
 

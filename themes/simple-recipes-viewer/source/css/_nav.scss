@@ -144,14 +144,30 @@ nav {
   }
 
   @media only screen and (max-width: $size-XXS) {
-    display: none;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid rgba( 255, 255, 255, 0.4 );
+
+    li {
+      @include flexGrow( 1 );
+    }
+
+    .btn {
+      font-size: 0.8rem;
+      width: 100%;
+    }
   }
 }
 
 .nav-main-recipe {
+
   li .btn {
     opacity: 1;
     color: var( --color-gray );
+  }
+
+  @media only screen and (max-width: $size-XXS) {
+    border-bottom: 1px solid rgba( 0, 0, 0, 0.2 );
   }
 }
 
